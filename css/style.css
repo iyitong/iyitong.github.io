@@ -242,7 +242,7 @@ body {
 	padding: .1rem;
 	width: 5.85rem;
 	border: 1px solid #e7e7e8;
-	color: #999;
+	color: #263238;
 	height: 1.8rem;
 	overflow: auto;
 }
@@ -260,6 +260,7 @@ body {
 	height: .56rem;
 	line-height: .56rem;
 	text-align: center;
+	cursor: pointer;
 }
 .order-num input[type="text"] {
 	float: left;

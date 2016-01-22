@@ -39,9 +39,9 @@
 					<div class="order-info-box">
 						<p><strong>数量（册）</strong></p>
 						<div class="order-num">
-							<i></i>
-							<input type="text" value="1">
-							<i></i>
+							<i onclick="delNum();"></i>
+							<input id="order_num" type="text" value="1">
+							<i onclick="addNum();"></i>
 						</div>
 					</div>
 
@@ -102,7 +102,7 @@
 
 					<div class="order-info-box">
 						<p><strong>留言</strong></p>
-						<textarea>如其他特殊要求</textarea>
+						<textarea placeholder="如其他特殊要求"></textarea>
 					</div>
 
 					<div class="order-info-box order-tips">
@@ -136,6 +136,20 @@
 			}
 		});
 	});
+
+	function addNum () {
+		var num = $('#order_num').val();
+		num++;
+		$('#order_num').val(num);
+	}
+
+	function delNum () {
+		var num = $('#order_num').val();
+		if (num > 1) {
+			num--;
+		}
+		$('#order_num').val(num);
+	}
 	</script>
 </body>
 </html>
