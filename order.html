@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>订单信息 | 微信书</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="Author" content="广州市优点尚信息科技有限公司"/>
+	<link rel="icon" type="image/x-icon" href="http://7xlgbd.com2.z0.glb.qiniucdn.com/img/favicon.ico"/>
+	<link rel="stylesheet" href="http://7xl6qe.com2.z0.glb.qiniucdn.com/css/base.min.css">
+
+	<!-- 如果是IE6打开，在顶部出现小黄条进行提醒 -->
+	<!--[if lt IE 7]>
+	<div style="position:absoulute;left:0;top:0;width:100%;height:50px;background:rgb(255,255,233);color:rgb(30,84,148);border-bottom:1px solid rgb(230,230,198);text-align:center;line-height:50px;font-size:12px;">您使用的浏览器版本过低，可能会影响到您浏览本网页，建议您升级您的浏览器。</div>
+	<![endif]-->
+	<!--[if lt IE 9]>
+      	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/respond.min.js"></script>
+      	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/html5shiv.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<form>
+			<div class="order-content">
+				<!-- 订单信息 begin -->
+				<section>
+					<h2>订单信息</h2>
+					<div class="order-info-box">
+						<p><strong>书名</strong></p>
+						<p class="input-wrap"><input type="text" placeholder="输入书名"></p>
+					</div>
+
+					<div class="order-info-box">
+						<p><strong>页数：</strong>99页</p>
+					</div>
+
+					<div class="order-info-box">
+						<p><strong>数量（册）</strong></p>
+						<div class="order-num">
+							<i></i>
+							<input type="text" value="1">
+							<i></i>
+						</div>
+					</div>
+
+					<div class="order-info-box">
+						<p><strong>装帧</strong><em>查看三种装帧的区别</em></p>
+						<label><input type="radio" name="zz" checked="">经济装</label>
+						<label><input type="radio" name="zz">文艺装</label>
+						<label><input type="radio" name="zz">精装</label>
+					</div>
+
+					<div class="order-info-box">
+						<p><strong>价格</strong></p>
+						<p>原价<span>￥50.00*1</span></p>
+						<p>物流<span>￥0</span></p>
+						<p class="order-num-total">合计<span>￥50.00</span></p>
+					</div>
+				</section>
+				<!-- 订单信息 end -->
+
+
+				<!-- 收货人信息 begin -->
+				<section>
+					<h2>收货人信息</h2>
+					<div class="order-info-box">
+						<p><strong>收货人姓名</strong></p>
+						<p class="input-wrap"><input type="text" placeholder="输入收货人姓名"></p>
+					</div>
+
+					<div class="order-info-box">
+						<p><strong>电话号码</strong></p>
+						<p class="input-wrap"><input type="tel" placeholder="输入收货人电话号码"></p>
+					</div>
+
+					<div class="order-info-box">
+						<p><strong>收货地址</strong></p>
+						<p>
+							<select class="order-select">
+								<option value="0">选择省份</option>
+								<option value="0">广东省</option>
+								<option value="0">广东省</option>
+								<option value="0">广东省</option>
+							</select>
+							<select class="order-select">
+								<option value="0">选择城市</option>
+								<option value="0">广州市</option>
+								<option value="0">广州市</option>
+								<option value="0">广州市</option>
+							</select>
+							<select class="order-select">
+								<option value="0">选择区县</option>
+								<option value="0">番禺区</option>
+								<option value="0">番禺区</option>
+								<option value="0">番禺区</option>
+							</select>
+						</p>
+						<p class="input-wrap"><input type="text" placeholder="输入详细街道地址"></p>
+					</div>
+
+					<div class="order-info-box">
+						<p><strong>留言</strong></p>
+						<textarea>如其他特殊要求</textarea>
+					</div>
+
+					<div class="order-info-box order-tips">
+						<p><strong>温馨提示</strong></p>
+						<p>1. 请您核对电子书内容无误后再下单，我们不负责内容校对噢！</p>
+						<p>2. 已定稿的版本在下单后将无法继续编辑，并很快进入印刷流程！请您耐心等待！</p>
+						<p>3. 印刷效果以您所选择的版本为准，如有疑问请咨询我们的客服美眉。</p>
+					</div>
+				</section>
+				<!-- 收货人信息 end -->
+			</div>
+
+			<!-- footer -->
+			<div class="footer order-footer">
+				<div class="footer-inner">
+					<span>合计<i>￥50.00</i></span>
+					<button class="red-button" type="button">确定</button>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/jquery-1.11.1.min.js"></script>
+	<script>
+	$(function(){
+		$('.design-menu').click(function(){
+			if ($(this).siblings('.design-inner').is(':visible')) {
+				$(this).siblings('.design-inner').slideUp('fast');
+			} else {
+				$(this).siblings('.design-inner').slideDown('fast');
+			}
+		});
+	});
+	</script>
+</body>
+</html>
