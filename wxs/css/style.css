@@ -297,21 +297,25 @@ body {
 .order-num-total {
 	border-top: 1px solid #e7e7e8;
 }
+.order-num-total span {
+	font-weight: bold;
+}
 .order-info-box .order-select {
 	margin-bottom: .1rem;
-	padding: .1rem .02rem;
 	display: inline-block;
 	float: left;
 	width: 2rem;
 	background-color: #fff;
-	border: 1px solid #e7e7e8;
+	border: 1px solid #ccc;
 	border-radius: .04rem;
 	vertical-align: middle;
 }
 :-webkit-any(.order-select) {
-	height: .68rem;
+	height: .56rem;
+	width: .56rem;
 	-webkit-appearance: none;
-	background: url('../img/down.jpg') 1.38rem center no-repeat;
+	background: url('../img/down.jpg') 1.44rem center no-repeat;
+	background-size: .56rem .56rem;
 	z-index: 999; 
 }
 .order-info-box .order-select:nth-child(2) {
