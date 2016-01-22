@@ -33,7 +33,7 @@ textarea {
 
 body, html {
 	width: 100%;
-	font-family: "Microsoft YaHei","Helvetica Neue",Arial, HelveticaNeue, Helvetica, "BBAlpha Sans", sans-serif;
+	font-family: SimSun;
 	font-weight: normal;
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
@@ -200,12 +200,114 @@ body {
 }
 /* 设计微信书 end */
 
+/* 微信书详情 begin */
+.detail-content {
+	padding: 0 .3rem;
+}
+.detail-content section {
+	position: relative;
+	margin-bottom: .2rem;
+	height: 11rem;
+	box-shadow: 0 0 .05rem rgba(0,0,0,.2);
+	overflow: hidden;
+}
+/* 时尚文艺版 封面 begin */
+.cover-sswy-bg {
+	width: 6.9rem;
+	height: 4rem;
+	background: url('../img/cover_sswy_bg.jpg') center top no-repeat;
+	background-size: 100% 100%;
+}
+.cover-sswy-info {
+	margin-top: .3rem;
+	padding-right: .4rem;
+	text-align: right;
+}
+.cover-sswy-info .title {
+	margin-bottom: .2rem;
+	font-size: .3rem;
+	font-family: SimSun;
+}
+.cover-sswy-footer {
+	padding: .1rem 0;
+	position: absolute;
+	bottom: .68rem;
+	right: .4rem;
+	width: 6.1rem;
+	border-top: 1px solid #263238;
+	border-bottom: 1px solid #263238;
+	text-align: right;
+}
+.cover-sswy-text p {
+	font-size: .16rem;
+}
+.cover-sswy-text:nth-child(2) {
+	margin: .2rem 0;
+}
+/* 时尚文艺版 封面 end */
+
+/* 版本编目数据 begin */
+.catalogue {
+	padding: 0 .47rem;
+	width: 5.96rem;
+	font-size: .18rem;
+}
+.catalogue-part-1 {
+	padding-top: .56rem;
+}
+.catalogue-part-1 p {
+	margin-bottom: .14rem;
+}
+.catalogue-part-2 p {
+	margin-bottom: .05rem;
+}
+.catalogue-part-2 p span {
+	margin-right: .1rem;
+}
+.catalogue-part-2 p:last-child {
+	margin-top: .2rem;
+}
+/* 版本编目数据 end */
+
+/* 月份封面 begin */
+.month-cover {
+	width: 6.9rem;
+	height: 11rem;
+}
+.month-cover-1 {
+	background: url('../img/month_bg_1.jpg') center top no-repeat;
+	background-size: 100% 100%;
+}
+.month-info {
+	width: 5.55rem;
+	position: absolute;
+	bottom: .7rem;
+	left: 1rem;
+}
+.month-desc {
+	float: left;
+}
+.month-desc p:nth-child(3) {
+	margin-top: .2rem;
+}
+.month-date {
+	position: absolute;
+	right: 0;
+	bottom: -.2rem;
+	float: right;
+	font-size: .8rem;
+	font-family: 'Snell Roundhand',cursive;
+}
+/* 月份封面 end */
+
+/* 微信书详情 end */
+
 /* 微信订单信息 begin */
 .order-content {
 	margin: 0 auto .3rem auto;
 	padding: .6rem .4rem;
 	width: 6.1rem;
-	box-shadow: 0 0 .05rem rgba(0,0,0,.2)
+	box-shadow: 0 0 .05rem rgba(0,0,0,.2);
 }
 .order-content section {
 	display: inline-block;

@@ -54,7 +54,7 @@
 
 					<div class="order-info-box">
 						<p><strong>价格</strong></p>
-						<p>原价<span>￥50.00*1</span></p>
+						<p>原价<span>￥50.00&nbsp;*&nbsp;1</span></p>
 						<p>物流<span>￥0</span></p>
 						<p class="order-num-total">合计<span>￥50.00</span></p>
 					</div>
@@ -127,16 +127,6 @@
 
 	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/jquery-1.11.1.min.js"></script>
 	<script>
-	$(function(){
-		$('.design-menu').click(function(){
-			if ($(this).siblings('.design-inner').is(':visible')) {
-				$(this).siblings('.design-inner').slideUp('fast');
-			} else {
-				$(this).siblings('.design-inner').slideDown('fast');
-			}
-		});
-	});
-
 	function addNum () {
 		var num = $('#order_num').val();
 		num++;
