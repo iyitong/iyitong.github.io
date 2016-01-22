@@ -124,10 +124,10 @@ body {
 .design-inner ul li label input[type="radio"]:checked:before {
 	display: inline-block;
 	content: '';
-	margin-left: -1.45rem;
-	margin-top: -.15rem;
-	width: 2.1rem;
-	height: 2.95rem;
+	margin-left: -1.4rem;
+	margin-top: -.1rem;
+	width: 2rem;
+	height: 2.85rem;
 	background: rgba(54,18,54,.2);
 }
 .design-inner ul li p {
