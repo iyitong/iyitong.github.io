@@ -211,7 +211,8 @@ body {
 	box-shadow: 0 0 .05rem rgba(0,0,0,.2);
 	overflow: hidden;
 }
-/* 时尚文艺版 封面 begin */
+/* 封面 begin */
+/* 时尚文艺版 begin */
 .cover-sswy-bg {
 	width: 6.9rem;
 	height: 4rem;
@@ -226,7 +227,6 @@ body {
 .cover-sswy-info .title {
 	margin-bottom: .2rem;
 	font-size: .3rem;
-	font-family: SimSun;
 }
 .cover-sswy-footer {
 	padding: .1rem 0;
@@ -244,7 +244,61 @@ body {
 .cover-sswy-text:nth-child(2) {
 	margin: .2rem 0;
 }
-/* 时尚文艺版 封面 end */
+/* 时尚文艺版 end */
+
+/* 留白极简版 begin */
+.cover-lbjj {
+	text-align: center;
+	color: #000;
+}
+.cover-lbjj-header {
+	margin-top: 1.42rem;
+}
+.cover-lbjj-header-detail {
+	padding: .7rem 0 .5rem 0;
+	margin: 0 auto;
+	width: 4rem;
+	border: 2px solid #000;
+}
+.cover-lbjj-header-detail h2 {
+	font-size: .5rem;
+	font-family: "Microsoft YaHei";
+}
+.cover-lbjj-header-detail h2:first-child {
+	padding-bottom: .5rem;
+}
+.cover-lbjj-header-detail-small h2:last-child {
+	font-size: .4rem;
+}
+.cover-lbjj-header-title {
+	position: relative;
+	margin: -.22rem auto .2rem auto;
+	width: 1.8rem;
+	font-size: .24rem;
+	font-family: "Microsoft YaHei";
+	background-color: #fff;
+}
+.cover-lbjj-header-desc {
+	font-size: .18rem;
+	font-weight: bold;
+	font-family: 'Snell Roundhand',cursive;
+}
+.cover-lbjj-article {
+	padding-top: .36rem;
+}
+.cover-lbjj-text {
+	font-size: .16rem;
+	margin-bottom: .2rem;
+}
+.cover-lbjj-date {
+	position: absolute;
+	bottom: .75rem;
+	left: 2.56rem;
+	font-size: .3rem;
+	font-family: "Microsoft YaHei";
+}
+/* 留白极简版 end */
+/* 封面 end */
 
 /* 版本编目数据 begin */
 .catalogue {
@@ -278,8 +332,52 @@ body {
 	background: url('../img/month_bg_1.jpg') center top no-repeat;
 	background-size: 100% 100%;
 }
+.month-cover-2 {
+	background: url('../img/month_bg_2.jpg') center top no-repeat;
+	background-size: 100% 100%;
+}
+.month-cover-3 {
+	background: url('../img/month_bg_3.jpg') center top no-repeat;
+	background-size: 100% 100%;
+}
+.month-cover-4 {
+	background: url('../img/month_bg_4.jpg') center top no-repeat;
+	background-size: 100% 100%;
+}
+.month-cover-5 {
+	background: url('../img/month_bg_5.jpg') center top no-repeat;
+	background-size: 100% 100%;
+}
+.month-cover-6 {
+	background: url('../img/month_bg_6.jpg') center top no-repeat;
+	background-size: 100% 100%;
+}
+.month-cover-7 {
+	background: url('../img/month_bg_7.jpg') center top no-repeat;
+	background-size: 100% 100%;
+}
+.month-cover-8 {
+	background: url('../img/month_bg_8.jpg') center top no-repeat;
+	background-size: 100% 100%;
+}
+.month-cover-9 {
+	background: url('../img/month_bg_9.jpg') center top no-repeat;
+	background-size: 100% 100%;
+}
+.month-cover-10 {
+	background: url('../img/month_bg_10.jpg') center top no-repeat;
+	background-size: 100% 100%;
+}
+.month-cover-11 {
+	background: url('../img/month_bg_11.jpg') center top no-repeat;
+	background-size: 100% 100%;
+}
+.month-cover-12 {
+	background: url('../img/month_bg_12.jpg') center top no-repeat;
+	background-size: 100% 100%;
+}
 .month-info {
-	width: 5.55rem;
+	width: 5.5rem;
 	position: absolute;
 	bottom: .7rem;
 	left: 1rem;
