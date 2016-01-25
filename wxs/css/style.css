@@ -277,9 +277,14 @@ section.cover-ssjy {
 	position: relative;
 	padding: .32rem .4rem;
 	text-align: right;
+	writing-mode: tb-rl;
 }
 .cover-ssjy-info .title {
 	font-size: 1.1rem;
+}
+.cover-ssjy-info .title span {
+	display: block;
+	line-height: 1.1rem;
 }
 .cover-ssjy-article {
 	position: absolute;
