@@ -248,7 +248,9 @@ body {
 
 /* 时尚简约版 begin */
 section.cover-ssjy {
-	/*box-shadow: none;*/
+	position: relative;
+	box-shadow: none;
+	margin-top: -.4rem;
 }
 .cover-ssjy-logo {
 	margin: .7rem 0 .3rem .12rem;
