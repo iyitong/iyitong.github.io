@@ -283,7 +283,7 @@ section.cover-ssjy {
 }
 .cover-ssjy-article {
 	position: absolute;
-	padding-right: .4rem;
+	right: .4rem;
 	bottom: .3rem;
 	text-align: right;
 }
