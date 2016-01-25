@@ -45,12 +45,12 @@ body, html {
 body {
 	margin: 0 auto;
 	font-size: .26rem;
-	max-width: 7.5rem;
+	/*max-width: 7.5rem;*/
 }
 .wrapper {
 	margin: 0 auto;
 	width: 7.5rem;
-	max-width: 7.5rem;
+	/*max-width: 7.5rem;*/
 	padding: .4rem 0 .98rem 0;
 }
 /* 共用部分 begin */
@@ -249,8 +249,8 @@ body {
 /* 时尚简约版 begin */
 section.cover-ssjy {
 	position: relative;
-	box-shadow: none;
-	margin-top: -.4rem;
+	/*box-shadow: none;*/
+	/*margin-top: -.4rem;*/
 }
 .cover-ssjy-logo {
 	margin: .7rem 0 .3rem .12rem;
@@ -275,19 +275,44 @@ section.cover-ssjy {
 	color: #999;
 	font-size: .14rem;
 }
-.cover-ssjy-info {
+.cover-ssjy-title {
 	position: relative;
-	padding: .32rem .4rem;
-	text-align: right;
-	writing-mode: tb-rl;
-}
-.cover-ssjy-info .title {
+	padding-right: .4rem;
+	float: right;
+	width: 1.1rem;
 	font-size: 1.1rem;
+	line-height: 1.15rem;
+	word-wrap: break-word;
 }
-.cover-ssjy-info .title span {
-	display: block;
-	margin-bottom: .05rem;
-	line-height: 1.1rem;
+.cover-ssjy-info {
+	padding-top: .2rem;
+	clear: both;
+	width: 100%;
+	font-size: .16rem;
+}
+.cover-ssjy-info .author {
+	float: right;
+	padding-right: .4rem;
+	width: .32rem;
+	height: 1.5rem;
+	overflow: hidden;
+	word-wrap: break-word;
+	letter-spacing: .32rem;
+}
+.cover-ssjy-info .copyright {
+	float: right;
+	padding-right: .1rem;
+	width: .26rem;
+	text-align: center;
+	word-wrap: break-word;
+}
+.cover-ssjy-info .copyright i {
+	display: inline-block;
+	width: .26rem;
+	-moz-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
 }
 .cover-ssjy-article {
 	position: absolute;
@@ -432,10 +457,10 @@ section.cover-ssjy {
 	background-size: 100% 100%;
 }
 .month-info {
-	width: 5.5rem;
+	width: 5.7rem;
 	position: absolute;
 	bottom: .7rem;
-	left: 1rem;
+	left: .8rem;
 }
 .month-desc {
 	float: left;
@@ -452,6 +477,92 @@ section.cover-ssjy {
 	font-family: 'Snell Roundhand',cursive;
 }
 /* 月份封面 end */
+
+/* 朋友圈文章详情 begin */
+.article-detail {
+	padding: .6rem .3rem 0 .3rem;
+}
+.article-list {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: inline-block;
+	height: 10rem;
+	width: 6.85rem;
+	overflow: hidden;
+}
+.article-detail-footer {
+	position: absolute;
+	bottom: 0;
+	width: 6.4rem;
+	border-top: 1px solid #e7e7e8;
+	height: .6rem;
+	line-height: .6rem;
+	font-family: "Microsoft YaHei";
+	background-color: #fff;
+}
+.article-detail-footer span:last-child {
+	float: right;
+}
+.article-detail-footer span:last-child i {
+	position: relative;
+	display: inline-block;
+	margin-top: .12rem;
+	margin-left: .15rem;
+	float: right;
+	width: .3rem;
+	text-align: center;
+	height: .3rem;
+	line-height: .3rem;
+	border-radius: .5rem;
+	background-color: #000;
+	font-size: .16rem;
+	color: #fff;
+}
+/* A5瀑布流排版 begin */
+.article-box {
+	position: absolute;
+	margin-bottom: .3rem;
+	width: 2.8rem;
+	/*padding: 0 .1753rem;*/
+	-webkit-transition: all .7s ease-out .1s; 
+	-moz-transition: all .7s ease-out; 
+	-o-transition: all .7s ease-out .1s; 
+	transition: all .7s ease-out .1s;
+}
+.article-box-title {
+	width: 100%;
+	margin-bottom: .2rem;
+	font-family: "Microsoft YaHei";
+	background-color: #fff;
+}
+.article-box-title span.date {
+	float: left;
+	font-size: .3rem;
+	color: #fa4d80;
+}
+.article-box-title span.time {
+	display: inline-block;
+	margin-left: .1rem;
+	font-size: .2rem;
+	width: .7rem;
+	text-align: center;
+	height: .3rem;
+	line-height: .3rem;
+	color: #fff;
+	background-color: #fa4d80; 
+}
+.article-box-content p {
+	background-color: #f1f3f2;
+	padding: .1rem .15rem;
+	font-size: .16rem;
+	font-family: SimSun;
+}
+.article-box-content img {
+	margin-bottom: .1rem;
+}
+/* A5瀑布流排版 end */
+/* 朋友圈文章详情 end */
 
 /* 微信书详情 end */
 
