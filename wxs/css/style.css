@@ -106,7 +106,7 @@ body {
 .design-inner ul li label img {
 	width: 2rem;
 	height: 2.85rem;
-	box-shadow: 0 0 5px rgba(0,0,0,.25)
+	box-shadow: 0 0 .05rem rgba(0,0,0,.25);
 }
 .design-inner ul li label input[type="radio"] {
 	position: absolute;
@@ -245,6 +245,52 @@ body {
 	margin: .2rem 0;
 }
 /* 时尚文艺版 end */
+
+/* 时尚简约版 begin */
+section.cover-ssjy {
+	/*box-shadow: none;*/
+}
+.cover-ssjy-logo {
+	margin: .7rem 0 .3rem .12rem;
+	width: 1.14rem;
+	height: .44rem;
+	background: url('../img/logo.png') center center no-repeat;
+	background-size: 100% 100%;
+}
+.cover-ssjy-content {
+	position: relative;
+	width: 6.1rem;
+	height: 8.5rem;
+	border-top-right-radius: .08rem;
+	border-bottom-right-radius: .08rem;
+	background-color: #f2f2f2;
+	box-shadow: 0 0 .05rem rgba(0,0,0,.2);
+	color: #999;
+}
+.cover-ssjy-content .company {
+	position: relative;
+	padding: .4rem 0 0 .15rem; 
+	color: #999;
+	font-size: .14rem;
+}
+.cover-ssjy-info {
+	position: relative;
+	padding: .32rem .4rem;
+	text-align: right;
+}
+.cover-ssjy-info .title {
+	font-size: 1.1rem;
+}
+.cover-ssjy-article {
+	position: absolute;
+	padding-right: .4rem;
+	bottom: .3rem;
+	text-align: right;
+}
+.cover-ssjy-text {
+	padding-bottom: .2rem;
+}
+/* 时尚简约版 end */
 
 /* 留白极简版 begin */
 .cover-lbjj {
