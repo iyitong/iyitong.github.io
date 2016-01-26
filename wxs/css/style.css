@@ -564,6 +564,73 @@ section.cover-ssjy {
 /* A5瀑布流排版 end */
 /* 朋友圈文章详情 end */
 
+/* 详情尾部 begin */
+.detail-footer {
+	position: fixed;
+	bottom: 0;
+	margin: 0 auto;
+	width: 7.5rem;
+	max-width: 7.5rem;
+	z-index: 10;
+	font-size: .28rem;
+	color: #263238;
+}
+.detail-footer-inner  {
+	padding: .14rem .3rem;
+	display: inline-block;
+	width: 6.9rem;
+	height: .74rem;
+	line-height: .74rem;
+	border-top: 1px solid #e7e7e8;
+	background: #fff;
+}
+.detail-footer-inner a {
+	display: inline-block;
+	float: right;
+}
+.detail-footer-account span i {
+	color: #ff2640;
+}
+.detail-footer-account .red-button {
+	margin-top: .1rem;
+	float: right;
+	width: 1.3rem;
+	text-align: center;
+	height: .54rem;
+	line-height: .54rem;
+	color: #fff;
+	background: #ff2640;
+	border: none;
+	border-radius: .08rem;
+	font-size: .28rem;
+}
+.detail-footer-design span {
+	font-size: .24rem;
+}
+.detail-footer-design span i {
+	margin-left: .15rem;
+}
+.detail-footer-design button {
+	float: right;
+	display: inline-block;
+	width: 1.8rem;
+	text-align: center;
+	height: .7rem;
+	line-height: .7rem;
+	color: #fff;
+	border: none;
+	border-radius: .08rem;
+	font-size: .28rem;
+}
+.detail-footer-design .btn-design {
+	margin-left: .2rem;
+	background-color: #ffb526;
+}
+.detail-footer-design .btn-account {
+	background-color: #4ccaea;
+}
+
+/* 详情尾部 end */
 /* 微信书详情 end */
 
 /* 微信订单信息 begin */
