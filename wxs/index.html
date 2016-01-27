@@ -483,10 +483,11 @@
 				<a href="preview.html"><button class="btn-account" type="button">预览</button></a>
 			</div>
 		</div>
-		<!-- footer end -->
+		<!-- footer end -->	
 	</div>
 
 	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/jquery-1.11.1.min.js"></script>
+	<script src="js/common.js"></script>
 	<script type="text/javascript">
 	var margin = 20;//这里设置间距
 	var li = $('.article-list li');//这里是区块名称
@@ -518,6 +519,10 @@
 	window.onload = function() {waterfall();};
 	/*浏览器窗口改变时也运行函数*/
 	window.onresize = function() {waterfall();};
+
+	$(function(){
+		showDialog(0);
+	});
 	</script>
 </body>
 </html>
