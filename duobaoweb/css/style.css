@@ -106,7 +106,7 @@ body {
 	height: .1rem;
 	text-align: center;
 	z-index: 400;
-	bottom: .1rem;
+	bottom: .15rem;
 }
 .scroll-position li {
 	display: inline-block;
