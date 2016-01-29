@@ -33,7 +33,7 @@ textarea {
 
 body, html {
 	width: 100%;
-	font-family: SimSun;
+	font-family: "Microsoft YaHei","Helvetica Neue",Arial, HelveticaNeue, Helvetica, "BBAlpha Sans", sans-serif;
 	font-weight: normal;
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
@@ -63,6 +63,64 @@ body {
 	font-size: .28rem;
 }
 /* 共用部分 end */
+
+/* 登陆注册、忘记密码 begin */
+.form {
+	position: relative;
+	padding-top: 2rem;
+}
+.form ul li {
+	display: block;
+	margin: 0 auto .2rem auto;
+	width: 100%;
+	text-align: center;
+}
+.form ul li input {
+	padding: .2rem;
+	width: 6rem;
+	font-size: .3rem;
+	border-radius: .08rem;
+	background-color: #fff;
+}
+.form ul li p {
+	margin-top: .1rem;
+	padding-right: .55rem;
+	text-align: right;
+	color: #1c87ff;
+}
+.form ul li button {
+	position: relative;
+	width: 4.6rem;
+	height: .72rem;
+	font-size: .36rem;
+	color: #fff;
+	border-radius: .08rem;
+	border: 0;
+	-webkit-appearance: none;
+}
+.form ul li button[type="submit"] {
+	margin-top: .8rem;
+	background-color: #ff4620;
+}
+.form ul li button[type="button"] {
+	margin-top: .2rem;
+	background-color: #fff;
+	border: 1px solid #ff4620;
+	color: #ff4620;
+}
+.reg-form input.code {
+	margin: 0 .2rem .2rem .55rem;
+	float: left;
+	width: 3.8rem;
+}
+.reg-form input.getcode-btn {
+	float: left;
+	width: 2rem;
+	color: #fff;
+	font-size: .28rem;
+	background-color: #1c87ff;
+}
+/* 登陆注册、忘记密码 end */
 
 /* 首页 begin */
 .home-wrap {
