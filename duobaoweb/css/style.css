@@ -101,12 +101,12 @@ body {
 	position: relative;
 }
 .scroll-position {
+	margin-top: -.13rem;
 	position: relative;
-	margin-top: -.1rem;
-	height: .1rem;
+	height: 6px;
 	text-align: center;
 	z-index: 400;
-	bottom: .25rem;
+	bottom: .2rem;
 }
 .scroll-position li {
 	display: inline-block;
