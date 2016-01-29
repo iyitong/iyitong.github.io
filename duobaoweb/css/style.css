@@ -1,0 +1,526 @@
+/*
+ * @description:手指夺宝网页版
+ * @author: cyt
+ * @update: 2016.1.19
+*/
+@charset "utf-8";
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	font-size: 312.5%;/*10px*/
+}
+
+a,
+a:hover {
+	text-decoration: none;
+	color: #6f6f6f;
+}
+
+input,
+select,
+textarea {
+	-webkit-appearance: none;
+	outline-style: none;
+	border: 0;
+}
+
+* {
+	outline: none;
+	webkit-focus-ring-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+}
+
+body, html {
+	width: 100%;
+	font-family: SimSun;
+	font-weight: normal;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-align: center;
+	background: #f2f2f2;
+	color: #263238;
+}
+
+body {
+	margin: 0 auto;
+	font-size: .26rem;
+}
+.wrap {
+	margin: 0 auto;
+	padding-bottom: .86rem;
+	width: 7.5rem;
+	background-color: #f2f2f2;
+	font-size: .26rem;
+}
+/* 共用部分 begin */
+.input-wrap {
+	padding-bottom: .05rem;
+	border-bottom: 1px solid #ddd; 
+}
+.input-wrap input {
+	color: #263238;
+	font-size: .28rem;
+}
+/* 共用部分 end */
+
+/* 首页 begin */
+.home-wrap {
+	position: relative;
+}
+/* 轮播图 */
+.home-scroll {
+	margin: 0 auto;
+	max-width: 7.5rem;
+	position: relative;
+	left: 0;
+	top: 0;
+}
+.scroll-box {
+	overflow: hidden;
+	visibility: hidden;
+	position: relative;
+}
+.scroll-wrap {
+	overflow: hidden; 
+	position: relative;
+}
+.scroll-wrap ul {
+	width: 100%;
+	height: .1rem;
+}
+.scroll-wrap li {
+	position: relative;
+	display: block;
+	width: 100%;
+	float: left;
+}
+.scroll-wrap li a {
+	display: block;
+	margin: 0 auto;
+	position: relative;
+}
+.scroll-position {
+	position: relative;
+	margin-top: -.1rem;
+	height: .1rem;
+	text-align: center;
+	z-index: 400;
+	bottom: .1rem;
+}
+.scroll-position li {
+	display: inline-block;
+	margin: 0 .08rem;
+	width: 6px;
+	height: 6px;
+	border-radius: 6px;
+	background-color: #ccc;
+}
+.scroll-position li a {
+	font-size: 0;
+}
+.scroll-position li.on {
+	background-color: #ff4620;
+}
+/* 滚动消息 */
+.home-news {
+	position: relative;
+	height: .7rem;
+	line-height: .7rem;
+	background-color: #fff;
+}
+.home-news-icon {
+	height: .7rem;
+	margin: 0 .1rem 0 .3rem;
+	float: left;
+}
+.home-news-icon i {
+	display: inline-block;
+	width: .3rem;
+	height: .7rem;
+	background: url('../img/icon_news.png') center center no-repeat;
+	background-size: 100% .3rem;
+}
+.home-news ul {
+	display: inline-block;
+	width: 6.5rem;
+	height: .7rem;
+	line-height: .7rem;
+	overflow: hidden;
+}
+.home-news ul li {
+	display: inline-block;
+	float: left;
+	width: 6.5rem;
+	height: .7rem;
+	line-height: .75rem;
+	color: #263238;
+	font-size: .26rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.home-news ul li span {
+	float: left;
+	color: #78909c;
+}
+.home-news ul li span em {
+	color: #ff4620;
+}
+/* 搜索 */
+.home-search {
+	position: relative;
+	margin: .2rem .3rem;
+	width: 6.9rem;
+	height: .8rem;
+	line-height: .8rem;
+}
+.search-input-wrap {
+	background-color: #fff;
+	border: 1px solid #78909c;
+	border-radius: .08rem;
+	overflow: hidden;
+}
+.search-icon {
+	display: inline-block;
+	float: left;
+	margin: .2rem;
+	width: .4rem;
+	height: .4rem;
+	background: url('../img/icon_search.png') center center no-repeat;
+	background-size: 100% 100%;
+}
+.search-input-wrap input[type="search"] {
+	display: inline-block;
+	float: left;
+	margin-top: .2rem;
+	height: .4rem;
+	width: 5.9rem;
+	color: #78909c;
+	font-size: .26rem;
+}
+/* 热门产品 */
+.home-goods {
+	position: relative;
+	background-color: #fff; 
+}
+.home-goods h2 {
+	padding-left: .3rem;
+	height: .7rem;
+	line-height: .7rem;
+	font-weight: normal;
+	border-bottom: 1px solid #dbe4e8;
+}
+.home-goods ul {
+	display: inline-block;
+	width: 100%;
+}
+.home-goods ul li a {
+	display: inline-block;
+	float: left;
+	margin-right: -1px;
+	width: 3.15rem;
+	padding: .2rem .3rem;
+	border-right: 1px solid #dbe4e8;
+	border-bottom: 1px solid #dbe4e8;
+}
+.home-goods ul li a img {
+	width: 3.2rem;
+	height: 2rem;
+}
+.home-goods ul li a .title {
+	margin: .2rem 0;
+	height: .56rem;
+	font-size: .26rem;
+	line-height: .3rem;
+	color: #263238;
+	overflow: hidden;
+}
+.home-goods-schedule {
+	position: relative;
+	float: left;
+	width: 2.32rem;
+}
+.home-goods-schedule p {
+	margin-bottom: .08rem;
+	color: #78909c;
+	font-size: .24rem;
+	line-height: .24rem;
+}
+.home-goods-schedule i {
+	position: absolute;
+	display: inline-block;
+	width: 100%;
+	height: .12rem;
+	background: #d9d9d9;
+	border-radius: .08rem;
+}
+.home-goods-schedule i.schedule-complete {
+	width: 90%;
+	background-color: #ff9500;
+}
+.home-goods-footer .goods-gwc-icon {
+	display: inline-block;
+	float: right;
+	width: .44rem;
+	height: .44rem;
+	background: url('../img/icon_gwc.png') center center no-repeat;
+	background-size: 100% 100%;
+}
+/* 首页 end */
+
+/* 最新揭晓 begin */
+.new-list {
+	position: relative;
+}
+.new-box {
+	position: relative;
+	float: left;
+	padding: .3rem;
+	display: inline-block;
+	width: 6.9rem;
+	background-color: #fff;
+	border-bottom: 1px solid #dbe4e8;
+}
+.new-box:last-child {
+	border-bottom: none;
+}
+.new-box .goods-img {
+	margin-right: .2rem;
+	float: left;
+	width: 1.2rem;
+	height: 1.2rem;
+}
+.new-box .goods-img img {
+	width: 100%;
+	height: 100%;
+}
+.new-box ul {
+	display: inline-block;
+	float: left;
+	width: 5.5rem;
+}
+.new-box ul li {
+	font-size: .26rem;
+	margin-bottom: .1rem;
+}
+.new-box ul li:last-child {
+	margin-bottom: 0;
+}
+.new-box ul li.title {
+	font-size: .28rem;
+}
+.new-box ul li.price {
+	font-size: .24rem;
+	color: #78909c;
+}
+.new-box ul li span.winner {
+	color: #1c87ff;
+}
+.new-box ul li span.num {
+	color: #ff4620;
+}
+.new-box ul li span.countdown {
+	padding: .1rem;
+	height: .5rem;
+	line-height: .5rem;
+	background-color: #ff9500;
+	color: #fff; 
+}
+/* 最新揭晓 end */
+
+/* nav begin */
+.nav {
+	position: fixed;
+	bottom: 0;
+	margin: 0 auto;
+	padding: 0;
+	width: 7.5rem;
+	height: .98rem;
+	background-color: #fff;
+	border-top: 1px solid #dbe4e8;
+}
+.nav ul {
+	display: block;
+	width: 7.5rem;
+	height: .98rem;
+}
+.nav ul li {
+	padding: .15rem 0;
+	float: left;
+	width: 1.5rem;
+	text-align: center;
+	cursor: pointer;
+}
+.nav ul li a {
+	display: inline-block;
+	width: 1.5rem;
+}
+.nav ul li .nav-icon {
+	margin-bottom: .08rem;
+	display: inline-block;
+	width: .34rem;
+	height: .34rem;
+	background-size: 100% 100%;
+}
+.nav ul li .nav-icon-home {
+	background: url('../img/nav_home_link.png') center center no-repeat;
+	background-size: 100% 100%;
+}
+.nav ul li.active .nav-icon-home {
+	background: url('../img/nav_home_active.png') center center no-repeat;
+	background-size: 100% 100%;
+}
+.nav ul li .nav-icon-new {
+	background: url('../img/nav_new_link.png') center center no-repeat;
+	background-size: 100% 100%;
+}
+.nav ul li.active .nav-icon-new {
+	background: url('../img/nav_new_active.png') center center no-repeat;
+	background-size: 100% 100%;
+}
+.nav ul li .nav-icon-sd {
+	background: url('../img/nav_sd_link.png') center center no-repeat;
+	background-size: 100% 100%;
+}
+.nav ul li.active .nav-icon-sd {
+	background: url('../img/nav_sd_active.png') center center no-repeat;
+	background-size: 100% 100%;
+}
+.nav ul li .nav-icon-gwc {
+	background: url('../img/nav_gwc_link.png') center center no-repeat;
+	background-size: 100% 100%;
+}
+.nav ul li.active .nav-icon-gwc {
+	background: url('../img/nav_gwc_active.png') center center no-repeat;
+	background-size: 100% 100%;
+}
+.nav ul li .nav-icon-me {
+	background: url('../img/nav_me_link.png') center center no-repeat;
+	background-size: 100% 100%;
+}
+.nav ul li.active .nav-icon-me {
+	background: url('../img/nav_me_active.png') center center no-repeat;
+	background-size: 100% 100%;
+}
+.nav ul li p {
+	color: #999;
+	font-size: .24rem;
+	line-height: .24rem;
+}
+.nav ul li.active p {
+	color: #ff4620;
+}
+/* nav end */
+
+
+/* 正在加载中动画 begin */
+.loading-dialog {
+	position: fixed;
+	top: 0;
+	left: 50%;
+	margin-left: -3.75rem;
+	width: 7.5rem;
+	height: 100%;
+	background-color: #fff;
+	text-align: center;
+	z-index: 999;
+}
+.loading-inner {
+	position: relative;
+	top: 4rem;
+}
+.loading-icon {
+	margin-bottom: 1.3rem;
+	position: relative;
+	left: 3.27rem;
+	width: .96rem;
+	height: .96rem;
+	background: url('http://7xl6qe.com2.z0.glb.qiniucdn.com/img%2Floading_icon.png') center center no-repeat;
+	background-size: 100% 100%;
+	animation: 1s linear 0s normal none infinite rotate;
+	-webkit-animation: 1s linear 0s normal none infinite rotate;
+}
+@-webkit-keyframes rotate {
+	from{-webkit-transform:rotate(0deg)}
+	to{-webkit-transform:rotate(360deg)}
+}
+@-moz-keyframes rotate {
+	from{-moz-transform:rotate(0deg)}
+	to{-moz-transform:rotate(360deg)}
+}
+@-ms-keyframes rotate {
+	from{-ms-transform:rotate(0deg)}
+	to{-ms-transform:rotate(360deg)}
+}
+@-o-keyframes rotate {
+	from{-o-transform:rotate(0deg)}
+	to{-o-transform:rotate(360deg)}
+}
+.loading-inner p {
+	margin-bottom: .1rem;
+	font-size: .3rem;
+	color: #263238;
+}
+.loading-inner small {
+	font-size: .16rem;
+	color: #999;
+}
+/* 正在加载中动画 end */
+
+/* 字体 */
+@font-face {
+    /* font-properties */
+    font-family: 'Snell Roundhand',cursive;
+    src:url('http://7xl6qe.com2.z0.glb.qiniucdn.com/fonts/Material-Design-Icons.woff2'),  
+    url('http://7xl6qe.com2.z0.glb.qiniucdn.com/fonts/SnellRoundhandLTStd-Scr.otf');
+}
+
+/* 媒体查询 */
+@media screen and (max-width:359px) and (orientation:portrait) {
+	html {
+		font-size: 266.67%;
+	}
+}
+
+@media screen and (min-width:360px) and (max-width:374px) and (orientation:portrait) {
+	html {
+		font-size: 300%;
+	}
+}
+
+@media screen and (min-width:384px) and (max-width:399px) and (orientation:portrait) {
+	html {
+		font-size: 320%;
+	}
+}
+
+@media screen and (min-width:400px) and (max-width:413px) and (orientation:portrait) {
+	html {
+		font-size: 333.33%;
+	}
+}
+
+@media screen and (min-width:414px) and (max-width:431px) and (orientation:portrait) {
+	html {
+		font-size: 345%;
+	}
+}
+
+@media screen and (min-width:432px) and (max-width:479px) and (orientation:portrait) {
+	html {
+		font-size: 360%;
+	}
+}
+
+@media screen and (min-width:480px)and (max-width:639px) and (orientation:portrait) {
+	html {
+		font-size: 400%;
+	}
+}
+
+@media screen and (min-width:640px) and (orientation:portrait) {
+	html {
+		font-size: 533.33%;
+	}
+}
