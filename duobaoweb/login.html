@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>用户注册 | 手指夺宝</title>
+	<title>登陆注册 | 手指夺宝</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<meta name="keywords" content="">
 	<meta name="description" content="">
@@ -13,16 +13,55 @@
 </head>
 <body>
 	<div class="wrap">
-		<form class="reg-form">
-			<ul>
-				<li><input type="tel" placeholder="请输入手机号码"></li>
-				<li><input type="tel" placeholder="请输入手机号码"></li>
-				<li><input type="tel" placeholder="请输入手机号码"></li>
-				<li><button type="submit">确定</button></li>
-			</ul>
-		</form>
+		<!-- 登陆 begin -->
+		<div class="login-wrap" id="login_wrap">
+			<form class="form login-form">
+				<ul>
+					<li>
+						<input type="tel" placeholder="请输入手机号码" required>
+					</li>
+
+					<li>
+						<input type="password" placeholder="请输入密码" required>
+						<p>忘记密码?</p>
+					</li>
+
+					<li>
+						<button type="submit">登陆</button>
+					</li>
+
+					<li>
+						<button type="button" id="gotoreg">快速注册</button>
+					</li>
+				</ul>
+			</form>
+		</div>
+		<!-- 登陆 end -->
+
+		<!-- 注册 begin -->
+		<div class="reg-wrap fn-hide" id="reg_wrap">
+			<form class="form reg-form">
+				<ul>
+					<li><input type="tel" placeholder="请输入手机号码" required></li>
+					<li><input class="code" type="text" placeholder="请输入验证码" required><input class="getcode-btn" type="button" value="发送验证码"></li>
+					<li><input type="password" placeholder="请输入密码" required></li>
+					<li><button type="submit">确定</button></li>
+				</ul>
+			</form>
+		</div>
+		<!-- 注册 end -->
+		
 	</div>
 
 	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/jquery-1.11.1.min.js"></script>
+
+	<script>
+	$(function(){
+		$('#gotoreg').click(function(){
+			$('#login_wrap').addClass('fn-hide');
+			$('#reg_wrap').removeClass('fn-hide');
+		});
+	});
+	</script>
 </body>
 </html>
