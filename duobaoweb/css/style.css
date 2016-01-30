@@ -502,6 +502,8 @@ body {
 	position: relative;
 }
 .record-db-box {
+	background-color: #fff; 
+	border-bottom: 1px solid #dbe4e8;
 	width: 6.9rem;
 }
 .record-db-box a {
@@ -511,8 +513,6 @@ body {
 	width: 6.9rem;
 	font-size: .28rem;
 	color: #263238;
-	background-color: #fff; 
-	border-bottom: 1px solid #dbe4e8;
 }
 .record-db-box a .goods-img {
 	margin-right: .2rem;
