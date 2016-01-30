@@ -14,10 +14,4 @@ $(function(){
 	$('.scroll-position-bg').css({
 		width:$('#scroll_position').width()
 	});
-
-	var hash = window.location.hash,
-		hashStr = hash.replace('#','');
-
-	$('#content_' + hashStr).removeClass('fn-hide').siblings('.content').addClass('fn-hide');
-	$('#nav_' + hashStr).addClass('active').siblings('li').removeClass('active');
 });
