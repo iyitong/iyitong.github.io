@@ -583,7 +583,7 @@ body {
 	margin-bottom: .1rem;
 }
 .record-db-box a ul li.db-result p:last-child {
-	margin-bottom: none;
+	margin-bottom: 0;
 }
 .record-db-box a ul li.db-result p span {
 	color: #ff9500;
