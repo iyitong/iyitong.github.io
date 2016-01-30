@@ -498,16 +498,11 @@ body {
 	color: #ff4620;
 	border-bottom: .04rem solid #ff4620;
 }
-.record-db-content {
-	display: inline-block;
-	position: relative;
-	background-color: #fff; 
-}
 .record-db-box {
 	display: inline-block;
 	float: left;
-	
 	width: 7.5rem;
+	background-color: #fff; 
 }
 .record-db-box a {
 	padding: .2rem .3rem;
