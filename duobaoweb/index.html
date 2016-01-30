@@ -324,10 +324,19 @@
 		<div class="content userinfo-wrap fn-hide" id="content_userinfo">
 			<div class="userinfo-header">
 				<div class="userinfo-setting"></div>
-				<div class="userinfo-content">
+				<div class="userinfo-inner">
 					<img src="img/pic_3.png">
 					<p>再来一打</p>
 				</div>
+			</div>
+
+			<div class="userinfo-content">
+				<ul>
+					<li><a href="#"><i class="userinfo-icon userinfo-icon-qb"></i>我的钱包<span>￥20</span><i class="userinfo-icon-goto"></i></a></li>
+					<li><a href="#"><i class="userinfo-icon userinfo-icon-db"></i>夺宝记录<i class="userinfo-icon-goto"></i></a></li>
+					<li><a href="#"><i class="userinfo-icon userinfo-icon-zj"></i>中奖记录<i class="userinfo-icon-goto"></i></a></li>
+					<li><a href="#"><i class="userinfo-icon userinfo-icon-sd"></i>我的晒单<i class="userinfo-icon-goto"></i></a></li>
+				</ul>
 			</div>
 		</div>
 		<!-- 我的夺宝 end -->
@@ -375,40 +384,7 @@
 	</div>
 
 	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/jquery-1.11.1.min.js"></script>
-	<script src='http://7xl6qe.com2.z0.glb.qiniucdn.com/js%2FhhSwipe.js'></script>
-
-	<script>
-		// 导航栏切换
-		function navClick (ele) {
-			var data_id = $(ele).attr('data-id');
-
-			$('#content_' + data_id).removeClass('fn-hide').siblings('.content').addClass('fn-hide');
-			$(ele).parent('li').addClass('active').siblings('li').removeClass('active');
-		}
-
-		var slider = Swipe(document.getElementById('scroll_img'), {
-			auto: 3000,
-			continuous: true,
-			callback: function(pos) {
-				var i = bullets.length;
-				while (i--) {
-					bullets[i].className = ' ';
-				}
-				bullets[pos].className = 'on';
-			}
-		});
-		var bullets = document.getElementById('scroll_position').getElementsByTagName('li');
-		$(function(){
-			$('.scroll-position-bg').css({
-				width:$('#scroll_position').width()
-			});
-
-			var hash = window.location.hash,
-				hashStr = hash.replace('#','');
-
-			$('#content_' + hashStr).removeClass('fn-hide').siblings('.content').addClass('fn-hide');
-			$('#nav_' + hashStr).addClass('active').siblings('li').removeClass('active');
-		});
-	</script>
+	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js%2FhhSwipe.js"></script>
+	<script src="js/index.js"></script>
 </body>
 </html>

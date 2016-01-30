@@ -409,21 +409,70 @@ body {
 	background: url('../img/nav_userinfo_active.png') center center no-repeat;
 	background-size: 100% 100%;
 }
-.userinfo-content {
+.userinfo-inner {
 	padding-top: .88rem;
 	position: relative;
 	text-align: center;
 }
-.userinfo-content img {
+.userinfo-inner img {
 	width: 1.1rem;
 	height: 1.1rem;
 	border-radius: 1.1rem;
 	overflow: hidden;
 }
-.userinfo-content p {
+.userinfo-inner p {
 	margin-top: .3rem;
 	font-size: .36rem;
 	color: #fff;
+}
+.userinfo-content {
+	background-color: #fff;
+}
+.userinfo-content ul li a {
+	padding: 0 .3rem;
+	display: inline-block;
+	width: 6.9rem;
+	height: 1.1rem;
+	line-height: 1.1rem;
+	text-decoration: none;
+	color: #263238;
+	font-size: .32rem;
+	border-bottom: 1px solid #dbe4e8;
+}
+.userinfo-content ul li a span {
+	position: absolute;
+	right: .7rem;
+}
+.userinfo-content ul li a .userinfo-icon {
+	margin-right: .2rem;
+	display: inline-block;
+	float: left;
+	width: .6rem;
+	height: 1.1rem;
+}
+.userinfo-content ul li a .userinfo-icon-qb {
+	background: url('../img/userinfo_icon_1.png') center center no-repeat;
+	background-size: 100% .6rem;
+}
+.userinfo-content ul li a .userinfo-icon-db {
+	background: url('../img/userinfo_icon_2.png') center center no-repeat;
+	background-size: 100% .6rem;
+}
+.userinfo-content ul li a .userinfo-icon-zj {
+	background: url('../img/userinfo_icon_3.png') center center no-repeat;
+	background-size: 100% .6rem;
+}
+.userinfo-content ul li a .userinfo-icon-sd {
+	background: url('../img/userinfo_icon_4.png') center center no-repeat;
+	background-size: 100% .6rem;
+}
+.userinfo-content ul li a .userinfo-icon-goto {
+	display: inline-block;
+	float: right;
+	width: .2rem;
+	height: 1.1rem;
+	background: url('../img/goto.png') center center no-repeat;
+	background-size: 100% .36rem;
 }
 /* 我的夺宝 end */
 
