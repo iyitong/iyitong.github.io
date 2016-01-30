@@ -500,10 +500,12 @@ body {
 }
 .record-db-content {
 	position: relative;
-	background-color: #fff;
 }
 .record-db-box {
 	padding: .2rem .3rem;
+	float: left;
+	width: 6.9rem;
+	background-color: #fff;
 	border-bottom: 1px solid #dbe4e8;
 }
 .record-db-box a {
