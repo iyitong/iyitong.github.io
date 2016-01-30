@@ -503,7 +503,8 @@ body {
 	display: inline-block;
 	float: left;
 	width: 7.5rem;
-	background-color: #fff; 
+	background-color: #fff;
+	border-bottom: 1px solid #dbe4e8;
 }
 .record-db-box a {
 	padding: .2rem .3rem;
@@ -512,7 +513,6 @@ body {
 	width: 6.9rem;
 	font-size: .28rem;
 	color: #263238;
-	border-bottom: 1px solid #dbe4e8;
 }
 .record-db-box a .goods-img {
 	margin-right: .2rem;
