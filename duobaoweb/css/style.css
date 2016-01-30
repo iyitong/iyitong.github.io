@@ -476,6 +476,117 @@ body {
 }
 /* 我的夺宝 end */
 
+/* 夺宝记录 begin */
+.record-db-wrap {
+	position: relative;
+}
+.record-db-nav {
+	height: .8rem;
+	line-height: .8rem;
+	background-color: #fff; 
+	border-bottom: 1px solid #dbe4e8;
+}
+.record-db-nav ul li a {
+	display: inline-block;
+	float: left;
+	width: 2.5rem;
+	text-align: center;
+	color: #263238;
+	font-size: .28rem;
+}
+.record-db-nav ul li.active a {
+	color: #ff4620;
+	border-bottom: .04rem solid #ff4620;
+}
+.record-db-content {
+	position: relative;
+	background-color: #fff;
+}
+.record-db-box {
+	padding: .2rem .3rem .3rem .3rem;
+	border-bottom: 1px solid #dbe4e8;
+}
+.record-db-box a {
+	display: inline-block;
+	width: 6.9rem;
+	font-size: .28rem;
+	color: #263238;
+}
+.record-db-box a .goods-img {
+	margin-right: .2rem;
+	float: left;
+	width: 1.2rem;
+	height: 1.2rem;
+}
+.record-db-box a .goods-img img {
+	width: 100%;
+	height: 100%;
+}
+.record-db-box a ul {
+	display: inline-block;
+	width: 5.5rem;
+}
+.record-db-box a ul li {
+	position: relative;
+	margin-bottom: .1rem;
+}
+.record-db-box a ul li:last-child {
+	margin-bottom: 0;
+}
+.record-db-box a ul li.process {
+	width: 4.2rem;
+}
+.record-db-box a ul li i {
+	position: absolute;
+	display: inline-block;
+	width: 100%;
+	height: .12rem;
+	background: #d9d9d9;
+	border-radius: .08rem;
+}
+.record-db-box a ul li i.schedule-complete {
+	width: 80%;
+	background-color: #ff9500;
+}
+.record-db-box a ul li.process p {
+	position: relative;
+	padding-top: .12rem;
+}
+.record-db-box a ul li.process span {
+	font-size: .24rem;
+}
+.record-db-box a ul li.process p span:last-child {
+	float: right;
+}
+.record-db-box a ul li.process p span:last-child em {
+	color: #ff9500;
+}
+.record-db-box a ul li.my-db {
+	color: #78909c;
+}
+.record-db-box a ul li.my-db span:last-child {
+	float: right;
+	color: #1c87ff;
+}
+.record-db-box a ul li.db-result {
+	padding: .2rem;
+	background-color: #f2f2f2;
+	font-size: .26rem;
+}
+.record-db-box a ul li.db-result p {
+	margin-bottom: .1rem;
+}
+.record-db-box a ul li.db-result p:last-child {
+	margin-bottom: none;
+}
+.record-db-box a ul li.db-result p span {
+	color: #ff9500;
+}
+.record-db-box a ul li.db-result p em {
+	color: #ff4620;
+}
+/* 夺宝记录 end */
+
 /* nav begin */
 .nav {
 	position: fixed;
