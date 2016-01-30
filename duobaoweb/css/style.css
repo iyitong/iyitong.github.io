@@ -499,22 +499,24 @@ body {
 	border-bottom: .04rem solid #ff4620;
 }
 .record-db-content {
+	display: inline-block;
 	position: relative;
+	background-color: #fff; 
 }
 .record-db-box {
 	display: inline-block;
 	float: left;
-	padding: .2rem .3rem;
-	background-color: #fff; 
-	border-bottom: 1px solid #dbe4e8;
-	width: 6.9rem;
+	
+	width: 7.5rem;
 }
 .record-db-box a {
+	padding: .2rem .3rem;
 	display: inline-block;
 	float: left;
 	width: 6.9rem;
 	font-size: .28rem;
 	color: #263238;
+	border-bottom: 1px solid #dbe4e8;
 }
 .record-db-box a .goods-img {
 	margin-right: .2rem;
