@@ -95,6 +95,7 @@ body {
 	position: relative;
 	width: 4.6rem;
 	height: .72rem;
+	line-height: .72rem;
 	font-size: .36rem;
 	color: #fff;
 	border-radius: .08rem;
