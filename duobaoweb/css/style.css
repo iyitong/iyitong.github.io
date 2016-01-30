@@ -67,7 +67,7 @@ body {
 }
 /* 共用部分 end */
 
-/* 登陆注册、忘记密码 begin */
+/* 登录注册、忘记密码 begin */
 .form {
 	position: relative;
 	padding-top: 2rem;
@@ -123,7 +123,7 @@ body {
 	font-size: .28rem;
 	background-color: #1c87ff;
 }
-/* 登陆注册、忘记密码 end */
+/* 登录注册、忘记密码 end */
 
 /* 首页 begin */
 .home-wrap {
