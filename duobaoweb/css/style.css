@@ -505,7 +505,7 @@ body {
 	padding: .2rem .3rem;
 	float: left;
 	width: 6.9rem;
-	background-color: #fff;
+	/*background-color: #fff;*/
 	border-bottom: 1px solid #dbe4e8;
 }
 .record-db-box a {
