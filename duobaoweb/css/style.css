@@ -479,6 +479,7 @@ body {
 /* 夺宝记录 begin */
 .record-db-wrap {
 	position: relative;
+	padding-bottom: 0;
 }
 .record-db-nav {
 	height: .8rem;
