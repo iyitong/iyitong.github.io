@@ -120,6 +120,7 @@ body {
 .reg-form input.getcode-btn {
 	float: left;
 	width: 2rem;
+	height: .76rem;
 	color: #fff;
 	font-size: .28rem;
 	background-color: #1c87ff;
