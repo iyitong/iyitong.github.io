@@ -15,3 +15,17 @@ $(function(){
 		width:$('#scroll_position').width()
 	});
 });
+
+function addNum () {
+	var num = $('#order_num').val();
+	num++;
+	$('#order_num').val(num);
+}
+
+function delNum () {
+	var num = $('#order_num').val();
+	if (num > 1) {
+		num--;
+	}
+	$('#order_num').val(num);
+}
