@@ -1,0 +1,369 @@
+/*
+ * @description:A梦分期
+ * @author: cyt
+ * @update: 2016.2.25
+*/
+@charset "utf-8";
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	font-size: 312.5%;/*10px*/
+}
+
+a,
+a:hover {
+	text-decoration: none;
+	color: #263238;
+}
+.hidden {
+	visibility: hidden;
+}
+
+input,
+select,
+textarea {
+	-webkit-appearance: none;
+	outline-style: none;
+	border: 0;
+}
+
+* {
+	outline: none;
+	webkit-focus-ring-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+}
+
+.null-tips {
+	position: relative;
+	display: inline-block;
+	width: 7.5rem;
+	line-height: 5rem;
+	color: #999;
+	text-align: center;
+}
+.nomore-tips {
+	position: relative;
+	display: inline-block;
+	width: 7.5rem;
+	line-height: 1rem;
+	color: #999;
+	text-align: center;
+	cursor: pointer;
+}
+
+/* loading */
+i.loading {
+	display: inline-block;
+	position: relative;
+	margin-right: 10px;
+	top: 5px;
+	width: 20px;
+	height: 20px;
+	background: url('http://7xl6qe.com2.z0.glb.qiniucdn.com/img/loading.gif') center center no-repeat;
+	background-size: 20px 20px;
+}
+
+body, html {
+	width: 100%;
+	font-family: "Microsoft YaHei","Helvetica Neue",Arial, HelveticaNeue, Helvetica, "BBAlpha Sans", sans-serif;
+	font-weight: normal;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-align: center;
+	background: #fff;
+	color: #263238;
+}
+
+body {
+	margin: 0 auto;
+	font-size: .26rem;
+}
+.wrap {
+	margin: 0 auto;
+	width: 7.5rem;
+	background-color: #fff;
+	font-size: .26rem;
+	overflow: hidden;
+}
+.index-wrap {
+	padding-bottom: .98rem;
+}
+.content {
+	position: relative;
+}
+/* common begin */
+.input-wrap {
+	padding-bottom: .05rem;
+	border-bottom: 1px solid #ddd; 
+}
+.input-wrap input {
+	color: #263238;
+	font-size: .28rem;
+}
+/* scroll begin */
+.goods-scroll {
+	padding: 0;
+	margin: 0 auto;
+	width: 7.5rem;
+	position: relative;
+	left: 0;
+	top: 0;
+}
+.scroll-box {
+	overflow: hidden;
+	visibility: hidden;
+	position: relative;
+}
+.scroll-wrap {
+	overflow: hidden; 
+	position: relative;
+}
+.scroll-wrap ul {
+	width: 100%;
+	height: .1rem;
+}
+.scroll-wrap li {
+	position: relative;
+	display: block;
+	width: 100%;
+	float: left;
+}
+.scroll-wrap li a {
+	display: block;
+	margin: 0 auto;
+	position: relative;
+}
+.scroll-position {
+	bottom: .3rem;
+	position: absolute;
+	display: inline-block;
+	width: 7.5rem;
+	height: 6px;
+	text-align: center;
+	z-index: 400;
+}
+.scroll-position li {
+	display: inline-block;
+	margin: 0 .08rem;
+	width: 6px;
+	height: 6px;
+	border-radius: 6px;
+	background-color: #ccc;
+}
+.scroll-position li a {
+	font-size: 0;
+}
+.scroll-position li a img {
+	width: 100%;
+}
+.scroll-position li.on {
+	background-color: #ff4620;
+}
+/* scroll end */
+/* common end */
+
+/* form begin */
+.login-reg-form {
+	position: relative;
+	padding-top: 1.8rem;
+	width: 7.5rem;
+	text-align: center;
+}
+.login-reg-form ul {
+	padding: .2rem 0;
+	margin: 0 auto;
+	width: 6.4rem;
+}
+.login-reg-form ul li {
+	display: block;
+	margin: 0 auto .2rem auto;
+	width: 100%;
+	text-align: center;
+}
+.login-reg-form ul li input {
+	display: inline-block;
+	padding: .2rem;
+	width: 5.96rem;
+	font-size: .3rem;
+	border-radius: .08rem;
+	background-color: #fff;
+	border: 1px solid #dbe4e8;
+}
+.login-reg-form ul li p {
+	margin-top: .1rem;
+	text-align: right;
+	color: #1c87ff;
+	cursor: pointer;
+}
+.login-reg-form ul li button {
+	position: relative;
+	width: 4.6rem;
+	height: .72rem;
+	vertical-align: middle;
+	font-size: .36rem;
+	color: #fff;
+	border-radius: .08rem;
+	border: 0;
+	-webkit-appearance: none;
+}
+.login-reg-form ul li button[type="button"] {
+	margin-top: .2rem;
+	background-color: #fff;
+	border: 1px solid #1c87ff;
+	color: #1c87ff;
+}
+.login-reg-form ul li button.js-btn {
+	margin-top: .8rem;
+	background-color: #ff4620;
+	border: 1px solid #ff4620;
+	color: #fff;
+}
+.login-reg-form input.code {
+	margin: 0 .2rem .2rem 0;
+	float: left;
+	width: 3.76rem;
+}
+.login-reg-form input.getcode-btn {
+	float: left;
+	width: 2rem;
+	height: .8rem;
+	color: #fff;
+	font-size: .28rem;
+	background-color: #1c87ff;
+}
+.login-reg-form input.getcode-btn:disabled {
+	background-color: #ccc;
+	border: 1px solid #ccc;
+	color: #fff;
+}
+/* form end */
+/*加载中begin */
+.loading-dialog {
+	position: fixed;
+	top: 0;
+	left: 50%;
+	margin-left: -3.75rem;
+	width: 7.5rem;
+	height: 100%;
+	background-color: #fff;
+	text-align: center;
+	z-index: 999;
+}
+.loading-inner {
+	position: relative;
+	top: 4rem;
+}
+.loading-icon {
+	margin-bottom: 1.3rem;
+	position: relative;
+	left: 3.27rem;
+	width: .96rem;
+	height: .96rem;
+	background: url('http://7xl6qe.com2.z0.glb.qiniucdn.com/img%2Floading_icon.png') center center no-repeat;
+	background-size: 100% 100%;
+	animation: 1s linear 0s normal none infinite rotate;
+	-webkit-animation: 1s linear 0s normal none infinite rotate;
+}
+@-webkit-keyframes rotate {
+	from{-webkit-transform:rotate(0deg)}
+	to{-webkit-transform:rotate(360deg)}
+}
+@-moz-keyframes rotate {
+	from{-moz-transform:rotate(0deg)}
+	to{-moz-transform:rotate(360deg)}
+}
+@-ms-keyframes rotate {
+	from{-ms-transform:rotate(0deg)}
+	to{-ms-transform:rotate(360deg)}
+}
+@-o-keyframes rotate {
+	from{-o-transform:rotate(0deg)}
+	to{-o-transform:rotate(360deg)}
+}
+.loading-inner p {
+	margin-bottom: .1rem;
+	font-size: .3rem;
+	color: #263238;
+}
+.loading-inner small {
+	font-size: .16rem;
+	color: #999;
+}
+/*加载中end */
+
+/* 操作提示 */
+.info-tips {
+	margin: 0 auto;
+	width: 7.5rem;
+	text-align: center;
+}
+.info-tips-inner {
+	padding: .2rem .1rem;
+	position: fixed;
+	bottom: 3rem;
+	left: 1.65rem;
+	width: 4rem;
+	border-radius: .1rem;
+	background-color: rgba(0,0,0,.8);
+	box-shadow: 0 0 .5rem rgba(0,0,0,.25);
+	color: #fff;
+	font-size: .26rem;
+	z-index: 999999;
+}
+/* 字体 */
+@font-face {
+    /* font-properties */
+    font-family: 'Snell Roundhand',cursive;
+    src:url('http://7xl6qe.com2.z0.glb.qiniucdn.com/fonts/Material-Design-Icons.woff2'),  
+    url('http://7xl6qe.com2.z0.glb.qiniucdn.com/fonts/SnellRoundhandLTStd-Scr.otf');
+}
+
+/* 媒体查询 */
+@media screen and (max-width:359px) and (orientation:portrait) {
+	html {
+		font-size: 266.67%;
+	}
+}
+
+@media screen and (min-width:360px) and (max-width:374px) and (orientation:portrait) {
+	html {
+		font-size: 300%;
+	}
+}
+
+@media screen and (min-width:384px) and (max-width:399px) and (orientation:portrait) {
+	html {
+		font-size: 320%;
+	}
+}
+
+@media screen and (min-width:400px) and (max-width:413px) and (orientation:portrait) {
+	html {
+		font-size: 333.33%;
+	}
+}
+
+@media screen and (min-width:414px) and (max-width:431px) and (orientation:portrait) {
+	html {
+		font-size: 345%;
+	}
+}
+
+@media screen and (min-width:432px) and (max-width:479px) and (orientation:portrait) {
+	html {
+		font-size: 360%;
+	}
+}
+
+@media screen and (min-width:480px)and (max-width:639px) and (orientation:portrait) {
+	html {
+		font-size: 400%;
+	}
+}
+
+@media screen and (min-width:640px) and (orientation:portrait) {
+	html {
+		font-size: 533.33%;
+	}
+}
