@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>商品详情</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="address=no" />
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="Author" content="广州市优点尚信息科技有限公司"/>
+	<link rel="icon" type="image/x-icon" href="http://7xlgbd.com2.z0.glb.qiniucdn.com/img/favicon.ico"/>
+	<link rel="stylesheet" href="http://7xl6qe.com2.z0.glb.qiniucdn.com/css/base.min.css">
+	<link rel="stylesheet" href="css/style.css?v=1.0">
+</head>
+<body>
+	<div class="wrap">
+		<!-- 商品详情 begin -->
+		<!-- 轮播图 begin -->
+		<div class="goods-scroll">
+			<div class="scroll-box" id="scroll_img">
+		        <ul class="scroll-wrap">
+					<li><a href="goods_detail.html"><img src="data/goods_1.png" width="100%"/></a></li>
+					<li><a href="goods_detail.html"><img src="data/goods_2.png" width="100%"/></a></li>
+					<li><a href="goods_detail.html"><img src="data/goods_3.png" width="100%"/></a></li>
+		        </ul>
+		    </div>
+	      	<ul class="scroll-position" id='scroll_position'>
+	          	<li class="on"><a href="javascript:void(0);">1</a></li>
+	          	<li><a href="javascript:void(0);">2</a></li>
+				<li><a href="javascript:void(0);">3</a></li>
+	      	</ul>
+		</div>
+		<!-- 轮播图 end -->
+		
+		<!-- 商品信息 begin -->
+		<div class="item-info">
+			<!-- 限时特惠提示 -->
+			<div class="item-info-tips">
+				限时特惠 全场24期免息
+				<span class="fn-right">49:56:24:56</span>
+			</div>
+
+			<!-- 商品标题 -->
+			<div class="item-info-header">
+				<h4>苹果iPhone6s 64G玫瑰金 国行 电信 移动 联通</h4>
+				<p>￥: 4688</p>
+			</div>
+			
+			<!-- 商品颜色、选购类型、分期等 -->
+			<div class="item-info-content">
+				<div class="item-info-box">
+					<p class="title">颜色：</p>
+					<div class="item-info-box-label">
+						<label class="checked"><p>金色</p><input name="color" type="radio" checked="checked" onclick="selectRadio(this);"></label>
+						<label><p>银色</p><input name="color" type="radio" onclick="selectRadio(this);"></label>
+						<label><p>深空灰</p><input name="color" type="radio" onclick="selectRadio(this);"></label>
+						<label><p>玫瑰金</p><input name="color" type="radio" onclick="selectRadio(this);"></label>
+						<label><p>玫瑰金</p><input name="color" type="radio" onclick="selectRadio(this);"></label>
+						<label><p>玫瑰金</p><input name="color" type="radio" onclick="selectRadio(this);"></label>
+					</div>
+				</div>
+
+				<div class="item-info-box">
+					<p class="title">选购类型：</p>
+					<div class="item-info-box-label">
+						<label class="checked"><p>16GB</p><input name="type" type="radio" checked="checked" onclick="selectRadio(this);"></label>
+						<label><p>64GB</p><input name="type" type="radio" onclick="selectRadio(this);"></label>
+						<label><p>128GB</p><input name="type" type="radio" onclick="selectRadio(this);"></label>
+					</div>
+				</div>
+
+				<div class="item-info-box item-info-box-term">
+					<p class="title">分期：</p>
+					<label class="checked">
+						<p>
+							<span>￥2200.33x3期</span>
+							<span>0服务费</span>
+						</p>
+						<input name="term" type="radio" checked="checked" onclick="selectRadio(this);">
+					</label>
+
+					<label>
+						<p>
+							<span>￥2200.33x6期</span>
+							<span>0服务费</span>
+						</p>
+						<input name="term" type="radio"onclick="selectRadio(this);">
+					</label>
+
+					<label>
+						<p>
+							<span>￥2200.33x9期</span>
+							<span>0服务费</span>
+						</p>
+						<input name="term" type="radio"onclick="selectRadio(this);">
+					</label>
+
+					<label>
+						<p>
+							<span>￥2200.33x12期</span>
+							<span>0服务费</span>
+						</p>
+						<input name="term" type="radio"onclick="selectRadio(this);">
+					</label>
+
+					<label>
+						<p>
+							<span>￥2200.33x15期</span>
+							<span>0服务费</span>
+						</p>
+						<input name="term" type="radio"onclick="selectRadio(this);">
+					</label>
+
+					<label>
+						<p>
+							<span>￥2200.33x18期</span>
+							<span>0服务费</span>
+						</p>
+						<input name="term" type="radio"onclick="selectRadio(this);">
+					</label>
+
+					<label>
+						<p>
+							<span>￥2200.33x24期</span>
+							<span>0服务费</span>
+						</p>
+						<input name="term" type="radio"onclick="selectRadio(this);">
+					</label>
+				</div>
+			</div>
+
+			<div class="item-info-link">
+				<a href="#">查看商品介绍<i class="icon-goto"></i></a>
+			</div>
+
+			<div class="item-info-footer">
+				<a href="#">立即购买</a>
+			</div>
+		</div>
+		<!-- 商品信息 end -->
+
+		<!-- 商品详情 end -->
+	</div>
+
+	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/jquery-1.11.1.min.js"></script>
+	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/jquery.form.min.js"></script>
+	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/cookie.min.js"></script>
+	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js%2FhhSwipe.js"></script>
+
+	<script>
+	$(function(){
+		var slider = Swipe(document.getElementById('scroll_img'), {
+			auto: 3000,
+			continuous: true,
+			callback: function(pos) {
+				var i = bullets.length;
+				while (i--) {
+					bullets[i].className = ' ';
+				}
+				bullets[pos].className = 'on';
+			}
+		});
+		var bullets = document.getElementById('scroll_position').getElementsByTagName('li');
+		
+		$('.scroll-position-bg').css({
+			width:$('#scroll_position').width()
+		});
+	});
+
+	function selectRadio (ele) {
+		$(ele).parent('label').addClass('checked').siblings('label').removeClass('checked');
+	}
+	</script>
+</body>
+</html>
