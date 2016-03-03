@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>信用钱包</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="address=no" />
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="Author" content="广州市优点尚信息科技有限公司"/>
+	<link rel="icon" type="image/x-icon" href="http://7xlgbd.com2.z0.glb.qiniucdn.com/img/favicon.ico"/>
+	<link rel="stylesheet" href="http://7xl6qe.com2.z0.glb.qiniucdn.com/css/base.min.css">
+	<link rel="stylesheet" href="css/style.css?v=1.0">
+</head>
+<body>
+	<div class="wrap">
+		<!-- 信用钱包 begin -->
+		<div class="credit-packet">
+			<section class="credit-packet-section credit-packet-header">
+				<div class="credit-limit">
+					<p class="title">可取现额度</p>
+					<p class="money">￥3000</p>
+				</div>
+
+				<div class="credit-money">
+					<p>取现金额</p>
+					<p class="input-wrap"><input type="text" placeholder="请输入你要取现的金额"></p>
+				</div>
+			</section>
+
+			<section class="credit-packet-section credit-packet-term">
+				<p class="title">选择分期</p>
+				
+				<div class="credit-packet-term-label">
+					<label class="checked">
+						<p>
+							<span>1期</span>
+							<span>(免服务费)</span>
+						</p>
+						<input name="term" type="radio"onclick="selectRadio(this);">
+					</label>
+
+					<label>
+						<p>
+							<span>3期</span>
+							<span>1024.33x3</span>
+						</p>
+						<input name="term" type="radio"onclick="selectRadio(this);">
+					</label>
+
+					<label>
+						<p>
+							<span>6期</span>
+							<span>1024.33x6</span>
+						</p>
+						<input name="term" type="radio"onclick="selectRadio(this);">
+					</label>
+
+					<label>
+						<p>
+							<span>9期</span>
+							<span>1024.33x9</span>
+						</p>
+						<input name="term" type="radio"onclick="selectRadio(this);">
+					</label>
+
+					<label>
+						<p>
+							<span>12期</span>
+							<span>1024.33x12</span>
+						</p>
+						<input name="term" type="radio"onclick="selectRadio(this);">
+					</label>
+
+					<label>
+						<p>
+							<span>15期</span>
+							<span>1024.33x15</span>
+						</p>
+						<input name="term" type="radio"onclick="selectRadio(this);">
+					</label>
+
+					<label>
+						<p>
+							<span>18期</span>
+							<span>1024.33x18</span>
+						</p>
+						<input name="term" type="radio"onclick="selectRadio(this);">
+					</label>
+
+					<label>
+						<p>
+							<span>24期</span>
+							<span>1024.33x24</span>
+						</p>
+						<input name="term" type="radio"onclick="selectRadio(this);">
+					</label>
+				</div>
+				
+				<p class="fee">取现手续费：<em>￥0</em></p>
+				<p>每月应还：<em>￥1042.23 (含服务费￥42.23)</em></p>
+			</section>
+
+			<section class="credit-packet-alipay">
+				<p class="title">提现至</p>
+				<p class="alipay">
+					<i class="icon-alipay"></i>支付宝
+					<span class="fn-right">15820216212<i onclick="$('.change-alipay-wrap').removeClass('fn-hide');">修改</i></span>
+				</p>
+			</section>
+
+			<section class="credit-packet-footer">
+				<button type="button">立即提现</button>
+
+				<div class="credit-packet-rule">
+					<div class="rule-header">
+						<i class="icon-line icon-line-left"></i>
+						信用钱包说明
+						<i class="icon-line icon-line-right"></i>
+					</div>
+					<ol>
+						<li>支付宝账号需本人实名认证，非本人账号将打款失败。</li>
+						<li>支付宝账号需本人实名认证，非本人账号将打款失败。</li>
+						<li>支付宝账号需本人实名认证，非本人账号将打款失败。</li>
+						<li>支付宝账号需本人实名认证，非本人账号将打款失败。</li>
+						<li>支付宝账号需本人实名认证，非本人账号将打款失败。</li>
+						<li>支付宝账号需本人实名认证，非本人账号将打款失败。</li>
+					</ol>
+				</div>
+			</section>
+
+			<div class="change-alipay-wrap fn-hide">
+				<div class="change-alipay-inner">
+					<form class="change-alipay-form">
+						<p>支付宝账号必须与认证用户名是绑定关系</p>
+						<p class="input-wrap">
+							<input type="text" placeholder="输入支付宝账号">
+						</p>
+						<div class="change-alipay-footer"><button type="button" onclick="$('.change-alipay-wrap').addClass('fn-hide');">取消</button><button type="button" onclick="$('.change-alipay-wrap').addClass('fn-hide');">确定</button></div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- 信用钱包 end -->
+	</div>
+
+	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/jquery-1.11.1.min.js"></script>
+	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/jquery.form.min.js"></script>
+	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/cookie.min.js"></script>
+
+	<script>
+	function selectRadio (ele) {
+		$(ele).parent('label').addClass('checked').siblings('label').removeClass('checked');
+	}
+	</script>
+</body>
+</html>
