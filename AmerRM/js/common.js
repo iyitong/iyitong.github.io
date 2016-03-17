@@ -16,17 +16,17 @@ function tab(data_id) {
 }
 
 // 显示警告框
-function showMsg (msg,type) {
+function showMsg(msg, type) {
 	var type_class = '';
-	if (type == '') {//默认
+	if (type == '') { //默认
 		type_class = '';
-	} else if (type == 'w'){
+	} else if (type == 'w') {
 		type_class = 'page-msg-warning';
-	} else if (type == 's'){
+	} else if (type == 's') {
 		type_class = 'page-msg-success';
 	}
 
-	var msg_box = '<div class="page-msg ' + type_class + '" id="page_msg"><a href="#" class="close">&times;</a><em>' + msg + '</em></div>'; 
+	var msg_box = '<div class="page-msg ' + type_class + '" id="page_msg"><a href="#" class="close">&times;</a><em>' + msg + '</em></div>';
 	$('body').append(msg_box);
 
 	// 关闭警告框
@@ -36,6 +36,7 @@ function showMsg (msg,type) {
 }
 
 window.onload = function() {
+	// 菜单栏显示
 	var hash = window.location.hash,
 		hash_len = hash.length,
 		hash_r = hash.substring(1, hash_len);
@@ -47,13 +48,23 @@ window.onload = function() {
 
 	$('.menu-item a').click(function() {
 		var data_id = $(this).attr('data-id');
-
 		tab(data_id);
 	});
 
-	// 帮助提示
-	$('.help').mouseover(function() {
-		$('.help_content').toggle();
+	// 问号帮助提示
+	var timer = '';
+	$('.help-icon').mouseover(function() {
+		window.clearInterval(timer);
+		$(this).siblings('.help_content').show();
+	});
+	$('.help-icon').mouseout(function() {
+		timer = setInterval("$('.help-icon').siblings('.help_content').hide();", 1000);
+	});
+	$('.help_content').mouseover(function() {
+		window.clearInterval(timer);
+	});
+	$('.help_content').mouseout(function() {
+		timer = setInterval("$('.help_content').hide();", 1000);
 	});
 
 	// 分页功能
