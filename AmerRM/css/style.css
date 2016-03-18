@@ -186,12 +186,13 @@ table td span {
 	float: left;
 	margin-left: -1px;
 	width: 949px;
-	width: 83.2456% !important;
+	width: 83.51% !important;
 	display: table-cell;
     vertical-align: top;
     word-wrap: break-word;
     word-break: break-all;
     border-left: 1px solid #d9dadc;
+    overflow: hidden;
 }
 .main-hd h2 {
 	padding: 0 30px;
@@ -250,6 +251,7 @@ table td span {
     border: 1px solid #d9dadc;
     font-size: 14px;
     color: #8d8d8d;
+    z-index: 1;
 }
 .help .help_content .dropdown_arrow {
     position: absolute;
@@ -305,6 +307,38 @@ table td span {
 	overflow: auto;
 }
 /* help end */
+
+/* sign_info begin */
+.sign-info {
+	position: relative;
+}
+.sign-info p strong {
+	color: #f5a028;
+}
+.sign-info h4 {
+	position: relative;
+	margin: 10px 0;
+	padding: 5px 10px;
+	background-color: #f4f5f9;
+	font-weight: 700;
+	clear: both;
+	color: #f5a028;
+}
+.sign-info ul {
+	display: inline-block;
+	clear: both;
+}
+.sign-info ul li {
+	display: inline-block;
+	width: 50%;
+	float: left;
+	color: #333;
+}
+.sign-info p span {
+	font-weight: 700;
+	color: #f5a028;
+}
+/* sign_info end */
 
 /* container end */
 
@@ -396,7 +430,43 @@ table td span {
 }
 /* foot end */
 
+/* common begin */
 button:disabled {
 	background: #ddd !important;
 	cursor: not-allowed;
 }
+/* 主体内容中的导航菜单 */
+.title-tab {
+	position: relative;
+	margin-bottom: 20px;
+	height: 34px;
+	line-height: 34px;
+	border-bottom: 2px solid #f4f5f9;
+}
+.title-tab ul li {
+	height: 32px;
+	display: inline-block;
+	float: left;
+}
+.title-tab ul li:first-child {
+	padding-left: 20px;
+}
+.title-tab ul li a {
+	display: block;
+	padding: 0 10px;
+	height: 34px;
+	line-height: 34px;
+	font-size: 14px;
+}
+.title-tab ul li.active a,
+.title-tab ul li:hover a {
+	border-bottom: 2px solid #f5a028;
+}
+
+
+
+
+
+
+
+/* common end */
