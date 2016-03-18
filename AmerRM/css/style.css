@@ -173,11 +173,15 @@ table td span {
 }
 .menu-item a {
 	display: block;
-	padding: 0 0 0 58px;
+	padding: 0 20px 0 58px;
 	padding-left: 30.6878% !important;
 	width: auto;
 	color: #222;
 	text-decoration: none;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	word-wrap: normal;
 }
 /* side end */
 
@@ -457,10 +461,13 @@ button:disabled {
 	height: 34px;
 	line-height: 34px;
 	font-size: 14px;
+
 }
 .title-tab ul li.active a,
 .title-tab ul li:hover a {
 	border-bottom: 2px solid #f5a028;
+	color: #222;
+	text-decoration: none;
 }
 
 
