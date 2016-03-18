@@ -295,15 +295,12 @@ table td span {
 	line-height: 22px;
     margin-bottom: 5px;
 }
-.help .help_content .help-change-footer {
+.help .help_content .help-footer {
     padding: 10px 12px 5px;
     border-color: #e7e7eb;
     color: #8d8d8d;
     border-top: 1px solid #e7e7eb;
     margin: 5px 15px 10px;
-}
-.help .help_content .wechat_data_range {
-	display: block;
 }
 .help-change-list {
 	min-height: 100px;
@@ -324,7 +321,7 @@ table td span {
 	margin: 10px 0;
 	padding: 5px 10px;
 	background-color: #f4f5f9;
-	font-weight: 700;
+	font-weight: normal;
 	clear: both;
 	color: #f5a028;
 }
@@ -339,7 +336,6 @@ table td span {
 	color: #333;
 }
 .sign-info p span {
-	font-weight: 700;
 	color: #f5a028;
 }
 /* sign_info end */
@@ -390,7 +386,6 @@ table td span {
 	border: none;
 	color: #fff;
 	font-size: 18px;
-	font-weight: 700;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	-o-border-radius: 4px;
@@ -461,7 +456,6 @@ button:disabled {
 	height: 34px;
 	line-height: 34px;
 	font-size: 14px;
-
 }
 .title-tab ul li.active a,
 .title-tab ul li:hover a {
@@ -470,10 +464,11 @@ button:disabled {
 	text-decoration: none;
 }
 
-
-
-
-
-
-
+.modal-form ul li {
+	margin-bottom: 10px;
+}
+.modal-form ul li .form-control {
+	margin: 0 auto;
+	width: 200px;
+}
 /* common end */

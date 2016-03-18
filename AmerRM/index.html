@@ -130,14 +130,14 @@
 									<i class="dropdown_arrow out"></i>
 									<i class="dropdown_arrow in"></i>
 									<dl class="help-change-list">
-										<dt>授权</dt>
-										<dd>区域经理对提交申请的签单员进行信息审核，符合标准的授予相关权限</dd>
+										<dt>审核通过</dt>
+										<dd>区域经理对提交申请的签单员进行信息审核，符合要求的处理为审核通过</dd>
 
-										<dt>回收</dt>
-										<dd>一旦发现签单员出现违规行为，区域经理可取消对签单员的授权</dd>
+										<dt>审核不通过</dt>
+										<dd>区域经理对提交申请的签单员进行信息审核，不符合要求的处理为审核不通过</dd>
 									</dl>
-									<div class="help-change-footer">
-										<span class="wechat_data_range">数据统计延迟一天，请以前一天的数据为准。</span>
+									<div class="help-footer">
+										<p>12</p>
 									</div>
 								</div>
 							</div>
@@ -151,7 +151,6 @@
 								<li class="active"><a href="javascript:;">待审核</a></li>
 								<li><a href="javascript:;">审核通过</a></li>
 								<li><a href="javascript:;">审核不通过</a></li>
-								<li><a href="javascript:;">驳回</a></li>
 							</ul>
 						</div>
 						<!-- 导航菜单 end -->
@@ -200,15 +199,19 @@
 							            	<h4 class="modal-title" id="myModalLabel">资格审核</h4>
 							         	</div>
 							         	<div class="modal-body">
-								            <form action="" class="form-horizontal">
+								            <form class="modal-form" action="" class="form-inline">
 								            	<ul>
-								            		<li><input type="text" class="form-control" placeholder="请输入备注"></li>
+								            		<li><select name="" id="" class="form-control">
+								            			<option value="">审核通过</option>
+								            			<option value="">审核不通过</option>
+								            		</select></li>
+								            		<li class="fn-hide"><input type="text" class="form-control" placeholder="请输入审核不通过的原因"></li>
 								            	</ul>
 								            </form>
 							         	</div>
 							         	<div class="modal-footer">
 							            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-							            	<button type="button" class="btn btn-warning">提交更改</button>
+							            	<button type="button" class="btn btn-warning">确定</button>
 							         	</div>
 							      	</div>
 						      	</div>
@@ -297,8 +300,8 @@
 										<dt>每日业绩</dt>
 										<dd>每日业绩</dd>
 									</dl>
-									<div class="help-change-footer">
-										<span class="wechat_data_range">输入相应的时间段获取业绩数据</span>
+									<div class="help-footer">
+										<p>输入相应的时间段获取业绩数据</p>
 									</div>
 								</div>
 							</div>
