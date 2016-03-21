@@ -3,17 +3,23 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
 	<meta name="renderer" content="webkit">
-	<title>A梦分期管理系统 | 总部</title>
+	<title>A梦分期管理系统 | 区域经理</title>
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/base.min.css">
-	<!--[if It IE 9]
-		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-	-->
+	<!-- 如果是IE6打开，在顶部出现小黄条进行提醒 -->
+	<!--[if lt IE 7]>
+	<div style="position:absoulute;left:0;top:0;width:100%;height:50px;background:rgb(255,255,233);color:rgb(30,84,148);border-bottom:1px solid rgb(230,230,198);text-align:center;line-height:50px;font-size:12px;">您使用的浏览器版本过低，可能会影响到您浏览本网页，建议您升级您的浏览器。</div>
+	<![endif]-->
+	<!--[if lt IE 9]>
+      <script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/respond.min.js"></script>
+      <script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/html5shiv.js"></script>
+    <![endif]-->
+
 	<!-- 分页 -->
-	<script type="text/javascript" src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/kkpager.min.js"></script>
+	<script type="text/javascript" src="libs/kkpager.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/kkpager_orange.min.css">
 	
 	<link rel="stylesheet" href="css/style.css">
@@ -22,10 +28,10 @@
 	<!-- header begin -->
 	<div class="head" id="header">
 		<div class="header-box">
-			<div class="inner">
-				<h1><a href="#" title="A梦分期总部管理系统"><i class="logo"></i>A梦分期总部管理系统</a></h1>
+			<div class="inner container">
+				<h1><a href="javascript:;" title="A梦分期区域经理管理系统"><i class="logo"></i></a>A梦分期区域经理管理系统</h1>
 				<div class="account">
-					<a href="#" class="nickname">昵称</a><a href="#" class="logout" id="logout">退出</a>
+					<a href="javascript:;" class="nickname">昵称</a><a href="#" class="logout" id="logout">退出</a>
 				</div>
 			</div>
 		</div>
@@ -33,7 +39,7 @@
 	<!-- header end -->
 	
 	<!-- container begin -->
-	<div class="body">
+	<div class="container body">
 		<div class="container-box">
 			<!-- side begin -->
 			<div class="col-side">
@@ -124,14 +130,14 @@
 									<i class="dropdown_arrow out"></i>
 									<i class="dropdown_arrow in"></i>
 									<dl class="help-change-list">
-										<dt>授权</dt>
-										<dd>区域经理对提交申请的签单员进行信息审核，符合标准的授予相关权限</dd>
+										<dt>审核通过</dt>
+										<dd>区域经理对提交申请的签单员进行信息审核，符合要求的处理为审核通过</dd>
 
-										<dt>回收</dt>
-										<dd>一旦发现签单员出现违规行为，区域经理可取消对签单员的授权</dd>
+										<dt>审核不通过</dt>
+										<dd>区域经理对提交申请的签单员进行信息审核，不符合要求的处理为审核不通过</dd>
 									</dl>
-									<div class="help-change-footer">
-										<span class="wechat_data_range">数据统计延迟一天，请以前一天的数据为准。</span>
+									<div class="help-footer">
+										<p>12</p>
 									</div>
 								</div>
 							</div>
@@ -139,65 +145,142 @@
 					</div>
 
 					<div class="main-bd">
+						<!-- 导航菜单 begin -->
+						<div class="title-tab" id="js_topTab">
+							<ul class="tab-nav">
+								<li class="active"><a href="javascript:;">待审核</a></li>
+								<li><a href="javascript:;">审核通过</a></li>
+								<li><a href="javascript:;">审核不通过</a></li>
+							</ul>
+						</div>
+						<!-- 导航菜单 end -->
+
 						<div class="content-wrap">
 							<div class="list signer-list" id="signer_list">
 								<table class="table table-hover table-condensed">
 									<thead>
 										<tr>
-											<td>姓名</td>
+											<td width="13%">姓名</td>
+											<td width="19%">手机号码</td>
 											<td>学校</td>
-											<td>申请时间</td>
-											<td>授权时间</td>
-											<td>状态</td>
-											<td width="55">操作</td>
+											<td width="27%">预约时间</td>
+											<td width="90">操作</td>
 										</tr>
 									</thead>
 									<tr>
 										<td>成一通</td>
+										<td>15820216212</td>	
 										<td>广东工业大学</td>
-										<td>2016-03-16 13:06:34</td>
-										<td>2016-03-17 15:03:00</td>
-										<td>可签单</td>
-										<td><span class="label label-danger">回收</span></td>
+										<td>2016-03-18 10:05:26</td>
+										<td><span class="label label-primary">审核</span>&nbsp;<span class="label label-warning">详情</span></td>
 									</tr>
 									<tr>
-										<td>小红</td>
-										<td>广东外语外贸大学</td>
-										<td>2016-03-15 17:03:08</td>
-										<td>2016-03-17 11:03:00</td>
-										<td>可签单</td>
-										<td><span class="label label-danger">回收</span></td>
+										<td>成一通</td>
+										<td>15820216212</td>	
+										<td>广东工业大学</td>
+										<td>2016-03-18 10:05:26</td>
+										<td><span class="label label-primary">审核</span>&nbsp;<span class="label label-warning">详情</span></td>
 									</tr>
 									<tr>
-										<td>小明</td>
-										<td>广东工业大学</td>
-										<td>2016-03-16 12:08:40</td>
-										<td>--</td>
-										<td>待开通</td>
-										<td><span class="label label-primary" data-toggle="modal" data-target="#checkSignModal">授权</span></td>
+										<td>成一通</td>
+										<td>15820216212</td>	
+										<td>广东工业大学</td><td>2016-03-18 10:05:26</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#checkSignModal">审核</span>&nbsp;<span class="label label-warning" data-toggle="modal" data-target="#signDetailModal">详情</span></td>
 									</tr>
 								</table>
 							</div>
 
-							<!-- 授权弹出层 begin -->
+							<!-- 审核弹出层 begin -->
 							<div class="modal fade" id="checkSignModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 							   	<div class="modal-dialog">
 							      	<div class="modal-content">
 							         	<div class="modal-header">
 							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-							            	<h4 class="modal-title" id="myModalLabel">模态框（Modal）标题</h4>
+							            	<h4 class="modal-title" id="myModalLabel">资格审核</h4>
 							         	</div>
 							         	<div class="modal-body">
-							            在这里添加一些文本
+								            <form class="modal-form" action="" class="form-inline">
+								            	<ul>
+								            		<li><select name="" id="" class="form-control">
+								            			<option value="">审核通过</option>
+								            			<option value="">审核不通过</option>
+								            		</select></li>
+								            		<li class="fn-hide"><input type="text" class="form-control" placeholder="请输入审核不通过的原因"></li>
+								            	</ul>
+								            </form>
 							         	</div>
 							         	<div class="modal-footer">
 							            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-							            	<button type="button" class="btn btn-warning">提交更改</button>
+							            	<button type="button" class="btn btn-warning">确定</button>
 							         	</div>
 							      	</div>
 						      	</div>
 							</div>
-							<!-- 授权弹出层 end -->
+							<!-- 审核弹出层 end -->
+
+							<!-- 详情弹出层 begin -->
+							<div class="modal fade" id="signDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title" id="myModalLabel">签单员详细信息</h4>
+							         	</div>
+							         	<div class="modal-body">
+							            	<div class="sign-info">
+							            	    <p>合同编号：<strong>1000234326</strong></p>
+							            	    <h4>个人信息</h4>
+							            		<ul>
+							            			<li><span>姓名：</span>成一通</li>
+							            			<li><span>性别：</span>男</li>
+							            			<li><span>电话：</span>15820216212</li>
+							            			<li><span>支付宝：</span>15820216212</li>
+							            			<li><span>QQ：</span>568480291</li>
+							            			<li><span>地址：</span>广东工业大学大学城校区东五714</li>
+							            		</ul>
+
+							            		<h4>教育信息</h4>
+							            		<ul>
+							            			<li><span>学校：</span>广东工业大学</li>
+							            			<li><span>院系：</span>机电工程学院</li>
+							            			<li><span>专业班级：</span>数字媒体技术专业10级2班</li>
+							            			<li><span>学号：</span>3110000759</li>
+							            			<li><span>入学时间：</span>2010-09</li>
+							            			<li><span>毕业时间：</span>2014-06</li>
+							            			<li><span>学历：</span>本科</li>
+							            			<li><span>学制：</span>四年</li>
+							            		</ul>
+
+							            		<h4>联系人信息</h4>
+							            		<ul>
+							            			<li><span>紧急联系人姓名：</span>成一通</li>
+							            			<li><span>紧急联系人电话</span>15820216212</li>
+							            			<li><span>父/母姓名：</span>成金传</li>
+							            			<li><span>父/母电话：</span>15820216212</li>
+							            			<li><span>辅导员姓名：</span>雷松群</li>
+							            			<li><span>辅导员电话：</span>13456435343</li>
+							            			<li><span>舍友姓名：</span>雷松群</li>
+							            			<li><span>舍友电话：</span>17847364756</li>
+							            		</ul>
+
+							            		<h4>照片信息</h4>
+							            		<ul>
+							            			<li><p>身份证正反面照片：</p><a href="img/pic1.png" target="_blank"><img src="img/pic1.png" alt="身份证正反面照片" width="50%"></a></li>
+							            			<li><p>用户手持身份证和协议表合照：</p><a href="img/pic1.png" target="_blank"><img src="img/pic1.png" alt="用户手持身份证和协议表合照" width="50%"></a></li>
+							            			<li><p>学信网/教务网/学费单照片：</p><a href="img/pic1.png" target="_blank"><img src="img/pic1.png" alt="学信网/教务网/学费单照片" width="50%"></a></li>
+							            		</ul>
+
+							            		<h4>审核状态</h4>
+							            		<p><span>审核不通过</span>，原因：身份证信息与其他资料不一致</p>
+							            	</div>
+							         	</div>
+							         	<div class="modal-footer">
+							            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							         	</div>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 详情弹出层 end -->
 
 						</div>
 					</div>
@@ -217,8 +300,8 @@
 										<dt>每日业绩</dt>
 										<dd>每日业绩</dd>
 									</dl>
-									<div class="help-change-footer">
-										<span class="wechat_data_range">输入相应的时间段获取业绩数据</span>
+									<div class="help-footer">
+										<p>输入相应的时间段获取业绩数据</p>
 									</div>
 								</div>
 							</div>
