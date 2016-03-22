@@ -1,53 +1,50 @@
  <!doctype html> 
 <html> 
-<head> 
-<meta charset="utf-8"> 
-
-</head> 
-
+	<head> 
+		<meta charset="utf-8"> 
+		<title>js倒计时功能</title>
+	</head> 
 <body> 
 
-<DIV id="CountMsg" class="HotDate"> 
-<span id="time">00:00:00:00</span>
-</DIV> 
-<script type="text/javascript"> 
+<div id="CountMsg" class="HotDate">
+	<h4>js根据目标时间进行倒计时</h4>
+	距离 2017-01-01 00:00:00 还有：<span id="time">00:00:00:00</span>
+</div> 
+<script> 
+	function getRTime(timeStr, id) {
+		var EndTime = new Date(timeStr), //截止时间 
+			NowTime = new Date(),
+			t = EndTime.getTime() - NowTime.getTime();
 
-function getRTime(timeStr,id){ 
-	var EndTime = new Date(timeStr); //截止时间 
-	var NowTime = new Date(); 
-	var t = EndTime.getTime() - NowTime.getTime(); 
+		var d = Math.floor(t / 1000 / 60 / 60 / 24),
+			h = Math.floor(t / 1000 / 60 / 60 % 24),
+			m = Math.floor(t / 1000 / 60 % 60),
+			s = Math.floor(t / 1000 % 60);
 
-	var d = Math.floor(t/1000/60/60/24);
-	var h = Math.floor(t/1000/60/60%24); 
-	var m = Math.floor(t/1000/60%60);
-	var s = Math.floor(t/1000%60);
+		if (h < 10 && h > 0) {
+			h = '0' + h;
+		}
 
-	if (h < 10) {
-		h = '0' + h;
+		if (m < 10 && m > 0) {
+			m = '0' + m;
+		}
+
+		if (s < 10 && s > 0) {
+			s = '0' + s;
+		}
+
+		document.getElementById(id).innerHTML = d + '天' + h + '时' + m + '分' + s + '秒';
 	}
 
-	if (m < 10) {
-		m = '0' + m;
+	var timeStr = '2017-01-01 00:00:00';
+
+	function main() {
+		getRTime(timeStr, 'time');
 	}
 
-	if (s < 10) {
-		s = '0' + s;
+	window.onload = function() {
+		setInterval(main, 1000);
 	}
-
-	document.getElementById(id).innerHTML = d + ":" + h + ":" + m + ":" + s; 
-} 
-
-var timeStr = '2016-03-23 10:00:00';
-	var id = 'time';
-
-function main () {
-	getRTime(timeStr,id);
-}
-
-window.onload = function(){
-	setInterval(main,1000);
-}
-
 </script> 
 </body> 
 </html>
