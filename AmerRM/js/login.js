@@ -4,6 +4,44 @@
  * desc: 登陆
  **/
 window.onload = function() {
+	// 菜单栏切换
+	var $a = $('.login-nav ul li a'),
+	$form = $('.form');
+
+	$('.login-nav ul li a').mouseover(function(){
+		var data_id = $(this).attr('data-id');
+
+		for (var i = 0, len = $a.length; i < len; i++) {
+			$a.eq(i).parent().removeClass('active');
+			$form.eq(i).addClass('fn-hide');
+
+			var data_id_i = $a.eq(i).attr('data-id');
+
+			if (data_id == data_id_i) {
+				$a.eq(i).parent().addClass('active');
+				$form.eq(i).removeClass('fn-hide');
+			}
+		}
+	});
+
+	// 忘记密码
+	$('.js-forgetpwd').click(function(){
+		$('.forget-pwd').removeClass('fn-hide');
+		$('.login-wrap').addClass('fn-hide');
+	});
+
+	// 忘记密码返回
+	$('.js-goback').click(function(){
+		$('.forget-pwd').addClass('fn-hide');
+		$('.login-wrap').removeClass('fn-hide');
+	});
+
+	// 忘记密码返回上一步
+	$('.js-goback-prev').click(function(){
+		$('#getCodeForm').removeClass('fn-hide');
+		$('#setPwdForm').addClass('fn-hide');
+	});
+
 	// 登陆
 	function login() {
 		var options = {

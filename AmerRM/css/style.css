@@ -352,14 +352,13 @@ table td span {
 	-o-border-radius: 4px;
 	border-radius: 4px;
 	background-color: #fff;
-	border: 1px solid #fff;
+	border: 1px solid #d9dadc;
 	overflow: hidden;
 }
 .login-nav {
 	height: 40px;
 	line-height: 40px;
 	clear: both;
-	background-color: #fff;
 	border-bottom: 1px solid #e7e8eb;
 }
 .login-nav ul li {
@@ -374,6 +373,8 @@ table td span {
 	line-height: 40px;
 	font-size: 16px;
 	font-weight: 400;
+	text-decoration: none;
+	color: #222;
 }
 .login-nav ul li.active a,
 .login-nav ul li a:hover {
@@ -387,7 +388,7 @@ table td span {
 	border-radius: 4px;
 	background-color: #fff;
 }
-.login-wrap .form ul li:not(:last-child) {
+.login-wrap .form ul li {
 	display: block;
 	margin-bottom: 15px;
 	padding: 5px 10px;
@@ -400,7 +401,7 @@ table td span {
 	border: 1px solid #e7e7eb;
 	overflow: hidden;
 }
-.login-wrap .form ul li:not(:last-child):hover {
+.login-wrap .form ul li:hover {
 	box-shadow: 0 0 5px #e7e7eb;
 	overflow: hidden;
 }
@@ -411,7 +412,7 @@ table td span {
 	line-height: 33px;
 	border: none;
 }
-.login-wrap .form ul li button {
+.login-wrap .form button {
 	display: block;
 	width: 100%;
 	height: 45px;
@@ -420,10 +421,67 @@ table td span {
 	border: none;
 	color: #fff;
 	font-size: 18px;
+	font-weight: bold;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	-o-border-radius: 4px;
 	border-radius: 4px;
+}
+.login-wrap .form .js-forgetpwd {
+	padding: 10px 0;
+	float: right;
+	color: #459ae9;
+}
+.login-wrap .form .js-forgetpwd:hover {
+	text-decoration: underline;
+}
+/* 忘记密码 */
+.forget-pwd {
+	border: 1px solid #d9dadc;
+	background-color: #fff;
+}
+.forget-pwd h4 {
+	padding: 0 30px;
+	height: 52px;
+	line-height: 52px;
+	font-weight: normal;
+	background-color: #f4f5f9;
+}
+.forget-main {
+	padding: 100px 120px 0;
+}
+.form-getcode {
+	margin: 0 auto;
+	padding-bottom: 150px;
+	width: 410px;
+}
+.form-getcode label {
+	float: left;
+	width: 65px;
+	height: 34px;
+	line-height: 34px;
+	font-weight: normal;
+}
+.form-getcode em {
+	margin: 0 5px;
+	color: #459ae9;
+}
+.form-control-group {
+	padding: 10px 0;
+}
+.form-control-group input {
+	width: 345px;
+}
+.form-footer {
+	padding: 20px 0 50px;
+	text-align: center;
+	border-top: 1px solid #d9dadc;
+}
+.form-footer .btn {
+	margin: 0 10px;
+	width: 100px;
+	text-align: center;
+	height: 30px;
 }
 /* login end */
 
