@@ -24,13 +24,23 @@ window.onload = function() {
 		}
 	});
 
-	// 忘记密码
-	$('.js-forgetpwd').click(function(){
-		$('.forget-pwd').removeClass('fn-hide');
+	// 根据hash值显示内容
+	var hash = window.location.hash;
+	if (hash == '#forgetpwd') {
 		$('.login-wrap').addClass('fn-hide');
+		$('.forget-pwd').removeClass('fn-hide');
+	} else {
+		$('.forget-pwd').addClass('fn-hide');
+		$('.login-wrap').removeClass('fn-hide');
+	}
+
+	// 进入忘记密码页面
+	$('.js-forgetpwd').click(function(){
+		$('.login-wrap').addClass('fn-hide');
+		$('.forget-pwd').removeClass('fn-hide');
 	});
 
-	// 忘记密码返回
+	// 从忘记密码页面返回登录
 	$('.js-goback').click(function(){
 		$('.forget-pwd').addClass('fn-hide');
 		$('.login-wrap').removeClass('fn-hide');
@@ -38,8 +48,8 @@ window.onload = function() {
 
 	// 忘记密码返回上一步
 	$('.js-goback-prev').click(function(){
-		$('#getCodeForm').removeClass('fn-hide');
 		$('#setPwdForm').addClass('fn-hide');
+		$('#getCodeForm').removeClass('fn-hide');
 	});
 
 	// 登陆
