@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+	<meta name="renderer" content="webkit">
+	<title>A梦分期 | 区域经理管理系统</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/base.min.css">
+	<!-- 如果是IE6打开，在顶部出现小黄条进行提醒 -->
+	<!--[if lt IE 7]>
+	<div style="position:absoulute;left:0;top:0;width:100%;height:50px;background:rgb(255,255,233);color:rgb(30,84,148);border-bottom:1px solid rgb(230,230,198);text-align:center;line-height:50px;font-size:12px;">您使用的浏览器版本过低，可能会影响到您浏览本网页，建议您升级您的浏览器。</div>
+	<![endif]-->
+	<!--[if lt IE 9]>
+      <script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/respond.min.js"></script>
+      <script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/html5shiv.js"></script>
+    <![endif]-->
+
+	<!-- 分页 -->
+	<script type="text/javascript" src="libs/kkpager.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/kkpager_orange.min.css">
+	
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<!-- header begin -->
+	<div class="head" id="header">
+		<div class="header-box">
+			<div class="inner container">
+				<h1><a href="javascript:;" title="A梦分期区域经理管理系统"><i class="logo"></i></a>A梦分期区域经理管理系统</h1>
+				<div class="account">
+					<a href="javascript:;" class="nickname">昵称</a><a href="#" class="logout" id="logout">退出</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- header end -->
+	
+	<!-- container begin -->
+	<div class="container body">
+		<div class="container-box">
+			<!-- side begin -->
+			<div class="col-side">
+				<div class="menu-box">
+					<dl class="menu no-extra">
+						<dt class="menu-title"><i class="icon-menu" style="background:url(
+	        img/icon_menu_function.png
+	        ) no-repeat;"></i>个人中心</dt>
+						<dd class="menu-item"><a data-id="home" href="#home">负责学校</a></dd>
+					</dl>
+					<dl class="menu">
+						<dt class="menu-title"><i class="icon-menu" style="background:url(
+        img/icon_menu_management.png
+        ) no-repeat;"></i>管理</dt>
+						<dd class="menu-item"><a data-id="signer" href="#signer">签单员管理</a></dd>
+					</dl>
+					<dl class="menu">
+						<dt class="menu-title"><i class="icon-menu" style="background:url(
+	        img/icon_menu_statistics.png
+	        ) no-repeat;"></i>统计</dt>
+						<dd class="menu-item"><a data-id="achievement" href="#achievement">每日业绩</a></dd>
+					</dl>
+				</div>
+			</div>
+			<!-- side end -->
+
+			<!-- main begin -->
+			<div class="col-main">
+				<!-- 负责学校 begin -->
+				<div class="main main-home fn-hide" id="main_home">
+					<div class="main-hd">
+						<h2>负责学校
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt>什么是负责学校</dt>
+										<dd>区域经理负责的学校由A梦分期总部管理员分配，区域经理可以管理其负责学校的所有签单员</dd>
+									</dl>
+								</div>
+							</div>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<div class="content-wrap">
+							<div class="list school-list" id="school_list">
+								<table class="table table-hover table-condensed">
+									<thead>
+										<tr>
+											<td>学校名称</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>广东工业大学</td>
+									</tr>
+									<tr>
+										<td>广东工业大学</td>
+									</tr>
+									<tr>
+										<td>广东工业大学</td>
+									</tr>
+									<tr>
+										<td>广东工业大学</td>
+									</tr>
+									<tr>
+										<td>广东工业大学</td>
+									</tr>
+									<tr>
+										<td>广东工业大学</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 负责学校 end -->
+
+				<!-- 签单员管理 begin -->
+				<div class="main main-signer fn-hide" id="main_signer">
+					<div class="main-hd">
+						<h2>签单员管理
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt>审核通过</dt>
+										<dd>区域经理对提交申请的签单员进行信息审核，符合要求的处理为审核通过</dd>
+
+										<dt>审核不通过</dt>
+										<dd>区域经理对提交申请的签单员进行信息审核，不符合要求的处理为审核不通过</dd>
+									</dl>
+									<div class="help-footer">
+										<p>12</p>
+									</div>
+								</div>
+							</div>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<!-- 导航菜单 begin -->
+						<div class="title-tab" id="js_topTab">
+							<ul class="tab-nav">
+								<li class="active"><a href="javascript:;">未授权</a></li>
+								<li><a href="javascript:;">已授权</a></li>
+							</ul>
+						</div>
+						<!-- 导航菜单 end -->
+
+						<div class="content-wrap">
+							<div class="list signer-list" id="signer_list">
+								<table class="table table-hover table-condensed">
+									<thead>
+										<tr>
+											<td width="13%">姓名</td>
+											<td width="19%">手机号码</td>
+											<td>学校</td>
+											<td width="27%">预约时间</td>
+											<td width="90">操作</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>成一通</td>
+										<td>15820216212</td>	
+										<td>广东工业大学</td>
+										<td>2016-03-18 10:05:26</td>
+										<td><span class="label label-primary">授权</span>&nbsp;<span class="label label-warning">详情</span></td>
+									</tr>
+									<tr>
+										<td>成一通</td>
+										<td>15820216212</td>	
+										<td>广东工业大学</td>
+										<td>2016-03-18 10:05:26</td>
+										<td><span class="label label-primary">授权</span>&nbsp;<span class="label label-warning">详情</span></td>
+									</tr>
+									<tr>
+										<td>成一通</td>
+										<td>15820216212</td>	
+										<td>广东工业大学</td><td>2016-03-18 10:05:26</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#checkSignModal">授权</span>&nbsp;<span class="label label-warning" data-toggle="modal" data-target="#signDetailModal">详情</span></td>
+									</tr>
+								</table>
+							</div>
+
+							<!-- 详情弹出层 begin -->
+							<div class="modal fade" id="signDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title" id="myModalLabel">签单员详细信息</h4>
+							         	</div>
+							         	<div class="modal-body">
+							            	<div class="sign-info">
+							            	    <p>合同编号：<strong>1000234326</strong></p>
+							            	    <h4>个人信息</h4>
+							            		<ul>
+							            			<li><span>姓名：</span>成一通</li>
+							            			<li><span>性别：</span>男</li>
+							            			<li><span>电话：</span>15820216212</li>
+							            			<li><span>支付宝：</span>15820216212</li>
+							            			<li><span>QQ：</span>568480291</li>
+							            			<li><span>地址：</span>广东工业大学大学城校区东五714</li>
+							            		</ul>
+
+							            		<h4>教育信息</h4>
+							            		<ul>
+							            			<li><span>学校：</span>广东工业大学</li>
+							            			<li><span>院系：</span>机电工程学院</li>
+							            			<li><span>专业班级：</span>数字媒体技术专业10级2班</li>
+							            			<li><span>学号：</span>3110000759</li>
+							            			<li><span>入学时间：</span>2010-09</li>
+							            			<li><span>毕业时间：</span>2014-06</li>
+							            			<li><span>学历：</span>本科</li>
+							            			<li><span>学制：</span>四年</li>
+							            		</ul>
+
+							            		<h4>联系人信息</h4>
+							            		<ul>
+							            			<li><span>紧急联系人姓名：</span>成一通</li>
+							            			<li><span>紧急联系人电话</span>15820216212</li>
+							            			<li><span>父/母姓名：</span>成金传</li>
+							            			<li><span>父/母电话：</span>15820216212</li>
+							            			<li><span>辅导员姓名：</span>雷松群</li>
+							            			<li><span>辅导员电话：</span>13456435343</li>
+							            			<li><span>舍友姓名：</span>雷松群</li>
+							            			<li><span>舍友电话：</span>17847364756</li>
+							            		</ul>
+
+							            		<h4>照片信息</h4>
+							            		<ul>
+							            			<li><p>身份证正反面照片：</p><a href="img/pic1.png" target="_blank"><img src="img/pic1.png" alt="身份证正反面照片" width="50%"></a></li>
+							            			<li><p>用户手持身份证和协议表合照：</p><a href="img/pic1.png" target="_blank"><img src="img/pic1.png" alt="用户手持身份证和协议表合照" width="50%"></a></li>
+							            			<li><p>学信网/教务网/学费单照片：</p><a href="img/pic1.png" target="_blank"><img src="img/pic1.png" alt="学信网/教务网/学费单照片" width="50%"></a></li>
+							            		</ul>
+
+							            		<h4>审核状态</h4>
+							            		<p><span>审核不通过</span>，原因：身份证信息与其他资料不一致</p>
+							            	</div>
+							         	</div>
+							         	<div class="modal-footer">
+							            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							         	</div>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 详情弹出层 end -->
+
+						</div>
+					</div>
+				</div>
+				<!-- 签单员管理 end -->
+
+				<!-- 每日业绩 begin -->
+				<div class="main main-achievement fn-hide" id="main_achievement">
+					<div class="main-hd">
+						<h2>每日业绩
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt>每日业绩</dt>
+										<dd>每日业绩</dd>
+									</dl>
+									<div class="help-footer">
+										<p>输入相应的时间段获取业绩数据</p>
+									</div>
+								</div>
+							</div>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<div class="content-wrap">
+							<form action="" class="form form-inline">
+								<input type="date" class="form-control">
+								<input type="date" class="form-control">
+								<button class="btn btn-warning">查询</button>
+							</form>
+
+							<div class="list achievement-list" id="achievement_list">
+								<table class="table table-hover table-condensed">
+									<thead>
+										<tr>
+											<td>日期</td>
+											<td>付款单数</td>
+											<td>付款金额</td>
+											<td>提成</td>
+											<td width="80">明细</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>2016-03-13</td>
+										<td>10</td>
+										<td>￥100.00</td>
+										<td>￥30.25</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
+									</tr>
+									<tr>
+										<td>2016-03-14</td>
+										<td>10</td>
+										<td>￥100.00</td>
+										<td>￥30.25</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
+									</tr>
+									<tr>
+										<td>2016-03-15</td>
+										<td>10</td>
+										<td>￥100.00</td>
+										<td>￥30.25</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
+									</tr>
+									<tr>
+										<td>2016-03-16</td>
+										<td>10</td>
+										<td>￥100.00</td>
+										<td>￥30.25</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
+									</tr>
+									<tr>
+										<td>2016-03-16</td>
+										<td>10</td>
+										<td>￥100.00</td>
+										<td>￥30.25</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
+									</tr>
+									<tr>
+										<td>2016-03-16</td>
+										<td>10</td>
+										<td>￥100.00</td>
+										<td>￥30.25</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
+									</tr>
+									<tr>
+										<td>2016-03-16</td>
+										<td>10</td>
+										<td>￥100.00</td>
+										<td>￥30.25</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
+									</tr>
+									<tr>
+										<td>2016-03-16</td>
+										<td>10</td>
+										<td>￥100.00</td>
+										<td>￥30.25</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
+									</tr>
+									<tr>
+										<td>2016-03-16</td>
+										<td>10</td>
+										<td>￥100.00</td>
+										<td>￥30.25</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
+									</tr>
+									<tr>
+										<td>2016-03-16</td>
+										<td>10</td>
+										<td>￥100.00</td>
+										<td>￥30.25</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
+									</tr>
+									<tr>
+										<td>2016-03-16</td>
+										<td>10</td>
+										<td>￥100.00</td>
+										<td>￥30.25</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
+									</tr>
+									<tr>
+										<td>2016-03-16</td>
+										<td>10</td>
+										<td>￥100.00</td>
+										<td>￥30.25</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
+									</tr>
+									<tr>
+										<td>2016-03-16</td>
+										<td>10</td>
+										<td>￥100.00</td>
+										<td>￥30.25</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
+									</tr>
+								</table>
+							</div>
+
+							<!-- 业绩明细弹出层 begin -->
+							<div class="modal fade" id="achievementDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title" id="myModalLabel">业绩明细</h4>
+							         	</div>
+							         	<div class="modal-body">
+							            	<div class="list achievement-detail" id="achieve_detail">
+							            		<table class="table table-hover table-condensed">
+							            			<thead>
+							            				<tr>
+							            					<td>学校</td>
+							            					<td>付款单数</td>
+							            					<td>付款金额</td>
+							            					<td>提成</td>
+							            				</tr>
+							            			</thead>
+							            			<tr>
+							            				<td>广东工业大学</td>
+							            				<td>10</td>
+							            				<td>￥60.00</td>
+							            				<td>￥5.00</td>
+							            			</tr>
+							            			<tr>
+							            				<td>广州大学</td>
+							            				<td>10</td>
+							            				<td>￥60.00</td>
+							            				<td>￥5.00</td>
+							            			</tr>
+							            			<tr>
+							            				<td>华南理工大学</td>
+							            				<td>10</td>
+							            				<td>￥60.00</td>
+							            				<td>￥5.00</td>
+							            			</tr>
+							            			<tr>
+							            				<td>中山大学</td>
+							            				<td>10</td>
+							            				<td>￥60.00</td>
+							            				<td>￥5.00</td>
+							            			</tr>
+							            			<tr>
+							            				<td>广州美术学院</td>
+							            				<td>10</td>
+							            				<td>￥60.00</td>
+							            				<td>￥5.00</td>
+							            			</tr>
+							            			<tr>
+							            				<td>广州美术学院</td>
+							            				<td>10</td>
+							            				<td>￥60.00</td>
+							            				<td>￥5.00</td>
+							            			</tr>
+							            			<tr>
+							            				<td>广州美术学院</td>
+							            				<td>10</td>
+							            				<td>￥60.00</td>
+							            				<td>￥5.00</td>
+							            			</tr>
+							            			<tr>
+							            				<td>广州美术学院</td>
+							            				<td>10</td>
+							            				<td>￥60.00</td>
+							            				<td>￥5.00</td>
+							            			</tr>
+							            			<tr>
+							            				<td>广州美术学院</td>
+							            				<td>10</td>
+							            				<td>￥60.00</td>
+							            				<td>￥5.00</td>
+							            			</tr>
+							            			<tr>
+							            				<td>广州美术学院</td>
+							            				<td>10</td>
+							            				<td>￥60.00</td>
+							            				<td>￥5.00</td>
+							            			</tr>
+							            			<tr>
+							            				<td>广州美术学院</td>
+							            				<td>10</td>
+							            				<td>￥60.00</td>
+							            				<td>￥5.00</td>
+							            			</tr>
+							            			<tr>
+							            				<td>广州美术学院</td>
+							            				<td>10</td>
+							            				<td>￥60.00</td>
+							            				<td>￥5.00</td>
+							            			</tr>
+							            			<tr>
+							            				<td>广州美术学院</td>
+							            				<td>10</td>
+							            				<td>￥60.00</td>
+							            				<td>￥5.00</td>
+							            			</tr>
+							            			<tr>
+							            				<td>广州美术学院</td>
+							            				<td>10</td>
+							            				<td>￥60.00</td>
+							            				<td>￥5.00</td>
+							            			</tr>
+							            		</table>
+							            	</div>
+							         	</div>
+							         	<div class="modal-footer">
+							            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							         	</div>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 业绩明细弹出层 end -->
+
+							<div class="kkpager" id="kkpager">111</div>
+						</div>
+					</div>
+				</div>
+				<!-- 每日业绩 end -->
+
+
+			</div>
+			<!-- main end -->
+		</div>
+	</div>
+	<!-- container end -->
+
+	<!-- footer begin -->
+	<div class="foot" id="footer">
+		<small class="copyright">Copyright © 2016 A梦分期 All Rights Reserved.</small>
+	</div>
+	<!-- footer end -->
+
+	<script src="libs/jquery-1.11.1.min.js"></script>
+	<script src="libs/jquery.form.min.js"></script>
+	<script src="libs/bootstrap.min.js"></script>
+	<script src="js/common.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
