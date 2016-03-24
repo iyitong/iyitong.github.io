@@ -48,7 +48,7 @@
 						<dt class="menu-title"><i class="icon-menu" style="background:url(
 	        img/icon_menu_function.png
 	        ) no-repeat;"></i>个人中心</dt>
-						<dd class="menu-item"><a data-id="home" href="#home">负责学校</a></dd>
+						<dd class="menu-item"><a data-id="home" href="#home">个人信息</a></dd>
 					</dl>
 					<dl class="menu">
 						<dt class="menu-title"><i class="icon-menu" style="background:url(
@@ -68,18 +68,18 @@
 
 			<!-- main begin -->
 			<div class="col-main">
-				<!-- 负责学校 begin -->
+				<!-- 个人信息 begin -->
 				<div class="main main-home fn-hide" id="main_home">
 					<div class="main-hd">
-						<h2>负责学校
+						<h2>个人信息
 							<div class="help">
 								<i class="help-icon"></i>
 								<div class="help_content">
 									<i class="dropdown_arrow out"></i>
 									<i class="dropdown_arrow in"></i>
 									<dl class="help-change-list">
-										<dt>什么是负责学校</dt>
-										<dd>区域经理负责的学校由A梦分期总部管理员分配，区域经理可以管理其负责学校的所有签单员</dd>
+										<dt>个人中心</dt>
+										<dd>区域经理可以修改个人的姓名、手机号码、支付宝账号以及详细地址。如果忘记密码，请在登录页面找回！</dd>
 									</dl>
 								</div>
 							</div>
@@ -88,37 +88,52 @@
 
 					<div class="main-bd">
 						<div class="content-wrap">
-							<div class="list school-list" id="school_list">
-								<table class="table table-hover table-condensed">
-									<thead>
-										<tr>
-											<td>学校名称</td>
-										</tr>
-									</thead>
-									<tr>
-										<td>广东工业大学</td>
-									</tr>
-									<tr>
-										<td>广东工业大学</td>
-									</tr>
-									<tr>
-										<td>广东工业大学</td>
-									</tr>
-									<tr>
-										<td>广东工业大学</td>
-									</tr>
-									<tr>
-										<td>广东工业大学</td>
-									</tr>
-									<tr>
-										<td>广东工业大学</td>
-									</tr>
-								</table>
+							<div class="info-list" id="">
+								<ul>
+									<li><span class="span-item">邮箱</span><span class="span-content">568480291@qq.com</span></li>
+									<li><span class="span-item">姓名</span><span class="span-content">成一通</span></li>
+									<li><span class="span-item">手机号码</span><span class="span-content">15820216212</span></li>
+									<li><span class="span-item">支付宝账号</span><span class="span-content">15820216212</span></li>
+									<li><span class="span-item">账户余额</span><span class="span-content">￥1,0000</span></li>
+									<li><span class="span-item">详细地址</span><span class="span-content">广东省广州市大学城东三路国家数字家庭基地东区B239</span></li>
+									<li><span class="span-item">负责学校列表</span><span class="span-content">广东工业大学、广州大学、中山大学、广东外语外贸大学、华南师范大学</span></li>
+									<li><span class="span-item">注册时间</span><span class="span-content">2016-03-24 13:05:25</span></li>
+								</ul>
+
+								<a href="javascript:;" class="btn btn-warning js-change-info-btn" data-toggle="modal" data-target="#changeInfoModal">修改</a>
 							</div>
+
+							<!-- 修改个人信息弹出层 begin -->
+							<div class="modal fade" id="changeInfoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title" id="myModalLabel">修改个人信息</h4>
+							         	</div>
+
+							         	<form action="" class="form form-horizontal info-form">
+								         	<div class="modal-body">
+							            		<ul>
+							            			<li>姓名：<input type="text" class="form-control" id="change_name" name="name" placeholder="请输入姓名" required></li>
+							            			<li>手机号码：<input type="tel" class="form-control" id="change_cellphone" name="cellphone"  placeholder="请输入手机号码"required ></li>
+							            			<li>支付宝账号：<input type="text" class="form-control" id="change_alipay" name="alipay"  placeholder="请输入支付宝账号" required></li>
+							            			<li>详细地址：<input type="text" class="form-control" id="change_address" name="address"  placeholder="请输入详细地址" required></li>
+							            		</ul>
+								         	</div>
+								         	<div class="modal-footer">
+								            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+								            	<button type="submit" class="btn btn-warning">保存修改</button>
+								         	</div>
+							         	</form>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 修改个人信息弹出层 end -->
 						</div>
 					</div>
 				</div>
-				<!-- 负责学校 end -->
+				<!-- 个人信息 end -->
 
 				<!-- 签单员管理 begin -->
 				<div class="main main-signer fn-hide" id="main_signer">
@@ -130,15 +145,12 @@
 									<i class="dropdown_arrow out"></i>
 									<i class="dropdown_arrow in"></i>
 									<dl class="help-change-list">
-										<dt>审核通过</dt>
-										<dd>区域经理对提交申请的签单员进行信息审核，符合要求的处理为审核通过</dd>
+										<dt>授权</dt>
+										<dd>区域经理对提交申请的签单员进行信息审核，符合要求的授予其面签的权限</dd>
 
-										<dt>审核不通过</dt>
-										<dd>区域经理对提交申请的签单员进行信息审核，不符合要求的处理为审核不通过</dd>
+										<dt>回收</dt>
+										<dd>一旦发现签单员出现违规行为，区域经理有权回收签单员的面签权限</dd>
 									</dl>
-									<div class="help-footer">
-										<p>12</p>
-									</div>
 								</div>
 							</div>
 						</h2>
@@ -159,32 +171,29 @@
 								<table class="table table-hover table-condensed">
 									<thead>
 										<tr>
-											<td width="13%">姓名</td>
-											<td width="19%">手机号码</td>
+											<td>姓名</td>
+											<td>手机号码</td>
 											<td>学校</td>
-											<td width="27%">预约时间</td>
-											<td width="90">操作</td>
+											<td width="60">操作</td>
 										</tr>
 									</thead>
 									<tr>
 										<td>成一通</td>
 										<td>15820216212</td>	
 										<td>广东工业大学</td>
-										<td>2016-03-18 10:05:26</td>
-										<td><span class="label label-primary">授权</span>&nbsp;<span class="label label-warning">详情</span></td>
+										<td><span class="label label-warning">授权</span></td>
 									</tr>
 									<tr>
 										<td>成一通</td>
 										<td>15820216212</td>	
 										<td>广东工业大学</td>
-										<td>2016-03-18 10:05:26</td>
-										<td><span class="label label-primary">授权</span>&nbsp;<span class="label label-warning">详情</span></td>
+										<td><span class="label label-warning">授权</span></td>
 									</tr>
 									<tr>
 										<td>成一通</td>
 										<td>15820216212</td>	
-										<td>广东工业大学</td><td>2016-03-18 10:05:26</td>
-										<td><span class="label label-primary" data-toggle="modal" data-target="#checkSignModal">授权</span>&nbsp;<span class="label label-warning" data-toggle="modal" data-target="#signDetailModal">详情</span></td>
+										<td>广东工业大学</td>
+										<td><span class="label label-warning">授权</span></td>
 									</tr>
 								</table>
 							</div>
@@ -268,8 +277,14 @@
 									<i class="dropdown_arrow out"></i>
 									<i class="dropdown_arrow in"></i>
 									<dl class="help-change-list">
-										<dt>每日业绩</dt>
-										<dd>每日业绩</dd>
+										<dt>付款单数</dt>
+										<dd>表示当前日期该区域经理所负责的所有签单员完成的付款订单数量</dd>
+
+										<dt>付款金额</dt>
+										<dd>表示当前日期该区域经理所负责的所有签单员完成的付款订单总金额</dd>
+
+										<dt>提成</dt>
+										<dd>表示当前日期该区域经理获得当天总付款金额的提成（1%）</dd>
 									</dl>
 									<div class="help-footer">
 										<p>输入相应的时间段获取业绩数据</p>
@@ -314,48 +329,6 @@
 									</tr>
 									<tr>
 										<td>2016-03-15</td>
-										<td>10</td>
-										<td>￥100.00</td>
-										<td>￥30.25</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
-									</tr>
-									<tr>
-										<td>2016-03-16</td>
-										<td>10</td>
-										<td>￥100.00</td>
-										<td>￥30.25</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
-									</tr>
-									<tr>
-										<td>2016-03-16</td>
-										<td>10</td>
-										<td>￥100.00</td>
-										<td>￥30.25</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
-									</tr>
-									<tr>
-										<td>2016-03-16</td>
-										<td>10</td>
-										<td>￥100.00</td>
-										<td>￥30.25</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
-									</tr>
-									<tr>
-										<td>2016-03-16</td>
-										<td>10</td>
-										<td>￥100.00</td>
-										<td>￥30.25</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
-									</tr>
-									<tr>
-										<td>2016-03-16</td>
-										<td>10</td>
-										<td>￥100.00</td>
-										<td>￥30.25</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
-									</tr>
-									<tr>
-										<td>2016-03-16</td>
 										<td>10</td>
 										<td>￥100.00</td>
 										<td>￥30.25</td>

@@ -218,6 +218,33 @@ table td span {
 	max-height: 400px;
 	overflow: auto;
 }
+.main .info-list {
+	margin: 50px auto;
+	width: 500px;
+	min-height: 400px;
+}
+.main .info-list ul li {
+	margin-bottom: 10px;
+}
+.main .info-list ul li span.span-item {
+	display: inline-block;
+	width: 100px;
+	vertical-align: top;
+}
+.main .info-list ul li span.span-content {
+	display: inline-block;
+	width: 400px;
+}
+.main .info-list .js-change-info-btn {
+	position: relative;
+	display: inline-block;
+	margin: 30px 200px 0;
+	width: 100px;
+}
+.main .info-form ul {
+	margin: 0 auto;
+	width: 60%;
+}
 /* main end */
 
 /* help begin */
@@ -548,6 +575,8 @@ button:disabled {
 	height: 34px;
 	line-height: 34px;
 	font-size: 14px;
+	color: #222;
+	text-decoration: none;
 }
 .title-tab ul li.active a,
 .title-tab ul li:hover a {
@@ -562,5 +591,9 @@ button:disabled {
 .modal-form ul li .form-control {
 	margin: 0 auto;
 	width: 200px;
+}
+
+.form ul li {
+	margin-bottom: 20px;
 }
 /* common end */
