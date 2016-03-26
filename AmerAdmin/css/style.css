@@ -213,8 +213,15 @@ table td span {
 	line-height: 75px;
 	font-weight: normal;
 }
+.main-hd h2 span.add-btn {
+	position: relative;
+	display: inline-block;
+	margin: 16px 20px 0 0;
+	float: right;
+}
 .main-bd {
 	padding-bottom: 30px;
+	min-height: 600px;
 }
 .content-wrap {
 	padding: 0 30px;

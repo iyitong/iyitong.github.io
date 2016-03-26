@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
 	<meta name="renderer" content="webkit">
-	<title>A梦分期 | 区域经理管理系统</title>
+	<title>A梦分期 | 内部管理员后台</title>
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 	<link rel="stylesheet" href="http://7xl6qe.com2.z0.glb.qiniucdn.com/css/bootstrap.min.css">
 	<link rel="stylesheet" href="http://7xl6qe.com2.z0.glb.qiniucdn.com/css/base.min.css">
@@ -29,7 +29,7 @@
 	<div class="head" id="header">
 		<div class="header-box">
 			<div class="inner container">
-				<h1><a href="javascript:;" title="A梦分期区域经理管理系统"><i class="logo"></i></a>A梦分期区域经理管理系统</h1>
+				<h1><a href="javascript:;" title="A梦分期内部管理员后台"><i class="logo"></i></a>A梦分期内部管理员后台</h1>
 				<div class="account">
 					<a href="javascript:;" class="nickname">昵称</a><a href="#" class="logout js-logout">退出</a>
 				</div>
@@ -47,31 +47,56 @@
 					<dl class="menu no-extra">
 						<dt class="menu-title"><i class="icon-menu" style="background:url(
 	        img/icon_menu_function.png
-	        ) no-repeat;"></i>个人中心</dt>
-						<dd class="menu-item"><a data-id="home" href="#home">个人信息</a></dd>
+	        ) no-repeat;"></i>商城管理</dt>
+						<dd class="menu-item"><a data-id="item_list" href="#item_list">商品列表</a></dd>
+						<dd class="menu-item"><a data-id="item_add" href="#item_add">添加商品</a></dd>
+						<dd class="menu-item"><a data-id="item_category" href="#item_category">商品分类</a></dd>
 					</dl>
+
 					<dl class="menu">
 						<dt class="menu-title"><i class="icon-menu" style="background:url(
         img/icon_menu_management.png
-        ) no-repeat;"></i>管理</dt>
-						<dd class="menu-item"><a data-id="signer" href="#signer">签单员管理</a></dd>
+        ) no-repeat;"></i>订单管理</dt>
+				        <dd class="menu-item"><a data-id="order_list" href="#order_list">订单列表</a></dd>
+						<dd class="menu-item"><a data-id="order_allocation" href="#order_allocation">订单分配</a></dd>
+						<dd class="menu-item"><a data-id="order_review" href="#order_review">订单审核</a></dd>
+						<dd class="menu-item"><a data-id="order_send" href="#order_send">发货管理</a></dd>
 					</dl>
+
+					<dl class="menu">
+						<dt class="menu-title"><i class="icon-menu" style="background:url(
+        img/icon_menu_developer.png
+        ) no-repeat;"></i>账单管理</dt>
+						<dd class="menu-item"><a data-id="bill_due" href="#bill_due">到期账单</a></dd>
+						<dd class="menu-item"><a data-id="bill_exception" href="#bill_exception">异常账单</a></dd>
+					</dl>
+
 					<dl class="menu">
 						<dt class="menu-title"><i class="icon-menu" style="background:url(
 	        img/icon_menu_statistics.png
-	        ) no-repeat;"></i>统计</dt>
+	        ) no-repeat;"></i>订单统计</dt>
 						<dd class="menu-item"><a data-id="achievement" href="#achievement">每日业绩</a></dd>
 					</dl>
+
+					<dl class="menu">
+						<dt class="menu-title"><i class="icon-menu" style="background:url(
+        img/icon_menu_setup.png
+        ) no-repeat;"></i>超级管理员</dt>
+						<dd class="menu-item"><a data-id="school" href="#school">学校管理</a></dd>
+						<dd class="menu-item"><a data-id="area" href="#area">区域经理管理</a></dd>
+						<dd class="menu-item"><a data-id="admin" href="#admin">管理员设置</a></dd>
+					</dl>
+
 				</div>
 			</div>
 			<!-- side end -->
 
 			<!-- main begin -->
 			<div class="col-main">
-				<!-- 个人信息 begin -->
-				<div class="main main-home fn-hide" id="main_home">
+				<!-- 商品列表 begin -->
+				<div class="main main-item fn-hide" id="main_item_list">
 					<div class="main-hd">
-						<h2>个人信息
+						<h2>商品列表
 							<div class="help">
 								<i class="help-icon"></i>
 								<div class="help_content">
@@ -134,23 +159,21 @@
 						</div>
 					</div>
 				</div>
-				<!-- 个人信息 end -->
+				<!-- 商品列表 end -->
 
-				<!-- 签单员管理 begin -->
-				<div class="main main-signer fn-hide" id="main_signer">
+
+				<!-- 添加商品 begin -->
+				<div class="main main-item fn-hide" id="main_add_item">
 					<div class="main-hd">
-						<h2>签单员管理
+						<h2>添加商品
 							<div class="help">
 								<i class="help-icon"></i>
 								<div class="help_content">
 									<i class="dropdown_arrow out"></i>
 									<i class="dropdown_arrow in"></i>
 									<dl class="help-change-list">
-										<dt>授权</dt>
-										<dd>区域经理对提交申请的签单员进行信息审核，符合要求的授予其面签的权限</dd>
-
-										<dt>回收</dt>
-										<dd>一旦发现签单员出现违规行为，区域经理有权回收签单员的面签权限</dd>
+										<dt>个人中心</dt>
+										<dd>区域经理可以修改个人的姓名、手机号码、支付宝账号以及详细地址。如果忘记密码，请在登录页面找回！</dd>
 									</dl>
 								</div>
 							</div>
@@ -158,334 +181,297 @@
 					</div>
 
 					<div class="main-bd">
-						<!-- 导航菜单 begin -->
-						<div class="title-tab" id="js_topTab">
-							<ul class="tab-nav">
-								<li class="active"><a href="javascript:;" data-state="0" onclick="singerTab(this);">未授权</a></li>
-								<li><a href="javascript:;" data-state="1" onclick="singerTab(this);">已授权</a></li>
-							</ul>
-						</div>
-						<!-- 导航菜单 end -->
-
 						<div class="content-wrap">
-							<div class="list signer-list" id="signer_list">
-								<table class="table table-hover table-condensed">
-									<thead>
-										<tr>
-											<td>姓名</td>
-											<td>手机号码</td>
-											<td>学校</td>
-											<td width="60">操作</td>
-										</tr>
-									</thead>
-									<tr>
-										<td>成一通</td>
-										<td>15820216212</td>	
-										<td>广东工业大学</td>
-										<td><span class="label label-warning">授权</span></td>
-									</tr>
-									<tr>
-										<td>成一通</td>
-										<td>15820216212</td>	
-										<td>广东工业大学</td>
-										<td><span class="label label-warning">授权</span></td>
-									</tr>
-									<tr>
-										<td>成一通</td>
-										<td>15820216212</td>	
-										<td>广东工业大学</td>
-										<td><span class="label label-warning">授权</span></td>
-									</tr>
-								</table>
-							</div>
-
-							<!-- 详情弹出层 begin -->
-							<div class="modal fade" id="signDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-							   	<div class="modal-dialog">
-							      	<div class="modal-content">
-							         	<div class="modal-header">
-							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-							            	<h4 class="modal-title" id="myModalLabel">签单员详细信息</h4>
-							         	</div>
-							         	<div class="modal-body">
-							            	<div class="sign-info">
-							            	    <p>合同编号：<strong>1000234326</strong></p>
-							            	    <h4>个人信息</h4>
-							            		<ul>
-							            			<li><span>姓名：</span>成一通</li>
-							            			<li><span>性别：</span>男</li>
-							            			<li><span>电话：</span>15820216212</li>
-							            			<li><span>支付宝：</span>15820216212</li>
-							            			<li><span>QQ：</span>568480291</li>
-							            			<li><span>地址：</span>广东工业大学大学城校区东五714</li>
-							            		</ul>
-
-							            		<h4>教育信息</h4>
-							            		<ul>
-							            			<li><span>学校：</span>广东工业大学</li>
-							            			<li><span>院系：</span>机电工程学院</li>
-							            			<li><span>专业班级：</span>数字媒体技术专业10级2班</li>
-							            			<li><span>学号：</span>3110000759</li>
-							            			<li><span>入学时间：</span>2010-09</li>
-							            			<li><span>毕业时间：</span>2014-06</li>
-							            			<li><span>学历：</span>本科</li>
-							            			<li><span>学制：</span>四年</li>
-							            		</ul>
-
-							            		<h4>联系人信息</h4>
-							            		<ul>
-							            			<li><span>紧急联系人姓名：</span>成一通</li>
-							            			<li><span>紧急联系人电话</span>15820216212</li>
-							            			<li><span>父/母姓名：</span>成金传</li>
-							            			<li><span>父/母电话：</span>15820216212</li>
-							            			<li><span>辅导员姓名：</span>雷松群</li>
-							            			<li><span>辅导员电话：</span>13456435343</li>
-							            			<li><span>舍友姓名：</span>雷松群</li>
-							            			<li><span>舍友电话：</span>17847364756</li>
-							            		</ul>
-
-							            		<h4>照片信息</h4>
-							            		<ul>
-							            			<li><p>身份证正反面照片：</p><a href="img/pic1.png" target="_blank"><img src="img/pic1.png" alt="身份证正反面照片" width="50%"></a></li>
-							            			<li><p>用户手持身份证和协议表合照：</p><a href="img/pic1.png" target="_blank"><img src="img/pic1.png" alt="用户手持身份证和协议表合照" width="50%"></a></li>
-							            			<li><p>学信网/教务网/学费单照片：</p><a href="img/pic1.png" target="_blank"><img src="img/pic1.png" alt="学信网/教务网/学费单照片" width="50%"></a></li>
-							            		</ul>
-
-							            		<h4>审核状态</h4>
-							            		<p><span>审核不通过</span>，原因：身份证信息与其他资料不一致</p>
-							            	</div>
-							         	</div>
-							         	<div class="modal-footer">
-							            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-							         	</div>
-							      	</div>
-						      	</div>
-							</div>
-							<!-- 详情弹出层 end -->
-
-							<!-- 分页 -->
-							<div class="kkpager" id="signer_kkpager"></div>
+							<form action="" class="form form-horizontal">
+								<ul>
+									<li><span>商品名称：</span><input type="text" class="form-control" placeholder="请输入商品名称" required></li>
+									<li><span>商品名称：</span><input type="text" class="form-control" placeholder="请输入商品名称" required></li>
+									<li><span>商品名称：</span><input type="text" class="form-control" placeholder="请输入商品名称" required></li>
+									<li><span>商品名称：</span><input type="text" class="form-control" placeholder="请输入商品名称" required></li>
+									<li><span>商品名称：</span><input type="text" class="form-control" placeholder="请输入商品名称" required></li>
+									<li><span>商品名称：</span><input type="text" class="form-control" placeholder="请输入商品名称" required></li>
+								</ul>
+							</form>
 						</div>
 					</div>
 				</div>
-				<!-- 签单员管理 end -->
+				<!-- 添加商品 end -->
 
-				<!-- 每日业绩 begin -->
-				<div class="main main-achievement fn-hide" id="main_achievement">
+
+				<!-- 学校管理 begin -->
+				<div class="main main-school fn-hide" id="main_school">
 					<div class="main-hd">
-						<h2>每日业绩
+						<h2>学校管理
 							<div class="help">
 								<i class="help-icon"></i>
 								<div class="help_content">
 									<i class="dropdown_arrow out"></i>
 									<i class="dropdown_arrow in"></i>
 									<dl class="help-change-list">
-										<dt>付款单数</dt>
-										<dd>表示当前日期该区域经理所负责的所有签单员完成的付款订单数量</dd>
-
-										<dt>付款金额</dt>
-										<dd>表示当前日期该区域经理所负责的所有签单员完成的付款订单总金额</dd>
-
-										<dt>提成</dt>
-										<dd>表示当前日期该区域经理获得当天总付款金额的提成（1%）</dd>
+										<dt>学校管理</dt>
+										<dd>超级管理员可对学校进行添加、编辑及删除</dd>
 									</dl>
+								</div>
+							</div>
+
+							<span class="btn btn-warning add-btn" data-toggle="modal" data-target="#addSchoolModal">添加学校</span>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<div class="content-wrap">
+							<div class="list school-list" id="school_list">
+								<table class="table table-hover table-condensed">
+									<thead>
+										<tr>
+											<td>学校名称</td>
+											<td>学校地址</td>
+											<td width="95">操作</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>广东工业大学</td>
+										<td>广州大学城外环西路100号</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#addSchoolModal">编辑</span>&nbsp;<span class="label label-danger">删除</span></td>
+									</tr>
+									<tr>
+										<td>广东工业大学</td>
+										<td>广州大学城外环西路100号</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#addSchoolModal">编辑</span>&nbsp;<span class="label label-danger">删除</span></td>
+									</tr>
+									<tr>
+										<td>广东工业大学</td>
+										<td>广州大学城外环西路100号</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#addSchoolModal">编辑</span>&nbsp;<span class="label label-danger">删除</span></td>
+									</tr>
+								</table>
+							</div>
+
+							<!-- 添加学校弹出层 begin -->
+							<div class="modal fade" id="addSchoolModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title" id="myModalLabel">添加学校</h4>
+							         	</div>
+
+							         	<form action="" class="form form-horizontal info-form">
+								         	<div class="modal-body">
+							            		<ul>
+							            			<li>学校名称：<input type="text" class="form-control" id="school_name" name="name" placeholder="请输入学校名称" required></li>
+							            			<li>学校地址：<input type="text" class="form-control" id="school_address" name="address"  placeholder="请输入学校详细地址"required ></li>
+							            		</ul>
+								         	</div>
+								         	<div class="modal-footer">
+								            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+								            	<button type="submit" class="btn btn-warning" id="add_school_btn">添加</button>
+								         	</div>
+							         	</form>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 添加学校弹出层 end -->
+						</div>
+					</div>
+				</div>
+				<!-- 学校管理 end -->
+
+				<!-- 区域经理管理 begin -->
+				<div class="main main-area fn-hide" id="main_area">
+					<div class="main-hd">
+						<h2>区域经理管理
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt>账户状态</dt>
+										<dd>账户状态分为：待审核、正常、已冻结；超级管理员可冻结或解冻区域经理账户</dd>
+
+										<dt>分配学校</dt>
+										<dd>超级管理员根据实际运营情况，为区域经理分配相应的学校；学校的签单员将归该区域经理管理</dd>
+									</dl>
+								</div>
+							</div>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<div class="content-wrap">
+							<div class="list area-list" id="area_list">
+								<table class="table table-hover table-condensed">
+									<thead>
+										<tr>
+											<td width="160">账户邮箱</td>
+											<td width="65">姓名</td>
+											<td width="100">手机号码</td>
+											<td width="110">支付宝账号</td>
+											<td>详细地址</td>
+											<td>负责学校</td>
+											<td width="60">状态</td>
+											<td width="50">操作</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>568480291@qq.com</td>
+										<td>静风</td>
+										<td>15820232123</td>
+										<td>15820232123</td>
+										<td>广东省广州市广州大学城广东工业大学</td>
+										<td>广东工业大学、广州美术学院</td>
+										<td><span class="label label-primary">待审核</span></td>
+										<td><span class="label label-warning">通过</span></td>
+									</tr>
+
+									<tr>
+										<td>1491961179@qq.com</td>
+										<td>孙伟博</td>
+										<td>15820232123</td>
+										<td>15820232123</td>
+										<td>广东省广州市广州大学城广东工业大学</td>
+										<td>广东工业大学、广州美术学院</td>
+										<td><span class="label label-danger">已冻结</span></td>
+										<td><span class="label label-success">解冻</span></td>
+									</tr>
+
+									<tr>
+										<td>568480291@qq.com</td>
+										<td>静风</td>
+										<td>15820232123</td>
+										<td>15820232123</td>
+										<td>广东省广州市广州大学城广东工业大学</td>
+										<td>--</td>
+										<td><span class="label label-success">正常</span></td>
+										<td><span class="label label-danger">冻结</span></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 区域经理管理 end -->
+
+				<!-- 管理员设置 begin -->
+				<div class="main main-admin fn-hide" id="main_admin">
+					<div class="main-hd">
+						<h2>内部管理员
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt>超级管理员</dt>
+										<dd>拥有该系统所有权限</dd>
+
+										<dt>运营组</dt>
+										<dd>拥有商城管理权限：商品的添加、查看、上架、下架、编辑；商品分类的添加、查看、编辑、删除</dd>
+
+										<dt>风控组组长</dt>
+										<dd>拥有订单分配权限：把订单分配给相应的风控组成员</dd>
+
+										<dt>风控组成员</dt>
+										<dd>拥有订单审核权限：对风控组组长分配的订单进行审核</dd>
+
+										<dt>财务组</dt>
+										<dd>拥有订单发货管理权限：风控组审核通过后，财务组负责根据订单类型进行打款或者发货</dd>
+
+										<dt>催收组</dt>
+										<dd>拥有处理异常订单、还款跟踪管理的权限</dd>
+									</dl>
+
 									<div class="help-footer">
-										<p>选择相应的时间段获取业绩数据</p>
+										<p>权限说明</p>
 									</div>
 								</div>
 							</div>
+
+							<span class="btn btn-warning add-btn" data-toggle="modal" data-target="#addAdminModal">添加管理员</span>
 						</h2>
 					</div>
 
 					<div class="main-bd">
 						<div class="content-wrap">
-							<form action="" class="form form-inline">
-								<input type="date" class="form-control" id="beginTime">
-								<input type="date" class="form-control" id="endTime">
-								<button class="btn btn-warning" type="button">查询</button>
-							</form>
-
-							<div class="list achievement-list" id="achievement_list">
+							<div class="list school-list" id="school_list">
 								<table class="table table-hover table-condensed">
 									<thead>
 										<tr>
-											<td>日期</td>
-											<td>付款单数</td>
-											<td>付款金额</td>
-											<td>提成</td>
-											<td width="80">明细</td>
+											<td>账户</td>
+											<td>角色</td>
+											<td>备注</td>
+											<td width="120">操作</td>
 										</tr>
 									</thead>
 									<tr>
-										<td>2016-03-13</td>
-										<td>10</td>
-										<td>￥100.00</td>
-										<td>￥30.25</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
+										<td>静风</td>
+										<td>超级管理员</td>
+										<td>11</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#updatePwdModal">修改密码</span>&nbsp;<span class="label label-danger">删除</span></td>
 									</tr>
 									<tr>
-										<td>2016-03-14</td>
-										<td>10</td>
-										<td>￥100.00</td>
-										<td>￥30.25</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
+										<td>大牛</td>
+										<td>运营组</td>
+										<td>11</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#updatePwdModal">修改密码</span>&nbsp;<span class="label label-danger">删除</span></td>
 									</tr>
 									<tr>
-										<td>2016-03-15</td>
-										<td>10</td>
-										<td>￥100.00</td>
-										<td>￥30.25</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
+										<td>李四</td>
+										<td>风控组组长</td>
+										<td>11</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#updatePwdModal">修改密码</span>&nbsp;<span class="label label-danger">删除</span></td>
 									</tr>
 									<tr>
-										<td>2016-03-16</td>
-										<td>10</td>
-										<td>￥100.00</td>
-										<td>￥30.25</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
+										<td>张三</td>
+										<td>风控组成员</td>
+										<td>11</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#updatePwdModal">修改密码</span>&nbsp;<span class="label label-danger">删除</span></td>
 									</tr>
 									<tr>
-										<td>2016-03-16</td>
-										<td>10</td>
-										<td>￥100.00</td>
-										<td>￥30.25</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
+										<td>小红</td>
+										<td>财务组</td>
+										<td>11</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#updatePwdModal">修改密码</span>&nbsp;<span class="label label-danger">删除</span></td>
 									</tr>
 									<tr>
-										<td>2016-03-16</td>
-										<td>10</td>
-										<td>￥100.00</td>
-										<td>￥30.25</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
-									</tr>
-									<tr>
-										<td>2016-03-16</td>
-										<td>10</td>
-										<td>￥100.00</td>
-										<td>￥30.25</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
+										<td>小明</td>
+										<td>催收组</td>
+										<td>11</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#updatePwdModal">修改密码</span>&nbsp;<span class="label label-danger">删除</span></td>
 									</tr>
 								</table>
 							</div>
 
-							<!-- 业绩明细弹出层 begin -->
-							<div class="modal fade" id="achievementDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<!-- 添加管理员弹出层 begin -->
+							<div class="modal fade" id="addAdminModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 							   	<div class="modal-dialog">
 							      	<div class="modal-content">
 							         	<div class="modal-header">
 							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-							            	<h4 class="modal-title" id="myModalLabel">业绩明细</h4>
+							            	<h4 class="modal-title" id="myModalLabel">添加管理员</h4>
 							         	</div>
-							         	<div class="modal-body">
-							            	<div class="list achievement-detail" id="achieve_detail">
-							            		<table class="table table-hover table-condensed">
-							            			<thead>
-							            				<tr>
-							            					<td>学校</td>
-							            					<td>付款单数</td>
-							            					<td>付款金额</td>
-							            					<td>提成</td>
-							            				</tr>
-							            			</thead>
-							            			<tr>
-							            				<td>广东工业大学</td>
-							            				<td>10</td>
-							            				<td>￥60.00</td>
-							            				<td>￥5.00</td>
-							            			</tr>
-							            			<tr>
-							            				<td>广州大学</td>
-							            				<td>10</td>
-							            				<td>￥60.00</td>
-							            				<td>￥5.00</td>
-							            			</tr>
-							            			<tr>
-							            				<td>华南理工大学</td>
-							            				<td>10</td>
-							            				<td>￥60.00</td>
-							            				<td>￥5.00</td>
-							            			</tr>
-							            			<tr>
-							            				<td>中山大学</td>
-							            				<td>10</td>
-							            				<td>￥60.00</td>
-							            				<td>￥5.00</td>
-							            			</tr>
-							            			<tr>
-							            				<td>广州美术学院</td>
-							            				<td>10</td>
-							            				<td>￥60.00</td>
-							            				<td>￥5.00</td>
-							            			</tr>
-							            			<tr>
-							            				<td>广州美术学院</td>
-							            				<td>10</td>
-							            				<td>￥60.00</td>
-							            				<td>￥5.00</td>
-							            			</tr>
-							            			<tr>
-							            				<td>广州美术学院</td>
-							            				<td>10</td>
-							            				<td>￥60.00</td>
-							            				<td>￥5.00</td>
-							            			</tr>
-							            			<tr>
-							            				<td>广州美术学院</td>
-							            				<td>10</td>
-							            				<td>￥60.00</td>
-							            				<td>￥5.00</td>
-							            			</tr>
-							            			<tr>
-							            				<td>广州美术学院</td>
-							            				<td>10</td>
-							            				<td>￥60.00</td>
-							            				<td>￥5.00</td>
-							            			</tr>
-							            			<tr>
-							            				<td>广州美术学院</td>
-							            				<td>10</td>
-							            				<td>￥60.00</td>
-							            				<td>￥5.00</td>
-							            			</tr>
-							            			<tr>
-							            				<td>广州美术学院</td>
-							            				<td>10</td>
-							            				<td>￥60.00</td>
-							            				<td>￥5.00</td>
-							            			</tr>
-							            			<tr>
-							            				<td>广州美术学院</td>
-							            				<td>10</td>
-							            				<td>￥60.00</td>
-							            				<td>￥5.00</td>
-							            			</tr>
-							            			<tr>
-							            				<td>广州美术学院</td>
-							            				<td>10</td>
-							            				<td>￥60.00</td>
-							            				<td>￥5.00</td>
-							            			</tr>
-							            			<tr>
-							            				<td>广州美术学院</td>
-							            				<td>10</td>
-							            				<td>￥60.00</td>
-							            				<td>￥5.00</td>
-							            			</tr>
-							            		</table>
-							            	</div>
-							         	</div>
-							         	<div class="modal-footer">
-							            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-							         	</div>
+
+							         	<form action="" class="form form-horizontal info-form">
+								         	<div class="modal-body">
+							            		<ul>
+							            			<li>学校名称：<input type="text" class="form-control" id="school_name" name="name" placeholder="请输入学校名称" required></li>
+							            			<li>学校地址：<input type="text" class="form-control" id="school_address" name="address"  placeholder="请输入学校详细地址"required ></li>
+							            		</ul>
+								         	</div>
+								         	<div class="modal-footer">
+								            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+								            	<button type="submit" class="btn btn-warning" id="add_school_btn">添加</button>
+								         	</div>
+							         	</form>
 							      	</div>
 						      	</div>
 							</div>
-							<!-- 业绩明细弹出层 end -->
+							<!-- 添加管理员弹出层 end -->
 						</div>
 					</div>
 				</div>
-				<!-- 每日业绩 end -->
-
+				<!-- 管理员设置 end -->
 
 			</div>
 			<!-- main end -->

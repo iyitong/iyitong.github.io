@@ -23,17 +23,15 @@ function isLogin() {
 
 // 主页菜单栏切换
 function tab(data_id) {
-	var $item = $('.menu-item a'),
-		$main = $('.main');
+	var $item = $('.menu-item a');
 	for (var i = 0, len = $item.length; i < len; i++) {
 		$item.eq(i).parent().removeClass('active');
-		$main.eq(i).addClass('fn-hide');
 
 		var data_id_i = $item.eq(i).attr('data-id');
 
 		if (data_id == data_id_i) {
 			$item.eq(i).parent().addClass('active');
-			$main.eq(i).removeClass('fn-hide');
+			$('#main_' + data_id).removeClass('fn-hide').siblings('.main').addClass('fn-hide');
 		}
 	}
 		
@@ -67,7 +65,7 @@ $(function(){
 		hash_r = hash.substring(1, hash_len);
 
 	if (hash_r == '') {
-		hash_r = 'home';
+		hash_r = 'item_list';
 	}
 	tab(hash_r);
 
