@@ -5,10 +5,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
 	<meta name="renderer" content="webkit">
-	<title>A梦分期 | 内部管理系统</title>
+	<title>A梦分期 | 区域经理管理系统</title>
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/base.min.css">
+	<link rel="stylesheet" href="http://7xl6qe.com2.z0.glb.qiniucdn.com/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://7xl6qe.com2.z0.glb.qiniucdn.com/css/base.min.css">
 	<!-- 如果是IE6打开，在顶部出现小黄条进行提醒 -->
 	<!--[if lt IE 7]>
 	<div style="position:absoulute;left:0;top:0;width:100%;height:50px;background:rgb(255,255,233);color:rgb(30,84,148);border-bottom:1px solid rgb(230,230,198);text-align:center;line-height:50px;font-size:12px;">您使用的浏览器版本过低，可能会影响到您浏览本网页，建议您升级您的浏览器。</div>
@@ -19,8 +19,8 @@
     <![endif]-->
 
 	<!-- 分页 -->
-	<script type="text/javascript" src="libs/kkpager.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/kkpager_orange.min.css">
+	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/kkpager.min.js"></script>
+	<link rel="stylesheet" href="http://7xl6qe.com2.z0.glb.qiniucdn.com/css/kkpager_orange.min.css">
 	
 	<link rel="stylesheet" href="css/style.css">
 </head>
@@ -29,9 +29,9 @@
 	<div class="head" id="header">
 		<div class="header-box">
 			<div class="inner container">
-				<h1><a href="javascript:;" title="A梦分期区域经理管理系统"><i class="logo"></i></a>A梦分期内部管理系统</h1>
+				<h1><a href="javascript:;" title="A梦分期区域经理管理系统"><i class="logo"></i></a>A梦分期区域经理管理系统</h1>
 				<div class="account">
-					<a href="javascript:;" class="nickname">昵称</a><a href="#" class="logout" id="logout">退出</a>
+					<a href="javascript:;" class="nickname">昵称</a><a href="#" class="logout js-logout">退出</a>
 				</div>
 			</div>
 		</div>
@@ -47,14 +47,8 @@
 					<dl class="menu no-extra">
 						<dt class="menu-title"><i class="icon-menu" style="background:url(
 	        img/icon_menu_function.png
-	        ) no-repeat;"></i>订单管理</dt>
-						<dd class="menu-item"><a data-id="home" href="#home">订单管理</a></dd>
-					</dl>
-					<dl class="menu">
-						<dt class="menu-title"><i class="icon-menu" style="background:url(
-        img/icon_menu_management.png
-        ) no-repeat;"></i>商城管理</dt>
-						<dd class="menu-item"><a data-id="signer" href="#signer">商品列表</a></dd>
+	        ) no-repeat;"></i>个人中心</dt>
+						<dd class="menu-item"><a data-id="home" href="#home">个人信息</a></dd>
 					</dl>
 					<dl class="menu">
 						<dt class="menu-title"><i class="icon-menu" style="background:url(
@@ -74,18 +68,18 @@
 
 			<!-- main begin -->
 			<div class="col-main">
-				<!-- 负责学校 begin -->
+				<!-- 个人信息 begin -->
 				<div class="main main-home fn-hide" id="main_home">
 					<div class="main-hd">
-						<h2>负责学校
+						<h2>个人信息
 							<div class="help">
 								<i class="help-icon"></i>
 								<div class="help_content">
 									<i class="dropdown_arrow out"></i>
 									<i class="dropdown_arrow in"></i>
 									<dl class="help-change-list">
-										<dt>什么是负责学校</dt>
-										<dd>区域经理负责的学校由A梦分期总部管理员分配，区域经理可以管理其负责学校的所有签单员</dd>
+										<dt>个人中心</dt>
+										<dd>区域经理可以修改个人的姓名、手机号码、支付宝账号以及详细地址。如果忘记密码，请在登录页面找回！</dd>
 									</dl>
 								</div>
 							</div>
@@ -94,37 +88,53 @@
 
 					<div class="main-bd">
 						<div class="content-wrap">
-							<div class="list school-list" id="school_list">
-								<table class="table table-hover table-condensed">
-									<thead>
-										<tr>
-											<td>学校名称</td>
-										</tr>
-									</thead>
-									<tr>
-										<td>广东工业大学</td>
-									</tr>
-									<tr>
-										<td>广东工业大学</td>
-									</tr>
-									<tr>
-										<td>广东工业大学</td>
-									</tr>
-									<tr>
-										<td>广东工业大学</td>
-									</tr>
-									<tr>
-										<td>广东工业大学</td>
-									</tr>
-									<tr>
-										<td>广东工业大学</td>
-									</tr>
-								</table>
+							<div class="info-list" id="">
+								<ul>
+									<li><span class="span-item">邮箱</span><span class="span-content" id="email">568480291@qq.com</span></li>
+									<li><span class="span-item">姓名</span><span class="span-content" id="name">成一通</span></li>
+									<li><span class="span-item">手机号码</span><span class="span-content" id="cellphone">15820216212</span></li>
+									<li><span class="span-item">支付宝账号</span><span class="span-content" id="alipay">15820216212</span></li>
+									<li><span class="span-item">账户余额</span><span class="span-content" id="money">￥1,0000</span></li>
+									<li><span class="span-item">详细地址</span><span class="span-content" id="address">广东省广州市大学城东三路国家数字家庭基地东区B239</span></li>
+									<li><span class="span-item">负责学校列表</span><span class="span-content" id="schools">广东工业大学、广州大学、中山大学、广东外语外贸大学、华南师范大学</span></li>
+									<li><span class="span-item">注册时间</span><span class="span-content" id="addTime">2016-03-24 13:05:25</span></li>
+									<li><span class="span-item">账户状态</span><span class="span-content" id="state"><em class="label label-success">正常</em></span></li>
+								</ul>
+
+								<span class="btn btn-warning js-change-info-btn" data-toggle="modal" data-target="#changeInfoModal">修改</span>
 							</div>
+
+							<!-- 修改个人信息弹出层 begin -->
+							<div class="modal fade" id="changeInfoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title" id="myModalLabel">修改个人信息</h4>
+							         	</div>
+
+							         	<form action="" class="form form-horizontal info-form">
+								         	<div class="modal-body">
+							            		<ul>
+							            			<li>姓名：<input type="text" class="form-control" id="change_name" name="name" placeholder="请输入姓名" required></li>
+							            			<li>手机号码：<input type="tel" class="form-control" id="change_cellphone" name="cellphone"  placeholder="请输入手机号码"required ></li>
+							            			<li>支付宝账号：<input type="text" class="form-control" id="change_alipay" name="alipay"  placeholder="请输入支付宝账号" required></li>
+							            			<li>详细地址：<input type="text" class="form-control" id="change_address" name="address"  placeholder="请输入详细地址" required></li>
+							            		</ul>
+								         	</div>
+								         	<div class="modal-footer">
+								            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+								            	<button type="button" class="btn btn-warning" id="change_info_btn" onclick="changePersonalInfo();">保存修改</button>
+								         	</div>
+							         	</form>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 修改个人信息弹出层 end -->
 						</div>
 					</div>
 				</div>
-				<!-- 负责学校 end -->
+				<!-- 个人信息 end -->
 
 				<!-- 签单员管理 begin -->
 				<div class="main main-signer fn-hide" id="main_signer">
@@ -136,15 +146,12 @@
 									<i class="dropdown_arrow out"></i>
 									<i class="dropdown_arrow in"></i>
 									<dl class="help-change-list">
-										<dt>审核通过</dt>
-										<dd>区域经理对提交申请的签单员进行信息审核，符合要求的处理为审核通过</dd>
+										<dt>授权</dt>
+										<dd>区域经理对提交申请的签单员进行信息审核，符合要求的授予其面签的权限</dd>
 
-										<dt>审核不通过</dt>
-										<dd>区域经理对提交申请的签单员进行信息审核，不符合要求的处理为审核不通过</dd>
+										<dt>回收</dt>
+										<dd>一旦发现签单员出现违规行为，区域经理有权回收签单员的面签权限</dd>
 									</dl>
-									<div class="help-footer">
-										<p>12</p>
-									</div>
 								</div>
 							</div>
 						</h2>
@@ -154,8 +161,8 @@
 						<!-- 导航菜单 begin -->
 						<div class="title-tab" id="js_topTab">
 							<ul class="tab-nav">
-								<li class="active"><a href="javascript:;">未授权</a></li>
-								<li><a href="javascript:;">已授权</a></li>
+								<li class="active"><a href="javascript:;" data-state="0" onclick="singerTab(this);">未授权</a></li>
+								<li><a href="javascript:;" data-state="1" onclick="singerTab(this);">已授权</a></li>
 							</ul>
 						</div>
 						<!-- 导航菜单 end -->
@@ -165,32 +172,29 @@
 								<table class="table table-hover table-condensed">
 									<thead>
 										<tr>
-											<td width="13%">姓名</td>
-											<td width="19%">手机号码</td>
+											<td>姓名</td>
+											<td>手机号码</td>
 											<td>学校</td>
-											<td width="27%">预约时间</td>
-											<td width="90">操作</td>
+											<td width="60">操作</td>
 										</tr>
 									</thead>
 									<tr>
 										<td>成一通</td>
 										<td>15820216212</td>	
 										<td>广东工业大学</td>
-										<td>2016-03-18 10:05:26</td>
-										<td><span class="label label-primary">授权</span>&nbsp;<span class="label label-warning">详情</span></td>
+										<td><span class="label label-warning">授权</span></td>
 									</tr>
 									<tr>
 										<td>成一通</td>
 										<td>15820216212</td>	
 										<td>广东工业大学</td>
-										<td>2016-03-18 10:05:26</td>
-										<td><span class="label label-primary">授权</span>&nbsp;<span class="label label-warning">详情</span></td>
+										<td><span class="label label-warning">授权</span></td>
 									</tr>
 									<tr>
 										<td>成一通</td>
 										<td>15820216212</td>	
-										<td>广东工业大学</td><td>2016-03-18 10:05:26</td>
-										<td><span class="label label-primary" data-toggle="modal" data-target="#checkSignModal">授权</span>&nbsp;<span class="label label-warning" data-toggle="modal" data-target="#signDetailModal">详情</span></td>
+										<td>广东工业大学</td>
+										<td><span class="label label-warning">授权</span></td>
 									</tr>
 								</table>
 							</div>
@@ -259,6 +263,8 @@
 							</div>
 							<!-- 详情弹出层 end -->
 
+							<!-- 分页 -->
+							<div class="kkpager" id="signer_kkpager"></div>
 						</div>
 					</div>
 				</div>
@@ -274,11 +280,17 @@
 									<i class="dropdown_arrow out"></i>
 									<i class="dropdown_arrow in"></i>
 									<dl class="help-change-list">
-										<dt>每日业绩</dt>
-										<dd>每日业绩</dd>
+										<dt>付款单数</dt>
+										<dd>表示当前日期该区域经理所负责的所有签单员完成的付款订单数量</dd>
+
+										<dt>付款金额</dt>
+										<dd>表示当前日期该区域经理所负责的所有签单员完成的付款订单总金额</dd>
+
+										<dt>提成</dt>
+										<dd>表示当前日期该区域经理获得当天总付款金额的提成（1%）</dd>
 									</dl>
 									<div class="help-footer">
-										<p>输入相应的时间段获取业绩数据</p>
+										<p>选择相应的时间段获取业绩数据</p>
 									</div>
 								</div>
 							</div>
@@ -288,9 +300,9 @@
 					<div class="main-bd">
 						<div class="content-wrap">
 							<form action="" class="form form-inline">
-								<input type="date" class="form-control">
-								<input type="date" class="form-control">
-								<button class="btn btn-warning">查询</button>
+								<input type="date" class="form-control" id="beginTime">
+								<input type="date" class="form-control" id="endTime">
+								<button class="btn btn-warning" type="button">查询</button>
 							</form>
 
 							<div class="list achievement-list" id="achievement_list">
@@ -320,48 +332,6 @@
 									</tr>
 									<tr>
 										<td>2016-03-15</td>
-										<td>10</td>
-										<td>￥100.00</td>
-										<td>￥30.25</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
-									</tr>
-									<tr>
-										<td>2016-03-16</td>
-										<td>10</td>
-										<td>￥100.00</td>
-										<td>￥30.25</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
-									</tr>
-									<tr>
-										<td>2016-03-16</td>
-										<td>10</td>
-										<td>￥100.00</td>
-										<td>￥30.25</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
-									</tr>
-									<tr>
-										<td>2016-03-16</td>
-										<td>10</td>
-										<td>￥100.00</td>
-										<td>￥30.25</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
-									</tr>
-									<tr>
-										<td>2016-03-16</td>
-										<td>10</td>
-										<td>￥100.00</td>
-										<td>￥30.25</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
-									</tr>
-									<tr>
-										<td>2016-03-16</td>
-										<td>10</td>
-										<td>￥100.00</td>
-										<td>￥30.25</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
-									</tr>
-									<tr>
-										<td>2016-03-16</td>
 										<td>10</td>
 										<td>￥100.00</td>
 										<td>￥30.25</td>
@@ -511,8 +481,6 @@
 						      	</div>
 							</div>
 							<!-- 业绩明细弹出层 end -->
-
-							<div class="kkpager" id="kkpager">111</div>
 						</div>
 					</div>
 				</div>
@@ -531,10 +499,13 @@
 	</div>
 	<!-- footer end -->
 
-	<script src="libs/jquery-1.11.1.min.js"></script>
-	<script src="libs/jquery.form.min.js"></script>
-	<script src="libs/bootstrap.min.js"></script>
+	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/jquery-1.11.1.min.js"></script>
+	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/jquery.form.min.js"></script>
+	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/bootstrap.min.js"></script>
+	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/cookie.min.js"></script>
+	<script src="js/base.js"></script>
 	<script src="js/common.js"></script>
+	<script src="js/index.js"></script>
 </body>
 </html>
 

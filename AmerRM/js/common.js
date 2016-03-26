@@ -1,21 +1,109 @@
-// 菜单栏切换
-function tab(data_id) {
-	var $item = $('.menu-item a'),
-		$main = $('.main');
-	for (var i = 0, len = $item.length; i < len; i++) {
-		$item.eq(i).parent().removeClass('active');
-		$main.eq(i).addClass('fn-hide');
-
-		var data_id_i = $item.eq(i).attr('data-id');
-
-		if (data_id == data_id_i) {
-			$item.eq(i).parent().addClass('active');
-			$main.eq(i).removeClass('fn-hide');
+//将时间戳转换成年月日
+function getLocalTime(nS, type) {
+	/*
+	 * nS:为传进来的时间戳
+	 * type:时间显示模式.若传入12则为12小时制,不传入则为24小时制
+	 */
+	//年月日时分秒
+	var Y,
+	M,
+	D,
+	H,
+	I,
+	S;
+	//月日时分秒为单位时前面补零
+	function fillZero(v) {
+		if (v < 10) {
+			v = '0' + v;
+		}
+		return v;
+	}
+	var d = new Date(parseInt(nS / 1000) * 1000);
+	var Week = ['星期天', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+	Y = d.getFullYear();
+	M = fillZero(d.getMonth() + 1);
+	D = fillZero(d.getDate());
+	W = Week[d.getDay()];
+	H = fillZero(d.getHours());
+	I = fillZero(d.getMinutes());
+	S = fillZero(d.getSeconds());
+	//12小时制显示模式
+	if (type && type == 12) {
+		//若要显示更多时间类型诸如中午凌晨可在下面添加判断
+		if (H <= 12) {
+			H = '上午&nbsp;' + H;
+		} else if (H > 12 && H < 24) {
+			H -= 12;
+			H = '下午&nbsp;' + fillZero(H);
+		} else if (H == 24) {
+			H = '下午&nbsp;00';
 		}
 	}
+	var localTime = Y + '/' + M + '/' + D + ' ' + H + ':' + I + ':' + S;
+	return localTime;
 }
 
-// 显示警告框
+function getToday() {
+	var timestamp = Date.parse(new Date());
+	var time = getLocalTime(timestamp);
+	var Y = time.substring(0, 4);
+	var M = time.substring(5, 7);
+	var D = time.substring(8, 10);
+
+	var today = Y + '-' + M + '-' + D;
+
+	return today;
+}
+
+function getYesterday() {
+	var timestamp = Date.parse(new Date());
+	var sevenDay = 1 * 24 * 60 * 60 * 1000;
+	var time = getLocalTime(timestamp - sevenDay);
+	var Y = time.substring(0, 4);
+	var M = time.substring(5, 7);
+	var D = time.substring(8, 10);
+
+	var yesterday = Y + '-' + M + '-' + D;
+
+	return yesterday;
+}
+
+function getSevenDayAgo() {
+	var timestamp = Date.parse(new Date());
+	var sevenDay = 6 * 24 * 60 * 60 * 1000;
+	var time = getLocalTime(timestamp - sevenDay);
+	var Y = time.substring(0, 4);
+	var M = time.substring(5, 7);
+	var D = time.substring(8, 10);
+
+	var SevenDayAgo = Y + '-' + M + '-' + D;
+
+	return SevenDayAgo;
+}
+
+//自动添加千分位
+function commafy(num) {
+    var n = parseFloat(num).toFixed(2);
+    var re = /(\d{1,3})(?=(\d{3})+(?:\.))/g;
+    return n.replace(re, "$1,");
+}
+
+// 自动去掉千分位
+function commafyback(num) { 
+    var x = num.split(','); 
+    return parseFloat(x.join("")); 
+}
+
+//获取url中的问号后的参数
+function getUrlParam(name) {
+	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+	var r = decodeURI(window.location.search).substr(1).match(reg);
+	if (r != null)
+		return r[2];
+	return null;
+}
+
+//显示警告框
 function showMsg(msg, type) {
 	var type_class = '';
 	if (type == '') { //默认
@@ -33,58 +121,6 @@ function showMsg(msg, type) {
 	$('.close').click(function() {
 		$('.page-msg').remove();
 	});
-}
 
-window.onload = function() {
-	// 菜单栏显示
-	var hash = window.location.hash,
-		hash_len = hash.length,
-		hash_r = hash.substring(1, hash_len);
-
-	if (hash_r == '') {
-		hash_r = 'home';
-	}
-	tab(hash_r);
-
-	$('.menu-item a').click(function() {
-		var data_id = $(this).attr('data-id');
-		tab(data_id);
-	});
-
-	// 问号帮助提示
-	var timer = '';
-	$('.help-icon').mouseover(function() {
-		window.clearInterval(timer);
-		$(this).siblings('.help_content').show();
-	});
-	$('.help-icon').mouseout(function() {
-		timer = setInterval("$('.help-icon').siblings('.help_content').hide();", 1000);
-	});
-	$('.help_content').mouseover(function() {
-		window.clearInterval(timer);
-	});
-	$('.help_content').mouseout(function() {
-		timer = setInterval("$('.help_content').hide();", 1000);
-	});
-
-	// 分页功能
-	var totalPage = 1000,
-		pageindex = 1,
-		totalRecords = 100;
-	//生成分页
-	kkpager.total = totalPage;
-	kkpager.totalRecords = totalRecords;
-	kkpager.generPageHtml({
-		pno: pageindex,
-		//总页码
-		total: totalPage,
-		//总数据条数
-		totalRecords: totalRecords,
-		mode: 'click', //默认值是link，可选link或者click
-		click: function(n) {
-			this.selectPage(n);
-			// 这里添加点击页面跳转时调用的函数
-			return false;
-		}
-	}, true);
+	setTimeout("$('.page-msg').remove();", 3000);
 }

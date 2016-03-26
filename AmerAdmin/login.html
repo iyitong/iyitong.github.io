@@ -5,10 +5,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
 	<meta name="renderer" content="webkit">
-	<title>A梦分期管理系统登陆 | 区域经理</title>
+	<title>A梦分期管理系统登录 | 区域经理</title>
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/base.min.css">
+	<link rel="stylesheet" href="http://7xl6qe.com2.z0.glb.qiniucdn.com/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://7xl6qe.com2.z0.glb.qiniucdn.com/css/base.min.css">
 	<!-- 如果是IE6打开，在顶部出现小黄条进行提醒 -->
 	<!--[if lt IE 7]>
 	<div style="position:absoulute;left:0;top:0;width:100%;height:50px;background:rgb(255,255,233);color:rgb(30,84,148);border-bottom:1px solid rgb(230,230,198);text-align:center;line-height:50px;font-size:12px;">您使用的浏览器版本过低，可能会影响到您浏览本网页，建议您升级您的浏览器。</div>
@@ -25,7 +25,7 @@
 	<div class="head" id="header">
 		<div class="header-box">
 			<div class="inner container">
-				<h1><a href="javascript:;" title="A梦分期区域经理管理系统"><i class="logo"></i></a>A梦分期管理系统-区域经理登陆</h1>
+				<h1><a href="javascript:;" title="A梦分期区域经理管理系统"><i class="logo"></i></a>A梦分期管理系统-区域经理</h1>
 			</div>
 		</div>
 	</div>
@@ -33,14 +33,83 @@
 	
 	<!-- container begin -->
 	<div class="body container">
-		<div class="login-wrap">
-			<form action="" class="form-horizontal" id="loginForm" name="loginForm">
+		<div class="login-wrap fn-hide">
+			<div class="login-nav">
 				<ul>
-					<li><input type="text" id="uname" placeholder="输入管理员账号" required></li>
-					<li><input type="text" id="upwd" placeholder="输入管理员密码" required></li>
-					<li><button type="submit">登陆</button></li>
+					<li class="active" id="nav_login"><a href="javascript:;" data-id="login">登录</a></li>
+					<li class="" id="nav_reg"><a href="javascript:;" data-id="reg">注册</a></li>
 				</ul>
+			</div>
+
+			<!-- 登陆 -->
+			<form action="" class="form form-horizontal" id="loginForm" name="loginForm">
+				<ul>
+					<li><input type="email" name="email" id="login_email" placeholder="请输入邮箱" required></li>
+					<li><input type="password" name="password" id="login_password" placeholder="请输入密码" required></li>
+				</ul>
+				<button id="login_btn" type="submit">登&nbsp;录</button>
+				<a href="?#forgetpwd" class="js-forgetpwd">忘记密码？</a>
 			</form>
+
+			<!-- 注册 -->
+			<form action="" class="form form-horizontal fn-hide" id="regForm" name="regForm">
+				<ul>
+					<li><input type="email" name="email" id="reg_email" placeholder="请输入邮箱（作为登录账号）" required></li>
+					<li><input type="password" name="password" id="reg_password" placeholder="请输入密码" required></li>
+					<li><input type="text" name="name" id="reg_name" placeholder="请输入姓名" required></li>
+					<li><input type="tel" name="cellphone" id="reg_cellphone" placeholder="请输入手机号码" required></li>
+					<li><input type="text" name="alipay" id="reg_alipay" placeholder="请输入支付宝账号（与用户姓名绑定）" required></li>
+					<li><input type="text" name="address" id="reg_address" placeholder="请输入详细地址" required></li>
+				</ul>
+				<button id="reg_btn" type="submit">注&nbsp;册</button>
+			</form>
+		</div>
+		<!-- login-wrap end -->
+
+		<!-- 忘记密码 -->
+		<div class="forget-pwd fn-hide">
+			<h4>忘记密码</h4>
+			<div class="forget-main">
+				<!-- 获取邮箱验证码 -->
+				<form action="" class="form form-horizontal" id="emailForm">
+					<div class="form-getcode">
+						请填写您账号绑定的邮箱，进行重设密码。
+						<div class="form-control-group">
+							<label for="forget_email">邮箱</label>
+							<input type="email" name="email" class="form-control" id="forget_email"  placeholder="请输入邮箱">
+						</div>
+					</div>
+					<div class="form-footer">
+						<button class="btn btn-success" id="email_btn" type="submit">下一步</button>
+						<a class="btn btn-default js-goback" href="#">返回</a>
+					</div>
+				</form>
+
+				<!-- 重设密码 -->
+				<form action="" class="form form-horizontal fn-hide" id="setPwdForm">
+					<div class="form-getcode">
+						验证码已经发送至邮箱<em>568490291@qq.com</em>，请注意查收！
+						<div class="form-control-group">
+							<label for="forget_randomNumber">验证码</label>
+							<input type="text" name="randomNumber" class="form-control" id="forget_randomNumber" required placeholder="请输入邮箱验证码">
+						</div>
+
+						<div class="form-control-group">
+							<label for="forget_password">新密码</label>
+							<input type="password" name="password" class="form-control" id="forget_password" required placeholder="请输入新密码">
+						</div>
+
+						<div class="form-control-group">
+							<label for="forget_password_confirm">确认密码</label>
+							<input type="password" name="password" class="form-control" id="forget_password_confirm" required placeholder="请再次确认密码">
+						</div>
+					</div>
+					<div class="form-footer">
+						<a class="btn btn-default js-goback-prev" href="javascript:;">上一步</a>
+						<button class="btn btn-success" id="reSetPassword_btn" type="submit">确定重设</button>
+					</div>
+				</form>
+			</div>
 		</div>
 	</div>
 	<!-- container end -->
@@ -51,9 +120,10 @@
 	</div>
 	<!-- footer end -->
 
-	<script src="libs/jquery-1.11.1.min.js"></script>
-	<script src="libs/jquery.form.min.js"></script>
-	<script src="libs/bootstrap.min.js"></script>
+	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/jquery-1.11.1.min.js"></script>
+	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/jquery.form.min.js"></script>
+	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/bootstrap.min.js"></script>
+	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/cookie.min.js"></script>
 	<script src="js/common.js"></script>
 	<script src="js/login.js"></script>
 </body>

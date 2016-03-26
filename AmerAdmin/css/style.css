@@ -42,6 +42,14 @@ table td {
 table td span {
 	cursor: pointer;
 }
+.null-tips {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	line-height: 200px;
+	color: #999;
+	text-align: center;
+}
 
 /* head begin */
 .header-box {
@@ -102,6 +110,7 @@ table td span {
 
 /* container begin */
 .body {
+	min-height: 670px;
 	padding: 36px 15px 88px;
 }
 .container-box {
@@ -216,6 +225,33 @@ table td span {
 .main .list {
 	max-height: 400px;
 	overflow: auto;
+}
+.main .info-list {
+	margin: 50px auto;
+	width: 500px;
+	min-height: 400px;
+}
+.main .info-list ul li {
+	margin-bottom: 10px;
+}
+.main .info-list ul li span.span-item {
+	display: inline-block;
+	width: 100px;
+	vertical-align: top;
+}
+.main .info-list ul li span.span-content {
+	display: inline-block;
+	width: 400px;
+}
+.main .info-list .js-change-info-btn {
+	position: relative;
+	display: inline-block;
+	margin: 30px 200px 0;
+	width: 100px;
+}
+.main .info-form ul {
+	margin: 0 auto;
+	width: 60%;
 }
 /* main end */
 
@@ -344,16 +380,49 @@ table td span {
 
 /* login begin */
 .login-wrap {
-	margin: 50px auto 290px auto;
-	padding: 20px;
+	margin: 50px auto 0 auto;
 	width: 500px;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	-o-border-radius: 4px;
 	border-radius: 4px;
 	background-color: #fff;
+	border: 1px solid #d9dadc;
+	overflow: hidden;
 }
-.login-wrap ul li:not(:last-child) {
+.login-nav {
+	height: 40px;
+	line-height: 40px;
+	clear: both;
+	border-bottom: 1px solid #e7e8eb;
+}
+.login-nav ul li {
+	width: 100px;
+	text-align: center;
+	float: left;
+}
+.login-nav ul li a {
+	display: inline-block;
+	width: 90%;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	font-weight: 400;
+	text-decoration: none;
+	color: #222;
+}
+.login-nav ul li.active a {
+	border-bottom: 2px solid #f5a028;
+}
+.login-wrap .form {
+	padding: 20px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+	background-color: #fff;
+}
+.login-wrap .form ul li {
 	display: block;
 	margin-bottom: 15px;
 	padding: 5px 10px;
@@ -366,18 +435,18 @@ table td span {
 	border: 1px solid #e7e7eb;
 	overflow: hidden;
 }
-.login-wrap ul li:not(:last-child):hover {
+.login-wrap .form ul li:hover {
 	box-shadow: 0 0 5px #e7e7eb;
 	overflow: hidden;
 }
-.login-wrap ul li input {
+.login-wrap .form ul li input {
 	display: block;
 	width: 100%;
 	height: 33px;
 	line-height: 33px;
 	border: none;
 }
-.login-wrap ul li button {
+.login-wrap .form button {
 	display: block;
 	width: 100%;
 	height: 45px;
@@ -386,37 +455,95 @@ table td span {
 	border: none;
 	color: #fff;
 	font-size: 18px;
+	font-weight: bold;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	-o-border-radius: 4px;
 	border-radius: 4px;
+}
+.login-wrap .form .js-forgetpwd {
+	padding: 10px 0;
+	float: right;
+	color: #459ae9;
+}
+.login-wrap .form .js-forgetpwd:hover {
+	text-decoration: underline;
+}
+/* 忘记密码 */
+.forget-pwd {
+	border: 1px solid #d9dadc;
+	background-color: #fff;
+}
+.forget-pwd h4 {
+	padding: 0 30px;
+	height: 52px;
+	line-height: 52px;
+	font-weight: normal;
+	background-color: #f4f5f9;
+}
+.forget-main {
+	padding: 100px 120px 0;
+}
+.form-getcode {
+	margin: 0 auto;
+	padding-bottom: 150px;
+	width: 410px;
+}
+.form-getcode label {
+	float: left;
+	width: 65px;
+	height: 34px;
+	line-height: 34px;
+	font-weight: normal;
+}
+.form-getcode em {
+	margin: 0 5px;
+	color: #459ae9;
+}
+.form-control-group {
+	padding: 10px 0;
+}
+.form-control-group input {
+	width: 345px;
+}
+.form-footer {
+	padding: 20px 0 50px;
+	text-align: center;
+	border-top: 1px solid #d9dadc;
+}
+.form-footer .btn {
+	margin: 0 10px;
+	width: 100px;
+	text-align: center;
+	height: 30px;
 }
 /* login end */
 
 /* 消息提醒 */
 .page-msg {
 	position: absolute;
-	top: 65px;
+	top: 0;
 	left: 50%;
-	margin-left: -250px;
-	width: 500px;
+	margin-left: -190px;
+	width: 380px;
 	padding: 8px 20px;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	-o-border-radius: 4px;
-	border-radius: 4px;
-	border: 1px solid transparent;
 	background-color: #e0eaf6;
+	border: none;
+	text-align: center;
+	color: #fff;
+}
+.page-msg em {
+	font-weight: bold;
+}
+.page-msg .close {
+	color: #fff;
+	opacity: .8;
 }
 .page-msg-warning {
-	border: 1px solid #faebcc;
-	background-color: #fcf8e3;
-	color: #8a6d3b;
+	background-color: #f5a028;
 }
 .page-msg-success {
-	border: 1px solid #d6e9c6;
 	background-color: #dff0d8;
-	color: #3c763d;
 }
 
 /* foot begin */
@@ -456,9 +583,10 @@ button:disabled {
 	height: 34px;
 	line-height: 34px;
 	font-size: 14px;
+	color: #222;
+	text-decoration: none;
 }
-.title-tab ul li.active a,
-.title-tab ul li:hover a {
+.title-tab ul li.active a {
 	border-bottom: 2px solid #f5a028;
 	color: #222;
 	text-decoration: none;
@@ -470,5 +598,9 @@ button:disabled {
 .modal-form ul li .form-control {
 	margin: 0 auto;
 	width: 200px;
+}
+
+.form ul li {
+	margin-bottom: 20px;
 }
 /* common end */
