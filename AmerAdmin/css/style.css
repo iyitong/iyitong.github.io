@@ -37,10 +37,21 @@ table td {
     text-align: left;
     word-wrap: break-word;
     word-break: break-all;
-    overflow: hidden;
 }
 table td span {
 	cursor: pointer;
+}
+label {
+	font-weight: normal;
+}
+.text-center {
+	text-align: center;
+}
+.ellipsis {
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .null-tips {
 	position: relative;
@@ -260,6 +271,33 @@ table td span {
 	margin: 0 auto;
 	width: 60%;
 }
+
+/* 账单详情 */
+.bill-info p strong {
+	color: #f5a028;
+}
+.bill-info h4 {
+	position: relative;
+	margin: 10px 0;
+	padding: 5px 10px;
+	background-color: #f4f5f9;
+	font-weight: normal;
+	clear: both;
+	color: #f5a028;
+}
+.bill-info ul {
+	display: inline-block;
+	clear: both;
+}
+.bill-info ul li {
+	display: inline-block;
+	width: 50%;
+	float: left;
+	color: #333;
+}
+.bill-info p span {
+	color: #f5a028;
+}
 /* main end */
 
 /* help begin */
@@ -351,37 +389,6 @@ table td span {
 	overflow: auto;
 }
 /* help end */
-
-/* sign_info begin */
-.sign-info {
-	position: relative;
-}
-.sign-info p strong {
-	color: #f5a028;
-}
-.sign-info h4 {
-	position: relative;
-	margin: 10px 0;
-	padding: 5px 10px;
-	background-color: #f4f5f9;
-	font-weight: normal;
-	clear: both;
-	color: #f5a028;
-}
-.sign-info ul {
-	display: inline-block;
-	clear: both;
-}
-.sign-info ul li {
-	display: inline-block;
-	width: 50%;
-	float: left;
-	color: #333;
-}
-.sign-info p span {
-	color: #f5a028;
-}
-/* sign_info end */
 
 /* container end */
 
@@ -608,6 +615,20 @@ button:disabled {
 }
 
 .form ul li {
-	margin-bottom: 20px;
+	margin-bottom: 15px;
+}
+
+/* bootstrap 弹出层内的样式 */
+.modal-body h4 {
+	margin: 10px 0;
+	font-weight: normal;
+}
+.modal-body label {
+	margin-right: 10px;
+}
+.modal-body label input {
+	display: inline-block;
+	margin-right: 3px;
+	vertical-align: top;
 }
 /* common end */

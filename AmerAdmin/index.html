@@ -197,6 +197,236 @@
 				</div>
 				<!-- 添加商品 end -->
 
+				<!-- 到期账单 begin -->
+				<div class="main main-bill-due fn-hide" id="main_bill_due">
+					<div class="main-hd">
+						<h2>到期未还款账单
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt>到期未还款账单</dt>
+										<dd>账单到期后，用户未按时还款，催收组需要对订单进行催收处理，电话联系用户沟通，可把账单处理为异常账单以及修改账单金额</dd>
+									</dl>
+								</div>
+							</div>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<div class="content-wrap">
+							<!-- 账单列表 begin -->
+							<div class="list bill-due-list" id="bill_due_list">
+								<table class="table table-hover table-condensed">
+									<thead>
+										<tr>
+											<td width="90">还款日</td>
+											<td>商品名称</td>
+											<td width="90">账单金额</td>
+											<td width="228">操作</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>2016-03-24</td>
+										<td>苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果</td>
+										<td>￥6,700.50</td>
+										<td><span class="label label-warning">修改账单金额</span>&nbsp;<span class="label label-danger">转为异常账单</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billDueDetailModal">详情</span></td>
+									</tr>
+									<tr>
+										<td>2016-03-23</td>
+										<td>白条订单</td>
+										<td>￥4,000.00</td>
+										<td><span class="label label-warning">修改账单金额</span>&nbsp;<span class="label label-danger">转为异常账单</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billDueDetailModal">详情</span></td>
+									</tr>
+									<tr>
+										<td>2016-03-22</td>
+										<td>白条订单</td>
+										<td>￥5,000.00</td>
+										<td><span class="label label-warning">修改账单金额</span>&nbsp;<span class="label label-danger">转为异常账单</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billDueDetailModal">详情</span></td>
+									</tr>
+								</table>
+							</div>
+							<!-- 账单列表 end -->
+
+							<!-- 账单详情弹出层 begin -->
+							<div class="modal fade" id="billDueDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title" id="myModalLabel">账单详情</h4>
+							         	</div>
+
+							         	<div class="modal-body">
+						            		<div class="bill-info">
+						            			<p>账单编号：<strong>2016012411</strong></p>
+						            			<h4>账单信息</h4>
+							            		<ul>
+							            			<li><span>还款日：</span>2016-03-24</li>
+							            			<li><span>商品名称：</span>苹果手机se苹果手机se苹果手机se苹果手机se苹果手机se</li>
+							            			<li><span>账单期数：</span>第3期</li>
+							            			<li><span>账单金额：</span>￥6,700.00</li>
+							            			<li><span>下单时间：</span>2016-01-24 10:25:30</li>
+							            		</ul>
+
+							            	    <h4>用户信息</h4>
+							            		<ul>
+							            			<li><span>姓名：</span>成一通</li>
+							            			<li><span>电话：</span>15820216212</li>
+							            			<li><span>支付宝：</span>15820216212</li>
+							            			<li><span>学校：</span>广东工业大学</li>
+							            			<li><span>详细地址：</span>大学城校区东五714</li>
+							            		</ul>
+						            		</div>
+							         	</div>
+							         	<div class="modal-footer">
+							            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							         	</div>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 账单详情弹出层 end -->
+
+							<!-- 分页 -->
+							<div class="kkpager" id="bill_due_kkpager">这里是分页列表</div>
+						</div>
+					</div>
+				</div>
+				<!-- 到期账单 end -->
+
+				<!-- 异常账单 begin -->
+				<div class="main main-bill-exception fn-hide" id="main_bill_exception">
+					<div class="main-hd">
+						<h2>未处理异常账单
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt>异常账单</dt>
+										<dd>催收组对异常订单进行处理，可处理为已催收、已还款并填写处理结果</dd>
+									</dl>
+								</div>
+							</div>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<div class="content-wrap">
+							<div class="list bill-exception-list" id="bill_exception_list">
+								<!-- 账单列表 begin -->
+								<table class="table table-hover table-condensed">
+									<thead>
+										<tr>
+											<td width="90">还款日</td>
+											<td>商品名称</td>
+											<td width="90">账单金额</td>
+											<td width="105">操作</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>2016-03-24</td>
+										<td>苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果</td>
+										<td>￥6,700.50</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#billDealModal">去处理</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billExceptionDetailModal">详情</span></td>
+									</tr>
+									<tr>
+										<td>2016-03-23</td>
+										<td>白条订单</td>
+										<td>￥4,000.00</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#billDealModal">去处理</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billExceptionDetailModal">详情</span></td>
+									</tr>
+									<tr>
+										<td>2016-03-22</td>
+										<td>白条订单</td>
+										<td>￥5,000.00</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#billDealModal">去处理</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billExceptionDetailModal">详情</span></td>
+									</tr>
+								</table>
+							</div>
+							<!-- 账单列表 end -->
+
+							<!-- 去处理弹出层 begin -->
+							<div class="modal fade" id="billDealModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title">账单处理</h4>
+							         	</div>
+										
+										<form class="form form-horizontal info-form">
+								         	<div class="modal-body">
+								         		<div class="bill-deal">
+								         			<h4 class="text-center font-bold">选择处理结果</h4>
+								         			<div class="text-center">
+								         				<label for=""><input type="radio" name="bill_state">已处理</label>
+							            				<label for=""><input type="radio" name="bill_state">已还款</label>
+								         			</div>
+
+						            				<h4>填写处理结果详细报告：</h4>
+						            				<textarea name="" class="form-control" id="" cols="30" rows="10"></textarea>
+								         		</div>
+								         	</div>
+								         	<div class="modal-footer">
+								            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+								            	<button type="submit" class="btn btn-warning" data-dismiss="modal">保存</button>
+								         	</div>
+							         	</form>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 去处理弹出层 end -->
+
+							<!-- 账单详情弹出层 begin -->
+							<div class="modal fade" id="billExceptionDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title">账单详情</h4>
+							         	</div>
+
+							         	<div class="modal-body">
+						            		<div class="bill-info">
+						            			<p>账单编号：<strong>2016012411</strong></p>
+						            			<h4>账单信息</h4>
+							            		<ul>
+							            			<li><span>还款日：</span>2016-03-24</li>
+							            			<li><span>商品名称：</span>苹果手机se苹果手机se苹果手机se苹果手机se苹果手机se</li>
+							            			<li><span>账单期数：</span>第3期</li>
+							            			<li><span>账单金额：</span>￥6,700.00</li>
+							            			<li><span>下单时间：</span>2016-01-24 10:25:30</li>
+							            		</ul>
+
+							            	    <h4>用户信息</h4>
+							            		<ul>
+							            			<li><span>姓名：</span>成一通</li>
+							            			<li><span>电话：</span>15820216212</li>
+							            			<li><span>支付宝：</span>15820216212</li>
+							            			<li><span>学校：</span>广东工业大学</li>
+							            			<li><span>详细地址：</span>大学城校区东五714</li>
+							            		</ul>
+						            		</div>
+							         	</div>
+							         	<div class="modal-footer">
+							            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							         	</div>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 账单详情弹出层 end -->
+
+							<!-- 分页 -->
+							<div class="kkpager" id="bill_exception_kkpager">这里是分页列表</div>
+						</div>
+					</div>
+				</div>
+				<!-- 异常账单 end -->
+
 
 				<!-- 学校管理 begin -->
 				<div class="main main-school fn-hide" id="main_school">
@@ -224,7 +454,7 @@
 								<table class="table table-hover table-condensed">
 									<thead>
 										<tr>
-											<td>学校名称</td>
+											<td width="200">学校名称</td>
 											<td>学校地址</td>
 											<td width="95">操作</td>
 										</tr>
@@ -331,7 +561,7 @@
 										<td>15820232123</td>
 										<td>15820232123</td>
 										<td>广东省广州市广州大学城广东工业大学</td>
-										<td>广东工业大学、广州美术学院</td>
+										<td>广东工业大学、广州美术学院&nbsp;<span class="label label-primary">+</span>&nbsp;<span class="label label-danger">-</span></td>
 										<td><span class="label label-danger">已冻结</span></td>
 										<td><span class="label label-success">解冻</span></td>
 									</tr>
@@ -342,12 +572,40 @@
 										<td>15820232123</td>
 										<td>15820232123</td>
 										<td>广东省广州市广州大学城广东工业大学</td>
-										<td>--</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#addSchoolForAreaModal">+</span></td>
 										<td><span class="label label-success">正常</span></td>
 										<td><span class="label label-danger">冻结</span></td>
 									</tr>
 								</table>
 							</div>
+
+							<!-- 分配学校弹出层 begin -->
+							<div class="modal fade" id="addSchoolForAreaModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title" id="myModalLabel">为区域经理分配学校</h4>
+							         	</div>
+
+							         	<form action="" class="form form-horizontal info-form">
+								         	<div class="modal-body">
+							            		<div id="area_school_list">
+							            			<label for=""><input type="checkbox" checked>广东工业大学</label>
+							            			<label for=""><input type="checkbox">广州美术学院</label>
+							            			<label for=""><input type="checkbox">广州大学</label>
+							            			<label for=""><input type="checkbox">广东外语外贸大学</label>
+							            		</div>
+								         	</div>
+								         	<div class="modal-footer">
+								            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+								            	<button type="submit" class="btn btn-warning" id="update_pwd_btn">确定</button>
+								         	</div>
+							         	</form>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 分配学校弹出层 end -->
 						</div>
 					</div>
 				</div>
@@ -455,8 +713,17 @@
 							         	<form action="" class="form form-horizontal info-form">
 								         	<div class="modal-body">
 							            		<ul>
-							            			<li>学校名称：<input type="text" class="form-control" id="school_name" name="name" placeholder="请输入学校名称" required></li>
-							            			<li>学校地址：<input type="text" class="form-control" id="school_address" name="address"  placeholder="请输入学校详细地址"required ></li>
+								            		<li>角色：<select name="" class="form-control" id="">
+								            			<option value="0">超级管理员</option>
+								            			<option value="1">运营组</option>
+								            			<option value="2">风控组组长</option>
+								            			<option value="3">风控组成员</option>
+								            			<option value="4">财务组</option>
+								            			<option value="5">催收组</option>
+								            		</select></li>
+							            			<li>姓名：<input type="text" class="form-control" id="admin_name" name="name" placeholder="请输入管理员姓名（作为登录账户）" required></li>
+							            			<li>密码：<input type="text" class="form-control" id="admin_password" name="password" placeholder="请输入管理员登录密码" required></li>
+							            			<li>备注：<input type="text" class="form-control" id="admin_remark" name="remark" placeholder="请输入管理员备注"></li>
 							            		</ul>
 								         	</div>
 								         	<div class="modal-footer">
@@ -468,6 +735,31 @@
 						      	</div>
 							</div>
 							<!-- 添加管理员弹出层 end -->
+
+							<!-- 修改密码弹出层 begin -->
+							<div class="modal fade" id="updatePwdModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title" id="myModalLabel">修改管理员密码</h4>
+							         	</div>
+
+							         	<form action="" class="form form-horizontal info-form">
+								         	<div class="modal-body">
+							            		<ul>
+							            			<li>新密码：<input type="text" class="form-control" id="update_password" name="password" placeholder="请输入新密码" required></li>
+							            		</ul>
+								         	</div>
+								         	<div class="modal-footer">
+								            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+								            	<button type="submit" class="btn btn-warning" id="update_pwd_btn">确定</button>
+								         	</div>
+							         	</form>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 修改密码弹出层 end -->
 						</div>
 					</div>
 				</div>
