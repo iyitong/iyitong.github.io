@@ -113,20 +113,8 @@
 
 					<div class="main-bd">
 						<div class="content-wrap">
-							<div class="info-list" id="">
-								<ul>
-									<li><span class="span-item">邮箱</span><span class="span-content" id="email">568480291@qq.com</span></li>
-									<li><span class="span-item">姓名</span><span class="span-content" id="name">成一通</span></li>
-									<li><span class="span-item">手机号码</span><span class="span-content" id="cellphone">15820216212</span></li>
-									<li><span class="span-item">支付宝账号</span><span class="span-content" id="alipay">15820216212</span></li>
-									<li><span class="span-item">账户余额</span><span class="span-content" id="money">￥1,0000</span></li>
-									<li><span class="span-item">详细地址</span><span class="span-content" id="address">广东省广州市大学城东三路国家数字家庭基地东区B239</span></li>
-									<li><span class="span-item">负责学校列表</span><span class="span-content" id="schools">广东工业大学、广州大学、中山大学、广东外语外贸大学、华南师范大学</span></li>
-									<li><span class="span-item">注册时间</span><span class="span-content" id="addTime">2016-03-24 13:05:25</span></li>
-									<li><span class="span-item">账户状态</span><span class="span-content" id="state"><em class="label label-success">正常</em></span></li>
-								</ul>
-
-								<span class="btn btn-warning js-change-info-btn" data-toggle="modal" data-target="#changeInfoModal">修改</span>
+							<div class="list " id="">
+								
 							</div>
 
 							<!-- 修改个人信息弹出层 begin -->
@@ -163,44 +151,9 @@
 
 
 				<!-- 添加商品 begin -->
-				<div class="main main-item fn-hide" id="main_add_item">
+				<div class="main main-item-add fn-hide" id="main_item_add">
 					<div class="main-hd">
 						<h2>添加商品
-							<div class="help">
-								<i class="help-icon"></i>
-								<div class="help_content">
-									<i class="dropdown_arrow out"></i>
-									<i class="dropdown_arrow in"></i>
-									<dl class="help-change-list">
-										<dt>个人中心</dt>
-										<dd>区域经理可以修改个人的姓名、手机号码、支付宝账号以及详细地址。如果忘记密码，请在登录页面找回！</dd>
-									</dl>
-								</div>
-							</div>
-						</h2>
-					</div>
-
-					<div class="main-bd">
-						<div class="content-wrap">
-							<form action="" class="form form-horizontal">
-								<ul>
-									<li><span>商品名称：</span><input type="text" class="form-control" placeholder="请输入商品名称" required></li>
-									<li><span>商品名称：</span><input type="text" class="form-control" placeholder="请输入商品名称" required></li>
-									<li><span>商品名称：</span><input type="text" class="form-control" placeholder="请输入商品名称" required></li>
-									<li><span>商品名称：</span><input type="text" class="form-control" placeholder="请输入商品名称" required></li>
-									<li><span>商品名称：</span><input type="text" class="form-control" placeholder="请输入商品名称" required></li>
-									<li><span>商品名称：</span><input type="text" class="form-control" placeholder="请输入商品名称" required></li>
-								</ul>
-							</form>
-						</div>
-					</div>
-				</div>
-				<!-- 添加商品 end -->
-
-				<!-- 每日业绩 begin -->
-				<div class="main main-achievement fn-hide" id="">
-					<div class="main-hd">
-						<h2>每日业绩
 							<div class="help">
 								<i class="help-icon"></i>
 								<div class="help_content">
@@ -221,7 +174,187 @@
 						</div>
 					</div>
 				</div>
-				<!-- 每日业绩 end -->
+				<!-- 添加商品 end -->
+
+				<!-- 商品分类 begin -->
+				<div class="main main-item-category fn-hide" id="main_item_category">
+					<div class="main-hd">
+						<h2>商品分类
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt>商品分类</dt>
+										<dd>用于商品搜索</dd>
+									</dl>
+								</div>
+							</div>
+
+							<span class="btn btn-warning add-btn" data-toggle="modal" data-target="#addCategoryModal">添加分类</span>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<div class="content-wrap">
+							<!-- 商品分类列表 begin -->
+							<div class="list item-category-list" id="item_category_list">
+								<table class="table table-hover table-condensed">
+									<thead>
+										<tr>
+											<td>分类名称</td>
+											<td width="93">操作</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>iphone 6s</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#addCategoryModal">编辑</span>&nbsp;<span class="label label-danger">删除</span></td>
+									</tr>
+									<tr>
+										<td>iphone se</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#addCategoryModal">编辑</span>&nbsp;<span class="label label-danger">删除</span></td>
+									</tr>
+									<tr>
+										<td>iphone 6</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#addCategoryModal">编辑</span>&nbsp;<span class="label label-danger">删除</span></td>
+									</tr>
+								</table>
+							</div>
+							<!-- 商品分类列表 end -->
+
+							<!-- 添加商品分类弹出层 begin -->
+							<div class="modal fade" id="addCategoryModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title">添加商品分类</h4>
+							         	</div>
+
+							         	<form action="" class="form form-horizontal info-form">
+								         	<div class="modal-body">
+							            		<ul>
+							            			<li>分类名称：<input type="text" class="form-control" id="" name="name" placeholder="请输入商品分类名称" required></li>
+							            		</ul>
+								         	</div>
+								         	<div class="modal-footer">
+								            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+								            	<button type="submit" class="btn btn-warning" id="add_school_btn">添加</button>
+								         	</div>
+							         	</form>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 添加商品分类弹出层 end -->
+						</div>
+					</div>
+				</div>
+				<!-- 商品分类 end -->
+
+				<!-- 订单列表 begin -->
+				<div class="main main-order-list fn-hide" id="main_order_list">
+					<div class="main-hd">
+						<h2>订单列表
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt>个人中心</dt>
+										<dd>区域经理可以修改个人的姓名、手机号码、支付宝账号以及详细地址。如果忘记密码，请在登录页面找回！</dd>
+									</dl>
+								</div>
+							</div>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<div class="content-wrap">
+							
+						</div>
+					</div>
+				</div>
+				<!-- 订单列表 end -->
+
+				<!-- 订单分配 begin -->
+				<div class="main main-order-allocation fn-hide" id="main_order_allocation">
+					<div class="main-hd">
+						<h2>订单分配
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt>个人中心</dt>
+										<dd>区域经理可以修改个人的姓名、手机号码、支付宝账号以及详细地址。如果忘记密码，请在登录页面找回！</dd>
+									</dl>
+								</div>
+							</div>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<div class="content-wrap">
+							
+						</div>
+					</div>
+				</div>
+				<!-- 订单分配 end -->
+
+				<!-- 订单审核 begin -->
+				<div class="main main-order-review fn-hide" id="main_order_review">
+					<div class="main-hd">
+						<h2>订单审核
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt>个人中心</dt>
+										<dd>区域经理可以修改个人的姓名、手机号码、支付宝账号以及详细地址。如果忘记密码，请在登录页面找回！</dd>
+									</dl>
+								</div>
+							</div>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<div class="content-wrap">
+							
+						</div>
+					</div>
+				</div>
+				<!-- 订单审核 end -->
+
+				<!-- 发货管理 begin -->
+				<div class="main main-order-send fn-hide" id="main_order_send">
+					<div class="main-hd">
+						<h2>发货管理
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt>个人中心</dt>
+										<dd>区域经理可以修改个人的姓名、手机号码、支付宝账号以及详细地址。如果忘记密码，请在登录页面找回！</dd>
+									</dl>
+								</div>
+							</div>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<div class="content-wrap">
+							
+						</div>
+					</div>
+				</div>
+				<!-- 发货管理 end -->
 
 				<!-- 到期账单 begin -->
 				<div class="main main-bill-due fn-hide" id="main_bill_due">
