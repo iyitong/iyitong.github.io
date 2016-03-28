@@ -58,7 +58,6 @@
         img/icon_menu_management.png
         ) no-repeat;"></i>订单管理</dt>
 				        <dd class="menu-item"><a data-id="order_list" href="#order_list">订单列表</a></dd>
-						<dd class="menu-item"><a data-id="order_allocation" href="#order_allocation">订单分配</a></dd>
 						<dd class="menu-item"><a data-id="order_review" href="#order_review">订单审核</a></dd>
 						<dd class="menu-item"><a data-id="order_send" href="#order_send">发货管理</a></dd>
 					</dl>
@@ -272,37 +271,87 @@
 
 					<div class="main-bd">
 						<div class="content-wrap">
-							
+							<!-- 订单列表 begin -->
+							<div class="list order-list" id="order_list">
+								<table class="table table-hover table-condensed">
+									<thead>
+										<tr>
+											<td width="120">订单编号</td>
+											<td>商品名称</td>
+											<td width="150">下单时间</td>
+											<td width="116">操作</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>20160324123</td>
+										<td>苹果手机苹果手机苹果手机苹果手机</td>
+										<td>2016-01-24 10:23:43</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#orderDetailModal">详情</span>&nbsp;<span class="label label-warning">我要接单</span></td>
+									</tr>
+									<tr>
+										<td>20160324123</td>
+										<td>苹果手机苹果手机苹果手机苹果手机</td>
+										<td>2016-01-24 10:23:43</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#orderDetailModal">详情</span>&nbsp;<span class="label label-warning">我要接单</span></td>
+									</tr>
+									<tr>
+										<td>20160324123</td>
+										<td>苹果手机苹果手机苹果手机苹果手机</td>
+										<td>2016-01-24 10:23:43</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#orderDetailModal">详情</span>&nbsp;<span class="label label-warning">我要接单</span></td>
+									</tr>
+								</table>
+							</div>
+							<!-- 订单列表 end -->
+
+							<!-- 订单详情弹出层 begin -->
+							<div class="modal fade" id="orderDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title">订单详情</h4>
+							         	</div>
+
+							         	<div class="modal-body">
+						            		<div class="bill-info">
+						            			<p>订单编号：<strong>2016012411</strong></p>
+						            			<h4>订单信息</h4>
+							            		<ul>
+							            			<li class="block"><span>商品名称：</span>苹果手机se苹果手机se苹果手机se苹果手机se苹果手机se</li>
+							            			<li><span>商品总价格：</span>￥5700.00</li>
+							            			<li><span>订单期数：</span>24期</li>
+							            			<li><span>首付：</span>￥700.00</li>
+							            			<li><span>推荐码：</span>12345</li>
+							            			<li><span>账单利息：</span>￥200.00</li>
+							            			<li><span>下单时间：</span>2016-01-24 10:25:30</li>
+							            			<li><span>实际还款时间：</span>2016-03-26 10:25:30</li>
+							            		</ul>
+
+							            	    <h4>下单用户信息</h4>
+							            		<ul>
+							            			<li><span>姓名：</span>成一通</li>
+							            			<li><span>电话：</span>15820216212</li>
+							            			<li><span>支付宝：</span>15820216212</li>
+							            			<li><span>学校：</span>广东工业大学</li>
+							            			<li class="block"><span>详细地址：</span>大学城校区东五714</li>
+							            		</ul>
+						            		</div>
+							         	</div>
+							         	<div class="modal-footer">
+							            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							         	</div>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 订单详情弹出层 end -->
+
+							<!-- 分页 -->
+							<div class="kkpager" id="order_kkpager">这里是分页列表</div>
 						</div>
 					</div>
 				</div>
 				<!-- 订单列表 end -->
-
-				<!-- 订单分配 begin -->
-				<div class="main main-order-allocation fn-hide" id="main_order_allocation">
-					<div class="main-hd">
-						<h2>订单分配
-							<div class="help">
-								<i class="help-icon"></i>
-								<div class="help_content">
-									<i class="dropdown_arrow out"></i>
-									<i class="dropdown_arrow in"></i>
-									<dl class="help-change-list">
-										<dt>个人中心</dt>
-										<dd>区域经理可以修改个人的姓名、手机号码、支付宝账号以及详细地址。如果忘记密码，请在登录页面找回！</dd>
-									</dl>
-								</div>
-							</div>
-						</h2>
-					</div>
-
-					<div class="main-bd">
-						<div class="content-wrap">
-							
-						</div>
-					</div>
-				</div>
-				<!-- 订单分配 end -->
 
 				<!-- 订单审核 begin -->
 				<div class="main main-order-review fn-hide" id="main_order_review">
@@ -476,7 +525,7 @@
 						            			<h4>账单信息</h4>
 							            		<ul>
 							            			<li><span>还款日：</span>2016-03-24</li>
-							            			<li><span>商品名称：</span>苹果手机se苹果手机se苹果手机se苹果手机se苹果手机se</li>
+							            			<li class="block"><span>商品名称：</span>苹果手机se苹果手机se苹果手机se苹果手机se苹果手机se</li>
 							            			<li><span>账单期数：</span>第3期</li>
 							            			<li><span>账单总金额：</span>￥6,700.00</li>
 							            			<li><span>账单本金：</span>￥6,500.00</li>
@@ -491,7 +540,7 @@
 							            			<li><span>电话：</span>15820216212</li>
 							            			<li><span>支付宝：</span>15820216212</li>
 							            			<li><span>学校：</span>广东工业大学</li>
-							            			<li><span>详细地址：</span>大学城校区东五714</li>
+							            			<li class="block"><span>详细地址：</span>大学城校区东五714</li>
 							            		</ul>
 						            		</div>
 							         	</div>
@@ -1055,11 +1104,8 @@
 										<dt>运营组</dt>
 										<dd>拥有商城管理权限：商品的添加、查看、上架、下架、编辑；商品分类的添加、查看、编辑、删除</dd>
 
-										<dt>风控组组长</dt>
-										<dd>拥有订单分配权限：把订单分配给相应的风控组成员</dd>
-
-										<dt>风控组成员</dt>
-										<dd>拥有订单审核权限：对风控组组长分配的订单进行审核</dd>
+										<dt>风控组</dt>
+										<dd>拥有订单审核权限：风控组在订单列表处选择“我要处理”后，该订单转到相关风控组组员名下</dd>
 
 										<dt>财务组</dt>
 										<dd>拥有订单发货管理权限：风控组审核通过后，财务组负责根据订单类型进行打款或者发货</dd>
@@ -1104,13 +1150,7 @@
 									</tr>
 									<tr>
 										<td>李四</td>
-										<td>风控组组长</td>
-										<td>11</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#updatePwdModal">修改密码</span>&nbsp;<span class="label label-danger">删除</span></td>
-									</tr>
-									<tr>
-										<td>张三</td>
-										<td>风控组成员</td>
+										<td>风控组</td>
 										<td>11</td>
 										<td><span class="label label-warning" data-toggle="modal" data-target="#updatePwdModal">修改密码</span>&nbsp;<span class="label label-danger">删除</span></td>
 									</tr>
@@ -1144,10 +1184,9 @@
 								            		<li>角色：<select name="" class="form-control" id="">
 								            			<option value="0">超级管理员</option>
 								            			<option value="1">运营组</option>
-								            			<option value="2">风控组组长</option>
-								            			<option value="3">风控组成员</option>
-								            			<option value="4">财务组</option>
-								            			<option value="5">催收组</option>
+								            			<option value="2">风控组</option>
+								            			<option value="3">财务组</option>
+								            			<option value="4">催收组</option>
 								            		</select></li>
 							            			<li>姓名：<input type="text" class="form-control" id="admin_name" name="name" placeholder="请输入管理员姓名（作为登录账户）" required></li>
 							            			<li>密码：<input type="text" class="form-control" id="admin_password" name="password" placeholder="请输入管理员登录密码" required></li>
