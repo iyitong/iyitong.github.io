@@ -74,7 +74,7 @@
 					<dl class="menu">
 						<dt class="menu-title"><i class="icon-menu" style="background:url(
 	        img/icon_menu_statistics.png
-	        ) no-repeat;"></i>订单统计</dt>
+	        ) no-repeat;"></i>统计</dt>
 						<dd class="menu-item"><a data-id="achievement" href="#achievement">每日业绩</a></dd>
 					</dl>
 
@@ -135,7 +135,7 @@
 							      	<div class="modal-content">
 							         	<div class="modal-header">
 							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-							            	<h4 class="modal-title" id="myModalLabel">修改个人信息</h4>
+							            	<h4 class="modal-title">修改个人信息</h4>
 							         	</div>
 
 							         	<form action="" class="form form-horizontal info-form">
@@ -197,18 +197,18 @@
 				</div>
 				<!-- 添加商品 end -->
 
-				<!-- 到期账单 begin -->
-				<div class="main main-bill-due fn-hide" id="main_bill_due">
+				<!-- 每日业绩 begin -->
+				<div class="main main-achievement fn-hide" id="">
 					<div class="main-hd">
-						<h2>到期未还款账单
+						<h2>每日业绩
 							<div class="help">
 								<i class="help-icon"></i>
 								<div class="help_content">
 									<i class="dropdown_arrow out"></i>
 									<i class="dropdown_arrow in"></i>
 									<dl class="help-change-list">
-										<dt>到期未还款账单</dt>
-										<dd>账单到期后，用户未按时还款，催收组需要对订单进行催收处理，电话联系用户沟通，可把账单处理为异常账单以及修改账单金额</dd>
+										<dt>个人中心</dt>
+										<dd>区域经理可以修改个人的姓名、手机号码、支付宝账号以及详细地址。如果忘记密码，请在登录页面找回！</dd>
 									</dl>
 								</div>
 							</div>
@@ -217,6 +217,47 @@
 
 					<div class="main-bd">
 						<div class="content-wrap">
+							
+						</div>
+					</div>
+				</div>
+				<!-- 每日业绩 end -->
+
+				<!-- 到期账单 begin -->
+				<div class="main main-bill-due fn-hide" id="main_bill_due">
+					<div class="main-hd">
+						<h2>到期账单
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt>到期账单</dt>
+										<dd>账单到还款日后，归纳到“到期账单”列表</dd>
+
+										<dt>修改总金额</dt>
+										<dd>催收组与用户沟通协商后，可对本期账单的总金额（总金额=本金+利息）进行调整</dd>
+
+										<dt>转为异常账单</dt>
+										<dd>账单到期后超过规定还款周期，催收组可将账单处理为异常账单</dd>
+									</dl>
+								</div>
+							</div>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<!-- 导航菜单 begin -->
+						<div class="title-tab">
+							<ul class="tab-nav">
+								<li class="active"><a href="javascript:;" data-state="0" onclick="mainTab(this);">未还款</a></li>
+								<li><a href="javascript:;" data-state="1" onclick="mainTab(this);">已还款</a></li>
+							</ul>
+						</div>
+						<!-- 导航菜单 end -->
+
+						<div class="content-wrap">
 							<!-- 账单列表 begin -->
 							<div class="list bill-due-list" id="bill_due_list">
 								<table class="table table-hover table-condensed">
@@ -224,27 +265,64 @@
 										<tr>
 											<td width="90">还款日</td>
 											<td>商品名称</td>
-											<td width="90">账单金额</td>
-											<td width="228">操作</td>
+											<td width="90">总金额</td>
+											<td width="90">本金</td>
+											<td width="217">操作</td>
 										</tr>
 									</thead>
 									<tr>
 										<td>2016-03-24</td>
-										<td>苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果</td>
+										<td>苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果</td>
 										<td>￥6,700.50</td>
-										<td><span class="label label-warning">修改账单金额</span>&nbsp;<span class="label label-danger">转为异常账单</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billDueDetailModal">详情</span></td>
+										<td>￥20.50</td>
+										<td><span class="label label-warning">修改总金额</span>&nbsp;<span class="label label-danger">转为异常账单</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billDueDetailModal">详情</span></td>
 									</tr>
 									<tr>
 										<td>2016-03-23</td>
 										<td>白条订单</td>
 										<td>￥4,000.00</td>
-										<td><span class="label label-warning">修改账单金额</span>&nbsp;<span class="label label-danger">转为异常账单</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billDueDetailModal">详情</span></td>
+										<td>￥10.50</td>
+										<td><span class="label label-warning">修改总金额</span>&nbsp;<span class="label label-danger">转为异常账单</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billDueDetailModal">详情</span></td>
 									</tr>
 									<tr>
 										<td>2016-03-22</td>
 										<td>白条订单</td>
 										<td>￥5,000.00</td>
-										<td><span class="label label-warning">修改账单金额</span>&nbsp;<span class="label label-danger">转为异常账单</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billDueDetailModal">详情</span></td>
+										<td>￥170.50</td>
+										<td><span class="label label-warning">修改总金额</span>&nbsp;<span class="label label-danger">转为异常账单</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billDueDetailModal">详情</span></td>
+									</tr>
+								</table>
+
+								<table class="table table-hover table-condensed">
+									<thead>
+										<tr>
+											<td width="90">还款日</td>
+											<td>商品名称</td>
+											<td width="90">总金额</td>
+											<td width="90">本金</td>
+											<td width="50">操作</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>2016-03-24</td>
+										<td>123</td>
+										<td>￥6,700.50</td>
+										<td>￥4.50</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#billDueDetailModal">详情</span></td>
+									</tr>
+									<tr>
+										<td>2016-03-23</td>
+										<td>白条订单</td>
+										<td>￥4,000.00</td>
+										<td>￥100.50</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#billDueDetailModal">详情</span></td>
+									</tr>
+									<tr>
+										<td>2016-03-22</td>
+										<td>白条订单</td>
+										<td>￥5,000.00</td>
+										<td>￥700.50</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#billDueDetailModal">详情</span></td>
 									</tr>
 								</table>
 							</div>
@@ -256,7 +334,7 @@
 							      	<div class="modal-content">
 							         	<div class="modal-header">
 							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-							            	<h4 class="modal-title" id="myModalLabel">账单详情</h4>
+							            	<h4 class="modal-title">账单详情</h4>
 							         	</div>
 
 							         	<div class="modal-body">
@@ -267,8 +345,11 @@
 							            			<li><span>还款日：</span>2016-03-24</li>
 							            			<li><span>商品名称：</span>苹果手机se苹果手机se苹果手机se苹果手机se苹果手机se</li>
 							            			<li><span>账单期数：</span>第3期</li>
-							            			<li><span>账单金额：</span>￥6,700.00</li>
+							            			<li><span>账单总金额：</span>￥6,700.00</li>
+							            			<li><span>账单本金：</span>￥6,500.00</li>
+							            			<li><span>账单利息：</span>￥200.00</li>
 							            			<li><span>下单时间：</span>2016-01-24 10:25:30</li>
+							            			<li><span>实际还款时间：</span>2016-03-26 10:25:30</li>
 							            		</ul>
 
 							            	    <h4>用户信息</h4>
@@ -299,7 +380,7 @@
 				<!-- 异常账单 begin -->
 				<div class="main main-bill-exception fn-hide" id="main_bill_exception">
 					<div class="main-hd">
-						<h2>未处理异常账单
+						<h2>异常账单
 							<div class="help">
 								<i class="help-icon"></i>
 								<div class="help_content">
@@ -308,6 +389,12 @@
 									<dl class="help-change-list">
 										<dt>异常账单</dt>
 										<dd>催收组对异常订单进行处理，可处理为已催收、已还款并填写处理结果</dd>
+
+										<dt>处理为坏账</dt>
+										<dd>催单组经过核对后，确认账单已经是坏账的，则处理为坏账</dd>
+
+										<dt>处理为已还款</dt>
+										<dd>催单组与用户沟通后，确认用户已经还款，则处理为已还款</dd>	
 									</dl>
 								</div>
 							</div>
@@ -315,35 +402,85 @@
 					</div>
 
 					<div class="main-bd">
+						<!-- 导航菜单 begin -->
+						<div class="title-tab">
+							<ul class="tab-nav">
+								<li class="active"><a href="javascript:;" data-state="0" onclick="mainTab(this);">未处理</a></li>
+								<li><a href="javascript:;" data-state="1" onclick="mainTab(this);">已处理</a></li>
+							</ul>
+						</div>
+						<!-- 导航菜单 end -->
+
 						<div class="content-wrap">
+							<!-- 账单列表 begin -->
 							<div class="list bill-exception-list" id="bill_exception_list">
-								<!-- 账单列表 begin -->
 								<table class="table table-hover table-condensed">
 									<thead>
 										<tr>
 											<td width="90">还款日</td>
 											<td>商品名称</td>
-											<td width="90">账单金额</td>
+											<td width="90">总金额</td>
+											<td width="90">本金</td>
 											<td width="105">操作</td>
 										</tr>
 									</thead>
 									<tr>
 										<td>2016-03-24</td>
 										<td>苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果</td>
-										<td>￥6,700.50</td>
+										<td>￥5,000.00</td>
+										<td>￥700.50</td>
 										<td><span class="label label-warning" data-toggle="modal" data-target="#billDealModal">去处理</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billExceptionDetailModal">详情</span></td>
 									</tr>
 									<tr>
 										<td>2016-03-23</td>
 										<td>白条订单</td>
-										<td>￥4,000.00</td>
+										<td>￥5,000.00</td>
+										<td>￥700.50</td>
 										<td><span class="label label-warning" data-toggle="modal" data-target="#billDealModal">去处理</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billExceptionDetailModal">详情</span></td>
 									</tr>
 									<tr>
 										<td>2016-03-22</td>
 										<td>白条订单</td>
 										<td>￥5,000.00</td>
+										<td>￥700.50</td>
 										<td><span class="label label-warning" data-toggle="modal" data-target="#billDealModal">去处理</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billExceptionDetailModal">详情</span></td>
+									</tr>
+								</table>
+
+								<table class="table table-hover table-condensed">
+									<thead>
+										<tr>
+											<td width="90">还款日</td>
+											<td>商品名称</td>
+											<td width="90">总金额</td>
+											<td width="90">本金</td>
+											<td width="70">处理结果</td>
+											<td width="50">操作</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>2016-03-24</td>
+										<td>苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果</td>
+										<td>￥5,000.00</td>
+										<td>￥700.50</td>
+										<td>坏账</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#billExceptionDetailModal">详情</span></td>
+									</tr>
+									<tr>
+										<td>2016-03-23</td>
+										<td>白条订单</td>
+										<td>￥5,000.00</td>
+										<td>￥700.50</td>
+										<td>坏账</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#billExceptionDetailModal">详情</span></td>
+									</tr>
+									<tr>
+										<td>2016-03-22</td>
+										<td>白条订单</td>
+										<td>￥5,000.00</td>
+										<td>￥700.50</td>
+										<td>已还款</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#billExceptionDetailModal">详情</span></td>
 									</tr>
 								</table>
 							</div>
@@ -363,11 +500,11 @@
 								         		<div class="bill-deal">
 								         			<h4 class="text-center font-bold">选择处理结果</h4>
 								         			<div class="text-center">
-								         				<label for=""><input type="radio" name="bill_state">已处理</label>
+								         				<label for=""><input type="radio" name="bill_state">坏账</label>
 							            				<label for=""><input type="radio" name="bill_state">已还款</label>
 								         			</div>
 
-						            				<h4>填写处理结果详细报告：</h4>
+						            				<h4>填写详细处理结果报告：（必填）</h4>
 						            				<textarea name="" class="form-control" id="" cols="30" rows="10"></textarea>
 								         		</div>
 								         	</div>
@@ -398,8 +535,11 @@
 							            			<li><span>还款日：</span>2016-03-24</li>
 							            			<li><span>商品名称：</span>苹果手机se苹果手机se苹果手机se苹果手机se苹果手机se</li>
 							            			<li><span>账单期数：</span>第3期</li>
-							            			<li><span>账单金额：</span>￥6,700.00</li>
+							            			<li><span>账单总金额：</span>￥6,700.00</li>
+							            			<li><span>账单本金：</span>￥6,500.00</li>
+							            			<li><span>账单利息：</span>￥200.00</li>
 							            			<li><span>下单时间：</span>2016-01-24 10:25:30</li>
+							            			<li><span>实际还款时间：</span>2016-03-26 10:25:30</li>
 							            		</ul>
 
 							            	    <h4>用户信息</h4>
@@ -410,6 +550,9 @@
 							            			<li><span>学校：</span>广东工业大学</li>
 							            			<li><span>详细地址：</span>大学城校区东五714</li>
 							            		</ul>
+
+							            		<h4>处理结果：坏账</h4>
+						            			<p><span>详细处理报告：</span>该账单经过与用户沟通后，确认处理为坏账。</p>
 						            		</div>
 							         	</div>
 							         	<div class="modal-footer">
@@ -427,6 +570,145 @@
 				</div>
 				<!-- 异常账单 end -->
 
+				<!-- 每日业绩 begin -->
+				<div class="main main-achievement fn-hide" id="main_achievement">
+					<div class="main-hd">
+						<h2>每日业绩
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt></dt>
+										<dd></dd>
+									</dl>
+									<div class="help-footer">
+										<p>选择相应的时间段获取业绩数据</p>
+									</div>
+								</div>
+							</div>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<div class="content-wrap">
+							<form action="" class="form form-inline">
+								<input type="date" class="form-control" id="">
+								<input type="date" class="form-control" id="">
+								<button class="btn btn-warning" type="button">查询</button>
+							</form>
+
+							<!-- 业绩列表 begin -->
+							<div class="list achievement-list" id="achievement_list">
+								<table class="table table-hover table-condensed">
+									<thead>
+										<tr>
+											<td>日期</td>
+											<td>签单数量</td>
+											<td>付款订单数量</td>
+											<td>付款订单总金额</td>
+											<td width="80">明细</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>2016-03-17</td>
+										<td>10</td>
+										<td>100</td>
+										<td>￥3,000.00</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
+									</tr>
+									<tr>
+										<td>2016-03-16</td>
+										<td>10</td>
+										<td>100</td>
+										<td>￥3,000.00</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
+									</tr>
+									<tr>
+										<td>2016-03-15</td>
+										<td>10</td>
+										<td>100</td>
+										<td>￥3,000.00</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
+									</tr>
+									<tr>
+										<td>2016-03-14</td>
+										<td>10</td>
+										<td>100</td>
+										<td>￥3,000.00</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
+									</tr>
+									<tr>
+										<td>2016-03-13</td>
+										<td>10</td>
+										<td>100</td>
+										<td>￥3,000.00</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
+									</tr>
+									<tr>
+										<td>2016-03-12</td>
+										<td>10</td>
+										<td>100</td>
+										<td>￥3,000.00</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
+									</tr>
+									<tr>
+										<td>2016-03-11</td>
+										<td>10</td>
+										<td>100</td>
+										<td>￥3,000.00</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
+									</tr>
+								</table>
+							</div>
+							<!-- 业绩列表 end -->
+
+							<!-- 业绩明细弹出层 begin -->
+							<div class="modal fade" id="achievementDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title">业绩明细</h4>
+							         	</div>
+							         	<div class="modal-body">
+							            	<div class="list achievement-detail" id="achieve_detail">
+							            		<table class="table table-hover table-condensed">
+							            			<thead>
+							            				<tr>
+							            					<td>省市</td>
+							            					<td>签单数量</td>
+							            					<td>付款订单数量</td>
+							            					<td>付款订单总金额</td>
+							            				</tr>
+							            			</thead>
+							            			<tr>
+							            				<td>广东省广州市</td>
+							            				<td>4</td>
+							            				<td>60</td>
+							            				<td>￥1,800.00</td>
+							            			</tr>
+							            			<tr>
+							            				<td>广东省深圳市</td>
+							            				<td>6</td>
+							            				<td>40</td>
+							            				<td>￥1,200.00</td>
+							            			</tr>
+							            		</table>
+							            	</div>
+							         	</div>
+							         	<div class="modal-footer">
+							            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							         	</div>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 业绩明细弹出层 end -->
+						</div>
+					</div>
+				</div>
+				<!-- 每日业绩 end -->
 
 				<!-- 学校管理 begin -->
 				<div class="main main-school fn-hide" id="main_school">
@@ -455,22 +737,26 @@
 									<thead>
 										<tr>
 											<td width="200">学校名称</td>
-											<td>学校地址</td>
+											<td width="200">学校所在省市</td>
+											<td>学校详细地址</td>
 											<td width="95">操作</td>
 										</tr>
 									</thead>
 									<tr>
 										<td>广东工业大学</td>
+										<td>广东省广州市</td>
 										<td>广州大学城外环西路100号</td>
 										<td><span class="label label-warning" data-toggle="modal" data-target="#addSchoolModal">编辑</span>&nbsp;<span class="label label-danger">删除</span></td>
 									</tr>
 									<tr>
 										<td>广东工业大学</td>
+										<td>广东省广州市</td>
 										<td>广州大学城外环西路100号</td>
 										<td><span class="label label-warning" data-toggle="modal" data-target="#addSchoolModal">编辑</span>&nbsp;<span class="label label-danger">删除</span></td>
 									</tr>
 									<tr>
 										<td>广东工业大学</td>
+										<td>广东省广州市</td>
 										<td>广州大学城外环西路100号</td>
 										<td><span class="label label-warning" data-toggle="modal" data-target="#addSchoolModal">编辑</span>&nbsp;<span class="label label-danger">删除</span></td>
 									</tr>
@@ -483,14 +769,23 @@
 							      	<div class="modal-content">
 							         	<div class="modal-header">
 							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-							            	<h4 class="modal-title" id="myModalLabel">添加学校</h4>
+							            	<h4 class="modal-title">添加学校</h4>
 							         	</div>
 
 							         	<form action="" class="form form-horizontal info-form">
 								         	<div class="modal-body">
 							            		<ul>
 							            			<li>学校名称：<input type="text" class="form-control" id="school_name" name="name" placeholder="请输入学校名称" required></li>
-							            			<li>学校地址：<input type="text" class="form-control" id="school_address" name="address"  placeholder="请输入学校详细地址"required ></li>
+							            			<li>选择省份<select name="" class="form-control" id="">
+							            					<option value="0">选择省份</option>	
+								            			</select>
+								            		</li>
+								            		<li>选择城市：
+								            			<select name="" class="form-control" id="">
+							            					<option value="0">选择城市</option>	
+								            			</select>
+								            		</li>
+							            			<li>学校详细地址：<textarea name="" class="form-control" id="" cols="30" rows="5"></textarea></li>
 							            		</ul>
 								         	</div>
 								         	<div class="modal-footer">
@@ -585,7 +880,7 @@
 							      	<div class="modal-content">
 							         	<div class="modal-header">
 							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-							            	<h4 class="modal-title" id="myModalLabel">为区域经理分配学校</h4>
+							            	<h4 class="modal-title">为区域经理分配学校</h4>
 							         	</div>
 
 							         	<form action="" class="form form-horizontal info-form">
@@ -707,7 +1002,7 @@
 							      	<div class="modal-content">
 							         	<div class="modal-header">
 							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-							            	<h4 class="modal-title" id="myModalLabel">添加管理员</h4>
+							            	<h4 class="modal-title">添加管理员</h4>
 							         	</div>
 
 							         	<form action="" class="form form-horizontal info-form">
@@ -742,7 +1037,7 @@
 							      	<div class="modal-content">
 							         	<div class="modal-header">
 							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-							            	<h4 class="modal-title" id="myModalLabel">修改管理员密码</h4>
+							            	<h4 class="modal-title">修改管理员密码</h4>
 							         	</div>
 
 							         	<form action="" class="form form-horizontal info-form">

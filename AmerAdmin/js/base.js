@@ -21,7 +21,7 @@ function isLogin() {
 	}, 'json');
 }
 
-// 主页菜单栏切换
+// 侧边栏切换
 function tab(data_id) {
 	var $item = $('.menu-item a');
 	for (var i = 0, len = $item.length; i < len; i++) {
@@ -37,14 +37,14 @@ function tab(data_id) {
 		
 	// 根据不同的页面调用不同的方法
 	if (data_id == 'home') {
-		getPersonalInfo();
 	} else if (data_id == 'signer') {
-		getAbers(0,1);
 	} else if (data_id == 'achievement') {
-		$('#beginTime').val(getSevenDayAgo());
-		$('#endTime').val(getToday());
-		getDataEveryday(1);
 	}
+}
+
+// 主题内容部分菜单栏切换
+function mainTab(ele) {
+	$(ele).parent().addClass('active').siblings('li').removeClass('active');
 }
 
 $(function(){
