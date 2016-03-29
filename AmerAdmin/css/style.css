@@ -190,6 +190,7 @@ label {
 .menu-item.active a {
 	text-decoration: none;
 	color: #fff;
+	font-weight: 700;
 }
 .menu-item a {
 	display: block;
