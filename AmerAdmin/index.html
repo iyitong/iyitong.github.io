@@ -497,7 +497,7 @@
 							<!-- 审核弹出层 end -->
 
 							<!-- 分页 -->
-							<div class="kkpager" id="order_kkpager">这里是分页列表</div>
+							<div class="kkpager" id="order_review_kkpager">这里是分页列表</div>
 						</div>
 					</div>
 				</div>
@@ -522,8 +522,141 @@
 					</div>
 
 					<div class="main-bd">
-						<div class="content-wrap">
+						<!-- 导航菜单 begin -->
+						<div class="title-tab">
+							<ul class="tab-nav">
+								<li>
+									<select name="" id="order_send_type">
+										<option value="0">商城订单</option>
+										<option value="1">白条订单</option>
+									</select>
+								</li>
+								<span class="order-send-span">
+									<li class="active"><a href="javascript:;" data-state="0" onclick="mainTab(this);">未发货</a></li>
+									<li><a href="javascript:;" data-state="1" onclick="mainTab(this);">已发货</a></li>
+									<li><a href="javascript:;" data-state="2" onclick="mainTab(this);">不发货</a></li>
+								</span>
+								<span class="order-send-span fn-hide">
+									<li><a href="javascript:;" data-state="3" onclick="mainTab(this);">未打款</a></li>
+									<li><a href="javascript:;" data-state="4" onclick="mainTab(this);">已打款</a></li>
+									<li><a href="javascript:;" data-state="5" onclick="mainTab(this);">不打款</a></li>
+								</span>
+							</ul>
+						</div>
+						<!-- 导航菜单 end -->
 
+						<div class="content-wrap">
+							<!-- 订单列表 begin -->
+							<div class="list order-review-list" id="order_review_list">
+								<table class="table table-hover table-condensed">
+									<thead>
+										<tr>
+											<td width="120">订单编号</td>
+											<td>商品名称</td>
+											<td width="150">下单时间</td>
+											<td width="93">操作</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>20160324123</td>
+										<td>苹果手机苹果手机苹果手机苹果手机</td>
+										<td>2016-01-24 10:23:43</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#orderReviewModal">审核</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#orderReviewDetailModal">详情</span></td>
+									</tr>
+									<tr>
+										<td>20160324123</td>
+										<td>苹果手机苹果手机苹果手机苹果手机</td>
+										<td>2016-01-24 10:23:43</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#orderReviewModal">审核</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#orderReviewDetailModal">详情</span></td>
+									</tr>
+									<tr>
+										<td>20160324123</td>
+										<td>苹果手机苹果手机苹果手机苹果手机</td>
+										<td>2016-01-24 10:23:43</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#orderReviewModal">审核</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#orderReviewDetailModal">详情</span></td>
+									</tr>
+								</table>
+							</div>
+							<!-- 订单列表 end -->
+
+							<!-- 订单详情弹出层 begin -->
+							<div class="modal fade" id="orderReviewDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title">订单详情</h4>
+							         	</div>
+
+							         	<div class="modal-body">
+						            		<div class="bill-info">
+						            			<p>订单编号：<strong>2016012411</strong></p>
+						            			<h4>订单信息</h4>
+							            		<ul>
+							            			<li class="block"><span>商品名称：</span>苹果手机se苹果手机se苹果手机se苹果手机se苹果手机se</li>
+							            			<li><span>订单总价：</span>￥4288.00</li>
+							            			<li><span>首付：</span>￥1000.00</li>
+							            			<li><span>分期详情：</span>￥1096.00 x 3期</li>
+							            			<li><span>月供：</span>￥1096.00（含服务费￥0.00）</li>
+							            			<li><span>邀请码：</span>12345</li>
+							            			<li><span>下单时间：</span>2016-01-24 10:25:30</li>
+							            		</ul>
+
+							            	    <h4>下单用户信息</h4>
+							            		<ul>
+							            			<li><span>姓名：</span>成一通</li>
+							            			<li><span>电话：</span>15820216212</li>
+							            			<li class="block"><span>收货地址：</span>广东省广州市大学城广东工业大学大学城校区东五714</li>
+							            		</ul>
+
+							            		<h4>订单状态</h4>
+							            		<ul>
+							            			<li class="block">审核不通过，原因：测试订单</li>
+							            		</ul>
+						            		</div>
+							         	</div>
+							         	<div class="modal-footer">
+							            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							         	</div>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 订单详情弹出层 end -->
+
+							<!-- 审核弹出层 begin -->
+							<div class="modal fade" id="orderReviewModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title">账单处理</h4>
+							         	</div>
+
+										<form class="form form-horizontal info-form">
+								         	<div class="modal-body">
+								         		<div class="bill-deal">
+								         			<h4 class="text-center font-bold">选择审核结果</h4>
+								         			<div class="text-center">
+								         				<label><input type="radio" name="order_state">通过</label>
+							            				<label><input type="radio" name="order_state">不通过</label>
+								         			</div>
+
+						            				<h4>备注：</h4>
+						            				<textarea name="" class="form-control" id="" cols="30" rows="5"></textarea>
+								         		</div>
+								         	</div>
+								         	<div class="modal-footer">
+								            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+								            	<button type="submit" class="btn btn-warning" data-dismiss="modal">保存</button>
+								         	</div>
+							         	</form>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 审核弹出层 end -->
+
+							<!-- 分页 -->
+							<div class="kkpager" id="order_send_kkpager">这里是分页列表</div>
 						</div>
 					</div>
 				</div>
