@@ -402,19 +402,19 @@
 										<td>20160324123</td>
 										<td>苹果手机苹果手机苹果手机苹果手机</td>
 										<td>2016-01-24 10:23:43</td>
-										<td><span class="label label-primary" data-toggle="modal" data-target="#orderReviewDetailModal">详情</span>&nbsp;<span class="label label-warning">审核</span></td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#orderReviewModal">审核</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#orderReviewDetailModal">详情</span></td>
 									</tr>
 									<tr>
 										<td>20160324123</td>
 										<td>苹果手机苹果手机苹果手机苹果手机</td>
 										<td>2016-01-24 10:23:43</td>
-										<td><span class="label label-primary" data-toggle="modal" data-target="#orderReviewDetailModal">详情</span>&nbsp;<span class="label label-warning">审核</span></td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#orderReviewModal">审核</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#orderReviewDetailModal">详情</span></td>
 									</tr>
 									<tr>
 										<td>20160324123</td>
 										<td>苹果手机苹果手机苹果手机苹果手机</td>
 										<td>2016-01-24 10:23:43</td>
-										<td><span class="label label-primary" data-toggle="modal" data-target="#orderReviewDetailModal">详情</span>&nbsp;<span class="label label-warning">审核</span></td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#orderReviewModal">审核</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#orderReviewDetailModal">详情</span></td>
 									</tr>
 								</table>
 							</div>
@@ -449,6 +449,11 @@
 							            			<li><span>电话：</span>15820216212</li>
 							            			<li class="block"><span>收货地址：</span>广东省广州市大学城广东工业大学大学城校区东五714</li>
 							            		</ul>
+
+							            		<h4>订单状态</h4>
+							            		<ul>
+							            			<li class="block">审核不通过，原因：测试订单</li>
+							            		</ul>
 						            		</div>
 							         	</div>
 							         	<div class="modal-footer">
@@ -458,6 +463,38 @@
 						      	</div>
 							</div>
 							<!-- 订单详情弹出层 end -->
+
+							<!-- 审核弹出层 begin -->
+							<div class="modal fade" id="orderReviewModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title">账单处理</h4>
+							         	</div>
+
+										<form class="form form-horizontal info-form">
+								         	<div class="modal-body">
+								         		<div class="bill-deal">
+								         			<h4 class="text-center font-bold">选择审核结果</h4>
+								         			<div class="text-center">
+								         				<label><input type="radio" name="order_state">通过</label>
+							            				<label><input type="radio" name="order_state">不通过</label>
+								         			</div>
+
+						            				<h4>备注：</h4>
+						            				<textarea name="" class="form-control" id="" cols="30" rows="5"></textarea>
+								         		</div>
+								         	</div>
+								         	<div class="modal-footer">
+								            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+								            	<button type="submit" class="btn btn-warning" data-dismiss="modal">保存</button>
+								         	</div>
+							         	</form>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 审核弹出层 end -->
 
 							<!-- 分页 -->
 							<div class="kkpager" id="order_kkpager">这里是分页列表</div>
@@ -769,8 +806,8 @@
 								         		<div class="bill-deal">
 								         			<h4 class="text-center font-bold">选择处理结果</h4>
 								         			<div class="text-center">
-								         				<label for=""><input type="radio" name="bill_state">坏账</label>
-							            				<label for=""><input type="radio" name="bill_state">已还款</label>
+								         				<label><input type="radio" name="bill_state">坏账</label>
+							            				<label><input type="radio" name="bill_state">已还款</label>
 								         			</div>
 
 						            				<h4>填写详细处理结果报告：（必填）</h4>

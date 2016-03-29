@@ -580,6 +580,9 @@ button:disabled {
 	background: #ddd !important;
 	cursor: not-allowed;
 }
+.btn-warning {
+	font-weight: 700;
+}
 /* 主体内容中的导航菜单 */
 .title-tab {
 	position: relative;
