@@ -989,17 +989,23 @@
 									<i class="dropdown_arrow out"></i>
 									<i class="dropdown_arrow in"></i>
 									<dl class="help-change-list">
-										<dt>未认证</dt>
-										<dd>用户信息处理未认证状态。</dd>
+										<dt>等待面签员接单</dt>
+										<dd>用户已经提交认证申请，等待面签员接单。</dd>
+										
+										<dt>等待面签</dt>
+										<dd>面签员已经接单，等待上门面签。</dd>
+										
+										<dt>等待审核</dt>
+										<dd>面签员已经上门面签并补充用户相关资料信息，等待风控组进行风控审核。</dd>
 
 										<dt>认证通过</dt>
-										<dd>用户认证通过后，用户即可正常下订单以及使用信用白条。</dd>
+										<dd>风控组对用户信息进行风控审核，符合要求的准予认证通过。</dd>
 
-										<dt>认证不通过</dt>
-										<dd>用户认证不通过后，用户可以根据不通过的原因对资料进行修改完善后再次提交。处理为认证不通过时需要填写不通过的原因。</dd>
+										<dt>认证驳回</dt>
+										<dd>风控组对用户信息进行风控审核，认定用户完全不符合要求（或已列入黑名单）的，可以驳回用户认证申请。驳回后，用户不可再次提交申请。</dd>
 
-										<dt>驳回</dt>
-										<dd>用户认证被驳回后，用户不可再次提交认证申请，需要填写驳回的原因。</dd>
+										<dt>认证失败</dt>
+										<dd>风控组对用户信息进行风控审核，发现用户资料有误的，处理为认证失败并填写原因。用户根据认证失败的原因对资料进行修改完善后可再次提交。</dd>
 									</dl>
 								</div>
 							</div>
@@ -1010,78 +1016,133 @@
 						<!-- 导航菜单 begin -->
 						<div class="title-tab">
 							<ul class="tab-nav">
-								<li class="active"><a href="javascript:;" data-state="0" onclick="mainTab(this);">未认证</a></li>
-								<li><a href="javascript:;" data-state="1" onclick="mainTab(this);">认证通过</a></li>
-								<li><a href="javascript:;" data-state="2" onclick="mainTab(this);">认证不通过</a></li>
-								<li><a href="javascript:;" data-state="3" onclick="mainTab(this);">驳回</a></li>
+								<li class="active"><a href="javascript:;" data-state="0" onclick="mainTab(this);">等待面签员接单</a></li>
+								<li><a href="javascript:;" data-state="1" onclick="mainTab(this);">等待面签</a></li>
+								<li><a href="javascript:;" data-state="2" onclick="mainTab(this);">等待审核</a></li>
+								<li><a href="javascript:;" data-state="3" onclick="mainTab(this);">认证通过</a></li>
+								<li><a href="javascript:;" data-state="4" onclick="mainTab(this);">认证驳回</a></li>
+								<li><a href="javascript:;" data-state="5" onclick="mainTab(this);">认证失败</a></li>
 							</ul>
 						</div>
 						<!-- 导航菜单 end -->
 
 						<div class="content-wrap">
-							<!-- 订单列表 begin -->
+							<!-- 认证申请列表 begin -->
 							<div class="list user-identify-list" id="user_identify_list">
 								<table class="table table-hover table-condensed">
 									<thead>
 										<tr>
-											<td width="120">订单编号</td>
-											<td>商品名称</td>
-											<td width="150">下单时间</td>
+											<td>学校名称</td>
+											<td>用户姓名</td>
+											<td>手机号码</td>
+											<td>宿舍楼-房号</td>
+											<td>预约时间</td>
+											<td width="50">操作</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>广东工业大学</td>
+										<td>静风</td>
+										<td>13800138000</td>
+										<td>东五-714</td>
+										<td>2016-01-24 10:23:43</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#userInfoDetailModal">详情</span></td>
+									</tr>
+									<tr>
+										<td>广东工业大学</td>
+										<td>静风</td>
+										<td>13800138000</td>
+										<td>东五-714</td>
+										<td>2016-01-24 10:23:43</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#userInfoDetailModal">详情</span></td>
+									</tr>
+								</table>
+
+<h4>等待审核的效果</h4>
+								<table class="table table-hover table-condensed">
+									<thead>
+										<tr>
+											<td>学校名称</td>
+											<td>用户姓名</td>
+											<td>手机号码</td>
+											<td>宿舍楼-房号</td>
 											<td width="93">操作</td>
 										</tr>
 									</thead>
 									<tr>
-										<td>20160324123</td>
-										<td>苹果手机苹果手机苹果手机苹果手机</td>
-										<td>2016-01-24 10:23:43</td>
-										<td><span class="label label-primary" data-toggle="modal" data-target="#orderReviewDetailModal">详情</span>&nbsp;<span class="label label-warning">审核</span></td>
+										<td>广东工业大学</td>
+										<td>静风</td>
+										<td>13800138000</td>
+										<td>东五-714</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#userInfoDetailModal">详情</span>&nbsp;<span class="label label-warning" data-toggle="modal" data-target="#userIdentifyModal">审核</span></td>
 									</tr>
 									<tr>
-										<td>20160324123</td>
-										<td>苹果手机苹果手机苹果手机苹果手机</td>
-										<td>2016-01-24 10:23:43</td>
-										<td><span class="label label-primary" data-toggle="modal" data-target="#orderReviewDetailModal">详情</span>&nbsp;<span class="label label-warning">审核</span></td>
-									</tr>
-									<tr>
-										<td>20160324123</td>
-										<td>苹果手机苹果手机苹果手机苹果手机</td>
-										<td>2016-01-24 10:23:43</td>
-										<td><span class="label label-primary" data-toggle="modal" data-target="#orderReviewDetailModal">详情</span>&nbsp;<span class="label label-warning">审核</span></td>
+										<td>广东工业大学</td>
+										<td>静风</td>
+										<td>13800138000</td>
+										<td>东五-714</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#userInfoDetailModal">详情</span>&nbsp;<span class="label label-warning" data-toggle="modal" data-target="#userIdentifyModal">审核</span></td>
 									</tr>
 								</table>
 							</div>
-							<!-- 订单列表 end -->
+							<!-- 认证申请列表 end -->
 
-							<!-- 订单详情弹出层 begin -->
-							<div class="modal fade" id="orderReviewDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<!-- 用户认证资料详情弹出层 begin -->
+							<div class="modal fade" id="userInfoDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 							   	<div class="modal-dialog">
 							      	<div class="modal-content">
 							         	<div class="modal-header">
 							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-							            	<h4 class="modal-title">订单详情</h4>
+							            	<h4 class="modal-title">用户认证资料</h4>
 							         	</div>
-
 							         	<div class="modal-body">
-						            		<div class="bill-info">
-						            			<p>订单编号：<strong>2016012411</strong></p>
-						            			<h4>订单信息</h4>
-							            		<ul>
-							            			<li class="block"><span>商品名称：</span>苹果手机se苹果手机se苹果手机se苹果手机se苹果手机se</li>
-							            			<li><span>订单总价：</span>￥4288.00</li>
-							            			<li><span>首付：</span>￥1000.00</li>
-							            			<li><span>分期详情：</span>￥1096.00 x 3期</li>
-							            			<li><span>月供：</span>￥1096.00（含服务费￥0.00）</li>
-							            			<li><span>邀请码：</span>12345</li>
-							            			<li><span>下单时间：</span>2016-01-24 10:25:30</li>
-							            		</ul>
-
-							            	    <h4>下单用户信息</h4>
+							            	<div class="bill-info">
+							            	    <p>合同编号：<strong>1000234326</strong></p>
+							            	    <h4>个人信息</h4>
 							            		<ul>
 							            			<li><span>姓名：</span>成一通</li>
+							            			<li><span>性别：</span>男</li>
 							            			<li><span>电话：</span>15820216212</li>
-							            			<li class="block"><span>收货地址：</span>广东省广州市大学城广东工业大学大学城校区东五714</li>
+							            			<li><span>支付宝：</span>15820216212</li>
+							            			<li><span>QQ：</span>568480291</li>
+							            			<li><span>地址：</span>广东工业大学大学城校区东五714</li>
+							            			<li><span>信用额度：</span>￥3,000</li>
 							            		</ul>
-						            		</div>
+
+							            		<h4>教育信息</h4>
+							            		<ul>
+							            			<li><span>学校：</span>广东工业大学</li>
+							            			<li><span>院系：</span>机电工程学院</li>
+							            			<li><span>专业班级：</span>数字媒体技术专业10级2班</li>
+							            			<li><span>学号：</span>3110000759</li>
+							            			<li><span>入学时间：</span>2010-09</li>
+							            			<li><span>毕业时间：</span>2014-06</li>
+							            			<li><span>学历：</span>本科</li>
+							            			<li><span>学制：</span>四年</li>
+							            		</ul>
+
+							            		<h4>联系人信息</h4>
+							            		<ul>
+							            			<li><span>紧急联系人姓名：</span>成一通</li>
+							            			<li><span>紧急联系人电话</span>15820216212</li>
+							            			<li><span>父/母姓名：</span>成金传</li>
+							            			<li><span>父/母电话：</span>15820216212</li>
+							            			<li><span>辅导员姓名：</span>雷松群</li>
+							            			<li><span>辅导员电话：</span></li>
+							            			<li><span>舍友姓名：</span>雷松群</li>
+							            			<li><span>舍友电话：</span>17847364756</li>
+							            		</ul>
+
+							            		<h4>照片信息</h4>
+							            		<ul>
+							            			<li><p>身份证正反面照片：</p><a href="img/pic1.png" target="_blank"><img src="img/pic1.png" alt="身份证正反面照片" width="50%"></a></li>
+							            			<li><p>用户手持身份证和协议表合照：</p><a href="img/pic1.png" target="_blank"><img src="img/pic1.png" alt="用户手持身份证和协议表合照" width="50%"></a></li>
+							            			<li><p>学信网/教务网/学费单照片：</p><a href="img/pic1.png" target="_blank"><img src="img/pic1.png" alt="学信网/教务网/学费单照片" width="50%"></a></li>
+							            		</ul>
+
+							            		<h4>审核状态</h4>
+							            		<p><span>驳回</span>，原因：身份证信息与其他资料不一致</p>
+							            	</div>
 							         	</div>
 							         	<div class="modal-footer">
 							            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
@@ -1089,10 +1150,10 @@
 							      	</div>
 						      	</div>
 							</div>
-							<!-- 订单详情弹出层 end -->
+							<!-- 用户认证资料详情弹出层 end -->
 
 							<!-- 分页 -->
-							<div class="kkpager" id="order_kkpager">这里是分页列表</div>
+							<div class="kkpager" id="identify_kkpager">这里是分页列表</div>
 						</div>
 					</div>
 				</div>
