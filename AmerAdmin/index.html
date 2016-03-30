@@ -177,7 +177,7 @@
 
 					<div class="main-bd">
 						<div class="content-wrap">
-
+							<form action="" class="form form"></form>
 						</div>
 					</div>
 				</div>
@@ -272,12 +272,44 @@
 										<dt>我要处理</dt>
 										<dd></dd>
 									</dl>
+									<div class="help-footer">
+										<p>属于风控组权限</p>
+									</div>
 								</div>
 							</div>
 						</h2>
 					</div>
 
 					<div class="main-bd">
+						<!-- 导航菜单 begin -->
+						<div class="title-tab">
+							<ul class="tab-nav">
+								<li>
+									<select name="" class="form-control" id="order_send_type">
+										<option value="0">商城订单</option>
+										<option value="1">白条订单</option>
+									</select>
+								</li>
+								<span class="order-send-span">
+									<li class="active"><a href="javascript:;" data-state="0" onclick="mainTab(this);">未审核</a></li>
+									<li><a href="javascript:;" data-state="1" onclick="mainTab(this);">审核通过</a></li>
+									<li><a href="javascript:;" data-state="2" onclick="mainTab(this);">审核不通过</a></li>
+									<li><a href="javascript:;" data-state="3" onclick="mainTab(this);">未发货</a></li>
+									<li><a href="javascript:;" data-state="4" onclick="mainTab(this);">已发货</a></li>
+									<li><a href="javascript:;" data-state="5" onclick="mainTab(this);">不发货</a></li>
+								</span>
+								<span class="order-send-span fn-hide">
+									<li class="active"><a href="javascript:;" data-state="0" onclick="mainTab(this);">未审核</a></li>
+									<li><a href="javascript:;" data-state="1" onclick="mainTab(this);">审核通过</a></li>
+									<li><a href="javascript:;" data-state="2" onclick="mainTab(this);">审核不通过</a></li>
+									<li><a href="javascript:;" data-state="3" onclick="mainTab(this);">未打款</a></li>
+									<li><a href="javascript:;" data-state="4" onclick="mainTab(this);">已打款</a></li>
+									<li><a href="javascript:;" data-state="5" onclick="mainTab(this);">不打款</a></li>
+								</span>
+							</ul>
+						</div>
+						<!-- 导航菜单 end -->
+
 						<div class="content-wrap">
 							<!-- 订单列表 begin -->
 							<div class="list order-list" id="order_total_list">
@@ -294,19 +326,19 @@
 										<td>20160324123</td>
 										<td>苹果手机苹果手机苹果手机苹果手机</td>
 										<td>2016-01-24 10:23:43</td>
-										<td><span class="label label-primary" data-toggle="modal" data-target="#orderDetailModal">详情</span>&nbsp;<span class="label label-warning">我要处理</span></td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#orderDetailModal">详情</span>&nbsp;<span class="label label-warning" onclick="alert('该订单已经转移到你的“未审核订单”列表中，请自行前往“订单审核”模块进行审核');">我要审核</span></td>
 									</tr>
 									<tr>
 										<td>20160324123</td>
 										<td>苹果手机苹果手机苹果手机苹果手机</td>
 										<td>2016-01-24 10:23:43</td>
-										<td><span class="label label-primary" data-toggle="modal" data-target="#orderDetailModal">详情</span>&nbsp;<span class="label label-warning">我要处理</span></td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#orderDetailModal">详情</span>&nbsp;<span class="label label-warning">我要审核</span></td>
 									</tr>
 									<tr>
 										<td>20160324123</td>
 										<td>苹果手机苹果手机苹果手机苹果手机</td>
 										<td>2016-01-24 10:23:43</td>
-										<td><span class="label label-primary" data-toggle="modal" data-target="#orderDetailModal">详情</span>&nbsp;<span class="label label-warning">我要处理</span></td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#orderDetailModal">详情</span>&nbsp;<span class="label label-warning">我要审核</span></td>
 									</tr>
 								</table>
 							</div>
@@ -380,9 +412,17 @@
 						<!-- 导航菜单 begin -->
 						<div class="title-tab">
 							<ul class="tab-nav">
-								<li class="active"><a href="javascript:;" data-state="0" onclick="mainTab(this);">未审核</a></li>
-								<li><a href="javascript:;" data-state="1" onclick="mainTab(this);">审核通过</a></li>
-								<li><a href="javascript:;" data-state="2" onclick="mainTab(this);">审核不通过</a></li>
+								<li>
+									<select name="" class="form-control" id="order_send_type">
+										<option value="0">商城订单</option>
+										<option value="1">白条订单</option>
+									</select>
+								</li>
+								<span class="order-send-span">
+									<li class="active"><a href="javascript:;" data-state="0" onclick="mainTab(this);">未审核</a></li>
+									<li><a href="javascript:;" data-state="1" onclick="mainTab(this);">审核通过</a></li>
+									<li><a href="javascript:;" data-state="2" onclick="mainTab(this);">审核不通过</a></li>
+								</span>
 							</ul>
 						</div>
 						<!-- 导航菜单 end -->
@@ -737,7 +777,7 @@
 									<thead>
 										<tr>
 											<td width="120">订单编号</td>
-											<td width="220">商品名称</td>
+											<td width="250">商品名称</td>
 											<td width="90">商品价格</td>
 											<td width="90">首付金额</td>
 											<td width="55">分期数</td>
@@ -746,7 +786,7 @@
 											<td width="55">利率</td>
 											<td width="68">用户姓名</td>
 											<td width="110">用户电话</td>
-											<td width="120">用户收货地址</td>
+											<td width="250">用户收货地址</td>
 											<td width="150">下单时间</td>
 											<td width="150">发货时间</td>
 										</tr>
