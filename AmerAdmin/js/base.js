@@ -89,4 +89,12 @@ $(function(){
 	$('.help_content').mouseout(function() {
 		timer = setInterval("$('.help_content').hide();", 1000);
 	});
+
+	// 发货管理，选择订单类型
+	$('#order_send_type').change(function(){
+		var type = $(this).find('option:selected').val(),
+		$span = $('.order-send-span');
+
+		$span.eq(type).removeClass('fn-hide').siblings('span').addClass('fn-hide');
+	});
 });

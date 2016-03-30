@@ -526,7 +526,7 @@
 						<div class="title-tab">
 							<ul class="tab-nav">
 								<li>
-									<select name="" id="order_send_type">
+									<select name="" class="form-control" id="order_send_type">
 										<option value="0">商城订单</option>
 										<option value="1">白条订单</option>
 									</select>
@@ -537,7 +537,7 @@
 									<li><a href="javascript:;" data-state="2" onclick="mainTab(this);">不发货</a></li>
 								</span>
 								<span class="order-send-span fn-hide">
-									<li><a href="javascript:;" data-state="3" onclick="mainTab(this);">未打款</a></li>
+									<li class="active"><a href="javascript:;" data-state="3" onclick="mainTab(this);">未打款</a></li>
 									<li><a href="javascript:;" data-state="4" onclick="mainTab(this);">已打款</a></li>
 									<li><a href="javascript:;" data-state="5" onclick="mainTab(this);">不打款</a></li>
 								</span>
@@ -547,7 +547,7 @@
 
 						<div class="content-wrap">
 							<!-- 订单列表 begin -->
-							<div class="list order-review-list" id="order_review_list">
+							<div class="list order-send-list" id="order_send_list">
 								<table class="table table-hover table-condensed">
 									<thead>
 										<tr>
@@ -561,13 +561,12 @@
 										<td>20160324123</td>
 										<td>苹果手机苹果手机苹果手机苹果手机</td>
 										<td>2016-01-24 10:23:43</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#orderReviewModal">审核</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#orderReviewDetailModal">详情</span></td>
 									</tr>
 									<tr>
 										<td>20160324123</td>
 										<td>苹果手机苹果手机苹果手机苹果手机</td>
 										<td>2016-01-24 10:23:43</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#orderReviewModal">审核</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#orderReviewDetailModal">详情</span></td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#orderReviewModal">处理</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#orderReviewDetailModal">详情</span></td>
 									</tr>
 									<tr>
 										<td>20160324123</td>
