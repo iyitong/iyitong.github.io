@@ -167,9 +167,46 @@
 									<i class="dropdown_arrow out"></i>
 									<i class="dropdown_arrow in"></i>
 									<dl class="help-change-list">
-										<dt>个人中心</dt>
-										<dd>区域经理可以修改个人的姓名、手机号码、支付宝账号以及详细地址。如果忘记密码，请在登录页面找回！</dd>
+										<dt>商品分类</dt>
+										<dd>必选。在添加商品时，如果尚无可用的商品分类，需要先前往“商品分类”模块进行添加</dd>
+
+										<dt>商品名称</dt>
+										<dd>必填。字数不宜过多</dd>
+
+										<dt>商品颜色</dt>
+										<dd>选填。多个颜色之间用英文逗号 , 分隔。如：金色,灰色,玫瑰金</dd>
+
+										<dt>选购类型</dt>
+										<dd>选填。多个类型之间用英文逗号 , 分隔。如：16G,32G,64G</dd>
+
+										<dt>最小分期</dt>
+										<dd>必填。最小分期数不可小于1</dd>
+
+										<dt>最大分期</dt>
+										<dd>必填</dd>
+
+										<dt>缩略图链接</dt>
+										<dd>必填。用于首页等需要商品缩略图的地方。只有一个链接，建议先把缩略图上传到第三方存储平台（如：七牛）后再获取相应的完整链接</dd>
+
+										<dt>轮播图链接</dt>
+										<dd>必填。用于商品详情页面头部的商品轮播展现。可有多个链接，多个链接之间用英文逗号分隔。建议先把轮播图上传到第三方存储平台（如：七牛）后再获取相应的完整链接</dd>
+
+										<dt>是否限时特惠</dt>
+										<dd>必选。默认为否</dd>
+
+										<dt>限时特惠结束日期</dt>
+										<dd>限时特惠选择“否”时，不需要填写。限时特惠选择“是”时，必填。结束时间精确到当天23:59:59。如：选择的日期为：2016-03-30，则限时特惠真正结束时间是：2016-03-30 23:59:59</dd>
+
+										<dt>商品图文详情</dt>
+										<dd>必填。编辑商品图文信息，对商品进行详细介绍</dd>
+
+										<dt>商品价格的设置</dt>
+										<dd>商品价格由商品颜色及选购类型共同决定，先添加商品的基本信息、颜色及选购类型后，在“商品列表”模块可以对商品价格进行设置</dd>
 									</dl>
+
+									<div class="help-footer">
+										<p>属于运营组的权限</p>
+									</div>
 								</div>
 							</div>
 						</h2>
@@ -203,11 +240,38 @@
 
 									<li>
 										<span>最小分期：</span>
-										<input type="text" class="form-control" placeholder="输入最小分期数，大于1">
-										&nbsp;<span>最大分期：</span>
-										<input type="text" class="form-control" placeholder="请输入最小分期数">
+										<input type="number" min="1" class="form-control" placeholder="必须大于或等于1期">
+										&nbsp;&nbsp;<span>最大分期：</span>
+										<input type="number" class="form-control" placeholder="输入最大分期数">
+										&nbsp;&nbsp;<span>分期月利率：</span>
+										<input type="number" class="form-control" placeholder="格式如：0.03">
+									</li>
+
+									<li>
+										<span>缩略图链接：</span>
+										<input type="text" class="form-control width8" placeholder="请输入商品选购类型，多个类型之间用英文逗号 , 分隔">
+									</li>
+
+									<li>
+										<span>轮播图链接：</span>
+										<input type="text" class="form-control width8" placeholder="请输入商品选购类型，多个类型之间用英文逗号 , 分隔">
+									</li>
+
+									<li>
+										<span>是否限时特惠：</span>
+										<label><input type="radio" value="0" name="xsth" checked>&nbsp;否</label>&nbsp;
+										<label><input type="radio" value="1" name="xsth">&nbsp;是</label>
+										&nbsp;&nbsp;<span>限时特惠结束日期：</span>
+										<input type="date" class="form-control">
+									</li>
+
+									<li>
+										<span>商品图文详情：</span>
+										<textarea name="" class="form-control" id="" cols="120" rows="10"></textarea>
 									</li>
 								</ul>
+
+								<button class="btn btn-warning btn-block" type="submit">添加商品</button>
 							</form>
 						</div>
 					</div>
@@ -323,19 +387,17 @@
 								</li>
 								<span class="order-send-span">
 									<li class="active"><a href="javascript:;" data-state="0" onclick="mainTab(this);">未审核</a></li>
-									<li><a href="javascript:;" data-state="1" onclick="mainTab(this);">审核通过</a></li>
-									<li><a href="javascript:;" data-state="2" onclick="mainTab(this);">审核不通过</a></li>
 									<li><a href="javascript:;" data-state="3" onclick="mainTab(this);">未发货</a></li>
 									<li><a href="javascript:;" data-state="4" onclick="mainTab(this);">已发货</a></li>
 									<li><a href="javascript:;" data-state="5" onclick="mainTab(this);">不发货</a></li>
+									<li><a href="javascript:;" data-state="2" onclick="mainTab(this);">审核不通过</a></li>
 								</span>
 								<span class="order-send-span fn-hide">
 									<li class="active"><a href="javascript:;" data-state="0" onclick="mainTab(this);">未审核</a></li>
-									<li><a href="javascript:;" data-state="1" onclick="mainTab(this);">审核通过</a></li>
-									<li><a href="javascript:;" data-state="2" onclick="mainTab(this);">审核不通过</a></li>
 									<li><a href="javascript:;" data-state="3" onclick="mainTab(this);">未打款</a></li>
 									<li><a href="javascript:;" data-state="4" onclick="mainTab(this);">已打款</a></li>
 									<li><a href="javascript:;" data-state="5" onclick="mainTab(this);">不打款</a></li>
+									<li><a href="javascript:;" data-state="2" onclick="mainTab(this);">审核不通过</a></li>
 								</span>
 							</ul>
 						</div>
