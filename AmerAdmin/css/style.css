@@ -530,6 +530,12 @@ label {
 	margin: 0 5px;
 	color: #459ae9;
 }
+.form-control {
+	min-width: 120px;
+}
+.form .width8 {
+	width: 80%;
+}
 .form-control-group {
 	padding: 10px 0;
 }
