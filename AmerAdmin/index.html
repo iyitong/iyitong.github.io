@@ -50,6 +50,7 @@
 	        ) no-repeat;"></i>商城管理</dt>
 						<dd class="menu-item"><a data-id="item_list" href="#item_list">商品列表</a></dd>
 						<dd class="menu-item"><a data-id="item_add" href="#item_add">添加商品</a></dd>
+						<!-- <dd class="menu-item"><a data-id="item_edit" href="#item_edit">编辑商品</a></dd> -->
 						<dd class="menu-item"><a data-id="item_category" href="#item_category">商品分类</a></dd>
 					</dl>
 
@@ -110,9 +111,25 @@
 									<i class="dropdown_arrow out"></i>
 									<i class="dropdown_arrow in"></i>
 									<dl class="help-change-list">
-										<dt>个人中心</dt>
-										<dd>区域经理可以修改个人的姓名、手机号码、支付宝账号以及详细地址。如果忘记密码，请在登录页面找回！</dd>
+										<dt>商品列表</dt>
+										<dd>根据商品分类及是否限时特惠获取商品列表</dd>
+
+										<dt>设置商品价格</dt>
+										<dd>只有在已下架状态才可以进行操作。商品价格由商品颜色及商品类型共同决定，如果商品颜色与商品类型的任何组合都是同一价格，则可以设置一口价。否则分别设置。</dd>
+
+										<dt>商品上架</dt>
+										<dd>商品上架之后才会展现在客户端，上架前必须先设置商品价格</dd>
+
+										<dt>商品下架</dt>
+										<dd>商品添加后，默认处于已下架状态</dd>
+
+										<dt>商品编辑</dt>
+										<dd>商品只有在已下架状态下才可以进行编辑</dd>
 									</dl>
+
+									<div class="help-footer">
+										<p>属于运营组的权限</p>
+									</div>
 								</div>
 							</div>
 						</h2>
@@ -120,42 +137,264 @@
 
 					<div class="main-bd">
 						<div class="content-wrap">
-							<div class="list " id="">
+							<form action="" class="form form-inline">
+								<span>商品分类：</span>
+								<select name="" class="form-control" id="">
+									<option value="">手机</option>
+									<option value="">电脑</option>
+								</select>
+								&nbsp;<span>限时特惠：</span>
+								<select name="" class="form-control" id="">
+									<option value="0">否</option>
+									<option value="1">是</option>
+								</select>
+								&nbsp;<span>商品状态：</span>
+								<select name="" class="form-control" id="">
+									<option value="1">已上架</option>
+									<option value="0">已下架</option>
+								</select>
+								<button class="btn btn-warning" type="button">获取</button>
+							</form>
+ 
+							<!-- 商品列表 begin -->
+							<div class="list item-list" id="all_item_list">
+							<p>已上架的商品列表</p>
+								<table class="table table-hover table-condensed">
+									<thead>
+										<tr>
+											<td>商品名称</td>
+											<td width="90">操作</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>苹果手机苹果手机苹果手机苹果手机</td>
+										<td><span class="label label-warning">下架</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#itemDetailModal">详情</span></td>
+									</tr>
+									<tr>
+										<td>苹果手机苹果手机苹果手机苹果手机</td>
+										<td><span class="label label-warning">下架</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#itemDetailModal">详情</span></td>
+									</tr>
+									<tr>
+										<td>苹果手机苹果手机苹果手机苹果手机</td>
+										<td><span class="label label-warning">下架</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#itemDetailModal">详情</span></td>
+									</tr>
+								</table>
 
+<p>已下架的商品列表</p>
+								<table class="table table-hover table-condensed">
+									<thead>
+										<tr>
+											<td>商品名称</td>
+											<td width="197">操作</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>苹果手机苹果手机苹果手机苹果手机</td>
+										<td><span class="label label-warning">上架</span>&nbsp;<span class="label label-success" data-toggle="modal" data-target="#setItemPriceModal">设置价格</span>&nbsp;<a class="label label-info" data-id="item_edit" href="#item_edit">编辑</a>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#itemDetailModal">详情</span></td>
+									</tr>
+									<tr>
+										<td>苹果手机苹果手机苹果手机苹果手机</td>
+										<td><span class="label label-warning">上架</span>&nbsp;<span class="label label-success" data-toggle="modal" data-target="#setItemPriceModal">设置价格</span>&nbsp;<a class="label label-info" data-id="item_edit" href="#item_edit">编辑</a>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#itemDetailModal">详情</span></td>
+									</tr>
+									<tr>
+										<td>苹果手机苹果手机苹果手机苹果手机</td>
+										<td><span class="label label-warning">上架</span>&nbsp;<span class="label label-success" data-toggle="modal" data-target="#setItemPriceModal">设置价格</span>&nbsp;<a class="label label-info" data-id="item_edit" href="#item_edit">编辑</a>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#itemDetailModal">详情</span></td>
+									</tr>
+								</table>
 							</div>
+							<!-- 商品列表 end -->
 
-							<!-- 修改个人信息弹出层 begin -->
-							<div class="modal fade" id="changeInfoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<!-- 设置商品价格弹出层 begin -->
+							<div class="modal fade" id="itemDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 							   	<div class="modal-dialog">
 							      	<div class="modal-content">
 							         	<div class="modal-header">
 							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-							            	<h4 class="modal-title">修改个人信息</h4>
+							            	<h4 class="modal-title">商品详情</h4>
 							         	</div>
 
-							         	<form action="" class="form form-horizontal info-form">
+							         	<div class="modal-body">
+						            		<div class="bill-info">
+							            	    <p>商品分类：<strong>手机</strong></p>
+							            	    <h4>商品基本信息</h4>
+							            		<ul>
+							            			<li class="block"><span>商品名称：</span>苹果手机苹果手机苹果手机苹果手机苹果手机苹果手机苹果手机苹果手机苹果手机苹果手机苹果手机苹果手机</li>
+							            			<li><span>商品颜色：</span>金色,灰色,玫瑰金</li>
+							            			<li><span>商品类型：</span>16G,32G,64G</li>
+							            			<li style="width: 25%;"><span>最小分期：</span>1期</li>
+							            			<li style="width: 25%;"><span>最大分期：</span>24期</li>
+							            			<li style="width: 50%;"><span>分期月利率：</span>0.03</li>
+							            			<li class="block"><span>缩略图链接：</span><a href="https://mp.weixin.qq.com/misc/getheadimg?fakeid=3082314054&token=60560262&lang=zh_CN" target="_blank">点击查看</a></li>
+							            			<li class="block"><span>轮播图链接：</span><a href="https://mp.weixin.qq.com/misc/getheadimg?fakeid=3082314054&token=60560262&lang=zh_CN" target="_blank">链接1</a>&nbsp;<a href="https://mp.weixin.qq.com/misc/getheadimg?fakeid=3082314054&token=60560262&lang=zh_CN" target="_blank">链接2</a>&nbsp;<a href="https://mp.weixin.qq.com/misc/getheadimg?fakeid=3082314054&token=60560262&lang=zh_CN" target="_blank">链接3</a></li>
+							            			<li><span>是否限时特惠：</span><span class="label label-primary">否</span>&nbsp;<span class="label label-success">是</span></li>
+							            			<li><span>限时特惠结束时间：</span>2016-03-30 23:59:59</li>
+							            		</ul>
+
+							            		<h4>商品价格列表</h4>
+							            		<ul>
+							            			<li class="block">
+							            				<table class="table table-hover table-condensed">
+															<thead>
+																<tr>
+																	<td width="250">颜色</td>
+																	<td>类型</td>
+																	<td width="120">价格</td>
+																</tr>
+															</thead>
+															<tr>
+																<td>灰色</td>
+																<td>16G</td>
+																<td>￥3299.00</td>
+															</tr>
+															<tr>
+																<td>灰色</td>
+																<td>32G</td>
+																<td>￥3299.00</td>
+															</tr>
+															<tr>
+																<td>灰色</td>
+																<td>64G</td>
+																<td>￥3299.00</td>
+															</tr>
+
+															<tr>
+																<td>金色</td>
+																<td>16G</td>
+																<td>￥3299.00</td>
+															</tr>
+															<tr>
+																<td>金色</td>
+																<td>32G</td>
+																<td>￥3299.00</td>
+															</tr>
+															<tr>
+																<td>金色</td>
+																<td>64G</td>
+																<td>￥3299.00</td>
+															</tr>
+
+															<tr>
+																<td>玫瑰金</td>
+																<td>16G</td>
+																<td>￥4899.00</td>
+															</tr>
+															<tr>
+																<td>玫瑰金</td>
+																<td>32G</td>
+																<td>￥4899.00</td>
+															</tr>
+															<tr>
+																<td>玫瑰金</td>
+																<td>64G</td>
+																<td>￥4899.00</td>
+															</tr>
+														</table>
+							            			</li>
+							            		</ul>
+
+							            		<h4>商品图文详情</h4>
+							            		<ul>
+							            			<li class="block">这里是商品图文详情介绍</li>
+							            		</ul>
+							            	</div>
+							         	</div>
+							         	<div class="modal-footer">
+							            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							         	</div>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 设置商品价格弹出层 end -->
+
+							<!-- 设置商品价格弹出层 begin -->
+							<div class="modal fade" id="setItemPriceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title">设置商品价格</h4>
+							         	</div>
+
+							         	<form action="" class="form form-inline info-form">
 								         	<div class="modal-body">
 							            		<ul>
-							            			<li>姓名：<input type="text" class="form-control" id="change_name" name="name" placeholder="请输入姓名" required></li>
-							            			<li>手机号码：<input type="tel" class="form-control" id="change_cellphone" name="cellphone"  placeholder="请输入手机号码"required ></li>
-							            			<li>支付宝账号：<input type="text" class="form-control" id="change_alipay" name="alipay"  placeholder="请输入支付宝账号" required></li>
-							            			<li>详细地址：<input type="text" class="form-control" id="change_address" name="address"  placeholder="请输入详细地址" required></li>
+								            		<li>商品价格由商品颜色及商品类型共同决定，如果商品颜色与商品类型的任何组合都是同一价格，则可以设置一口价。否则分别设置。</li>
+
+								            		<li><span>一口价：</span>￥<input type="number" class="form-control">&nbsp;<button type="button" class="btn btn-warning">设置</button></li>
+
+							            			<li>
+							            				<table class="table table-hover table-condensed">
+															<thead>
+																<tr>
+																	<td>颜色</td>
+																	<td>类型</td>
+																	<td>价格</td>
+																</tr>
+															</thead>
+															<tr>
+																<td>灰色</td>
+																<td>16G</td>
+																<td>￥<input type="number"></td>
+															</tr>
+															<tr>
+																<td>灰色</td>
+																<td>32G</td>
+																<td>￥<input type="number"></td>
+															</tr>
+															<tr>
+																<td>灰色</td>
+																<td>64G</td>
+																<td>￥<input type="number"></td>
+															</tr>
+
+															<tr>
+																<td>金色</td>
+																<td>16G</td>
+																<td>￥<input type="number"></td>
+															</tr>
+															<tr>
+																<td>金色</td>
+																<td>32G</td>
+																<td>￥<input type="number"></td>
+															</tr>
+															<tr>
+																<td>金色</td>
+																<td>64G</td>
+																<td>￥<input type="number"></td>
+															</tr>
+
+															<tr>
+																<td>玫瑰金</td>
+																<td>16G</td>
+																<td>￥<input type="number"></td>
+															</tr>
+															<tr>
+																<td>玫瑰金</td>
+																<td>32G</td>
+																<td>￥<input type="number"></td>
+															</tr>
+															<tr>
+																<td>玫瑰金</td>
+																<td>64G</td>
+																<td>￥<input type="number"></td>
+															</tr>
+														</table>
+							            			</li>
 							            		</ul>
 								         	</div>
 								         	<div class="modal-footer">
 								            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-								            	<button type="button" class="btn btn-warning" id="change_info_btn" onclick="changePersonalInfo();">保存修改</button>
+								            	<button type="button" class="btn btn-warning" id="">保存价格</button>
 								         	</div>
 							         	</form>
 							      	</div>
 						      	</div>
 							</div>
-							<!-- 修改个人信息弹出层 end -->
+							<!-- 设置商品价格弹出层 end -->
 						</div>
 					</div>
 				</div>
 				<!-- 商品列表 end -->
-
 
 				<!-- 添加商品 begin -->
 				<div class="main main-item-add fn-hide" id="main_item_add">
@@ -176,7 +415,7 @@
 										<dt>商品颜色</dt>
 										<dd>选填。多个颜色之间用英文逗号 , 分隔。如：金色,灰色,玫瑰金</dd>
 
-										<dt>选购类型</dt>
+										<dt>商品类型</dt>
 										<dd>选填。多个类型之间用英文逗号 , 分隔。如：16G,32G,64G</dd>
 
 										<dt>最小分期</dt>
@@ -230,12 +469,12 @@
 
 									<li>
 										<span>商品颜色：</span>
-										<input type="text" class="form-control width8" placeholder="请输入商品颜色，多个颜色之间用英文逗号 , 分隔">
+										<input type="text" class="form-control width8" placeholder="请输入商品颜色，多个颜色之间用英文逗号 , 分隔；如：金色,灰色,玫瑰金">
 									</li>
 
 									<li>
-										<span>选购类型：</span>
-										<input type="text" class="form-control width8" placeholder="请输入商品选购类型，多个类型之间用英文逗号 , 分隔">
+										<span>商品类型：</span>
+										<input type="text" class="form-control width8" placeholder="请输入商品选购类型，多个类型之间用英文逗号 , 分隔；如：16G,32G,64G">
 									</li>
 
 									<li>
@@ -278,6 +517,127 @@
 				</div>
 				<!-- 添加商品 end -->
 
+				<!-- 编辑商品 begin -->
+				<div class="main main-item-edit fn-hide" id="main_item_edit">
+					<div class="main-hd">
+						<h2>编辑商品
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt>商品分类</dt>
+										<dd>必选。在添加商品时，如果尚无可用的商品分类，需要先前往“商品分类”模块进行添加</dd>
+
+										<dt>商品名称</dt>
+										<dd>必填。字数不宜过多</dd>
+
+										<dt>商品颜色</dt>
+										<dd>选填。多个颜色之间用英文逗号 , 分隔。如：金色,灰色,玫瑰金</dd>
+
+										<dt>商品类型</dt>
+										<dd>选填。多个类型之间用英文逗号 , 分隔。如：16G,32G,64G</dd>
+
+										<dt>最小分期</dt>
+										<dd>必填。最小分期数不可小于1</dd>
+
+										<dt>最大分期</dt>
+										<dd>必填</dd>
+
+										<dt>缩略图链接</dt>
+										<dd>必填。用于首页等需要商品缩略图的地方。只有一个链接，建议先把缩略图上传到第三方存储平台（如：七牛）后再获取相应的完整链接</dd>
+
+										<dt>轮播图链接</dt>
+										<dd>必填。用于商品详情页面头部的商品轮播展现。可有多个链接，多个链接之间用英文逗号分隔。建议先把轮播图上传到第三方存储平台（如：七牛）后再获取相应的完整链接</dd>
+
+										<dt>是否限时特惠</dt>
+										<dd>必选。默认为否</dd>
+
+										<dt>限时特惠结束日期</dt>
+										<dd>限时特惠选择“否”时，不需要填写。限时特惠选择“是”时，必填。结束时间精确到当天23:59:59。如：选择的日期为：2016-03-30，则限时特惠真正结束时间是：2016-03-30 23:59:59</dd>
+
+										<dt>商品图文详情</dt>
+										<dd>必填。编辑商品图文信息，对商品进行详细介绍</dd>
+
+										<dt>商品价格的设置</dt>
+										<dd>商品价格由商品颜色及选购类型共同决定，先添加商品的基本信息、颜色及选购类型后，在“商品列表”模块可以对商品价格进行设置</dd>
+									</dl>
+
+									<div class="help-footer">
+										<p>属于运营组的权限</p>
+									</div>
+								</div>
+							</div>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<div class="content-wrap">
+							<form action="" class="form form-inline">
+								<ul>
+									<li>
+										<span>商品分类：</span>
+										<select name="" class="form-control" id="">
+											<option value="">手机</option>
+										</select>
+									</li>
+
+									<li>
+										<span>商品名称：</span>
+										<input type="text" class="form-control width8" placeholder="请输入商品名称" required>
+									</li>
+
+									<li>
+										<span>商品颜色：</span>
+										<input type="text" class="form-control width8" placeholder="请输入商品颜色，多个颜色之间用英文逗号 , 分隔；如：金色,灰色,玫瑰金">
+									</li>
+
+									<li>
+										<span>商品类型：</span>
+										<input type="text" class="form-control width8" placeholder="请输入商品选购类型，多个类型之间用英文逗号 , 分隔；如：16G,32G,64G">
+									</li>
+
+									<li>
+										<span>最小分期：</span>
+										<input type="number" min="1" class="form-control" placeholder="必须大于或等于1期">
+										&nbsp;&nbsp;<span>最大分期：</span>
+										<input type="number" class="form-control" placeholder="输入最大分期数">
+										&nbsp;&nbsp;<span>分期月利率：</span>
+										<input type="number" class="form-control" placeholder="格式如：0.03">
+									</li>
+
+									<li>
+										<span>缩略图链接：</span>
+										<input type="text" class="form-control width8" placeholder="请输入商品选购类型，多个类型之间用英文逗号 , 分隔">
+									</li>
+
+									<li>
+										<span>轮播图链接：</span>
+										<input type="text" class="form-control width8" placeholder="请输入商品选购类型，多个类型之间用英文逗号 , 分隔">
+									</li>
+
+									<li>
+										<span>是否限时特惠：</span>
+										<label><input type="radio" value="0" name="xsth" checked>&nbsp;否</label>&nbsp;
+										<label><input type="radio" value="1" name="xsth">&nbsp;是</label>
+										&nbsp;&nbsp;<span>限时特惠结束日期：</span>
+										<input type="date" class="form-control">
+									</li>
+
+									<li>
+										<span>商品图文详情：</span>
+										<textarea name="" class="form-control" id="" cols="120" rows="10"></textarea>
+									</li>
+								</ul>
+
+								<button class="btn btn-warning btn-block" type="submit">添加商品</button>
+							</form>
+						</div>
+					</div>
+				</div>
+				<!-- 编辑商品 end -->
+
 				<!-- 商品分类 begin -->
 				<div class="main main-item-category fn-hide" id="main_item_category">
 					<div class="main-hd">
@@ -289,8 +649,12 @@
 									<i class="dropdown_arrow in"></i>
 									<dl class="help-change-list">
 										<dt>商品分类</dt>
-										<dd>用于商品搜索</dd>
+										<dd>区分商品类别，添加商品时需要选择分类</dd>
 									</dl>
+
+									<div class="help-footer">
+										<p>属于运营组的权限</p>
+									</div>
 								</div>
 							</div>
 
@@ -364,8 +728,8 @@
 									<i class="dropdown_arrow out"></i>
 									<i class="dropdown_arrow in"></i>
 									<dl class="help-change-list">
-										<dt>我要处理</dt>
-										<dd></dd>
+										<dt>我要审核</dt>
+										<dd>风控组成员根据自己的工作要求，对未审核的订单进行审核，在审核之前需要先点击“我要审核”按钮把订单转入自己的“未审核”订单列表中，然后在“订单审核”模块的“未审核”列表中进行风控审核</dd>
 									</dl>
 									<div class="help-footer">
 										<p>属于风控组权限</p>
@@ -419,19 +783,19 @@
 										<td>20160324123</td>
 										<td>苹果手机苹果手机苹果手机苹果手机</td>
 										<td>2016-01-24 10:23:43</td>
-										<td><span class="label label-primary" data-toggle="modal" data-target="#orderDetailModal">详情</span>&nbsp;<span class="label label-warning" onclick="alert('该订单已经转移到你的“未审核订单”列表中，请自行前往“订单审核”模块进行审核');">我要审核</span></td>
+										<td><span class="label label-warning" onclick="alert('该订单已经转移到你的“未审核订单”列表中，请自行前往“订单审核”模块进行审核');">我要审核</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#orderDetailModal">详情</span></td>
 									</tr>
 									<tr>
 										<td>20160324123</td>
 										<td>苹果手机苹果手机苹果手机苹果手机</td>
 										<td>2016-01-24 10:23:43</td>
-										<td><span class="label label-primary" data-toggle="modal" data-target="#orderDetailModal">详情</span>&nbsp;<span class="label label-warning">我要审核</span></td>
+										<td><span class="label label-warning" onclick="alert('该订单已经转移到你的“未审核订单”列表中，请自行前往“订单审核”模块进行审核');">我要审核</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#orderDetailModal">详情</span></td>
 									</tr>
 									<tr>
 										<td>20160324123</td>
 										<td>苹果手机苹果手机苹果手机苹果手机</td>
 										<td>2016-01-24 10:23:43</td>
-										<td><span class="label label-primary" data-toggle="modal" data-target="#orderDetailModal">详情</span>&nbsp;<span class="label label-warning">我要审核</span></td>
+										<td><span class="label label-warning" onclick="alert('该订单已经转移到你的“未审核订单”列表中，请自行前往“订单审核”模块进行审核');">我要审核</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#orderDetailModal">详情</span></td>
 									</tr>
 								</table>
 							</div>
@@ -493,8 +857,8 @@
 									<i class="dropdown_arrow out"></i>
 									<i class="dropdown_arrow in"></i>
 									<dl class="help-change-list">
-										<dt>个人中心</dt>
-										<dd>区域经理可以修改个人的姓名、手机号码、支付宝账号以及详细地址。如果忘记密码，请在登录页面找回！</dd>
+										<dt>订单审核</dt>
+										<dd>风控组对订单进行风控审核，并填写审核结果</dd>
 									</dl>
 								</div>
 							</div>
@@ -647,8 +1011,14 @@
 									<i class="dropdown_arrow out"></i>
 									<i class="dropdown_arrow in"></i>
 									<dl class="help-change-list">
-										<dt>个人中心</dt>
-										<dd>区域经理可以修改个人的姓名、手机号码、支付宝账号以及详细地址。如果忘记密码，请在登录页面找回！</dd>
+										<dt>发货管理</dt>
+										<dd>财务组根据订单的类型及状态对订单进行相应处理，发货或者打款</dd>
+
+										<dt>填写商品成本价</dt>
+										<dd>如果是商城订单，财务组在订单处理结果为“发货”时，需要填写商品的成本价格以及处理备注</dd>
+
+										<dt>处理结果的备注</dt>
+										<dd>如果订单处理为“不发货”或者“不打款”时，强烈建议填写备注，说明“不发货”或者“不打款”的原因</dd>
 									</dl>
 								</div>
 							</div>
@@ -765,8 +1135,8 @@
 								         		<div class="bill-deal">
 								         			<h4 class="text-center font-bold">选择结果</h4>
 								         			<div class="text-center">
-								         				<label><input type="radio" name="order_state">发货</label>
-							            				<label><input type="radio" name="order_state">不发货</label>
+								         				<label><input type="radio" name="order_state">发货/打款</label>
+							            				<label><input type="radio" name="order_state">不发货/不打款</label>
 								         			</div>
 
 								         			<span>商品成本:（单位:元）</span><input type="text" class="form-control" placeholder="请输入商品成本，单位:元" style="width: 280px;">
@@ -804,6 +1174,9 @@
 									<dl class="help-change-list">
 										<dt>导出订单报表</dt>
 										<dd>只有处于已发货或已打款状态的订单才可以导出Excel表格</dd>
+
+										<dt>导出的数据参数</dt>
+										<dd>财务组根据具体业务要求，勾选需要导出的数据参数并导出相应的数据</dd>
 									</dl>
 
 									<div class="help-footer">
@@ -1351,11 +1724,23 @@
 									<i class="dropdown_arrow out"></i>
 									<i class="dropdown_arrow in"></i>
 									<dl class="help-change-list">
-										<dt></dt>
-										<dd></dd>
+										<dt>签单数量</dt>
+										<dd>当天完成的签单总数量</dd>
+
+										<dt>成交订单量</dt>
+										<dd>当天用户下单成交总数量</dd>
+
+										<dt>审核通过订单量</dt>
+										<dd>当天通过风控审核的订单总数量</dd>
+
+										<dt>商品成交总成本</dt>
+										<dd>当天用户下单成交量相应的商品总成本</dd>
+
+										<dt>订单总服务费</dt>
+										<dd>当天成交的订单带来的总服务费用</dd>
 									</dl>
 									<div class="help-footer">
-										<p>选择相应的时间段获取业绩数据</p>
+										<p>属于城市组的权限</p>
 									</div>
 								</div>
 							</div>
@@ -1653,7 +2038,7 @@
 									<i class="dropdown_arrow in"></i>
 									<dl class="help-change-list">
 										<dt>学校管理</dt>
-										<dd>超级管理员可对学校进行添加、编辑及删除</dd>
+										<dd>超级管理员可对学校进行添加、编辑</dd>
 									</dl>
 
 									<div class="help-footer">

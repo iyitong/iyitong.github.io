@@ -19,7 +19,7 @@ thead tr td {
 }
 table a,table a:visited {
 	display: inline-block;
-	color: #222;
+	color: #fff;
 	text-decoration: none;
 }
 table a:hover {
