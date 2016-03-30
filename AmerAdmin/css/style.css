@@ -241,6 +241,17 @@ label {
 .content-wrap .form {
 	margin-bottom: 10px;
 }
+.content-wrap .form .label-list {
+	margin-top: 10px;
+	display: block;
+}
+.content-wrap .form .label-list label {
+	margin-right: 5px;
+	line-height: 22px;
+}
+.content-wrap .form .label-list input {
+	margin-right: 3px;
+}
 .main .list {
 	max-height: 400px;
 	overflow: auto;

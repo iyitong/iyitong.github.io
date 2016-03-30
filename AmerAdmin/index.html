@@ -327,7 +327,7 @@
 						            			<h4>订单信息</h4>
 							            		<ul>
 							            			<li class="block"><span>商品名称：</span>苹果手机se苹果手机se苹果手机se苹果手机se苹果手机se</li>
-							            			<li><span>订单总价：</span>￥4288.00</li>
+							            			<li><span>商品价格：</span>￥4288.00</li>
 							            			<li><span>首付：</span>￥1000.00</li>
 							            			<li><span>分期详情：</span>￥1096.00 x 3期</li>
 							            			<li><span>月供：</span>￥1096.00（含服务费￥0.00）</li>
@@ -436,7 +436,7 @@
 						            			<h4>订单信息</h4>
 							            		<ul>
 							            			<li class="block"><span>商品名称：</span>苹果手机se苹果手机se苹果手机se苹果手机se苹果手机se</li>
-							            			<li><span>订单总价：</span>￥4288.00</li>
+							            			<li><span>商品价格：</span>￥4288.00</li>
 							            			<li><span>首付：</span>￥1000.00</li>
 							            			<li><span>分期详情：</span>￥1096.00 x 3期</li>
 							            			<li><span>月供：</span>￥1096.00（含服务费￥0.00）</li>
@@ -562,20 +562,20 @@
 										<td>20160324123</td>
 										<td>苹果手机苹果手机苹果手机苹果手机</td>
 										<td>2016-01-24 10:23:43</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#orderReviewModal">处理</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#orderReviewDetailModal">详情</span></td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#orderSendModal">处理</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#orderSendDetailModal">详情</span></td>
 									</tr>
 									<tr>
 										<td>20160324123</td>
 										<td>苹果手机苹果手机苹果手机苹果手机</td>
 										<td>2016-01-24 10:23:43</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#orderReviewModal">审核</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#orderReviewDetailModal">详情</span></td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#orderSendModal">处理</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#orderSendDetailModal">详情</span></td>
 									</tr>
 								</table>
 							</div>
 							<!-- 订单列表 end -->
 
 							<!-- 订单详情弹出层 begin -->
-							<div class="modal fade" id="orderReviewDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal fade" id="orderSendDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 							   	<div class="modal-dialog">
 							      	<div class="modal-content">
 							         	<div class="modal-header">
@@ -618,23 +618,25 @@
 							</div>
 							<!-- 订单详情弹出层 end -->
 
-							<!-- 审核弹出层 begin -->
-							<div class="modal fade" id="orderReviewModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<!-- 发货处理弹出层 begin -->
+							<div class="modal fade" id="orderSendModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 							   	<div class="modal-dialog">
 							      	<div class="modal-content">
 							         	<div class="modal-header">
 							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-							            	<h4 class="modal-title">账单处理</h4>
+							            	<h4 class="modal-title">发货处理</h4>
 							         	</div>
 
 										<form class="form form-horizontal info-form">
 								         	<div class="modal-body">
 								         		<div class="bill-deal">
-								         			<h4 class="text-center font-bold">选择审核结果</h4>
+								         			<h4 class="text-center font-bold">选择结果</h4>
 								         			<div class="text-center">
-								         				<label><input type="radio" name="order_state">通过</label>
-							            				<label><input type="radio" name="order_state">不通过</label>
+								         				<label><input type="radio" name="order_state">发货</label>
+							            				<label><input type="radio" name="order_state">不发货</label>
 								         			</div>
+
+								         			<span>商品成本:（单位:元）</span><input type="text" class="form-control" placeholder="请输入商品成本，单位:元" style="width: 280px;">
 
 						            				<h4>备注：</h4>
 						            				<textarea name="" class="form-control" id="" cols="30" rows="5"></textarea>
@@ -648,7 +650,7 @@
 							      	</div>
 						      	</div>
 							</div>
-							<!-- 审核弹出层 end -->
+							<!-- 发货处理弹出层 end -->
 
 							<!-- 分页 -->
 							<div class="kkpager" id="order_send_kkpager">这里是分页列表</div>
@@ -656,6 +658,188 @@
 					</div>
 				</div>
 				<!-- 发货管理 end -->
+
+				<!-- 导出订单报表 begin -->
+				<div class="main main-order-export fn-hide" id="main_order_export">
+					<div class="main-hd">
+						<h2>导出订单报表
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt>导出订单报表</dt>
+										<dd>只有处于已发货或已打款状态的订单才可以导出Excel表格</dd>
+									</dl>
+
+									<div class="help-footer">
+										<p>属于财务组权限</p>
+									</div>
+								</div>
+							</div>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<div class="content-wrap">
+							<form action="" class="form form-inline">
+								<span>订单类型：</span>
+								<select name="" class="form-control" id="">
+									<option value="0">商城订单</option>
+									<option value="0">白条订单</option>
+								</select>
+
+								<span>下单时间：</span>
+								<input type="date" class="form-control" id="">
+								<input type="date" class="form-control" id="">
+								<button type="button" class="btn btn-warning fn-right">导出EXCEL</button>
+
+								<p style="margin-top: 20px;">商城订单可选择导出的数据</p>
+								<div class="label-list">
+									<label><input type="checkbox">全选</label>
+									<label><input type="checkbox">订单编号</label>
+									<label><input type="checkbox">商品名称</label>
+									<label><input type="checkbox">商品价格</label>
+									<label><input type="checkbox">首付金额</label>
+									<label><input type="checkbox">分期数</label>
+									<label><input type="checkbox">月供</label>
+									<label><input type="checkbox">服务费</label>
+									<label><input type="checkbox">利率</label>
+									<label><input type="checkbox">用户姓名</label>
+									<label><input type="checkbox">用户电话</label>
+									<label><input type="checkbox">用户收货地址</label>
+									<label><input type="checkbox">下单时间</label>
+									<label><input type="checkbox">发货时间</label>
+									<button class="btn btn-warning">生成报表</button>
+								</div>
+
+								<p style="margin-top: 20px;">白条订单可选择导出的数据</p>
+								<div class="label-list">
+									<label><input type="checkbox">全选</label>
+									<label><input type="checkbox">订单编号</label>
+									<label><input type="checkbox">商品名称</label>
+									<label><input type="checkbox">白条金额</label>
+									<label><input type="checkbox">分期数</label>
+									<label><input type="checkbox">月供</label>
+									<label><input type="checkbox">服务费</label>
+									<label><input type="checkbox">利率</label>
+									<label><input type="checkbox">下单时间</label>
+									<label><input type="checkbox">打款时间</label>
+									<button class="btn btn-warning">生成报表</button>
+								</div>
+							</form>
+
+							<!-- 订单列表 begin -->
+							<div class="list order-send-list" id="order_send_list">
+								<p>商城订单</p>
+								<table class="table table-hover table-condensed" style="width: 889px;">
+									<thead>
+										<tr>
+											<td width="120">订单编号</td>
+											<td width="220">商品名称</td>
+											<td width="90">商品价格</td>
+											<td width="90">首付金额</td>
+											<td width="55">分期数</td>
+											<td width="80">月供</td>
+											<td width="80">服务费</td>
+											<td width="55">利率</td>
+											<td width="68">用户姓名</td>
+											<td width="110">用户电话</td>
+											<td width="120">用户收货地址</td>
+											<td width="150">下单时间</td>
+											<td width="150">发货时间</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>2016032410009</td>
+										<td>苹果手机苹果手机苹果手机苹果手机</td>
+										<td>￥5,000.00</td>
+										<td>￥1,000.00</td>
+										<td>24</td>
+										<td>￥500.00</td>
+										<td>￥50.00</td>
+										<td>0.03</td>
+										<td>静风</td>
+										<td>15829323923</td>
+										<td>广东省广州市大学城东三路</td>
+										<td>2016-01-24 10:23:43</td>
+										<td>2016-01-24 10:23:43</td>
+									</tr>
+								</table>
+
+								<p>白条订单</p>
+								<table class="table table-hover table-condensed">
+									<thead>
+										<tr>
+											<td width="120">订单编号</td>
+											<td width="80">商品名称</td>
+											<td width="90">白条金额</td>
+											<td width="55">分期数</td>
+											<td width="80">月供</td>
+											<td width="80">服务费</td>
+											<td width="55">利率</td>
+											<td>下单时间</td>
+											<td>打款时间</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>2016032410009</td>
+										<td>白条订单</td>
+										<td>￥5,000.00</td>
+										<td>24</td>
+										<td>￥500.00</td>
+										<td>￥50.00</td>
+										<td>0.03</td>
+										<td>2016-01-24 10:23:43</td>
+										<td>2016-01-24 10:23:43</td>
+									</tr>
+								</table>
+							</div>
+							<!-- 订单列表 end -->
+
+							<!-- 订单详情弹出层 begin -->
+							<div class="modal fade" id="orderExportDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title">订单详情</h4>
+							         	</div>
+
+							         	<div class="modal-body">
+						            		<div class="bill-info">
+						            			<p>订单编号：<strong>2016012411</strong></p>
+						            			<h4>订单信息</h4>
+							            		<ul>
+							            			<li class="block"><span>商品名称：</span>苹果手机se苹果手机se苹果手机se苹果手机se苹果手机se</li>
+							            			<li><span>商品价格：</span>￥4288.00</li>
+							            			<li><span>首付：</span>￥1000.00</li>
+							            			<li><span>分期详情：</span>￥1096.00 x 3期</li>
+							            			<li><span>月供：</span>￥1096.00（含服务费￥0.00）</li>
+							            			<li><span>邀请码：</span>12345</li>
+							            			<li><span>下单时间：</span>2016-01-24 10:25:30</li>
+							            		</ul>
+
+							            	    <h4>下单用户信息</h4>
+							            		<ul>
+							            			<li><span>姓名：</span>成一通</li>
+							            			<li><span>电话：</span>15820216212</li>
+							            			<li class="block"><span>收货地址：</span>广东省广州市大学城广东工业大学大学城校区东五714</li>
+							            		</ul>
+						            		</div>
+							         	</div>
+							         	<div class="modal-footer">
+							            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							         	</div>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 订单详情弹出层 end -->
+						</div>
+					</div>
+				</div>
+				<!-- 导出订单报表 end -->
 
 				<!-- 到期账单 begin -->
 				<div class="main main-bill-due fn-hide" id="main_bill_due">
