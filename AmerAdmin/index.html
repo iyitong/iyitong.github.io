@@ -60,6 +60,7 @@
 				        <dd class="menu-item"><a data-id="order_list" href="#order_list">订单列表</a></dd>
 						<dd class="menu-item"><a data-id="order_review" href="#order_review">订单审核</a></dd>
 						<dd class="menu-item"><a data-id="order_send" href="#order_send">发货管理</a></dd>
+						<dd class="menu-item"><a data-id="order_export" href="#order_export">导出报表</a></dd>
 					</dl>
 
 					<dl class="menu">
@@ -561,11 +562,6 @@
 										<td>20160324123</td>
 										<td>苹果手机苹果手机苹果手机苹果手机</td>
 										<td>2016-01-24 10:23:43</td>
-									</tr>
-									<tr>
-										<td>20160324123</td>
-										<td>苹果手机苹果手机苹果手机苹果手机</td>
-										<td>2016-01-24 10:23:43</td>
 										<td><span class="label label-warning" data-toggle="modal" data-target="#orderReviewModal">处理</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#orderReviewDetailModal">详情</span></td>
 									</tr>
 									<tr>
@@ -705,6 +701,7 @@
 											<td>商品名称</td>
 											<td width="90">总金额</td>
 											<td width="90">本金</td>
+											<td width="90">滞纳金</td>
 											<td width="217">操作</td>
 										</tr>
 									</thead>
@@ -713,6 +710,7 @@
 										<td>苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果</td>
 										<td>￥6,700.50</td>
 										<td>￥20.50</td>
+										<td>￥20.50</td>
 										<td><span class="label label-warning">修改总金额</span>&nbsp;<span class="label label-danger">转为异常账单</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billDueDetailModal">详情</span></td>
 									</tr>
 									<tr>
@@ -720,6 +718,7 @@
 										<td>白条订单</td>
 										<td>￥4,000.00</td>
 										<td>￥10.50</td>
+										<td>￥20.50</td>
 										<td><span class="label label-warning">修改总金额</span>&nbsp;<span class="label label-danger">转为异常账单</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billDueDetailModal">详情</span></td>
 									</tr>
 									<tr>
@@ -727,6 +726,7 @@
 										<td>白条订单</td>
 										<td>￥5,000.00</td>
 										<td>￥170.50</td>
+										<td>￥20.50</td>
 										<td><span class="label label-warning">修改总金额</span>&nbsp;<span class="label label-danger">转为异常账单</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billDueDetailModal">详情</span></td>
 									</tr>
 								</table>
@@ -1044,8 +1044,10 @@
 										<tr>
 											<td>日期</td>
 											<td>签单数量</td>
-											<td>付款订单数量</td>
-											<td>付款订单总金额</td>
+											<td>成交订单量</td>
+											<td>审核通过订单量</td>
+											<td>商品成交总成本</td>
+											<td>订单总服务费</td>
 											<td width="80">明细</td>
 										</tr>
 									</thead>
@@ -1053,49 +1055,18 @@
 										<td>2016-03-17</td>
 										<td>10</td>
 										<td>100</td>
+										<td>90</td>
 										<td>￥3,000.00</td>
+										<td>￥900.00</td>
 										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
 									</tr>
 									<tr>
 										<td>2016-03-16</td>
 										<td>10</td>
 										<td>100</td>
+										<td>90</td>
 										<td>￥3,000.00</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
-									</tr>
-									<tr>
-										<td>2016-03-15</td>
-										<td>10</td>
-										<td>100</td>
-										<td>￥3,000.00</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
-									</tr>
-									<tr>
-										<td>2016-03-14</td>
-										<td>10</td>
-										<td>100</td>
-										<td>￥3,000.00</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
-									</tr>
-									<tr>
-										<td>2016-03-13</td>
-										<td>10</td>
-										<td>100</td>
-										<td>￥3,000.00</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
-									</tr>
-									<tr>
-										<td>2016-03-12</td>
-										<td>10</td>
-										<td>100</td>
-										<td>￥3,000.00</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
-									</tr>
-									<tr>
-										<td>2016-03-11</td>
-										<td>10</td>
-										<td>100</td>
-										<td>￥3,000.00</td>
+										<td>￥900.00</td>
 										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
 									</tr>
 								</table>
@@ -1117,21 +1088,27 @@
 							            				<tr>
 							            					<td>省市</td>
 							            					<td>签单数量</td>
-							            					<td>付款订单数量</td>
-							            					<td>付款订单总金额</td>
+							            					<td>成交订单量</td>
+							            					<td>审核通过订单量</td>
+							            					<td>商品成交总成本</td>
+							            					<td>订单总服务费</td>
 							            				</tr>
 							            			</thead>
 							            			<tr>
 							            				<td>广东省广州市</td>
-							            				<td>4</td>
+							            				<td>6</td>
 							            				<td>60</td>
+							            				<td>50</td>
 							            				<td>￥1,800.00</td>
+							            				<td>￥700.00</td>
 							            			</tr>
 							            			<tr>
 							            				<td>广东省深圳市</td>
-							            				<td>6</td>
+							            				<td>4</td>
 							            				<td>40</td>
-							            				<td>￥1,200.00</td>
+							            				<td>40</td>
+							            				<td>￥1,400.00</td>
+							            				<td>￥200.00</td>
 							            			</tr>
 							            		</table>
 							            	</div>
@@ -1357,7 +1334,7 @@
 											<td width="200">学校名称</td>
 											<td width="200">学校所在省市</td>
 											<td>学校详细地址</td>
-											<td width="95">操作</td>
+											<td width="50">操作</td>
 										</tr>
 									</thead>
 									<tr>
