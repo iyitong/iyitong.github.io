@@ -219,7 +219,7 @@
 			"file": "AmerAdmin/index.html",
 			"settings":
 			{
-				"buffer_size": 74381,
+				"buffer_size": 93968,
 				"line_ending": "Unix"
 			}
 		},
@@ -293,6 +293,7 @@
 	],
 	"file_history":
 	[
+		"/Users/cyt/Desktop/work/送呗任务墙/readme.txt",
 		"/Users/cyt/Desktop/work/iyitong.github.io/AmerAdmin/js/base.js",
 		"/Users/cyt/Desktop/work/iyitong.github.io/AmerRM/index.html",
 		"/Users/cyt/Desktop/work/iyitong.github.io/AmerRM/js/base.js",
@@ -339,6 +340,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"下单用户信息",
+			"成交订单量",
+			"\" ",
+			"用户认证",
+			"用户信息",
 			"导出",
 			"到期账单",
 			"坏账",
@@ -389,7 +395,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -428,15 +434,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 74381,
+						"buffer_size": 93968,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7618,
-								7618
+								8755,
+								8755
 							]
 						],
 						"settings":
@@ -446,10 +452,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2630.0,
+						"translation.y": 2891.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -479,7 +485,7 @@
 						"translation.y": 782.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -495,8 +501,8 @@
 						"selection":
 						[
 							[
-								9688,
-								9688
+								2223,
+								2223
 							]
 						],
 						"settings":
@@ -506,10 +512,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 7689.0,
+						"translation.y": 1342.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
