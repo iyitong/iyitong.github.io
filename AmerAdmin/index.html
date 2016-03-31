@@ -17,11 +17,6 @@
       <script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/respond.min.js"></script>
       <script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/html5shiv.js"></script>
     <![endif]-->
-
-	<!-- 分页 -->
-	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/kkpager.min.js"></script>
-	<link rel="stylesheet" href="http://7xl6qe.com2.z0.glb.qiniucdn.com/css/kkpager_orange.min.css">
-
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -140,13 +135,9 @@
 							<form action="" class="form form-inline">
 								<span>商品分类：</span>
 								<select name="" class="form-control" id="">
+									<option value="">全部</option>
 									<option value="">手机</option>
 									<option value="">电脑</option>
-								</select>
-								&nbsp;<span>限时特惠：</span>
-								<select name="" class="form-control" id="">
-									<option value="0">否</option>
-									<option value="1">是</option>
 								</select>
 								&nbsp;<span>商品状态：</span>
 								<select name="" class="form-control" id="">
@@ -163,20 +154,24 @@
 									<thead>
 										<tr>
 											<td>商品名称</td>
-											<td width="90">操作</td>
+											<td width="70">限时特惠</td>
+											<td width="132">操作</td>
 										</tr>
 									</thead>
 									<tr>
 										<td>苹果手机苹果手机苹果手机苹果手机</td>
-										<td><span class="label label-warning">下架</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#itemDetailModal">详情</span></td>
+										<td><span class="label label-primary">否</span></td>
+										<td><span class="label label-warning">下架</span>&nbsp;<a class="label label-info" data-id="item_edit" href="#item_edit">编辑</a>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#itemDetailModal">详情</span></td>
 									</tr>
 									<tr>
 										<td>苹果手机苹果手机苹果手机苹果手机</td>
-										<td><span class="label label-warning">下架</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#itemDetailModal">详情</span></td>
+										<td><span class="label label-primary">否</span></td>
+										<td><span class="label label-warning">下架</span>&nbsp;<a class="label label-info" data-id="item_edit" href="#item_edit">编辑</a>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#itemDetailModal">详情</span></td>
 									</tr>
 									<tr>
 										<td>苹果手机苹果手机苹果手机苹果手机</td>
-										<td><span class="label label-warning">下架</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#itemDetailModal">详情</span></td>
+										<td><span class="label label-success">是</span></td>
+										<td><span class="label label-warning">下架</span>&nbsp;<a class="label label-info" data-id="item_edit" href="#item_edit">编辑</a>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#itemDetailModal">详情</span></td>
 									</tr>
 								</table>
 
@@ -185,19 +180,23 @@
 									<thead>
 										<tr>
 											<td>商品名称</td>
+											<td width="70">限时特惠</td>
 											<td width="197">操作</td>
 										</tr>
 									</thead>
 									<tr>
 										<td>苹果手机苹果手机苹果手机苹果手机</td>
+										<td><span class="label label-success">是</span></td>
 										<td><span class="label label-warning">上架</span>&nbsp;<span class="label label-success" data-toggle="modal" data-target="#setItemPriceModal">设置价格</span>&nbsp;<a class="label label-info" data-id="item_edit" href="#item_edit">编辑</a>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#itemDetailModal">详情</span></td>
 									</tr>
 									<tr>
 										<td>苹果手机苹果手机苹果手机苹果手机</td>
+										<td><span class="label label-primary">否</span></td>
 										<td><span class="label label-warning">上架</span>&nbsp;<span class="label label-success" data-toggle="modal" data-target="#setItemPriceModal">设置价格</span>&nbsp;<a class="label label-info" data-id="item_edit" href="#item_edit">编辑</a>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#itemDetailModal">详情</span></td>
 									</tr>
 									<tr>
 										<td>苹果手机苹果手机苹果手机苹果手机</td>
+										<td><span class="label label-primary">否</span></td>
 										<td><span class="label label-warning">上架</span>&nbsp;<span class="label label-success" data-toggle="modal" data-target="#setItemPriceModal">设置价格</span>&nbsp;<a class="label label-info" data-id="item_edit" href="#item_edit">编辑</a>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#itemDetailModal">详情</span></td>
 									</tr>
 								</table>
@@ -946,11 +945,57 @@
 							            			<li><span>下单时间：</span>2016-01-24 10:25:30</li>
 							            		</ul>
 
-							            	    <h4>下单用户信息</h4>
+							            	    <h4>下单用户信息 <a href="javascript:;" class="label label-warning fn-right">获取用户个人账单</a></h4>
 							            		<ul>
 							            			<li><span>姓名：</span>成一通</li>
 							            			<li><span>电话：</span>15820216212</li>
 							            			<li class="block"><span>收货地址：</span>广东省广州市大学城广东工业大学大学城校区东五714</li>
+							            		</ul>
+
+							            		<h4>用户个人账单</h4>
+							            		<ul>
+							            			<li class="block">
+							            				<table class="table table-hover table-condensed">
+															<thead>
+																<tr>
+																	<td width="120">订单编号</td>
+																	<td>商品名称</td>
+																	<td width="95">第N期/总期数</td>
+																	<td width="80">本期应还</td>
+																	<td width="90">应还日期</td>
+																	<td width="90">还款日期</td>
+																	<td width="60">状态</td>
+																</tr>
+															</thead>
+															<tr>
+																<td>20160324123</td>
+																<td>苹果手机苹果手机苹果手机苹果手机</td>
+																<td>第1/24期</td>
+																<td>￥221.31</td>	
+																<td>2016-01-24</td>
+																<td>2016-01-23</td>
+																<td><span class="label label-success">已还款</span></td>
+															</tr>
+															<tr>
+																<td>20160324123</td>
+																<td>苹果手机苹果手机苹果手机苹果手机</td>
+																<td>第2/24期</td>
+																<td>￥221.31</td>	
+																<td>2016-02-24</td>
+																<td>2016-02-23</td>
+																<td><span class="label label-success">已还款</span></td>
+															</tr>
+															<tr>
+																<td>20160324123</td>
+																<td>苹果手机苹果手机苹果手机苹果手机</td>
+																<td>第3/24期</td>
+																<td>￥221.31</td>	
+																<td>2016-03-24</td>
+																<td>--</td>
+																<td><span class="label label-primary">未还款</span></td>
+															</tr>
+														</table>
+							            			</li>
 							            		</ul>
 
 							            		<h4>订单状态</h4>
@@ -1732,13 +1777,13 @@
 										<dt>签单数量</dt>
 										<dd>当天完成的签单总数量</dd>
 
-										<dt>成交订单量</dt>
+										<dt>总订单量</dt>
 										<dd>当天用户下单成交总数量</dd>
 
 										<dt>审核通过订单量</dt>
 										<dd>当天通过风控审核的订单总数量</dd>
 
-										<dt>商品成交总成本</dt>
+										<dt>订单总成本</dt>
 										<dd>当天用户下单成交量相应的商品总成本</dd>
 
 										<dt>订单总服务费</dt>
@@ -1767,10 +1812,11 @@
 										<tr>
 											<td>日期</td>
 											<td>签单数量</td>
-											<td>成交订单量</td>
+											<td>总订单量</td>
 											<td>审核通过订单量</td>
-											<td>商品成交总成本</td>
+											<td>订单总成本</td>
 											<td>订单总服务费</td>
+											<td>总提成</td>
 											<td width="80">明细</td>
 										</tr>
 									</thead>
@@ -1781,6 +1827,7 @@
 										<td>90</td>
 										<td>￥3,000.00</td>
 										<td>￥900.00</td>
+										<td>￥100.00</td>
 										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
 									</tr>
 									<tr>
@@ -1790,6 +1837,7 @@
 										<td>90</td>
 										<td>￥3,000.00</td>
 										<td>￥900.00</td>
+										<td>￥100.00</td>
 										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
 									</tr>
 								</table>
@@ -1811,10 +1859,11 @@
 							            				<tr>
 							            					<td>省市</td>
 							            					<td>签单数量</td>
-							            					<td>成交订单量</td>
+							            					<td>总订单量</td>
 							            					<td>审核通过订单量</td>
-							            					<td>商品成交总成本</td>
+							            					<td>订单总成本</td>
 							            					<td>订单总服务费</td>
+							            					<td>区域提成</td>
 							            				</tr>
 							            			</thead>
 							            			<tr>
@@ -1824,6 +1873,7 @@
 							            				<td>50</td>
 							            				<td>￥1,800.00</td>
 							            				<td>￥700.00</td>
+							            				<td>￥50.00</td>
 							            			</tr>
 							            			<tr>
 							            				<td>广东省深圳市</td>
@@ -1832,6 +1882,7 @@
 							            				<td>40</td>
 							            				<td>￥1,400.00</td>
 							            				<td>￥200.00</td>
+							            				<td>￥50.00</td>
 							            			</tr>
 							            		</table>
 							            	</div>
@@ -1970,7 +2021,7 @@
 							         	</div>
 							         	<div class="modal-body">
 							            	<div class="bill-info">
-							            	    <p>合同编号：<strong>1000234326</strong></p>
+							            	    <p>合同编号：<strong>0000001</strong></p>
 							            	    <h4>个人信息</h4>
 							            		<ul>
 							            			<li><span>姓名：</span>成一通</li>
@@ -2044,7 +2095,7 @@
 							            				<label><input type="radio" name="bill_state">不通过</label>
 								         			</div>
 
-						            				<h4>填写详细处理结果报告：（必填）</h4>
+						            				<h4>填写详细处理结果报告：</h4>
 						            				<textarea name="" class="form-control" id="" cols="30" rows="10"></textarea>
 								         		</div>
 								         	</div>
@@ -2427,6 +2478,10 @@
 		<small class="copyright">Copyright © 2016 A梦分期 All Rights Reserved.</small>
 	</div>
 	<!-- footer end -->
+
+	<!-- 分页 -->
+	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/kkpager.min.js"></script>
+	<link rel="stylesheet" href="http://7xl6qe.com2.z0.glb.qiniucdn.com/css/kkpager_orange.min.css">
 
 	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/jquery-1.11.1.min.js"></script>
 	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/jquery.form.min.js"></script>
