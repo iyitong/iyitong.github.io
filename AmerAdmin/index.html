@@ -1423,19 +1423,19 @@
 										<dd>账单到还款日后，归纳到“到期账单”列表</dd>
 
 										<dt>账单总金额</dt>
-										<dd>该账单最终应还金额</dd>
+										<dd>该账单最终应还金额，总金额=本金+服务费+滞纳金</dd>
 
 										<dt>本金</dt>
 										<dd>该账单成交时商品的成本或本金</dd>
 
 										<dt>滞纳金</dt>
-										<dd>账单逾期不还款，需要缴纳一定比例的滞纳金。</dd>
+										<dd>账单逾期不还款，需要缴纳一定比例的滞纳金</dd>
 
-										<dt>修改总金额</dt>
-										<dd>催收组与用户沟通协商后，可对本期账单的总金额（总金额=本金+服务费+滞纳金）进行调整。</dd>
+										<dt>修改金额</dt>
+										<dd>可修改账单本金以及滞纳金，滞纳金一旦修改后将不会自动叠加计算</dd>
 
 										<dt>转为异常账单</dt>
-										<dd>账单到期后超过规定还款周期，催收组可将账单处理为异常账单。</dd>
+										<dd>账单到期后超过规定还款周期，催收组可将账单处理为异常账单</dd>
 									</dl>
 
 									<div class="help-footer">
@@ -1468,7 +1468,7 @@
 											<td width="90">总金额</td>
 											<td width="90">本金</td>
 											<td width="65">滞纳金</td>
-											<td width="217">操作</td>
+											<td width="205">操作</td>
 										</tr>
 									</thead>
 									<tr>
@@ -1478,7 +1478,7 @@
 										<td>￥6,700.50</td>
 										<td>￥20.50</td>
 										<td>￥20.50</td>
-										<td><span class="label label-warning">修改总金额</span>&nbsp;<span class="label label-danger">转为异常账单</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billDueDetailModal">详情</span></td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#updateBillPriceModal">修改金额</span>&nbsp;<span class="label label-danger">转为异常账单</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billDueDetailModal">详情</span></td>
 									</tr>
 									<tr>
 										<td>2016032300001</td>
@@ -1487,7 +1487,7 @@
 										<td>￥4,000.00</td>
 										<td>￥10.50</td>
 										<td>￥20.50</td>
-										<td><span class="label label-warning">修改总金额</span>&nbsp;<span class="label label-danger">转为异常账单</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billDueDetailModal">详情</span></td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#updateBillPriceModal">修改金额</span>&nbsp;<span class="label label-danger">转为异常账单</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billDueDetailModal">详情</span></td>
 									</tr>
 									<tr>
 										<td>2016032300001</td>
@@ -1496,7 +1496,7 @@
 										<td>￥5,000.00</td>
 										<td>￥170.50</td>
 										<td>￥20.50</td>
-										<td><span class="label label-warning">修改总金额</span>&nbsp;<span class="label label-danger">转为异常账单</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billDueDetailModal">详情</span></td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#updateBillPriceModal">修改金额</span>&nbsp;<span class="label label-danger">转为异常账单</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billDueDetailModal">详情</span></td>
 									</tr>
 								</table>
 
@@ -1542,6 +1542,32 @@
 								</table>
 							</div>
 							<!-- 账单列表 end -->
+
+							<!-- 修改金额弹出层 begin -->
+							<div class="modal fade" id="updateBillPriceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title">修改账单金额</h4>
+							         	</div>
+
+										<form class="form form-inline">
+								         	<div class="modal-body">
+							            		<ul>
+							            			<li><span>账单本金：</span><input type="text" class="form-control" placeholder="输入账单本金"></li>
+							            			<li><span>滞纳金：</span><input type="text" class="form-control" placeholder="输入滞纳金"></li>
+							            		</ul>
+								         	</div>
+								         	<div class="modal-footer">
+								            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+								            	<button type="button" class="btn btn-warning">保存</button>
+								         	</div>
+							         	</form>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 修改金额弹出层 end -->
 
 							<!-- 账单详情弹出层 begin -->
 							<div class="modal fade" id="billDueDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
