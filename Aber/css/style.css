@@ -106,10 +106,10 @@ body {
 
 /* 提交资料页面 begin */
 .user-info {
-	padding: .3rem;
+	padding: .3rem 0 .98rem 0;
 }
 .user-info section {
-	padding-bottom: .2rem;
+	padding: 0 .3rem .2rem;
 }
 .user-info p {
 	margin-bottom: .2rem;
@@ -163,6 +163,18 @@ body {
 	height: 1rem;
 	overflow: hidden;
 	outline: none;
+}
+.submit_info_btn {
+	position: fixed;
+	bottom: 0;
+	width: 7.5rem;
+	height: .98rem;
+	line-height: .98rem;
+	font-weight: 700;
+	font-size: .36rem;
+	color: #fff;
+	background-color: #ff681d;
+	border: none;
 }
 /* 提交资料页面 end */
 
