@@ -123,7 +123,8 @@ body {
 	margin-right: 1rem;
 }
 .user-info p.gender input {
-	margin-right: .1rem;
+	vertical-align: top;
+	margin-right: .05rem;
 }
 
 /* 提交资料页面 end */
