@@ -28,20 +28,21 @@ textarea {
 	border: 0;
 }
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
-    color: #78909c;
+    color: #ccc;
 }
 input:-moz-placeholder, textarea:-moz-placeholder { 
-    color: #78909c;
+    color: #ccc;
 }
 input::-moz-placeholder, textarea::-moz-placeholder { 
-    color: #78909c;
+    color: #ccc;
 }
 input:-ms-input-placeholder, textarea:-ms-input-placeholder { 
-    color: #78909c;
+    color: #ccc;
 }
 input[type="checkbox"] {
 	display: inline-block;
 	float: left;
+	margin: 0 2px 0;
 	width: .36rem;
 	height: .36rem;
 	background: url('http://7xo79i.com2.z0.glb.qiniucdn.com/amer/img/icon_select_link.png') center center no-repeat;
@@ -52,6 +53,23 @@ input[type="checkbox"]:checked {
 	background-size: 100% 100%;
 }
 input[type="checkbox"]:disabled {
+	background: none;
+	visibility:hidden;
+}
+input[type="radio"] {
+	display: inline-block;
+	float: left;
+	margin: 2px 3px 0;
+	width: .36rem;
+	height: .36rem;
+	background: url('http://7xo79i.com2.z0.glb.qiniucdn.com/amer/img/icon_select_link.png') center center no-repeat;
+	background-size: 100% 100%;
+}
+input[type="radio"]:checked {
+	background: url('http://7xo79i.com2.z0.glb.qiniucdn.com/amer/img/icon_select_active.png') center center no-repeat;
+	background-size: 100% 100%;
+}
+input[type="radio"]:disabled {
 	background: none;
 	visibility:hidden;
 }
@@ -70,23 +88,43 @@ body, html {
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	-webkit-box-align: center;
-	background: #f1f3f2;
+	background: #fff;
 	color: #263238;
 }
 
 body {
 	margin: 0 auto;
 	font-size: .28rem;
-	line-height: 1.2;
+	line-height: 1.6;
 }
 .wrap {
 	margin: 0 auto;
 	width: 7.5rem;
-	background-color: #f1f3f2;
+	background-color: #fff;
 	font-size: .28rem;
 }
 
 /* 提交资料页面 begin */
+.user-info {
+	padding: .3rem;
+}
+.user-info p {
+	margin-bottom: .4rem;
+}
+.user-info p.title {
+	color: #78909c;
+	font-size: .24rem;
+}
+.user-info p.gender label {
+	font-weight: normal;
+}
+.user-info p.gender label:not(:last-child) {
+	display: inline-block;
+	margin-right: 1rem;
+}
+.user-info p.gender input {
+	margin-right: .2rem;
+}
 
 /* 提交资料页面 end */
 
