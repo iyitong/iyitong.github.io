@@ -160,7 +160,6 @@ body {
 .user-info-img input[type="file"] {
 	width: 1rem;
 	height: 1rem;
-	border: 1px solid #ccc;
 	overflow: hidden;
 	outline: none;
 }
