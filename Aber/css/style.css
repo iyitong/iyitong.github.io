@@ -127,12 +127,11 @@ body {
 	margin-right: .05rem;
 	outline-style: none;
 }
-.user-info .info-input {
+.user-info .input-wrap {
 	position: relative;
-	-webkit-apparcence: none;
 	padding: .1rem .2rem;
 	width: 6.9rem;
-	line-height: .4rem;
+	height: .7rem;
 	border: 1px solid #dbe4e8;
 	-webkit-border-radius: .08rem;
 	-moz-border-radius: .08rem;
