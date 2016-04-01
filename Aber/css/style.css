@@ -144,7 +144,8 @@ body {
 .user-info .input-wrap input {
 	width: 100%;
 	height: .5rem;
-	line-height: .5rem;
+	/*line-height: .5rem;*/
+	vertical-align: middle;
 }
 
 .user-info-img ul {
