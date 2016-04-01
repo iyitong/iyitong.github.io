@@ -141,6 +141,13 @@ body {
 	-moz-border-radius: .08rem;
 	border-radius: .08rem;
 }
+.user-info .input-wrap input {
+	width: 100%;
+	height: .4rem;
+	line-height: .4rem;
+	border: 1px solid #ccc;
+}
+
 .user-info-img ul {
 	display: inline-block;
 	width: 6.9rem;
