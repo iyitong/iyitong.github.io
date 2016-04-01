@@ -1422,11 +1422,17 @@
 										<dt>到期账单</dt>
 										<dd>账单到还款日后，归纳到“到期账单”列表</dd>
 
+										<dt>账单总金额</dt>
+										<dd>该账单最终应还金额</dd>
+
+										<dt>本金</dt>
+										<dd>该账单成交时商品的成本或本金</dd>
+
 										<dt>滞纳金</dt>
 										<dd>账单逾期不还款，需要缴纳一定比例的滞纳金。</dd>
 
 										<dt>修改总金额</dt>
-										<dd>催收组与用户沟通协商后，可对本期账单的总金额（总金额=本金+利息）进行调整。</dd>
+										<dd>催收组与用户沟通协商后，可对本期账单的总金额（总金额=本金+服务费+滞纳金）进行调整。</dd>
 
 										<dt>转为异常账单</dt>
 										<dd>账单到期后超过规定还款周期，催收组可将账单处理为异常账单。</dd>
@@ -1456,6 +1462,7 @@
 								<table class="table table-hover table-condensed">
 									<thead>
 										<tr>
+											<td width="120">账单编号</td>
 											<td width="90">应还日期</td>
 											<td>商品名称</td>
 											<td width="90">总金额</td>
@@ -1465,6 +1472,7 @@
 										</tr>
 									</thead>
 									<tr>
+										<td>2016032300001</td>
 										<td>2016-03-24</td>
 										<td>苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果</td>
 										<td>￥6,700.50</td>
@@ -1473,6 +1481,7 @@
 										<td><span class="label label-warning">修改总金额</span>&nbsp;<span class="label label-danger">转为异常账单</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billDueDetailModal">详情</span></td>
 									</tr>
 									<tr>
+										<td>2016032300001</td>
 										<td>2016-03-23</td>
 										<td>白条订单</td>
 										<td>￥4,000.00</td>
@@ -1481,6 +1490,7 @@
 										<td><span class="label label-warning">修改总金额</span>&nbsp;<span class="label label-danger">转为异常账单</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billDueDetailModal">详情</span></td>
 									</tr>
 									<tr>
+										<td>2016032300001</td>
 										<td>2016-03-22</td>
 										<td>白条订单</td>
 										<td>￥5,000.00</td>
@@ -1493,6 +1503,7 @@
 								<table class="table table-hover table-condensed">
 									<thead>
 										<tr>
+											<td width="120">账单编号</td>
 											<td width="90">应还日期</td>
 											<td>商品名称</td>
 											<td width="90">总金额</td>
@@ -1502,6 +1513,7 @@
 										</tr>
 									</thead>
 									<tr>
+										<td>2016032300001</td>
 										<td>2016-03-24</td>
 										<td>123</td>
 										<td>￥6,700.50</td>
@@ -1510,6 +1522,7 @@
 										<td><span class="label label-primary" data-toggle="modal" data-target="#billDueDetailModal">详情</span></td>
 									</tr>
 									<tr>
+										<td>2016032300001</td>
 										<td>2016-03-23</td>
 										<td>白条订单</td>
 										<td>￥4,000.00</td>
@@ -1518,6 +1531,7 @@
 										<td><span class="label label-primary" data-toggle="modal" data-target="#billDueDetailModal">详情</span></td>
 									</tr>
 									<tr>
+										<td>2016032300001</td>
 										<td>2016-03-22</td>
 										<td>白条订单</td>
 										<td>￥5,000.00</td>
@@ -1558,7 +1572,6 @@
 							            		<ul>
 							            			<li><span>姓名：</span>静风</li>
 							            			<li><span>电话：</span>15839209382</li>
-							            			<li><span>支付宝：</span>15834934234</li>
 							            			<li><span>学校：</span>广东工业大学</li>
 							            			<li class="block"><span>详细地址：</span>广东省广州市大学城广东工业大学东五714</li>
 							            		</ul>
@@ -1594,9 +1607,6 @@
 
 										<dt>处理为坏账</dt>
 										<dd>催单组经过核对后，确认账单已经是坏账的，则处理为坏账</dd>
-
-										<dt>处理为已还款</dt>
-										<dd>催单组与用户沟通后，确认用户已经还款，则处理为已还款</dd>
 									</dl>
 
 									<div class="help-footer">
@@ -1623,69 +1633,81 @@
 								<table class="table table-hover table-condensed">
 									<thead>
 										<tr>
-											<td width="90">还款日</td>
+											<td width="120">账单编号</td>
+											<td width="90">应还日期</td>
 											<td>商品名称</td>
 											<td width="90">总金额</td>
 											<td width="90">本金</td>
-											<td width="105">操作</td>
+											<td width="65">滞纳金</td>
+											<td width="115">操作</td>
 										</tr>
 									</thead>
 									<tr>
+										<td>2016032300001</td>
 										<td>2016-03-24</td>
 										<td>苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果</td>
 										<td>￥5,000.00</td>
 										<td>￥700.50</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#billDealModal">去处理</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billExceptionDetailModal">详情</span></td>
+										<td>￥20.50</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#billDealModal">转为坏账</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billExceptionDetailModal">详情</span></td>
 									</tr>
 									<tr>
+										<td>2016032300001</td>
 										<td>2016-03-23</td>
 										<td>白条订单</td>
 										<td>￥5,000.00</td>
 										<td>￥700.50</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#billDealModal">去处理</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billExceptionDetailModal">详情</span></td>
+										<td>￥20.50</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#billDealModal">转为坏账</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billExceptionDetailModal">详情</span></td>
 									</tr>
 									<tr>
+										<td>2016032300001</td>
 										<td>2016-03-22</td>
 										<td>白条订单</td>
 										<td>￥5,000.00</td>
 										<td>￥700.50</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#billDealModal">去处理</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billExceptionDetailModal">详情</span></td>
+										<td>￥20.50</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#billDealModal">转为坏账</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billExceptionDetailModal">详情</span></td>
 									</tr>
 								</table>
 
 								<table class="table table-hover table-condensed">
 									<thead>
 										<tr>
-											<td width="90">还款日</td>
+											<td width="120">账单编号</td>
+											<td width="90">应还日期</td>
 											<td>商品名称</td>
 											<td width="90">总金额</td>
 											<td width="90">本金</td>
-											<td width="70">处理结果</td>
+											<td width="65">滞纳金</td>
 											<td width="50">操作</td>
 										</tr>
 									</thead>
 									<tr>
+										<td>2016032300001</td>
 										<td>2016-03-24</td>
 										<td>苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果</td>
 										<td>￥5,000.00</td>
 										<td>￥700.50</td>
-										<td><span class="label label-danger">坏账</span></td>
+										<td>￥20.50</td>
 										<td><span class="label label-primary" data-toggle="modal" data-target="#billExceptionDetailModal">详情</span></td>
 									</tr>
 									<tr>
+										<td>2016032300001</td>
 										<td>2016-03-23</td>
 										<td>白条订单</td>
 										<td>￥5,000.00</td>
 										<td>￥700.50</td>
-										<td><span class="label label-danger">坏账</span></td>
+										<td>￥20.50</td>
 										<td><span class="label label-primary" data-toggle="modal" data-target="#billExceptionDetailModal">详情</span></td>
 									</tr>
 									<tr>
+										<td>2016032300001</td>
 										<td>2016-03-22</td>
 										<td>白条订单</td>
 										<td>￥5,000.00</td>
 										<td>￥700.50</td>
-										<td><span class="label label-success">已还款</span></td>
+										<td>￥20.50</td>
 										<td><span class="label label-primary" data-toggle="modal" data-target="#billExceptionDetailModal">详情</span></td>
 									</tr>
 								</table>
@@ -1704,11 +1726,7 @@
 										<form class="form form-horizontal info-form">
 								         	<div class="modal-body">
 								         		<div class="bill-deal">
-								         			<h4 class="text-center font-bold">选择处理结果</h4>
-								         			<div class="text-center">
-								         				<label><input type="radio" name="bill_state">坏账</label>
-							            				<label><input type="radio" name="bill_state">已还款</label>
-								         			</div>
+								         			<h4>处理结果：<em>转为坏账</em></h4>
 
 						            				<h4>填写详细处理结果报告：（必填）</h4>
 						            				<textarea name="" class="form-control" id="" cols="30" rows="10"></textarea>
@@ -1734,27 +1752,27 @@
 							         	</div>
 
 							         	<div class="modal-body">
-						            		<div class="bill-info">
+								         	<div class="bill-info">
 						            			<p>账单编号：<strong>2016012411</strong></p>
 						            			<h4>账单信息</h4>
 							            		<ul>
-							            			<li><span>还款日：</span>2016-03-24</li>
-							            			<li><span>商品名称：</span>苹果手机se苹果手机se苹果手机se苹果手机se苹果手机se</li>
-							            			<li><span>账单期数：</span>第3期</li>
+							            			<li><span>应还日期：</span>2016-03-24</li>
+							            			<li class="block"><span>商品名称：</span>苹果手机se苹果手机se苹果手机se苹果手机se苹果手机se</li>
+							            			<li><span>第N期：</span>第3期</li>
 							            			<li><span>账单总金额：</span>￥6,700.00</li>
 							            			<li><span>账单本金：</span>￥6,500.00</li>
-							            			<li><span>账单利息：</span>￥200.00</li>
+							            			<li><span>服务费：</span>￥200.00</li>
+							            			<li><span>滞纳金：</span>￥20.00</li>
 							            			<li><span>下单时间：</span>2016-01-24 10:25:30</li>
 							            			<li><span>实际还款时间：</span>2016-03-26 10:25:30</li>
 							            		</ul>
 
-							            	    <h4>用户信息</h4>
+							            	    <h4>下单用户信息</h4>
 							            		<ul>
-							            			<li><span>姓名：</span>成一通</li>
-							            			<li><span>电话：</span>15820216212</li>
-							            			<li><span>支付宝：</span>15820216212</li>
+							            			<li><span>姓名：</span>静风</li>
+							            			<li><span>电话：</span>15839209382</li>
 							            			<li><span>学校：</span>广东工业大学</li>
-							            			<li><span>详细地址：</span>大学城校区东五714</li>
+							            			<li class="block"><span>详细地址：</span>广东省广州市大学城广东工业大学东五714</li>
 							            		</ul>
 
 							            		<h4>处理结果：坏账</h4>
