@@ -85,6 +85,7 @@
 						<dt class="menu-title"><i class="icon-menu" style="background:url(
         img/icon_menu_setup.png
         ) no-repeat;"></i>超级管理员</dt>
+				        <dd class="menu-item"><a data-id="rate" href="#rate">设置白条利率</a></dd>
 						<dd class="menu-item"><a data-id="school" href="#school">学校管理</a></dd>
 						<dd class="menu-item"><a data-id="area" href="#area">区域经理管理</a></dd>
 						<dd class="menu-item"><a data-id="admin" href="#admin">管理员设置</a></dd>
@@ -2120,6 +2121,13 @@
 							            			<li><p>学信网/教务网/学费单照片：</p><a href="img/pic1.png" target="_blank"><img src="img/pic1.png" alt="学信网/教务网/学费单照片" width="50%"></a></li>
 							            		</ul>
 
+							            		<h4>其他信息</h4>
+							            		<ul>
+							            			<li><span>签单员姓名：</span>李四</li>
+							            			<li><span>签单员手机号码：</span>15820216712</li>
+							            			<li><span>审核人：</span>张三</li>
+							            		</ul>
+
 							            		<h4>审核状态</h4>
 							            		<p><span>驳回</span>，原因：身份证信息与其他资料不一致</p>
 							            	</div>
@@ -2173,6 +2181,36 @@
 					</div>
 				</div>
 				<!-- 用户认证管理 end -->
+
+				<!-- 设置白条利率 begin -->
+				<div class="main main-rate fn-hide" id="main_rate">
+					<div class="main-hd">
+						<h2>设置白条利率
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt>设置白条利率</dt>
+										<dd>白条利率</dd>
+									</dl>
+								</div>
+							</div>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<div class="content-wrap">
+							<form action="" class="form form-inline">
+								白条利率：<input type="number" class="form-control" value="2.31" required>
+								<button type="button" class="btn btn-warning">保存</button>
+							</form>
+
+						</div>
+					</div>
+				</div>
+				<!-- 设置白条利率 end -->
 
 				<!-- 学校管理 begin -->
 				<div class="main main-school fn-hide" id="main_school">
@@ -2405,6 +2443,9 @@
 
 										<dt>催收组</dt>
 										<dd>拥有处理到期账单、异常订单、还款跟踪管理的权限</dd>
+
+										<dt>编辑角色</dt>
+										<dd>重新设置管理员的角色</dd>
 									</dl>
 
 									<div class="help-footer">
@@ -2426,38 +2467,38 @@
 											<td>账户</td>
 											<td>角色</td>
 											<td>备注</td>
-											<td width="120">操作</td>
+											<td width="180">操作</td>
 										</tr>
 									</thead>
 									<tr>
 										<td>静风</td>
 										<td>超级管理员</td>
 										<td>11</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#updatePwdModal">修改密码</span>&nbsp;<span class="label label-danger">删除</span></td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#updatePwdModal">编辑角色</span>&nbsp;<span class="label label-warning" data-toggle="modal" data-target="#updatePwdModal">修改密码</span>&nbsp;<span class="label label-danger">删除</span></td>
 									</tr>
 									<tr>
 										<td>大牛</td>
 										<td>运营组</td>
 										<td>11</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#updatePwdModal">修改密码</span>&nbsp;<span class="label label-danger">删除</span></td>
+										<td><span class="label label-primary">编辑角色</span>&nbsp;<span class="label label-warning" data-toggle="modal" data-target="#updatePwdModal">修改密码</span>&nbsp;<span class="label label-danger">删除</span></td>
 									</tr>
 									<tr>
 										<td>李四</td>
 										<td>风控组</td>
 										<td>11</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#updatePwdModal">修改密码</span>&nbsp;<span class="label label-danger">删除</span></td>
+										<td><span class="label label-primary">编辑角色</span>&nbsp;<span class="label label-warning" data-toggle="modal" data-target="#updatePwdModal">修改密码</span>&nbsp;<span class="label label-danger">删除</span></td>
 									</tr>
 									<tr>
 										<td>小红</td>
 										<td>财务组</td>
 										<td>11</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#updatePwdModal">修改密码</span>&nbsp;<span class="label label-danger">删除</span></td>
+										<td><span class="label label-primary">编辑角色</span>&nbsp;<span class="label label-warning" data-toggle="modal" data-target="#updatePwdModal">修改密码</span>&nbsp;<span class="label label-danger">删除</span></td>
 									</tr>
 									<tr>
 										<td>小明</td>
 										<td>催收组</td>
 										<td>11</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#updatePwdModal">修改密码</span>&nbsp;<span class="label label-danger">删除</span></td>
+										<td><span class="label label-primary">编辑角色</span>&nbsp;<span class="label label-warning" data-toggle="modal" data-target="#updatePwdModal">修改密码</span>&nbsp;<span class="label label-danger">删除</span></td>
 									</tr>
 								</table>
 							</div>
