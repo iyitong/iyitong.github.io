@@ -62,11 +62,11 @@ input[type="radio"] {
 	margin: 2px 3px 0;
 	width: .36rem;
 	height: .36rem;
-	background: url('http://7xo79i.com2.z0.glb.qiniucdn.com/amer/img/icon_select_link.png') center center no-repeat;
+	background: url('../img/icon_radio_link.png') center center no-repeat;
 	background-size: 100% 100%;
 }
 input[type="radio"]:checked {
-	background: url('http://7xo79i.com2.z0.glb.qiniucdn.com/amer/img/icon_select_active.png') center center no-repeat;
+	background: url('../img/icon_radio_active.png') center center no-repeat;
 	background-size: 100% 100%;
 }
 input[type="radio"]:disabled {
