@@ -24,7 +24,7 @@ input,
 select,
 textarea {
 	-webkit-appearance: none;
-	outline-style: none;
+	outline: none;
 	border: 0;
 }
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
@@ -124,7 +124,18 @@ body {
 }
 .user-info p.gender input {
 	vertical-align: top;
-	margin-right: .02rem;
+	margin-right: .05rem;
+	outline-style: none;
+}
+.user-info .info-input {
+	padding: .2rem;
+	width: 6.9rem;
+	height: .7rem;
+	line-height: .7rem;
+	border: 1px solid #dbe4e8;
+	-webkit-border-radius: .08rem;
+	-moz-border-radius: .08rem;
+	border-radius: .08rem;
 }
 
 /* 提交资料页面 end */
