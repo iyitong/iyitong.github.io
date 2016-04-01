@@ -219,7 +219,7 @@
 			"file": "AmerAdmin/index.html",
 			"settings":
 			{
-				"buffer_size": 93968,
+				"buffer_size": 97255,
 				"line_ending": "Unix"
 			}
 		},
@@ -285,14 +285,15 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/cyt/Desktop/work/iyitong.github.io/Amer",
-		"/Users/cyt/Desktop/work/iyitong.github.io/AmerAdmin",
 		"/Users/cyt/Desktop/work/iyitong.github.io/AmerAdmin/css",
 		"/Users/cyt/Desktop/work/iyitong.github.io/AmerAdmin/js",
 		"/Users/cyt/Desktop/work/iyitong.github.io/AmerAdmin/libs"
 	],
 	"file_history":
 	[
+		"/Users/cyt/Desktop/work/iyitong.github.io/AmerAdmin/readme.txt",
+		"/Users/cyt/Desktop/work/iyitong.github.io/AmerRM/readme.txt",
+		"/Users/cyt/Desktop/work/iyitong.github.io/AmerRM/re'a'd",
 		"/Users/cyt/Desktop/work/送呗任务墙/readme.txt",
 		"/Users/cyt/Desktop/work/iyitong.github.io/AmerAdmin/js/base.js",
 		"/Users/cyt/Desktop/work/iyitong.github.io/AmerRM/index.html",
@@ -340,6 +341,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"异常账单",
 			"下单用户信息",
 			"成交订单量",
 			"\" ",
@@ -395,7 +397,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -434,15 +436,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 93968,
+						"buffer_size": 97255,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								8755,
-								8755
+								91795,
+								91795
 							]
 						],
 						"settings":
@@ -452,10 +454,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2891.0,
+						"translation.y": 38907.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -501,8 +503,8 @@
 						"selection":
 						[
 							[
-								2223,
-								2223
+								2207,
+								2207
 							]
 						],
 						"settings":
@@ -512,10 +514,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1342.0,
+						"translation.y": 1345.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]

@@ -1,0 +1,203 @@
+/*
+ * @description:A梦创业提交用户认证资料
+ * @author: cyt
+ * @update: 2016.4.1
+*/
+@charset "utf-8";
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	font-size: 312.5%;/*10px*/
+}
+
+a,
+a:hover,
+a:active {
+	text-decoration: none;
+	color: #263238;
+}
+.hidden {
+	visibility: hidden;
+}
+
+input,
+select,
+textarea {
+	-webkit-appearance: none;
+	outline-style: none;
+	border: 0;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
+    color: #78909c;
+}
+input:-moz-placeholder, textarea:-moz-placeholder { 
+    color: #78909c;
+}
+input::-moz-placeholder, textarea::-moz-placeholder { 
+    color: #78909c;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { 
+    color: #78909c;
+}
+input[type="checkbox"] {
+	display: inline-block;
+	float: left;
+	width: .36rem;
+	height: .36rem;
+	background: url('http://7xo79i.com2.z0.glb.qiniucdn.com/amer/img/icon_select_link.png') center center no-repeat;
+	background-size: 100% 100%;
+}
+input[type="checkbox"]:checked {
+	background: url('http://7xo79i.com2.z0.glb.qiniucdn.com/amer/img/icon_select_active.png') center center no-repeat;
+	background-size: 100% 100%;
+}
+input[type="checkbox"]:disabled {
+	background: none;
+	visibility:hidden;
+}
+
+* {
+	outline: none;
+	webkit-focus-ring-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+}
+
+body, html {
+	width: 100%;
+	font-family: "Microsoft YaHei","Helvetica Neue",Arial, HelveticaNeue, Helvetica, "BBAlpha Sans", sans-serif;
+	font-weight: normal;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-align: center;
+	background: #f1f3f2;
+	color: #263238;
+}
+
+body {
+	margin: 0 auto;
+	font-size: .28rem;
+	line-height: 1.2;
+}
+.wrap {
+	margin: 0 auto;
+	width: 7.5rem;
+	background-color: #f1f3f2;
+	font-size: .28rem;
+}
+
+/* 提交资料页面 begin */
+
+/* 提交资料页面 end */
+
+
+/* common begin */
+.null-tips {
+	position: relative;
+	display: inline-block;
+	width: 7.5rem;
+	line-height: 5rem;
+	font-size: .28rem;
+	color: #999;
+	text-align: center;
+}
+.nomore-tips {
+	position: relative;
+	display: inline-block;
+	width: 7.5rem;
+	line-height: 1rem;
+	color: #999;
+	text-align: center;
+	cursor: pointer;
+}
+.txt-orange {
+	color: #ff681d;
+}
+
+i.loading {
+	display: inline-block;
+	position: relative;
+	margin-right: 10px;
+	top: 5px;
+	width: 20px;
+	height: 20px;
+	background: url('http://7xl6qe.com2.z0.glb.qiniucdn.com/img/loading.gif') center center no-repeat;
+	background-size: 20px 20px;
+}
+i.icon-finish {
+	display: inline-block;
+	width: 1.8rem;
+	height: 1.8rem;
+	background: url('http://7xo79i.com2.z0.glb.qiniucdn.com/amer/img/icon_finish.png') center center no-repeat;
+	background-size: 100% 100%;
+}
+i.icon-warning {
+	display: inline-block;
+	width: 1.8rem;
+	height: 1.8rem;
+	background: url('http://7xo79i.com2.z0.glb.qiniucdn.com/amer/img/icon_warning.png') center center no-repeat;
+	background-size: 100% 100%;
+}
+button:disabled {
+	background-color: #ccc;
+	border: 1px solid #ccc;
+	color: #fff;
+}
+/* common end */
+
+/* 字体 */
+@font-face {
+    /* font-properties */
+    font-family: 'Snell Roundhand',cursive;
+    src:url('http://7xl6qe.com2.z0.glb.qiniucdn.com/fonts/Material-Design-Icons.woff2'),  
+    url('http://7xl6qe.com2.z0.glb.qiniucdn.com/fonts/SnellRoundhandLTStd-Scr.otf');
+}
+
+/* 自适应 */
+@media screen and (max-width:359px) and (orientation:portrait) {
+	html {
+		font-size: 266.67%;
+	}
+}
+
+@media screen and (min-width:360px) and (max-width:374px) and (orientation:portrait) {
+	html {
+		font-size: 300%;
+	}
+}
+
+@media screen and (min-width:384px) and (max-width:399px) and (orientation:portrait) {
+	html {
+		font-size: 320%;
+	}
+}
+
+@media screen and (min-width:400px) and (max-width:413px) and (orientation:portrait) {
+	html {
+		font-size: 333.33%;
+	}
+}
+
+@media screen and (min-width:414px) and (max-width:431px) and (orientation:portrait) {
+	html {
+		font-size: 345%;
+	}
+}
+
+@media screen and (min-width:432px) and (max-width:479px) and (orientation:portrait) {
+	html {
+		font-size: 360%;
+	}
+}
+
+@media screen and (min-width:480px)and (max-width:639px) and (orientation:portrait) {
+	html {
+		font-size: 400%;
+	}
+}
+
+@media screen and (min-width:640px) and (orientation:portrait) {
+	html {
+		font-size: 533.33%;
+	}
+}
