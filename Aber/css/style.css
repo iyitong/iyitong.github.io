@@ -142,11 +142,9 @@ body {
 	border-radius: .08rem;
 }
 .user-info .input-wrap input {
-	margin-top: .1rem;
 	width: 100%;
 	height: .5rem;
 	line-height: .5rem;
-	border: 1px solid #ccc;
 }
 
 .user-info-img ul {
