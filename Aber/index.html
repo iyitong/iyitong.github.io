@@ -24,15 +24,75 @@
 		<!-- 提交用户认证信息 -->
 		<div class="user-info">
 			<form action="" class="form">
-				<p class="title">个人信息</p>
-				<p>姓名：黄东方</p>
-				<p class="gender">
-					<span>性别：</span>
-					<label><input type="radio" name="gender" checked>男</label>
-					<label><input type="radio" name="gender">女</label>
-				</p>
-				<p>手机号：13800138000</p>
-				<p class="input-wrap"><input type="number" class="info-input" placeholder="请填写身份证号码"></p>
+				<section>
+					<p class="title">个人信息</p>
+					<p>姓名：黄东方</p>
+					<p class="gender">
+						<span>性别：</span>
+						<label><input type="radio" name="gender" checked>男</label>
+						<label><input type="radio" name="gender">女</label>
+					</p>
+					<p>手机：13800138000</p>
+					<p class="input-wrap"><input type="number" placeholder="请填写身份证号码"></p>
+				</section>
+				
+				<section>
+					<p class="title">学校信息</p>
+					<p>学校：广东工业大学</p>
+					<ul>
+						<li class="input-wrap"><input type="text" placeholder="院系"></li>
+						<li class="input-wrap"><input type="text" placeholder="专业"></li>
+						<li class="input-wrap"><input type="text" placeholder="学号"></li>
+						<li class="input-wrap"><input type="text" placeholder="学历"></li>
+						<li class="input-wrap"><input type="text" placeholder="学制"></li>
+						<li class="input-wrap"><input type="text" placeholder="入学时间"></li>
+						<li class="input-wrap"><input type="text" placeholder="毕业时间"></li>
+					</ul>
+				</section>
+
+				<section>
+					<p class="title">联系方式</p>
+					<ul>
+						<li class="input-wrap"><input type="number" placeholder="QQ"></li>
+						<li class="input-wrap"><input type="text" placeholder="支付宝"></li>
+						<li class="input-wrap"><input type="text" placeholder="父亲姓名"></li>
+						<li class="input-wrap"><input type="tel" placeholder="父亲电话"></li>
+						<li class="input-wrap"><input type="text" placeholder="母亲姓名"></li>
+						<li class="input-wrap"><input type="tel" placeholder="母亲电话"></li>
+						<li class="input-wrap"><input type="text" placeholder="舍友姓名"></li>
+						<li class="input-wrap"><input type="tel" placeholder="舍友电话"></li>
+						<li class="input-wrap"><input type="text" placeholder="辅导员姓名"></li>
+						<li class="input-wrap"><input type="tel" placeholder="辅导员电话"></li>
+						<li class="input-wrap"><input type="text" placeholder="紧急联系人姓名"></li>
+						<li class="input-wrap"><input type="tel" placeholder="紧急联系人电话"></li>
+					</ul>
+				</section>
+
+				<section>
+					<p class="title">合同</p>
+					<ul>
+						<li class="input-wrap"><input type="number" placeholder="填写合同编号"></li>
+					</ul>
+				</section>
+
+				<section class="user-info-img">
+					<p class="title">上传照片</p>
+					<p class="title">身份证正反面照片</p>
+					<ul>
+						<li><input type="file"></li>
+						<li><input type="file"></li>
+					</ul>
+
+					<p class="title">用户手持身份证和协议表合照</p>
+					<ul>
+						<li><input type="file"></li>
+					</ul>
+
+					<p class="title">学信网/教务网/学费单照片</p>
+					<ul>
+						<li><input type="file"></li>
+					</ul>
+				</section>
 			</form>
 		</div>
 	</div>
