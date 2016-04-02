@@ -4,16 +4,24 @@
 		"selected_items":
 		[
 			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"ma",
+				"margin-bottom"
+			],
+			[
+				"border",
+				"border"
+			],
+			[
 				"re",
 				"required	Attr"
 			],
 			[
 				"min",
 				"min-width"
-			],
-			[
-				"margin",
-				"margin-top"
 			],
 			[
 				"ac",
@@ -104,10 +112,6 @@
 				"font-weight"
 			],
 			[
-				"border",
-				"border-bottom"
-			],
-			[
 				"bacc",
 				"background-color"
 			],
@@ -142,10 +146,6 @@
 			[
 				"tota",
 				"totalPage"
-			],
-			[
-				"ma",
-				"max-height"
 			],
 			[
 				"ha",
@@ -211,7 +211,7 @@
 			"file": "Aber/index.html",
 			"settings":
 			{
-				"buffer_size": 1620,
+				"buffer_size": 4463,
 				"line_ending": "Unix"
 			}
 		},
@@ -219,7 +219,7 @@
 			"file": "Aber/css/style.css",
 			"settings":
 			{
-				"buffer_size": 4164,
+				"buffer_size": 6011,
 				"line_ending": "Windows"
 			}
 		}
@@ -271,10 +271,12 @@
 	[
 		"/Users/cyt/Desktop/work/iyitong.github.io/AmerAdmin",
 		"/Users/cyt/Desktop/work/iyitong.github.io/Aber",
-		"/Users/cyt/Desktop/work/iyitong.github.io/Aber/css"
+		"/Users/cyt/Desktop/work/iyitong.github.io/Aber/css",
+		"/Users/cyt/Desktop/work/iyitong.github.io/Aber/img"
 	],
 	"file_history":
 	[
+		"/Users/cyt/Desktop/cookie.js",
 		"/Users/cyt/Desktop/work/iyitong.github.io/AmerAdmin/index.html",
 		"/Users/cyt/Desktop/work/iyitong.github.io/AmerAdmin/login.html",
 		"/Users/cyt/Desktop/work/iyitong.github.io/AmerAdmin/css/style.css",
@@ -391,15 +393,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1620,
+						"buffer_size": 4463,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1596,
-								1596
+								1734,
+								1739
 							]
 						],
 						"settings":
@@ -409,7 +411,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1082.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -421,15 +423,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4164,
+						"buffer_size": 6011,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1695,
-								1695
+								2779,
+								2779
 							]
 						],
 						"settings":
@@ -439,7 +441,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 918.0,
+						"translation.y": 1719.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -525,7 +527,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 89.0,
+	"side_bar_width": 303.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
