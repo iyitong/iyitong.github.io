@@ -216,6 +216,22 @@
 			}
 		},
 		{
+			"file": "AmerAdmin/index.html",
+			"settings":
+			{
+				"buffer_size": 97263,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/cyt/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+			"settings":
+			{
+				"buffer_size": 731,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "Aber/css/style.css",
 			"settings":
 			{
@@ -248,7 +264,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 593.0
+		"width": 449.0
 	},
 	"console":
 	{
@@ -276,6 +292,8 @@
 	],
 	"file_history":
 	[
+		"/Users/cyt/Desktop/work/iyitong.github.io/Aber/index.html",
+		"/Users/cyt/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
 		"/Users/cyt/Desktop/cookie.js",
 		"/Users/cyt/Desktop/work/iyitong.github.io/AmerAdmin/index.html",
 		"/Users/cyt/Desktop/work/iyitong.github.io/AmerAdmin/login.html",
@@ -400,18 +418,19 @@
 						"selection":
 						[
 							[
-								1734,
-								1739
+								877,
+								877
 							]
 						],
 						"settings":
 						{
+							"history_list_is_closing": true,
 							"origin_encoding": "UTF-8",
 							"syntax": "Packages/HTML/HTML.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1082.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -419,6 +438,65 @@
 				},
 				{
 					"buffer": 1,
+					"file": "AmerAdmin/index.html",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 97263,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1504,
+								1504
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/cyt/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 731,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								481,
+								481
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
 					"file": "Aber/css/style.css",
 					"semi_transient": false,
 					"settings":
@@ -444,7 +522,7 @@
 						"translation.y": 1719.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -527,7 +605,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 303.0,
+	"side_bar_width": 122.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
