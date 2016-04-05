@@ -1,0 +1,2457 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+	<meta name="renderer" content="webkit">
+	<title>A梦分期 | 内部管理员后台</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link rel="stylesheet" href="http://7xl6qe.com2.z0.glb.qiniucdn.com/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://7xl6qe.com2.z0.glb.qiniucdn.com/css/base.min.css">
+	<!-- 如果是IE6打开，在顶部出现小黄条进行提醒 -->
+	<!--[if lt IE 7]>
+	<div style="position:absoulute;left:0;top:0;width:100%;height:50px;background:rgb(255,255,233);color:rgb(30,84,148);border-bottom:1px solid rgb(230,230,198);text-align:center;line-height:50px;font-size:12px;">您使用的浏览器版本过低，可能会影响到您浏览本网页，建议您升级您的浏览器。</div>
+	<![endif]-->
+	<!--[if lt IE 9]>
+      <script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/respond.min.js"></script>
+      <script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/html5shiv.js"></script>
+    <![endif]-->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<!-- header begin -->
+	<div class="head" id="header">
+		<div class="header-box">
+			<div class="inner container">
+				<h1><a href="javascript:;" title="A梦分期内部管理员后台"><i class="logo"></i></a>A梦分期内部管理员后台</h1>
+				<div class="account">
+					<a href="javascript:;" class="nickname">昵称</a><a href="#" class="logout js-logout">退出</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- header end -->
+
+	<!-- container begin -->
+	<div class="container body">
+		<div class="container-box">
+			<!-- side begin -->
+			<div class="col-side">
+				<div class="menu-box">
+					<dl class="menu no-extra">
+						<dt class="menu-title"><i class="icon-menu" style="background:url(
+	        img/icon_menu_function.png
+	        ) no-repeat;"></i>商城管理</dt>
+						<dd class="menu-item"><a data-id="item_list" href="#item_list">商品列表</a></dd>
+						<dd class="menu-item"><a data-id="item_add" href="#item_add">添加商品</a></dd>
+						<!-- <dd class="menu-item"><a data-id="item_edit" href="#item_edit">编辑商品</a></dd> -->
+						<dd class="menu-item"><a data-id="item_category" href="#item_category">商品分类</a></dd>
+					</dl>
+
+					<dl class="menu">
+						<dt class="menu-title"><i class="icon-menu" style="background:url(
+        img/icon_menu_management.png
+        ) no-repeat;"></i>订单管理</dt>
+				        <dd class="menu-item"><a data-id="order_list" href="#order_list">订单列表</a></dd>
+						<dd class="menu-item"><a data-id="order_review" href="#order_review">订单审核</a></dd>
+						<dd class="menu-item"><a data-id="order_send" href="#order_send">发货管理</a></dd>
+						<dd class="menu-item"><a data-id="order_export" href="#order_export">导出报表</a></dd>
+					</dl>
+
+					<dl class="menu">
+						<dt class="menu-title"><i class="icon-menu" style="background:url(
+        img/icon_menu_developer.png
+        ) no-repeat;"></i>账单管理</dt>
+						<dd class="menu-item"><a data-id="bill_due" href="#bill_due">到期账单</a></dd>
+						<dd class="menu-item"><a data-id="bill_exception" href="#bill_exception">异常账单</a></dd>
+					</dl>
+
+					<dl class="menu">
+						<dt class="menu-title"><i class="icon-menu" style="background:url(
+	        img/icon_menu_statistics.png
+	        ) no-repeat;"></i>统计</dt>
+						<dd class="menu-item"><a data-id="achievement" href="#achievement">每日业绩</a></dd>
+					</dl>
+
+					<dl class="menu">
+						<dt class="menu-title"><i class="icon-menu" style="background:url(
+        img/icon_menu_management.png
+        ) no-repeat;"></i>认证管理</dt>
+				        <dd class="menu-item"><a data-id="user_identify" href="#user_identify">用户认证</a></dd>
+					</dl>
+
+					<dl class="menu">
+						<dt class="menu-title"><i class="icon-menu" style="background:url(
+        img/icon_menu_setup.png
+        ) no-repeat;"></i>超级管理员</dt>
+				        <dd class="menu-item"><a data-id="rate" href="#rate">设置白条利率</a></dd>
+						<dd class="menu-item"><a data-id="school" href="#school">学校管理</a></dd>
+						<dd class="menu-item"><a data-id="area" href="#area">区域经理管理</a></dd>
+						<dd class="menu-item"><a data-id="admin" href="#admin">管理员设置</a></dd>
+					</dl>
+
+				</div>
+			</div>
+			<!-- side end -->
+
+			<!-- main begin -->
+			<div class="col-main">
+				<!-- 商品列表 begin -->
+				<div class="main main-item fn-hide" id="main_item_list">
+					<div class="main-hd">
+						<h2>商品列表
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt>商品列表</dt>
+										<dd>根据商品分类及是否限时特惠获取商品列表</dd>
+
+										<dt>设置商品价格</dt>
+										<dd>只有在已下架状态才可以进行操作。商品价格由商品颜色及商品类型共同决定，如果商品颜色与商品类型的任何组合都是同一价格，则可以设置一口价。否则分别设置。</dd>
+
+										<dt>商品上架</dt>
+										<dd>商品上架之后才会展现在客户端，上架前必须先设置商品价格</dd>
+
+										<dt>商品下架</dt>
+										<dd>商品添加后，默认处于已下架状态</dd>
+
+										<dt>商品编辑</dt>
+										<dd>建议在已下架状态下进行编辑</dd>
+									</dl>
+
+									<div class="help-footer">
+										<p>属于运营组的权限</p>
+									</div>
+								</div>
+							</div>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<div class="content-wrap">
+							<form action="" class="form form-inline">
+								<span>商品分类：</span>
+								<select name="" class="form-control" id="">
+									<option value="">全部</option>
+									<option value="">手机</option>
+									<option value="">电脑</option>
+								</select>
+								&nbsp;<span>商品状态：</span>
+								<select name="" class="form-control" id="">
+									<option value="1">已上架</option>
+									<option value="0">已下架</option>
+								</select>
+								<button class="btn btn-warning" type="button">获取</button>
+							</form>
+ 
+							<!-- 商品列表 begin -->
+							<div class="list item-list" id="all_item_list">
+							<p>已上架的商品列表</p>
+								<table class="table table-hover table-condensed">
+									<thead>
+										<tr>
+											<td>商品名称</td>
+											<td width="70">限时特惠</td>
+											<td width="132">操作</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>苹果手机苹果手机苹果手机苹果手机</td>
+										<td><span class="label label-primary">否</span></td>
+										<td><span class="label label-warning">下架</span>&nbsp;<a class="label label-info" data-id="item_edit" href="#item_edit">编辑</a>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#itemDetailModal">详情</span></td>
+									</tr>
+									<tr>
+										<td>苹果手机苹果手机苹果手机苹果手机</td>
+										<td><span class="label label-primary">否</span></td>
+										<td><span class="label label-warning">下架</span>&nbsp;<a class="label label-info" data-id="item_edit" href="#item_edit">编辑</a>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#itemDetailModal">详情</span></td>
+									</tr>
+									<tr>
+										<td>苹果手机苹果手机苹果手机苹果手机</td>
+										<td><span class="label label-success">是</span></td>
+										<td><span class="label label-warning">下架</span>&nbsp;<a class="label label-info" data-id="item_edit" href="#item_edit">编辑</a>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#itemDetailModal">详情</span></td>
+									</tr>
+								</table>
+
+<p>已下架的商品列表</p>
+								<table class="table table-hover table-condensed">
+									<thead>
+										<tr>
+											<td>商品名称</td>
+											<td width="70">限时特惠</td>
+											<td width="197">操作</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>苹果手机苹果手机苹果手机苹果手机</td>
+										<td><span class="label label-success">是</span></td>
+										<td><span class="label label-warning">上架</span>&nbsp;<span class="label label-success" data-toggle="modal" data-target="#setItemPriceModal">设置价格</span>&nbsp;<a class="label label-info" data-id="item_edit" href="#item_edit">编辑</a>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#itemDetailModal">详情</span></td>
+									</tr>
+									<tr>
+										<td>苹果手机苹果手机苹果手机苹果手机</td>
+										<td><span class="label label-primary">否</span></td>
+										<td><span class="label label-warning">上架</span>&nbsp;<span class="label label-success" data-toggle="modal" data-target="#setItemPriceModal">设置价格</span>&nbsp;<a class="label label-info" data-id="item_edit" href="#item_edit">编辑</a>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#itemDetailModal">详情</span></td>
+									</tr>
+									<tr>
+										<td>苹果手机苹果手机苹果手机苹果手机</td>
+										<td><span class="label label-primary">否</span></td>
+										<td><span class="label label-warning">上架</span>&nbsp;<span class="label label-success" data-toggle="modal" data-target="#setItemPriceModal">设置价格</span>&nbsp;<a class="label label-info" data-id="item_edit" href="#item_edit">编辑</a>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#itemDetailModal">详情</span></td>
+									</tr>
+								</table>
+							</div>
+							<!-- 商品列表 end -->
+
+							<!-- 商品详情弹出层 begin -->
+							<div class="modal fade" id="itemDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title">商品详情</h4>
+							         	</div>
+
+							         	<div class="modal-body">
+						            		<div class="bill-info">
+							            	    <p>商品分类：<strong>手机</strong></p>
+							            	    <h4>商品基本信息</h4>
+							            		<ul>
+							            			<li class="block"><span>商品名称：</span>苹果手机苹果手机苹果手机苹果手机苹果手机苹果手机苹果手机苹果手机苹果手机苹果手机苹果手机苹果手机</li>
+							            			<li><span>商品颜色：</span>金色,灰色,玫瑰金</li>
+							            			<li><span>商品类型：</span>16G,32G,64G</li>
+							            			<li style="width: 25%;"><span>最小分期：</span>1期</li>
+							            			<li style="width: 25%;"><span>最大分期：</span>24期</li>
+							            			<li style="width: 50%;"><span>分期月利率：</span>0.03</li>
+							            			<li class="block"><span>缩略图链接：</span><a href="https://mp.weixin.qq.com/misc/getheadimg?fakeid=3082314054&token=60560262&lang=zh_CN" target="_blank">点击查看</a></li>
+							            			<li class="block"><span>轮播图链接：</span><a href="https://mp.weixin.qq.com/misc/getheadimg?fakeid=3082314054&token=60560262&lang=zh_CN" target="_blank">链接1</a>&nbsp;<a href="https://mp.weixin.qq.com/misc/getheadimg?fakeid=3082314054&token=60560262&lang=zh_CN" target="_blank">链接2</a>&nbsp;<a href="https://mp.weixin.qq.com/misc/getheadimg?fakeid=3082314054&token=60560262&lang=zh_CN" target="_blank">链接3</a></li>
+							            			<li><span>是否限时特惠：</span><span class="label label-primary">否</span>&nbsp;<span class="label label-success">是</span></li>
+							            			<li><span>限时特惠结束时间：</span>2016-03-30 23:59:59</li>
+							            		</ul>
+
+							            		<h4>商品价格列表</h4>
+							            		<ul>
+							            			<li class="block">
+							            				<table class="table table-hover table-condensed">
+															<thead>
+																<tr>
+																	<td width="250">颜色</td>
+																	<td>类型</td>
+																	<td width="120">价格</td>
+																</tr>
+															</thead>
+															<tr>
+																<td>灰色</td>
+																<td>16G</td>
+																<td>￥3299.00</td>
+															</tr>
+															<tr>
+																<td>灰色</td>
+																<td>32G</td>
+																<td>￥3299.00</td>
+															</tr>
+															<tr>
+																<td>灰色</td>
+																<td>64G</td>
+																<td>￥3299.00</td>
+															</tr>
+
+															<tr>
+																<td>金色</td>
+																<td>16G</td>
+																<td>￥3299.00</td>
+															</tr>
+															<tr>
+																<td>金色</td>
+																<td>32G</td>
+																<td>￥3299.00</td>
+															</tr>
+															<tr>
+																<td>金色</td>
+																<td>64G</td>
+																<td>￥3299.00</td>
+															</tr>
+
+															<tr>
+																<td>玫瑰金</td>
+																<td>16G</td>
+																<td>￥4899.00</td>
+															</tr>
+															<tr>
+																<td>玫瑰金</td>
+																<td>32G</td>
+																<td>￥4899.00</td>
+															</tr>
+															<tr>
+																<td>玫瑰金</td>
+																<td>64G</td>
+																<td>￥4899.00</td>
+															</tr>
+														</table>
+							            			</li>
+							            		</ul>
+
+							            		<h4>商品图文详情</h4>
+							            		<ul>
+							            			<li class="block">这里是商品图文详情介绍</li>
+							            		</ul>
+							            	</div>
+							         	</div>
+							         	<div class="modal-footer">
+							            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							         	</div>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 商品详情弹出层 end -->
+
+							<!-- 设置商品价格弹出层 begin -->
+							<div class="modal fade" id="setItemPriceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title">设置商品价格</h4>
+							         	</div>
+
+							         	<form action="" class="form form-inline info-form">
+								         	<div class="modal-body">
+							            		<ul>
+								            		<li>商品价格由商品颜色及商品类型共同决定，如果商品颜色与商品类型的任何组合都是同一价格，则可以设置一口价。否则分别设置。</li>
+
+								            		<li><span>一口价：</span>￥<input type="number" class="form-control">&nbsp;<button type="button" class="btn btn-warning">设置</button></li>
+
+							            			<li>
+							            				<table class="table table-hover table-condensed">
+															<thead>
+																<tr>
+																	<td>颜色</td>
+																	<td>类型</td>
+																	<td>价格</td>
+																</tr>
+															</thead>
+															<tr>
+																<td>灰色</td>
+																<td>16G</td>
+																<td>￥<input type="number"></td>
+															</tr>
+															<tr>
+																<td>灰色</td>
+																<td>32G</td>
+																<td>￥<input type="number"></td>
+															</tr>
+															<tr>
+																<td>灰色</td>
+																<td>64G</td>
+																<td>￥<input type="number"></td>
+															</tr>
+
+															<tr>
+																<td>金色</td>
+																<td>16G</td>
+																<td>￥<input type="number"></td>
+															</tr>
+															<tr>
+																<td>金色</td>
+																<td>32G</td>
+																<td>￥<input type="number"></td>
+															</tr>
+															<tr>
+																<td>金色</td>
+																<td>64G</td>
+																<td>￥<input type="number"></td>
+															</tr>
+
+															<tr>
+																<td>玫瑰金</td>
+																<td>16G</td>
+																<td>￥<input type="number"></td>
+															</tr>
+															<tr>
+																<td>玫瑰金</td>
+																<td>32G</td>
+																<td>￥<input type="number"></td>
+															</tr>
+															<tr>
+																<td>玫瑰金</td>
+																<td>64G</td>
+																<td>￥<input type="number"></td>
+															</tr>
+														</table>
+							            			</li>
+							            		</ul>
+								         	</div>
+								         	<div class="modal-footer">
+								            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+								            	<button type="button" class="btn btn-warning" id="">保存价格</button>
+								         	</div>
+							         	</form>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 设置商品价格弹出层 end -->
+
+							<!-- 分页 -->
+							<div class="kkpager" id="item_kkpager">
+								这里是分页
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 商品列表 end -->
+
+				<!-- 添加商品 begin -->
+				<div class="main main-item-add fn-hide" id="main_item_add">
+					<div class="main-hd">
+						<h2>添加商品
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt>商品分类</dt>
+										<dd>必选。在添加商品时，如果尚无可用的商品分类，需要先前往“商品分类”模块进行添加</dd>
+
+										<dt>商品名称</dt>
+										<dd>必填。字数不宜过多</dd>
+
+										<dt>商品颜色</dt>
+										<dd>选填。多个颜色之间用英文逗号 , 分隔。如：金色,灰色,玫瑰金</dd>
+
+										<dt>商品类型</dt>
+										<dd>选填。多个类型之间用英文逗号 , 分隔。如：16G,32G,64G</dd>
+
+										<dt>商品一口价</dt>
+										<dd>选填。价格由颜色及类型共同决定，可以设置一口价，也可在“商品列表”模块对价格进行差异化设置。初始价格默认为0元</dd>
+
+										<dt>最小分期</dt>
+										<dd>必填。最小分期数不可小于1</dd>
+
+										<dt>最大分期</dt>
+										<dd>必填</dd>
+
+										<dt>分期月利率</dt>
+										<dd>必填。月利息=商品价格*分期月利率</dd>
+
+										<dt>缩略图链接</dt>
+										<dd>必填。用于首页等需要商品缩略图的地方。只有一个链接，建议先把缩略图上传到第三方存储平台（如：七牛）后再获取相应的完整链接</dd>
+
+										<dt>轮播图链接</dt>
+										<dd>必填。用于商品详情页面头部的商品轮播展现。可有多个链接，多个链接之间用英文逗号分隔。建议先把轮播图上传到第三方存储平台（如：七牛）后再获取相应的完整链接</dd>
+
+										<dt>是否限时特惠</dt>
+										<dd>必选。默认为否</dd>
+
+										<dt>限时特惠结束日期</dt>
+										<dd>限时特惠选择“否”时，不需要填写。限时特惠选择“是”时，必填。结束时间精确到当天23:59:59。如：选择的日期为：2016-03-30，则限时特惠真正结束时间是：2016-03-30 23:59:59</dd>
+
+										<dt>商品图文详情</dt>
+										<dd>必填。编辑商品图文信息，对商品进行详细介绍</dd>
+
+										<dt>商品价格的设置</dt>
+										<dd>商品价格由商品颜色及选购类型共同决定，先添加商品的基本信息、颜色及选购类型后，在“商品列表”模块可以对商品价格进行设置</dd>
+									</dl>
+
+									<div class="help-footer">
+										<p>属于运营组的权限</p>
+									</div>
+								</div>
+							</div>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<div class="content-wrap">
+							<form action="" class="form form-inline">
+								<ul>
+									<li>
+										<span>商品分类：</span>
+										<select name="" class="form-control" id="">
+											<option value="">手机</option>
+										</select>
+									</li>
+
+									<li>
+										<span>商品名称：</span>
+										<input type="text" class="form-control width8" placeholder="请输入商品名称" required>
+									</li>
+
+									<li>
+										<span>商品颜色：</span>
+										<input type="text" class="form-control width8" placeholder="请输入商品颜色，多个颜色之间用英文逗号 , 分隔；如：金色,灰色,玫瑰金">
+									</li>
+
+									<li>
+										<span>商品类型：</span>
+										<input type="text" class="form-control width8" placeholder="请输入商品选购类型，多个类型之间用英文逗号 , 分隔；如：16G,32G,64G">
+									</li>
+
+									<li>
+										<span>商品一口价：</span>
+										<input type="text" class="form-control" placeholder="请输入商品一口价">
+										&nbsp;<small>价格由颜色及类型共同决定，可以设置一口价，也可在“商品列表”模块对价格进行差异化设置，默认为0元。</small>
+									</li>
+
+									<li>
+										<span>最小分期：</span>
+										<input type="number" min="1" class="form-control" placeholder="必须大于或等于1期">
+										&nbsp;&nbsp;<span>最大分期：</span>
+										<input type="number" class="form-control" placeholder="输入最大分期数">
+										&nbsp;&nbsp;<span>分期月利率：</span>
+										<input type="number" class="form-control" placeholder="格式如：2.31">&nbsp;%
+									</li>
+
+									<li>
+										<span>缩略图链接：</span>
+										<input type="text" class="form-control width8" placeholder="请输入商品选购类型，多个类型之间用英文逗号 , 分隔">
+									</li>
+
+									<li>
+										<span>轮播图链接：</span>
+										<input type="text" class="form-control width8" placeholder="请输入商品选购类型，多个类型之间用英文逗号 , 分隔">
+									</li>
+
+									<li>
+										<span>是否限时特惠：</span>
+										<label><input type="radio" value="0" name="xsth" checked>&nbsp;否</label>&nbsp;
+										<label><input type="radio" value="1" name="xsth">&nbsp;是</label>
+										&nbsp;&nbsp;<span>限时特惠结束日期：</span>
+										<input type="date" class="form-control">
+									</li>
+
+									<li>
+										<span>商品图文详情：</span>
+										<textarea name="" class="form-control" id="" cols="120" rows="10"></textarea>
+									</li>
+								</ul>
+
+								<button class="btn btn-warning btn-block" type="submit">添加商品</button>
+							</form>
+						</div>
+					</div>
+				</div>
+				<!-- 添加商品 end -->
+
+				<!-- 编辑商品 begin -->
+				<div class="main main-item-edit fn-hide" id="main_item_edit">
+					<div class="main-hd">
+						<h2>编辑商品
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt>商品分类</dt>
+										<dd>必选。在添加商品时，如果尚无可用的商品分类，需要先前往“商品分类”模块进行添加</dd>
+
+										<dt>商品名称</dt>
+										<dd>必填。字数不宜过多</dd>
+
+										<dt>商品颜色</dt>
+										<dd>选填。多个颜色之间用英文逗号 , 分隔。如：金色,灰色,玫瑰金</dd>
+
+										<dt>商品类型</dt>
+										<dd>选填。多个类型之间用英文逗号 , 分隔。如：16G,32G,64G</dd>
+
+										<dt>最小分期</dt>
+										<dd>必填。最小分期数不可小于1</dd>
+
+										<dt>最大分期</dt>
+										<dd>必填</dd>
+
+										<dt>缩略图链接</dt>
+										<dd>必填。用于首页等需要商品缩略图的地方。只有一个链接，建议先把缩略图上传到第三方存储平台（如：七牛）后再获取相应的完整链接</dd>
+
+										<dt>轮播图链接</dt>
+										<dd>必填。用于商品详情页面头部的商品轮播展现。可有多个链接，多个链接之间用英文逗号分隔。建议先把轮播图上传到第三方存储平台（如：七牛）后再获取相应的完整链接</dd>
+
+										<dt>是否限时特惠</dt>
+										<dd>必选。默认为否</dd>
+
+										<dt>限时特惠结束日期</dt>
+										<dd>限时特惠选择“否”时，不需要填写。限时特惠选择“是”时，必填。结束时间精确到当天23:59:59。如：选择的日期为：2016-03-30，则限时特惠真正结束时间是：2016-03-30 23:59:59</dd>
+
+										<dt>商品图文详情</dt>
+										<dd>必填。编辑商品图文信息，对商品进行详细介绍</dd>
+
+										<dt>商品价格的设置</dt>
+										<dd>商品价格由商品颜色及选购类型共同决定，先添加商品的基本信息、颜色及选购类型后，在“商品列表”模块可以对商品价格进行设置</dd>
+									</dl>
+
+									<div class="help-footer">
+										<p>属于运营组的权限</p>
+									</div>
+								</div>
+							</div>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<div class="content-wrap">
+							<form action="" class="form form-inline">
+								<ul>
+									<li>
+										<span>商品分类：</span>
+										<select name="" class="form-control" id="">
+											<option value="">手机</option>
+										</select>
+									</li>
+
+									<li>
+										<span>商品名称：</span>
+										<input type="text" class="form-control width8" placeholder="请输入商品名称" required>
+									</li>
+
+									<li>
+										<span>商品颜色：</span>
+										<input type="text" class="form-control width8" placeholder="请输入商品颜色，多个颜色之间用英文逗号 , 分隔；如：金色,灰色,玫瑰金">
+									</li>
+
+									<li>
+										<span>商品类型：</span>
+										<input type="text" class="form-control width8" placeholder="请输入商品选购类型，多个类型之间用英文逗号 , 分隔；如：16G,32G,64G">
+									</li>
+
+									<li>
+										<span>最小分期：</span>
+										<input type="number" min="1" class="form-control" placeholder="必须大于或等于1期">
+										&nbsp;&nbsp;<span>最大分期：</span>
+										<input type="number" class="form-control" placeholder="输入最大分期数">
+										&nbsp;&nbsp;<span>分期月利率：</span>
+										<input type="number" class="form-control" placeholder="格式如：0.03">
+									</li>
+
+									<li>
+										<span>缩略图链接：</span>
+										<input type="text" class="form-control width8" placeholder="请输入商品选购类型，多个类型之间用英文逗号 , 分隔">
+									</li>
+
+									<li>
+										<span>轮播图链接：</span>
+										<input type="text" class="form-control width8" placeholder="请输入商品选购类型，多个类型之间用英文逗号 , 分隔">
+									</li>
+
+									<li>
+										<span>是否限时特惠：</span>
+										<label><input type="radio" value="0" name="xsth" checked>&nbsp;否</label>&nbsp;
+										<label><input type="radio" value="1" name="xsth">&nbsp;是</label>
+										&nbsp;&nbsp;<span>限时特惠结束日期：</span>
+										<input type="date" class="form-control">
+									</li>
+
+									<li>
+										<span>商品图文详情：</span>
+										<textarea name="" class="form-control" id="" cols="120" rows="10"></textarea>
+									</li>
+								</ul>
+
+								<button class="btn btn-warning btn-block" type="submit">添加商品</button>
+							</form>
+						</div>
+					</div>
+				</div>
+				<!-- 编辑商品 end -->
+
+				<!-- 商品分类 begin -->
+				<div class="main main-item-category fn-hide" id="main_item_category">
+					<div class="main-hd">
+						<h2>商品分类
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt>商品分类</dt>
+										<dd>区分商品类别，添加商品时需要选择分类</dd>
+									</dl>
+
+									<div class="help-footer">
+										<p>属于运营组的权限</p>
+									</div>
+								</div>
+							</div>
+
+							<span class="btn btn-warning add-btn" data-toggle="modal" data-target="#addCategoryModal">添加分类</span>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<div class="content-wrap">
+							<!-- 商品分类列表 begin -->
+							<div class="list item-category-list" id="item_category_list">
+								<table class="table table-hover table-condensed">
+									<thead>
+										<tr>
+											<td>分类名称</td>
+											<td width="93">操作</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>iphone 6s</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#addCategoryModal">编辑</span>&nbsp;<span class="label label-danger">删除</span></td>
+									</tr>
+									<tr>
+										<td>iphone se</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#addCategoryModal">编辑</span>&nbsp;<span class="label label-danger">删除</span></td>
+									</tr>
+									<tr>
+										<td>iphone 6</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#addCategoryModal">编辑</span>&nbsp;<span class="label label-danger">删除</span></td>
+									</tr>
+								</table>
+							</div>
+							<!-- 商品分类列表 end -->
+
+							<!-- 添加商品分类弹出层 begin -->
+							<div class="modal fade" id="addCategoryModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title">添加商品分类</h4>
+							         	</div>
+
+							         	<form action="" class="form form-horizontal info-form">
+								         	<div class="modal-body">
+							            		<ul>
+							            			<li>分类名称：<input type="text" class="form-control" id="" name="name" placeholder="请输入商品分类名称" required></li>
+							            		</ul>
+								         	</div>
+								         	<div class="modal-footer">
+								            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+								            	<button type="submit" class="btn btn-warning" id="add_school_btn">添加</button>
+								         	</div>
+							         	</form>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 添加商品分类弹出层 end -->
+						</div>
+					</div>
+				</div>
+				<!-- 商品分类 end -->
+
+				<!-- 订单列表 begin -->
+				<div class="main main-order-list fn-hide" id="main_order_list">
+					<div class="main-hd">
+						<h2>订单列表
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt>我要审核</dt>
+										<dd>风控组成员根据自己的工作要求，对未审核的订单进行审核，在审核之前需要先点击“我要审核”按钮把订单转入自己的“未审核”订单列表中，然后在“订单审核”模块的“未审核”列表中进行风控审核</dd>
+									</dl>
+									<div class="help-footer">
+										<p>属于风控组权限</p>
+									</div>
+								</div>
+							</div>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<!-- 导航菜单 begin -->
+						<div class="title-tab">
+							<ul class="tab-nav">
+								<li>
+									<select name="" class="form-control" id="order_send_type">
+										<option value="0">商城订单</option>
+										<option value="1">白条订单</option>
+									</select>
+								</li>
+								<span class="order-send-span">
+									<li class="active"><a href="javascript:;" data-state="0" onclick="mainTab(this);">未审核</a></li>
+									<li><a href="javascript:;" data-state="3" onclick="mainTab(this);">未发货</a></li>
+									<li><a href="javascript:;" data-state="4" onclick="mainTab(this);">已发货</a></li>
+									<li><a href="javascript:;" data-state="5" onclick="mainTab(this);">不发货</a></li>
+									<li><a href="javascript:;" data-state="2" onclick="mainTab(this);">审核不通过</a></li>
+								</span>
+								<span class="order-send-span fn-hide">
+									<li class="active"><a href="javascript:;" data-state="0" onclick="mainTab(this);">未审核</a></li>
+									<li><a href="javascript:;" data-state="3" onclick="mainTab(this);">未打款</a></li>
+									<li><a href="javascript:;" data-state="4" onclick="mainTab(this);">已打款</a></li>
+									<li><a href="javascript:;" data-state="5" onclick="mainTab(this);">不打款</a></li>
+									<li><a href="javascript:;" data-state="2" onclick="mainTab(this);">审核不通过</a></li>
+								</span>
+							</ul>
+						</div>
+						<!-- 导航菜单 end -->
+
+						<div class="content-wrap">
+							<!-- 订单列表 begin -->
+							<div class="list order-list" id="order_total_list">
+								<table class="table table-hover table-condensed">
+									<thead>
+										<tr>
+											<td width="120">订单编号</td>
+											<td>商品名称</td>
+											<td width="150">下单时间</td>
+											<td width="116">操作</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>20160324123</td>
+										<td>苹果手机苹果手机苹果手机苹果手机</td>
+										<td>2016-01-24 10:23:43</td>
+										<td><span class="label label-warning" onclick="alert('该订单已经转移到你的“未审核订单”列表中，请自行前往“订单审核”模块进行审核');">我要审核</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#orderDetailModal">详情</span></td>
+									</tr>
+									<tr>
+										<td>20160324123</td>
+										<td>苹果手机苹果手机苹果手机苹果手机</td>
+										<td>2016-01-24 10:23:43</td>
+										<td><span class="label label-warning" onclick="alert('该订单已经转移到你的“未审核订单”列表中，请自行前往“订单审核”模块进行审核');">我要审核</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#orderDetailModal">详情</span></td>
+									</tr>
+									<tr>
+										<td>20160324123</td>
+										<td>苹果手机苹果手机苹果手机苹果手机</td>
+										<td>2016-01-24 10:23:43</td>
+										<td><span class="label label-warning" onclick="alert('该订单已经转移到你的“未审核订单”列表中，请自行前往“订单审核”模块进行审核');">我要审核</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#orderDetailModal">详情</span></td>
+									</tr>
+								</table>
+							</div>
+							<!-- 订单列表 end -->
+
+							<!-- 订单详情弹出层 begin -->
+							<div class="modal fade" id="orderDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title">订单详情</h4>
+							         	</div>
+
+							         	<div class="modal-body">
+						            		<div class="bill-info">
+						            			<p>订单编号：<strong>2016012411</strong></p>
+						            			<h4>订单信息</h4>
+							            		<ul>
+							            			<li class="block"><span>商品名称：</span>苹果手机se苹果手机se苹果手机se苹果手机se苹果手机se</li>
+							            			<li><span>商品价格：</span>￥4288.00</li>
+							            			<li><span>首付：</span>￥1000.00</li>
+							            			<li><span>分期详情：</span>￥1096.00 x 3期</li>
+							            			<li><span>月供：</span>￥1096.00（含服务费￥0.00）</li>
+							            			<li><span>邀请码：</span>12345</li>
+							            			<li><span>下单时间：</span>2016-01-24 10:25:30</li>
+							            		</ul>
+
+							            	    <h4>下单用户信息</h4>
+							            		<ul>
+							            			<li><span>姓名：</span>成一通</li>
+							            			<li><span>电话：</span>15820216212</li>
+							            			<li class="block"><span>收货地址：</span>广东省广州市大学城广东工业大学大学城校区东五714</li>
+							            		</ul>
+						            		</div>
+							         	</div>
+							         	<div class="modal-footer">
+							            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							         	</div>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 订单详情弹出层 end -->
+
+							<!-- 分页 -->
+							<div class="kkpager" id="order_kkpager">这里是分页列表</div>
+						</div>
+					</div>
+				</div>
+				<!-- 订单列表 end -->
+
+				<!-- 订单审核 begin -->
+				<div class="main main-order-review fn-hide" id="main_order_review">
+					<div class="main-hd">
+						<h2>订单审核
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt>订单审核</dt>
+										<dd>风控组对订单进行风控审核，并填写审核结果</dd>
+									</dl>
+								</div>
+							</div>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<!-- 导航菜单 begin -->
+						<div class="title-tab">
+							<ul class="tab-nav">
+								<li>
+									<select name="" class="form-control" id="order_send_type">
+										<option value="0">商城订单</option>
+										<option value="1">白条订单</option>
+									</select>
+								</li>
+								<span class="order-send-span">
+									<li class="active"><a href="javascript:;" data-state="0" onclick="mainTab(this);">未审核</a></li>
+									<li><a href="javascript:;" data-state="1" onclick="mainTab(this);">审核通过</a></li>
+									<li><a href="javascript:;" data-state="2" onclick="mainTab(this);">审核不通过</a></li>
+								</span>
+							</ul>
+						</div>
+						<!-- 导航菜单 end -->
+
+						<div class="content-wrap">
+							<!-- 订单列表 begin -->
+							<div class="list order-review-list" id="order_review_list">
+								<table class="table table-hover table-condensed">
+									<thead>
+										<tr>
+											<td width="120">订单编号</td>
+											<td>商品名称</td>
+											<td width="150">下单时间</td>
+											<td width="50">操作</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>20160324123</td>
+										<td>苹果手机苹果手机苹果手机苹果手机</td>
+										<td>2016-01-24 10:23:43</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#orderReviewDetailModal">详情</span></td>
+									</tr>
+									<tr>
+										<td>20160324123</td>
+										<td>苹果手机苹果手机苹果手机苹果手机</td>
+										<td>2016-01-24 10:23:43</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#orderReviewDetailModal">详情</span></td>
+									</tr>
+									<tr>
+										<td>20160324123</td>
+										<td>苹果手机苹果手机苹果手机苹果手机</td>
+										<td>2016-01-24 10:23:43</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#orderReviewDetailModal">详情</span></td>
+									</tr>
+								</table>
+							</div>
+							<!-- 订单列表 end -->
+
+							<!-- 订单详情弹出层 begin -->
+							<div class="modal fade" id="orderReviewDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title">订单详情</h4>
+							         	</div>
+
+							         	<div class="modal-body">
+						            		<div class="bill-info">
+						            			<p>订单编号：<strong>2016012411</strong></p>
+						            			<h4>订单信息</h4>
+							            		<ul>
+							            			<li class="block"><span>商品名称：</span>苹果手机se苹果手机se苹果手机se苹果手机se苹果手机se</li>
+							            			<li><span>商品价格：</span>￥4288.00</li>
+							            			<li><span>首付：</span>￥1000.00</li>
+							            			<li><span>分期详情：</span>￥1096.00 x 3期</li>
+							            			<li><span>月供：</span>￥1096.00（含服务费￥0.00）</li>
+							            			<li><span>邀请码：</span>12345</li>
+							            			<li><span>下单时间：</span>2016-01-24 10:25:30</li>
+							            		</ul>
+
+							            	    <h4>下单用户信息 <a href="javascript:;" class="label label-warning fn-right">获取用户个人账单</a></h4>
+							            		<ul>
+							            			<li><span>姓名：</span>成一通</li>
+							            			<li><span>电话：</span>15820216212</li>
+							            			<li class="block"><span>收货地址：</span>广东省广州市大学城广东工业大学大学城校区东五714</li>
+							            		</ul>
+
+							            		<h4>用户个人账单</h4>
+							            		<ul>
+							            			<li class="block">
+							            				<table class="table table-hover table-condensed">
+															<thead>
+																<tr>
+																	<td width="120">订单编号</td>
+																	<td>商品名称</td>
+																	<td width="95">第N期/总期数</td>
+																	<td width="80">本期应还</td>
+																	<td width="90">应还日期</td>
+																	<td width="90">还款日期</td>
+																	<td width="60">状态</td>
+																</tr>
+															</thead>
+															<tr>
+																<td>20160324123</td>
+																<td>苹果手机苹果手机苹果手机苹果手机</td>
+																<td>第1/24期</td>
+																<td>￥221.31</td>	
+																<td>2016-01-24</td>
+																<td>2016-01-23</td>
+																<td><span class="label label-success">已还款</span></td>
+															</tr>
+															<tr>
+																<td>20160324123</td>
+																<td>苹果手机苹果手机苹果手机苹果手机</td>
+																<td>第2/24期</td>
+																<td>￥221.31</td>	
+																<td>2016-02-24</td>
+																<td>2016-02-23</td>
+																<td><span class="label label-success">已还款</span></td>
+															</tr>
+															<tr>
+																<td>20160324123</td>
+																<td>苹果手机苹果手机苹果手机苹果手机</td>
+																<td>第3/24期</td>
+																<td>￥221.31</td>	
+																<td>2016-03-24</td>
+																<td>--</td>
+																<td><span class="label label-primary">未还款</span></td>
+															</tr>
+														</table>
+							            			</li>
+							            		</ul>
+
+							            		<h4>订单审核</h4>
+							            		<ul>
+								            		<form action="">
+								            			<li class="block">
+									         				<span>选择审核结果</span>&nbsp;&nbsp;
+									         				<label><input type="radio" name="order_state" required>通过</label>
+								            				<label><input type="radio" name="order_state" required>不通过</label>
+							            				</li>
+							            				<li class="block">
+								            				<p>备注：</p>
+								            				<textarea name="" class="form-control" id="" cols="30" rows="5"></textarea>
+								            			</li>
+								            			<li class="block"><button type="submit" class="btn btn-warning fn-right">提交审核结果</button></li>
+							            			</form>
+							            		</ul>
+
+							            		<h4>订单状态</h4>
+							            		<ul>
+							            			<li class="block">审核不通过，原因：测试订单</li>
+							            		</ul>
+						            		</div>
+							         	</div>
+							         	<div class="modal-footer">
+							            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							         	</div>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 订单详情弹出层 end -->
+
+							<!-- 分页 -->
+							<div class="kkpager" id="order_review_kkpager">这里是分页列表</div>
+						</div>
+					</div>
+				</div>
+				<!-- 订单审核 end -->
+
+				<!-- 发货管理 begin -->
+				<div class="main main-order-send fn-hide" id="main_order_send">
+					<div class="main-hd">
+						<h2>发货管理
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt>发货管理</dt>
+										<dd>财务组根据订单的类型及状态对订单进行相应处理，发货或者打款</dd>
+
+										<dt>填写商品成本价</dt>
+										<dd>如果是商城订单，财务组在订单处理结果为“发货”时，需要填写商品的成本价格以及处理备注</dd>
+
+										<dt>处理结果的备注</dt>
+										<dd>如果订单处理为“不发货”或者“不打款”时，强烈建议填写备注，说明“不发货”或者“不打款”的原因</dd>
+									</dl>
+								</div>
+							</div>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<!-- 导航菜单 begin -->
+						<div class="title-tab">
+							<ul class="tab-nav">
+								<li>
+									<select name="" class="form-control" id="order_send_type">
+										<option value="0">商城订单</option>
+										<option value="1">白条订单</option>
+									</select>
+								</li>
+								<span class="order-send-span">
+									<li class="active"><a href="javascript:;" data-state="0" onclick="mainTab(this);">未发货</a></li>
+									<li><a href="javascript:;" data-state="1" onclick="mainTab(this);">已发货</a></li>
+									<li><a href="javascript:;" data-state="2" onclick="mainTab(this);">不发货</a></li>
+								</span>
+								<span class="order-send-span fn-hide">
+									<li class="active"><a href="javascript:;" data-state="3" onclick="mainTab(this);">未打款</a></li>
+									<li><a href="javascript:;" data-state="4" onclick="mainTab(this);">已打款</a></li>
+									<li><a href="javascript:;" data-state="5" onclick="mainTab(this);">不打款</a></li>
+								</span>
+							</ul>
+						</div>
+						<!-- 导航菜单 end -->
+
+						<div class="content-wrap">
+							<!-- 订单列表 begin -->
+							<div class="list order-send-list" id="order_send_list">
+								<table class="table table-hover table-condensed">
+									<thead>
+										<tr>
+											<td width="120">订单编号</td>
+											<td>商品名称</td>
+											<td width="150">下单时间</td>
+											<td width="50">操作</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>20160324123</td>
+										<td>苹果手机苹果手机苹果手机苹果手机</td>
+										<td>2016-01-24 10:23:43</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#orderSendDetailModal">详情</span></td>
+									</tr>
+									<tr>
+										<td>20160324123</td>
+										<td>苹果手机苹果手机苹果手机苹果手机</td>
+										<td>2016-01-24 10:23:43</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#orderSendDetailModal">详情</span></td>
+									</tr>
+								</table>
+							</div>
+							<!-- 订单列表 end -->
+
+							<!-- 订单详情弹出层 begin -->
+							<div class="modal fade" id="orderSendDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title">订单详情</h4>
+							         	</div>
+
+							         	<div class="modal-body">
+						            		<div class="bill-info">
+						            			<p>订单编号：<strong>2016012411</strong></p>
+						            			<h4>订单信息</h4>
+							            		<ul>
+							            			<li class="block"><span>商品名称：</span>苹果手机se苹果手机se苹果手机se苹果手机se苹果手机se</li>
+							            			<li><span>订单总价：</span>￥4288.00</li>
+							            			<li><span>首付：</span>￥1000.00</li>
+							            			<li><span>分期详情：</span>￥1096.00 x 3期</li>
+							            			<li><span>月供：</span>￥1096.00（含服务费￥0.00）</li>
+							            			<li><span>邀请码：</span>12345</li>
+							            			<li><span>下单时间：</span>2016-01-24 10:25:30</li>
+							            		</ul>
+
+							            	    <h4>下单用户信息</h4>
+							            		<ul>
+							            			<li><span>姓名：</span>成一通</li>
+							            			<li><span>电话：</span>15820216212</li>
+							            			<li class="block"><span>收货地址：</span>广东省广州市大学城广东工业大学大学城校区东五714</li>
+							            		</ul>
+
+							            		<h4>发货处理</h4>
+							            		<ul>
+								            		<form action="">
+								            			<li class="block">
+									         				<span>选择结果</span>&nbsp;&nbsp;
+									         				<label><input type="radio" name="order_state" required>发货/打款</label>
+								            				<label><input type="radio" name="order_state" required>不发货/不打款</label>
+									         			</li>
+
+									         			<li><span>商品成本:（单位:元）</span><input type="text" class="form-control" placeholder="请输入商品成本，单位:元" style="width: 280px;"></li>
+
+											         	<li class="block">
+											         		<p>备注：</p>
+								            				<textarea name="" class="form-control" id="" cols="30" rows="5"></textarea>
+											         	</li>	
+								            			
+								            			<li class="block"><button type="submit" class="btn btn-warning fn-right">提交审核结果</button></li>
+							            			</form>
+							            		</ul>
+
+							            		<h4>订单状态</h4>
+							            		<ul>
+							            			<li class="block">审核不通过，原因：测试订单</li>
+							            		</ul>
+						            		</div>
+							         	</div>
+							         	<div class="modal-footer">
+							            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							         	</div>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 订单详情弹出层 end -->
+
+							<!-- 分页 -->
+							<div class="kkpager" id="order_send_kkpager">这里是分页列表</div>
+						</div>
+					</div>
+				</div>
+				<!-- 发货管理 end -->
+
+				<!-- 导出订单报表 begin -->
+				<div class="main main-order-export fn-hide" id="main_order_export">
+					<div class="main-hd">
+						<h2>导出订单报表
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt>导出订单报表</dt>
+										<dd>只有处于已发货或已打款状态的订单才可以导出Excel表格</dd>
+
+										<dt>导出的数据参数</dt>
+										<dd>财务组根据具体业务要求，勾选需要导出的数据参数并导出相应的数据</dd>
+									</dl>
+
+									<div class="help-footer">
+										<p>属于财务组权限</p>
+									</div>
+								</div>
+							</div>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<div class="content-wrap">
+							<form action="" class="form form-inline">
+								<span>订单类型：</span>
+								<select name="" class="form-control" id="">
+									<option value="0">商城订单</option>
+									<option value="0">白条订单</option>
+								</select>
+
+								<span>下单时间：</span>
+								<input type="date" class="form-control" id="">
+								<input type="date" class="form-control" id="">
+								<button type="button" class="btn btn-warning fn-right">导出EXCEL</button>
+
+								<p style="margin-top: 20px;">商城订单可选择导出的数据</p>
+								<div class="label-list">
+									<label><input type="checkbox">全选</label>
+									<label><input type="checkbox">订单编号</label>
+									<label><input type="checkbox">商品名称</label>
+									<label><input type="checkbox">商品价格</label>
+									<label><input type="checkbox">首付金额</label>
+									<label><input type="checkbox">分期数</label>
+									<label><input type="checkbox">月供</label>
+									<label><input type="checkbox">服务费</label>
+									<label><input type="checkbox">利率</label>
+									<label><input type="checkbox">用户姓名</label>
+									<label><input type="checkbox">用户电话</label>
+									<label><input type="checkbox">用户收货地址</label>
+									<label><input type="checkbox">下单时间</label>
+									<label><input type="checkbox">发货时间</label>
+									<button class="btn btn-warning">生成报表</button>
+								</div>
+
+								<p style="margin-top: 20px;">白条订单可选择导出的数据</p>
+								<div class="label-list">
+									<label><input type="checkbox">全选</label>
+									<label><input type="checkbox">订单编号</label>
+									<label><input type="checkbox">商品名称</label>
+									<label><input type="checkbox">白条金额</label>
+									<label><input type="checkbox">分期数</label>
+									<label><input type="checkbox">月供</label>
+									<label><input type="checkbox">服务费</label>
+									<label><input type="checkbox">利率</label>
+									<label><input type="checkbox">下单时间</label>
+									<label><input type="checkbox">打款时间</label>
+									<button class="btn btn-warning">生成报表</button>
+								</div>
+							</form>
+
+							<!-- 订单列表 begin -->
+							<div class="list order-send-list" id="order_send_list">
+								<p>商城订单</p>
+								<table class="table table-hover table-condensed" style="width: 889px;">
+									<thead>
+										<tr>
+											<td width="120">订单编号</td>
+											<td width="250">商品名称</td>
+											<td width="90">商品价格</td>
+											<td width="90">首付金额</td>
+											<td width="55">分期数</td>
+											<td width="80">月供</td>
+											<td width="80">服务费</td>
+											<td width="55">利率</td>
+											<td width="68">用户姓名</td>
+											<td width="110">用户电话</td>
+											<td width="250">用户收货地址</td>
+											<td width="150">下单时间</td>
+											<td width="150">发货时间</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>2016032410009</td>
+										<td>苹果手机苹果手机苹果手机苹果手机</td>
+										<td>￥5,000.00</td>
+										<td>￥1,000.00</td>
+										<td>24</td>
+										<td>￥500.00</td>
+										<td>￥50.00</td>
+										<td>0.03</td>
+										<td>静风</td>
+										<td>15829323923</td>
+										<td>广东省广州市大学城东三路</td>
+										<td>2016-01-24 10:23:43</td>
+										<td>2016-01-24 10:23:43</td>
+									</tr>
+								</table>
+
+								<p>白条订单</p>
+								<table class="table table-hover table-condensed">
+									<thead>
+										<tr>
+											<td width="120">订单编号</td>
+											<td width="80">商品名称</td>
+											<td width="90">白条金额</td>
+											<td width="55">分期数</td>
+											<td width="80">月供</td>
+											<td width="80">服务费</td>
+											<td width="55">利率</td>
+											<td>下单时间</td>
+											<td>打款时间</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>2016032410009</td>
+										<td>白条订单</td>
+										<td>￥5,000.00</td>
+										<td>24</td>
+										<td>￥500.00</td>
+										<td>￥50.00</td>
+										<td>0.03</td>
+										<td>2016-01-24 10:23:43</td>
+										<td>2016-01-24 10:23:43</td>
+									</tr>
+								</table>
+							</div>
+							<!-- 订单列表 end -->
+
+							<!-- 订单详情弹出层 begin -->
+							<div class="modal fade" id="orderExportDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title">订单详情</h4>
+							         	</div>
+
+							         	<div class="modal-body">
+						            		<div class="bill-info">
+						            			<p>订单编号：<strong>2016012411</strong></p>
+						            			<h4>订单信息</h4>
+							            		<ul>
+							            			<li class="block"><span>商品名称：</span>苹果手机se苹果手机se苹果手机se苹果手机se苹果手机se</li>
+							            			<li><span>商品价格：</span>￥4288.00</li>
+							            			<li><span>首付：</span>￥1000.00</li>
+							            			<li><span>分期详情：</span>￥1096.00 x 3期</li>
+							            			<li><span>月供：</span>￥1096.00（含服务费￥0.00）</li>
+							            			<li><span>邀请码：</span>12345</li>
+							            			<li><span>下单时间：</span>2016-01-24 10:25:30</li>
+							            		</ul>
+
+							            	    <h4>下单用户信息</h4>
+							            		<ul>
+							            			<li><span>姓名：</span>成一通</li>
+							            			<li><span>电话：</span>15820216212</li>
+							            			<li class="block"><span>收货地址：</span>广东省广州市大学城广东工业大学大学城校区东五714</li>
+							            		</ul>
+						            		</div>
+							         	</div>
+							         	<div class="modal-footer">
+							            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							         	</div>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 订单详情弹出层 end -->
+						</div>
+					</div>
+				</div>
+				<!-- 导出订单报表 end -->
+
+				<!-- 到期账单 begin -->
+				<div class="main main-bill-due fn-hide" id="main_bill_due">
+					<div class="main-hd">
+						<h2>到期账单
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt>到期账单</dt>
+										<dd>账单到还款日后，归纳到“到期账单”列表</dd>
+
+										<dt>账单总金额</dt>
+										<dd>该账单最终应还金额，总金额=本金+服务费+滞纳金</dd>
+
+										<dt>本金</dt>
+										<dd>该账单成交时商品的成本或本金</dd>
+
+										<dt>滞纳金</dt>
+										<dd>账单逾期不还款，需要缴纳一定比例的滞纳金</dd>
+
+										<dt>修改金额</dt>
+										<dd>可修改账单本金以及滞纳金，滞纳金一旦修改后将不会自动叠加计算</dd>
+
+										<dt>转为异常账单</dt>
+										<dd>账单到期后超过规定还款周期，催收组可将账单处理为异常账单</dd>
+									</dl>
+
+									<div class="help-footer">
+										<p>属于催收组的权限</p>
+									</div>
+								</div>
+							</div>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<!-- 导航菜单 begin -->
+						<div class="title-tab">
+							<ul class="tab-nav">
+								<li class="active"><a href="javascript:;" data-state="0" onclick="mainTab(this);">未还款</a></li>
+								<li><a href="javascript:;" data-state="1" onclick="mainTab(this);">已还款</a></li>
+							</ul>
+						</div>
+						<!-- 导航菜单 end -->
+
+						<div class="content-wrap">
+							<!-- 账单列表 begin -->
+							<div class="list bill-due-list" id="bill_due_list">
+								<table class="table table-hover table-condensed">
+									<thead>
+										<tr>
+											<td width="120">账单编号</td>
+											<td width="90">应还日期</td>
+											<td>商品名称</td>
+											<td width="90">总金额</td>
+											<td width="90">本金</td>
+											<td width="50">操作</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>2016032300001</td>
+										<td>2016-03-24</td>
+										<td>123</td>
+										<td>￥6,700.50</td>
+										<td>￥4.50</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#billDueDetailModal">详情</span></td>
+									</tr>
+									<tr>
+										<td>2016032300001</td>
+										<td>2016-03-23</td>
+										<td>白条订单</td>
+										<td>￥4,000.00</td>
+										<td>￥100.50</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#billDueDetailModal">详情</span></td>
+									</tr>
+									<tr>
+										<td>2016032300001</td>
+										<td>2016-03-22</td>
+										<td>白条订单</td>
+										<td>￥5,000.00</td>
+										<td>￥700.50</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#billDueDetailModal">详情</span></td>
+									</tr>
+								</table>
+							</div>
+							<!-- 账单列表 end -->
+
+							<!-- 账单详情弹出层 begin -->
+							<div class="modal fade" id="billDueDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title">账单详情</h4>
+							         	</div>
+
+							         	<div class="modal-body">
+						            		<div class="bill-info">
+						            			<p>账单编号：<strong>2016012411</strong></p>
+						            			<h4>账单信息</h4>
+							            		<ul>
+							            			<li><span>应还日期：</span>2016-03-24</li>
+							            			<li class="block"><span>商品名称：</span>苹果手机se苹果手机se苹果手机se苹果手机se苹果手机se</li>
+							            			<li><span>第N期：</span>第3期</li>
+							            			<li><span>账单总金额：</span>￥6,700.00</li>
+							            			<li><span>账单本金：</span>￥6,500.00</li>
+							            			<li><span>服务费：</span>￥200.00</li>
+							            			<li><span>滞纳金：</span>￥20.00</li>
+							            			<li><span>下单时间：</span>2016-01-24 10:25:30</li>
+							            			<li><span>实际还款时间：</span>2016-03-26 10:25:30</li>
+							            		</ul>
+
+							            	    <h4>下单用户信息</h4>
+							            		<ul>
+							            			<li><span>姓名：</span>静风</li>
+							            			<li><span>电话：</span>15839209382</li>
+							            			<li><span>学校：</span>广东工业大学</li>
+							            			<li class="block"><span>详细地址：</span>广东省广州市大学城广东工业大学东五714</li>
+							            		</ul>
+
+							            		<h4>修改账单金额</h4>
+							            		<ul>
+							            			<li class="block">
+							            				<form class="form form-inline">
+								            				<span>账单本金：</span>¥&nbsp;<input type="number" class="form-control" required>&nbsp;&nbsp;
+								            				<span>滞纳金：</span>¥&nbsp;<input type="number" class="form-control" required>
+								            				<button type="submit" class="btn btn-warning">提交修改</button>
+							            				</form>
+							            			</li>
+							            		</ul>
+						            		</div>
+							         	</div>
+							         	<div class="modal-footer">
+							            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							            	<button type="button" class="btn btn-warning">处理为异常账单</button>
+							         	</div>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 账单详情弹出层 end -->
+
+							<!-- 分页 -->
+							<div class="kkpager" id="bill_due_kkpager">这里是分页列表</div>
+						</div>
+					</div>
+				</div>
+				<!-- 到期账单 end -->
+
+				<!-- 异常账单 begin -->
+				<div class="main main-bill-exception fn-hide" id="main_bill_exception">
+					<div class="main-hd">
+						<h2>异常账单
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt>异常账单</dt>
+										<dd>催收组对异常订单进行处理，可处理为已催收、已还款并填写处理结果</dd>
+
+										<dt>处理为坏账</dt>
+										<dd>催单组经过核对后，确认账单已经是坏账的，则处理为坏账</dd>
+									</dl>
+
+									<div class="help-footer">
+										<p>属于催收组的权限</p>
+									</div>
+								</div>
+							</div>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<!-- 导航菜单 begin -->
+						<div class="title-tab">
+							<ul class="tab-nav">
+								<li class="active"><a href="javascript:;" data-state="0" onclick="mainTab(this);">未处理</a></li>
+								<li><a href="javascript:;" data-state="1" onclick="mainTab(this);">已处理</a></li>
+							</ul>
+						</div>
+						<!-- 导航菜单 end -->
+
+						<div class="content-wrap">
+							<!-- 账单列表 begin -->
+							<div class="list bill-exception-list" id="bill_exception_list">
+								<table class="table table-hover table-condensed">
+									<thead>
+										<tr>
+											<td width="120">账单编号</td>
+											<td width="90">应还日期</td>
+											<td>商品名称</td>
+											<td width="90">总金额</td>
+											<td width="90">本金</td>
+											<td width="50">操作</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>2016032300001</td>
+										<td>2016-03-24</td>
+										<td>苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果</td>
+										<td>￥5,000.00</td>
+										<td>￥700.50</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#billExceptionDetailModal">详情</span></td>
+									</tr>
+									<tr>
+										<td>2016032300001</td>
+										<td>2016-03-23</td>
+										<td>白条订单</td>
+										<td>￥5,000.00</td>
+										<td>￥700.50</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#billExceptionDetailModal">详情</span></td>
+									</tr>
+									<tr>
+										<td>2016032300001</td>
+										<td>2016-03-22</td>
+										<td>白条订单</td>
+										<td>￥5,000.00</td>
+										<td>￥700.50</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#billExceptionDetailModal">详情</span></td>
+									</tr>
+								</table>
+							</div>
+							<!-- 账单列表 end -->
+
+							<!-- 账单详情弹出层 begin -->
+							<div class="modal fade" id="billExceptionDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title">账单详情</h4>
+							         	</div>
+
+							         	<div class="modal-body">
+								         	<div class="bill-info">
+						            			<p>账单编号：<strong>2016012411</strong></p>
+						            			<h4>账单信息</h4>
+							            		<ul>
+							            			<li><span>应还日期：</span>2016-03-24</li>
+							            			<li class="block"><span>商品名称：</span>苹果手机se苹果手机se苹果手机se苹果手机se苹果手机se</li>
+							            			<li><span>第N期：</span>第3期</li>
+							            			<li><span>账单总金额：</span>￥6,700.00</li>
+							            			<li><span>账单本金：</span>￥6,500.00</li>
+							            			<li><span>服务费：</span>￥200.00</li>
+							            			<li><span>滞纳金：</span>￥20.00</li>
+							            			<li><span>下单时间：</span>2016-01-24 10:25:30</li>
+							            			<li><span>实际还款时间：</span>2016-03-26 10:25:30</li>
+							            		</ul>
+
+							            	    <h4>下单用户信息</h4>
+							            		<ul>
+							            			<li><span>姓名：</span>静风</li>
+							            			<li><span>电话：</span>15839209382</li>
+							            			<li><span>学校：</span>广东工业大学</li>
+							            			<li class="block"><span>详细地址：</span>广东省广州市大学城广东工业大学东五714</li>
+							            		</ul>
+
+							            		<h4>转为坏账</h4>
+							            		<ul>
+							            			<li class="block">
+							            				<p>备注/处理报告：（必填）</p>
+							            				<textarea name="" class="form-control" id="" cols="30" rows="5" required></textarea>
+							            			</li>
+							            			<li class="block">
+							            				<button type="submit" class="btn btn-warning fn-right">提交处理结果</button>
+							            			</li>
+							            		</ul>
+							            		
+							            		<h4>处理结果：坏账</h4>
+						            			<p><span>详细处理报告：</span>该账单经过与用户沟通后，确认处理为坏账。</p>
+						            		</div>
+							         	</div>
+							         	<div class="modal-footer">
+							            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							         	</div>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 账单详情弹出层 end -->
+
+							<!-- 分页 -->
+							<div class="kkpager" id="bill_exception_kkpager">这里是分页列表</div>
+						</div>
+					</div>
+				</div>
+				<!-- 异常账单 end -->
+
+				<!-- 每日业绩 begin -->
+				<div class="main main-achievement fn-hide" id="main_achievement">
+					<div class="main-hd">
+						<h2>每日业绩
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt>签单数量</dt>
+										<dd>当天完成的签单总数量</dd>
+
+										<dt>总订单量</dt>
+										<dd>当天用户下单成交总数量</dd>
+
+										<dt>审核通过订单量</dt>
+										<dd>当天通过风控审核的订单总数量</dd>
+
+										<dt>订单总成本</dt>
+										<dd>当天用户下单成交量相应的商品总成本</dd>
+
+										<dt>订单总服务费</dt>
+										<dd>当天成交的订单带来的总服务费用</dd>
+									</dl>
+									<div class="help-footer">
+										<p>属于城市组的权限</p>
+									</div>
+								</div>
+							</div>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<div class="content-wrap">
+							<form action="" class="form form-inline">
+								<input type="date" class="form-control" id="">
+								<input type="date" class="form-control" id="">
+								<button class="btn btn-warning" type="button">查询</button>
+							</form>
+
+							<!-- 业绩列表 begin -->
+							<div class="list achievement-list" id="achievement_list">
+								<table class="table table-hover table-condensed">
+									<thead>
+										<tr>
+											<td>日期</td>
+											<td width="70">签单数量</td>
+											<td width="70">总订单量</td>
+											<td width="110">审核通过订单量</td>
+											<td>订单总成本</td>
+											<td>订单总服务费</td>
+											<td>总提成</td>
+											<td width="73">操作</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>2016-03-17</td>
+										<td>10</td>
+										<td>100</td>
+										<td>90</td>
+										<td>￥3,000.00</td>
+										<td>￥900.00</td>
+										<td>￥100.00</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
+									</tr>
+									<tr>
+										<td>2016-03-16</td>
+										<td>10,000</td>
+										<td>10,000</td>
+										<td>9,999</td>
+										<td>￥300,000.00</td>
+										<td>￥900,000.00</td>
+										<td>￥100,000.00</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
+									</tr>
+								</table>
+							</div>
+							<!-- 业绩列表 end -->
+
+							<!-- 业绩明细弹出层 begin -->
+							<div class="modal fade" id="achievementDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title">业绩明细</h4>
+							         	</div>
+							         	<div class="modal-body">
+							            	<div class="list achievement-detail" id="achieve_detail">
+							            		<table class="table table-hover table-condensed">
+							            			<thead>
+							            				<tr>
+							            					<td>省市</td>
+							            					<td width="70">签单数量</td>
+															<td width="70">总订单量</td>
+															<td width="110">审核通过订单量</td>
+															<td width="105">订单总成本</td>
+															<td width="105">订单总服务费</td>
+															<td width="100">区域提成</td>
+							            				</tr>
+							            			</thead>
+							            			<tr>
+							            				<td>内蒙古乌鲁木齐</td>
+							            				<td>6</td>
+							            				<td>1000000</td>
+							            				<td>50</td>
+							            				<td>￥100,000.00</td>
+							            				<td>￥70,000.00</td>
+							            				<td>￥50,000.00</td>
+							            			</tr>
+							            			<tr>
+							            				<td>广东省深圳市</td>
+							            				<td>4</td>
+							            				<td>40</td>
+							            				<td>40</td>
+							            				<td>￥1,400.00</td>
+							            				<td>￥200.00</td>
+							            				<td>￥50.00</td>
+							            			</tr>
+							            		</table>
+							            	</div>
+							         	</div>
+							         	<div class="modal-footer">
+							            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							         	</div>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 业绩明细弹出层 end -->
+						</div>
+					</div>
+				</div>
+				<!-- 每日业绩 end -->
+
+				<!-- 用户认证管理 begin -->
+				<div class="main main-user-identify fn-hide" id="main_user_identify">
+					<div class="main-hd">
+						<h2>用户认证管理
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt>等待面签员接单</dt>
+										<dd>用户已经提交认证申请，等待面签员接单。</dd>
+										
+										<dt>等待面签</dt>
+										<dd>面签员已经接单，等待上门面签。</dd>
+										
+										<dt>等待审核</dt>
+										<dd>面签员已经上门面签并补充用户相关资料信息，等待风控组进行风控审核。</dd>
+
+										<dt>认证通过</dt>
+										<dd>风控组对用户信息进行风控审核，符合要求的准予认证通过。</dd>
+
+										<dt>认证驳回</dt>
+										<dd>风控组对用户信息进行风控审核，认定用户完全不符合要求（或已列入黑名单）的，可以驳回用户认证申请。驳回后，用户不可再次提交申请。</dd>
+
+										<dt>认证失败</dt>
+										<dd>风控组对用户信息进行风控审核，发现用户资料有误的，处理为认证失败并填写原因。签单员需要再次上门面签，根据认证失败的原因对资料进行修改完善后可再次提交。</dd>
+									</dl>
+
+									<div class="help-footer">
+										<p>属于风控组的权限</p>
+									</div>
+								</div>
+							</div>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<!-- 导航菜单 begin -->
+						<div class="title-tab">
+							<ul class="tab-nav">
+								<li class="active"><a href="javascript:;" data-state="0" onclick="mainTab(this);">等待签单员接单</a></li>
+								<li><a href="javascript:;" data-state="1" onclick="mainTab(this);">等待面签</a></li>
+								<li><a href="javascript:;" data-state="2" onclick="mainTab(this);">等待初审</a></li>
+								<li><a href="javascript:;" data-state="3" onclick="mainTab(this);">等待终审</a></li>
+								<li><a href="javascript:;" data-state="4" onclick="mainTab(this);">认证通过</a></li>
+								<li><a href="javascript:;" data-state="5" onclick="mainTab(this);">认证驳回</a></li>
+								<li><a href="javascript:;" data-state="6" onclick="mainTab(this);">认证失败</a></li>
+							</ul>
+						</div>
+						<!-- 导航菜单 end -->
+
+						<div class="content-wrap">
+							<!-- 认证申请列表 begin -->
+							<div class="list user-identify-list" id="user_identify_list">
+								<table class="table table-hover table-condensed">
+									<thead>
+										<tr>
+											<td>学校名称</td>
+											<td>用户姓名</td>
+											<td>手机号码</td>
+											<td>宿舍楼-房号</td>
+											<td width="155">预约时间</td>
+											<td width="50">操作</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>广东工业大学</td>
+										<td>静风</td>
+										<td>13800138000</td>
+										<td>东五-714</td>
+										<td>2016-01-24 10:23:43</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#userInfoDetailModal">详情</span></td>
+									</tr>
+									<tr>
+										<td>广东工业大学</td>
+										<td>静风</td>
+										<td>13800138000</td>
+										<td>东五-714</td>
+										<td>2016-01-24 10:23:43</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#userInfoDetailModal">详情</span></td>
+									</tr>
+								</table>
+
+<h4>等待审核的效果</h4>
+								<table class="table table-hover table-condensed">
+									<thead>
+										<tr>
+											<td>学校名称</td>
+											<td>用户姓名</td>
+											<td>手机号码</td>
+											<td>宿舍楼-房号</td>
+											<td width="93">操作</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>广东工业大学</td>
+										<td>静风</td>
+										<td>13800138000</td>
+										<td>东五-714</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#userInfoDetailModal">详情</span>&nbsp;<span class="label label-warning" data-toggle="modal" data-target="#userIdentifyModal">审核</span></td>
+									</tr>
+									<tr>
+										<td>广东工业大学</td>
+										<td>静风</td>
+										<td>13800138000</td>
+										<td>东五-714</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#userInfoDetailModal">详情</span>&nbsp;<span class="label label-warning" data-toggle="modal" data-target="#userIdentifyModal">审核</span></td>
+									</tr>
+								</table>
+							</div>
+							<!-- 认证申请列表 end -->
+
+							<!-- 用户认证资料详情弹出层 begin -->
+							<div class="modal fade" id="userInfoDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title">用户认证资料</h4>
+							         	</div>
+							         	<div class="modal-body">
+							            	<div class="bill-info">
+							            	    <p>合同编号：<strong>0000001</strong></p>
+							            	    <h4>个人信息</h4>
+							            		<ul>
+							            			<li><span>姓名：</span>成一通</li>
+							            			<li><span>性别：</span>男</li>
+							            			<li><span>电话：</span>15820216212</li>
+							            			<li><span>支付宝：</span>15820216212</li>
+							            			<li><span>QQ：</span>568480291</li>
+							            			<li><span>地址：</span>广东工业大学大学城校区东五714</li>
+							            			<li><span>信用额度：</span>￥3,000</li>
+							            			<li><span>可用额度：</span>￥2,500</li>
+							            		</ul>
+
+							            		<h4>教育信息</h4>
+							            		<ul>
+							            			<li><span>学校：</span>广东工业大学</li>
+							            			<li><span>院系：</span>机电工程学院</li>
+							            			<li><span>专业班级：</span>数字媒体技术专业10级2班</li>
+							            			<li><span>学号：</span>3110000759</li>
+							            			<li><span>入学时间：</span>2010-09</li>
+							            			<li><span>毕业时间：</span>2014-06</li>
+							            			<li><span>学历：</span>本科</li>
+							            			<li><span>学制：</span>四年</li>
+							            		</ul>
+
+							            		<h4>联系人信息</h4>
+							            		<ul>
+							            			<li><span>紧急联系人姓名：</span>成一通</li>
+							            			<li><span>紧急联系人电话</span>15820216212</li>
+							            			<li><span>父/母姓名：</span>成金传</li>
+							            			<li><span>父/母电话：</span>15820216212</li>
+							            			<li><span>辅导员姓名：</span>雷松群</li>
+							            			<li><span>辅导员电话：</span></li>
+							            			<li><span>舍友姓名：</span>雷松群</li>
+							            			<li><span>舍友电话：</span>17847364756</li>
+							            		</ul>
+
+							            		<h4>照片信息</h4>
+							            		<ul>
+							            			<li><p>身份证正反面照片：</p><a href="img/pic1.png" target="_blank"><img src="img/pic1.png" alt="身份证正反面照片" width="50%"></a></li>
+							            			<li><p>用户手持身份证和协议表合照：</p><a href="img/pic1.png" target="_blank"><img src="img/pic1.png" alt="用户手持身份证和协议表合照" width="50%"></a></li>
+							            			<li><p>学信网/教务网/学费单照片：</p><a href="img/pic1.png" target="_blank"><img src="img/pic1.png" alt="学信网/教务网/学费单照片" width="50%"></a></li>
+							            		</ul>
+
+							            		<h4>其他信息</h4>
+							            		<ul>
+							            			<li><span>签单员姓名：</span>李四</li>
+							            			<li><span>签单员手机号码：</span>15820216712</li>
+							            			<li><span>初审人：</span>张三</li>
+							            			<li><span>初审时间：</span>2016-04-05 10:22:13</li>
+							            			<li><span>终审人：</span>里斯</li>
+							            			<li><span>终审时间：</span>2016-04-05 11:20:03</li>
+							            		</ul>
+
+							            		<h4>审核状态</h4>
+							            		<p><span>驳回</span>，原因：身份证信息与其他资料不一致</p>
+							            	</div>
+							         	</div>
+							         	<div class="modal-footer">
+							            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							         	</div>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 用户认证资料详情弹出层 end -->
+
+							<!-- 审核弹出层 begin -->
+							<div class="modal fade" id="userIdentifyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title">用户认证审核</h4>
+							         	</div>
+
+										<form class="form form-horizontal info-form">
+								         	<div class="modal-body">
+								         		<div class="bill-deal">
+								         			<h4 class="text-center font-bold">选择审核结果</h4>
+								         			<div class="text-center">
+								         				<label><input type="radio" name="bill_state">通过</label>
+							            				<label><input type="radio" name="bill_state">驳回</label>
+							            				<label><input type="radio" name="bill_state">不通过</label>
+								         			</div>
+
+								         			<p>用户可用信用额度：<input type="text"></p>
+
+						            				<h4>填写详细处理结果报告：</h4>
+						            				<textarea name="" class="form-control" id="" cols="30" rows="10"></textarea>
+								         		</div>
+								         	</div>
+								         	<div class="modal-footer">
+								            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+								            	<button type="submit" class="btn btn-warning" data-dismiss="modal">保存</button>
+								         	</div>
+							         	</form>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 审核弹出层 end -->
+
+							<!-- 分页 -->
+							<div class="kkpager" id="identify_kkpager">这里是分页列表</div>
+						</div>
+					</div>
+				</div>
+				<!-- 用户认证管理 end -->
+
+				<!-- 设置白条利率 begin -->
+				<div class="main main-rate fn-hide" id="main_rate">
+					<div class="main-hd">
+						<h2>设置白条利率
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt>设置白条利率</dt>
+										<dd>白条利率</dd>
+									</dl>
+
+									<div class="help-footer">
+										<p>属于超级管理员的权限</p>
+									</div>
+								</div>
+							</div>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<div class="content-wrap">
+							<form action="" class="form form-inline">
+								白条利率：<input type="number" class="form-control" value="2.31" required>%
+								<button type="button" class="btn btn-warning">保存</button>
+							</form>
+						</div>
+					</div>
+				</div>
+				<!-- 设置白条利率 end -->
+
+				<!-- 学校管理 begin -->
+				<div class="main main-school fn-hide" id="main_school">
+					<div class="main-hd">
+						<h2>学校管理
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt>学校管理</dt>
+										<dd>超级管理员可对学校进行添加、编辑</dd>
+									</dl>
+
+									<div class="help-footer">
+										<p>属于超级管理员的权限</p>
+									</div>
+								</div>
+							</div>
+
+							<span class="btn btn-warning add-btn" data-toggle="modal" data-target="#addSchoolModal">添加学校</span>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<div class="content-wrap">
+							<div class="list school-list" id="school_list">
+								<table class="table table-hover table-condensed">
+									<thead>
+										<tr>
+											<td width="200">学校名称</td>
+											<td width="200">学校所在省市</td>
+											<td>学校详细地址</td>
+											<td width="50">操作</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>广东工业大学</td>
+										<td>广东省广州市</td>
+										<td>广州大学城外环西路100号</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#addSchoolModal">编辑</span></td>
+									</tr>
+									<tr>
+										<td>广东工业大学</td>
+										<td>广东省广州市</td>
+										<td>广州大学城外环西路100号</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#addSchoolModal">编辑</span></td>
+									</tr>
+									<tr>
+										<td>广东工业大学</td>
+										<td>广东省广州市</td>
+										<td>广州大学城外环西路100号</td>
+										<td><span class="label label-warning" data-toggle="modal" data-target="#addSchoolModal">编辑</span></td>
+									</tr>
+								</table>
+							</div>
+
+							<!-- 添加学校弹出层 begin -->
+							<div class="modal fade" id="addSchoolModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title">添加学校</h4>
+							         	</div>
+
+							         	<form action="" class="form form-horizontal info-form">
+								         	<div class="modal-body">
+							            		<ul>
+							            			<li>学校名称：<input type="text" class="form-control" id="school_name" name="name" placeholder="请输入学校名称" required></li>
+							            			<li>选择省份<select name="" class="form-control" id="">
+							            					<option value="0">选择省份</option>
+								            			</select>
+								            		</li>
+								            		<li>选择城市：
+								            			<select name="" class="form-control" id="">
+							            					<option value="0">选择城市</option>
+								            			</select>
+								            		</li>
+							            			<li>学校详细地址：<textarea name="" class="form-control" id="" cols="30" rows="5"></textarea></li>
+							            		</ul>
+								         	</div>
+								         	<div class="modal-footer">
+								            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+								            	<button type="submit" class="btn btn-warning" id="add_school_btn">添加</button>
+								         	</div>
+							         	</form>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 添加学校弹出层 end -->
+
+							<!-- 分页 -->
+							<div class="kkpager" id="school_kkpager">这里是分页列表</div>
+						</div>
+					</div>
+				</div>
+				<!-- 学校管理 end -->
+
+				<!-- 区域经理管理 begin -->
+				<div class="main main-area fn-hide" id="main_area">
+					<div class="main-hd">
+						<h2>区域经理管理
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt>账户状态</dt>
+										<dd>账户状态分为：待审核、正常、已冻结；超级管理员可冻结或解冻区域经理账户</dd>
+
+										<dt>分配学校</dt>
+										<dd>超级管理员根据实际运营情况，为区域经理分配相应的学校；学校的签单员将归该区域经理管理</dd>
+									</dl>
+
+									<div class="help-footer">
+										<p>属于超级管理员的权限</p>
+									</div>
+								</div>
+							</div>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<div class="content-wrap">
+							<div class="list area-list" id="area_list">
+								<table class="table table-hover table-condensed">
+									<thead>
+										<tr>
+											<td width="160">账户邮箱</td>
+											<td width="65">姓名</td>
+											<td width="100">手机号码</td>
+											<td width="110">支付宝账号</td>
+											<td>详细地址</td>
+											<td>负责学校</td>
+											<td width="60">状态</td>
+											<td width="50">操作</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>568480291@qq.com</td>
+										<td>静风</td>
+										<td>15820232123</td>
+										<td>15820232123</td>
+										<td>广东省广州市广州大学城广东工业大学</td>
+										<td>广东工业大学、广州美术学院</td>
+										<td><span class="label label-primary">待审核</span></td>
+										<td><span class="label label-warning">通过</span></td>
+									</tr>
+
+									<tr>
+										<td>1491961179@qq.com</td>
+										<td>孙伟博</td>
+										<td>15820232123</td>
+										<td>15820232123</td>
+										<td>广东省广州市广州大学城广东工业大学</td>
+										<td>广东工业大学、广州美术学院&nbsp;<span class="label label-primary">+</span>&nbsp;<span class="label label-danger">-</span></td>
+										<td><span class="label label-danger">已冻结</span></td>
+										<td><span class="label label-success">解冻</span></td>
+									</tr>
+
+									<tr>
+										<td>568480291@qq.com</td>
+										<td>静风</td>
+										<td>15820232123</td>
+										<td>15820232123</td>
+										<td>广东省广州市广州大学城广东工业大学</td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#addSchoolForAreaModal">+</span></td>
+										<td><span class="label label-success">正常</span></td>
+										<td><span class="label label-danger">冻结</span></td>
+									</tr>
+								</table>
+							</div>
+
+							<!-- 分配学校弹出层 begin -->
+							<div class="modal fade" id="addSchoolForAreaModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title">为区域经理分配学校</h4>
+							         	</div>
+
+							         	<form action="" class="form form-horizontal info-form">
+								         	<div class="modal-body">
+							            		<div id="area_school_list">
+							            			<label for=""><input type="checkbox" checked>广东工业大学</label>
+							            			<label for=""><input type="checkbox">广州美术学院</label>
+							            			<label for=""><input type="checkbox">广州大学</label>
+							            			<label for=""><input type="checkbox">广东外语外贸大学</label>
+							            		</div>
+								         	</div>
+								         	<div class="modal-footer">
+								            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+								            	<button type="submit" class="btn btn-warning" id="update_pwd_btn">确定</button>
+								         	</div>
+							         	</form>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 分配学校弹出层 end -->
+						</div>
+					</div>
+				</div>
+				<!-- 区域经理管理 end -->
+
+				<!-- 管理员设置 begin -->
+				<div class="main main-admin fn-hide" id="main_admin">
+					<div class="main-hd">
+						<h2>内部管理员
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt>超级管理员</dt>
+										<dd>拥有该系统所有权限</dd>
+
+										<dt>运营组</dt>
+										<dd>拥有商城管理权限：商品的添加、查看、上架、下架、编辑；商品分类的添加、查看、编辑、删除</dd>
+
+										<dt>风控组</dt>
+										<dd>拥有订单审核权限：风控组在订单列表处选择“我要处理”后，该订单转到相关风控组组员名下</dd>
+
+										<dt>财务组</dt>
+										<dd>拥有订单发货管理权限：风控组审核通过后，财务组负责根据订单类型进行打款或者发货</dd>
+
+										<dt>催收组</dt>
+										<dd>拥有处理到期账单、异常订单、还款跟踪管理的权限</dd>
+
+										<dt>编辑角色</dt>
+										<dd>重新设置管理员的角色</dd>
+									</dl>
+
+									<div class="help-footer">
+										<p>属于超级管理员的权限</p>
+									</div>
+								</div>
+							</div>
+
+							<span class="btn btn-warning add-btn" data-toggle="modal" data-target="#addAdminModal">添加管理员</span>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<div class="content-wrap">
+							<div class="list school-list" id="school_list">
+								<table class="table table-hover table-condensed">
+									<thead>
+										<tr>
+											<td>账户</td>
+											<td>角色</td>
+											<td>备注</td>
+											<td width="180">操作</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>静风</td>
+										<td>超级管理员</td>
+										<td>11</td>
+										<td><span class="label label-primary">编辑角色</span>&nbsp;<span class="label label-warning" data-toggle="modal" data-target="#updatePwdModal">修改密码</span>&nbsp;<span class="label label-danger">删除</span></td>
+									</tr>
+									<tr>
+										<td>大牛</td>
+										<td>运营组</td>
+										<td>11</td>
+										<td><span class="label label-primary">编辑角色</span>&nbsp;<span class="label label-warning" data-toggle="modal" data-target="#updatePwdModal">修改密码</span>&nbsp;<span class="label label-danger">删除</span></td>
+									</tr>
+									<tr>
+										<td>李四</td>
+										<td>风控组</td>
+										<td>11</td>
+										<td><span class="label label-primary">编辑角色</span>&nbsp;<span class="label label-warning" data-toggle="modal" data-target="#updatePwdModal">修改密码</span>&nbsp;<span class="label label-danger">删除</span></td>
+									</tr>
+									<tr>
+										<td>小红</td>
+										<td>财务组</td>
+										<td>11</td>
+										<td><span class="label label-primary">编辑角色</span>&nbsp;<span class="label label-warning" data-toggle="modal" data-target="#updatePwdModal">修改密码</span>&nbsp;<span class="label label-danger">删除</span></td>
+									</tr>
+									<tr>
+										<td>小明</td>
+										<td>催收组</td>
+										<td>11</td>
+										<td><span class="label label-primary">编辑角色</span>&nbsp;<span class="label label-warning" data-toggle="modal" data-target="#updatePwdModal">修改密码</span>&nbsp;<span class="label label-danger">删除</span></td>
+									</tr>
+								</table>
+							</div>
+
+							<!-- 添加管理员弹出层 begin -->
+							<div class="modal fade" id="addAdminModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title">添加管理员</h4>
+							         	</div>
+
+							         	<form action="" class="form form-horizontal info-form">
+								         	<div class="modal-body">
+							            		<ul>
+								            		<li>角色：<select name="" class="form-control" id="">
+								            			<option value="0">超级管理员</option>
+								            			<option value="1">运营组</option>
+								            			<option value="2">风控组</option>
+								            			<option value="3">财务组</option>
+								            			<option value="4">催收组</option>
+								            		</select></li>
+							            			<li>姓名：<input type="text" class="form-control" id="admin_name" name="name" placeholder="请输入管理员姓名（作为登录账户）" required></li>
+							            			<li>密码：<input type="text" class="form-control" id="admin_password" name="password" placeholder="请输入管理员登录密码" required></li>
+							            			<li>备注：<input type="text" class="form-control" id="admin_remark" name="remark" placeholder="请输入管理员备注"></li>
+							            		</ul>
+								         	</div>
+								         	<div class="modal-footer">
+								            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+								            	<button type="submit" class="btn btn-warning" id="add_school_btn">添加</button>
+								         	</div>
+							         	</form>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 添加管理员弹出层 end -->
+
+							<!-- 修改密码弹出层 begin -->
+							<div class="modal fade" id="updatePwdModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title">修改管理员密码</h4>
+							         	</div>
+
+							         	<form action="" class="form form-horizontal info-form">
+								         	<div class="modal-body">
+							            		<ul>
+							            			<li>新密码：<input type="text" class="form-control" id="update_password" name="password" placeholder="请输入新密码" required></li>
+							            		</ul>
+								         	</div>
+								         	<div class="modal-footer">
+								            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+								            	<button type="submit" class="btn btn-warning" id="update_pwd_btn">确定</button>
+								         	</div>
+							         	</form>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 修改密码弹出层 end -->
+						</div>
+					</div>
+				</div>
+				<!-- 管理员设置 end -->
+
+			</div>
+			<!-- main end -->
+		</div>
+	</div>
+	<!-- container end -->
+
+	<!-- footer begin -->
+	<div class="foot" id="footer">
+		<small class="copyright">Copyright © 2016 A梦分期 All Rights Reserved.</small>
+	</div>
+	<!-- footer end -->
+
+	<!-- 分页 -->
+	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/kkpager.min.js"></script>
+	<link rel="stylesheet" href="http://7xl6qe.com2.z0.glb.qiniucdn.com/css/kkpager_orange.min.css">
+
+	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/jquery-1.11.1.min.js"></script>
+	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/jquery.form.min.js"></script>
+	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/bootstrap.min.js"></script>
+	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/cookie.min.js"></script>
+	<script src="js/base.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/index.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
