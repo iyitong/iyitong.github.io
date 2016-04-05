@@ -910,26 +910,26 @@
 											<td width="120">订单编号</td>
 											<td>商品名称</td>
 											<td width="150">下单时间</td>
-											<td width="93">操作</td>
+											<td width="50">操作</td>
 										</tr>
 									</thead>
 									<tr>
 										<td>20160324123</td>
 										<td>苹果手机苹果手机苹果手机苹果手机</td>
 										<td>2016-01-24 10:23:43</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#orderReviewModal">审核</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#orderReviewDetailModal">详情</span></td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#orderReviewDetailModal">详情</span></td>
 									</tr>
 									<tr>
 										<td>20160324123</td>
 										<td>苹果手机苹果手机苹果手机苹果手机</td>
 										<td>2016-01-24 10:23:43</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#orderReviewModal">审核</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#orderReviewDetailModal">详情</span></td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#orderReviewDetailModal">详情</span></td>
 									</tr>
 									<tr>
 										<td>20160324123</td>
 										<td>苹果手机苹果手机苹果手机苹果手机</td>
 										<td>2016-01-24 10:23:43</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#orderReviewModal">审核</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#orderReviewDetailModal">详情</span></td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#orderReviewDetailModal">详情</span></td>
 									</tr>
 								</table>
 							</div>
@@ -1011,6 +1011,22 @@
 							            			</li>
 							            		</ul>
 
+							            		<h4>订单审核</h4>
+							            		<ul>
+								            		<form action="">
+								            			<li class="block">
+									         				<span>选择审核结果</span>&nbsp;&nbsp;
+									         				<label><input type="radio" name="order_state" required>通过</label>
+								            				<label><input type="radio" name="order_state" required>不通过</label>
+							            				</li>
+							            				<li class="block">
+								            				<p>备注：</p>
+								            				<textarea name="" class="form-control" id="" cols="30" rows="5"></textarea>
+								            			</li>
+								            			<li class="block"><button type="submit" class="btn btn-warning fn-right">提交审核结果</button></li>
+							            			</form>
+							            		</ul>
+
 							            		<h4>订单状态</h4>
 							            		<ul>
 							            			<li class="block">审核不通过，原因：测试订单</li>
@@ -1024,38 +1040,6 @@
 						      	</div>
 							</div>
 							<!-- 订单详情弹出层 end -->
-
-							<!-- 审核弹出层 begin -->
-							<div class="modal fade" id="orderReviewModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-							   	<div class="modal-dialog">
-							      	<div class="modal-content">
-							         	<div class="modal-header">
-							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-							            	<h4 class="modal-title">账单处理</h4>
-							         	</div>
-
-										<form class="form form-horizontal info-form">
-								         	<div class="modal-body">
-								         		<div class="bill-deal">
-								         			<h4 class="text-center font-bold">选择审核结果</h4>
-								         			<div class="text-center">
-								         				<label><input type="radio" name="order_state">通过</label>
-							            				<label><input type="radio" name="order_state">不通过</label>
-								         			</div>
-
-						            				<h4>备注：</h4>
-						            				<textarea name="" class="form-control" id="" cols="30" rows="5"></textarea>
-								         		</div>
-								         	</div>
-								         	<div class="modal-footer">
-								            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-								            	<button type="submit" class="btn btn-warning" data-dismiss="modal">保存</button>
-								         	</div>
-							         	</form>
-							      	</div>
-						      	</div>
-							</div>
-							<!-- 审核弹出层 end -->
 
 							<!-- 分页 -->
 							<div class="kkpager" id="order_review_kkpager">这里是分页列表</div>
@@ -1121,20 +1105,20 @@
 											<td width="120">订单编号</td>
 											<td>商品名称</td>
 											<td width="150">下单时间</td>
-											<td width="93">操作</td>
+											<td width="50">操作</td>
 										</tr>
 									</thead>
 									<tr>
 										<td>20160324123</td>
 										<td>苹果手机苹果手机苹果手机苹果手机</td>
 										<td>2016-01-24 10:23:43</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#orderSendModal">处理</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#orderSendDetailModal">详情</span></td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#orderSendDetailModal">详情</span></td>
 									</tr>
 									<tr>
 										<td>20160324123</td>
 										<td>苹果手机苹果手机苹果手机苹果手机</td>
 										<td>2016-01-24 10:23:43</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#orderSendModal">处理</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#orderSendDetailModal">详情</span></td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#orderSendDetailModal">详情</span></td>
 									</tr>
 								</table>
 							</div>
@@ -1170,6 +1154,26 @@
 							            			<li class="block"><span>收货地址：</span>广东省广州市大学城广东工业大学大学城校区东五714</li>
 							            		</ul>
 
+							            		<h4>发货处理</h4>
+							            		<ul>
+								            		<form action="">
+								            			<li class="block">
+									         				<span>选择结果</span>&nbsp;&nbsp;
+									         				<label><input type="radio" name="order_state" required>发货/打款</label>
+								            				<label><input type="radio" name="order_state" required>不发货/不打款</label>
+									         			</li>
+
+									         			<li><span>商品成本:（单位:元）</span><input type="text" class="form-control" placeholder="请输入商品成本，单位:元" style="width: 280px;"></li>
+
+											         	<li class="block">
+											         		<p>备注：</p>
+								            				<textarea name="" class="form-control" id="" cols="30" rows="5"></textarea>
+											         	</li>	
+								            			
+								            			<li class="block"><button type="submit" class="btn btn-warning fn-right">提交审核结果</button></li>
+							            			</form>
+							            		</ul>
+
 							            		<h4>订单状态</h4>
 							            		<ul>
 							            			<li class="block">审核不通过，原因：测试订单</li>
@@ -1183,40 +1187,6 @@
 						      	</div>
 							</div>
 							<!-- 订单详情弹出层 end -->
-
-							<!-- 发货处理弹出层 begin -->
-							<div class="modal fade" id="orderSendModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-							   	<div class="modal-dialog">
-							      	<div class="modal-content">
-							         	<div class="modal-header">
-							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-							            	<h4 class="modal-title">发货处理</h4>
-							         	</div>
-
-										<form class="form form-horizontal info-form">
-								         	<div class="modal-body">
-								         		<div class="bill-deal">
-								         			<h4 class="text-center font-bold">选择结果</h4>
-								         			<div class="text-center">
-								         				<label><input type="radio" name="order_state">发货/打款</label>
-							            				<label><input type="radio" name="order_state">不发货/不打款</label>
-								         			</div>
-
-								         			<span>商品成本:（单位:元）</span><input type="text" class="form-control" placeholder="请输入商品成本，单位:元" style="width: 280px;">
-
-						            				<h4>备注：</h4>
-						            				<textarea name="" class="form-control" id="" cols="30" rows="5"></textarea>
-								         		</div>
-								         	</div>
-								         	<div class="modal-footer">
-								            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-								            	<button type="submit" class="btn btn-warning" data-dismiss="modal">保存</button>
-								         	</div>
-							         	</form>
-							      	</div>
-						      	</div>
-							</div>
-							<!-- 发货处理弹出层 end -->
 
 							<!-- 分页 -->
 							<div class="kkpager" id="order_send_kkpager">这里是分页列表</div>
@@ -1468,48 +1438,6 @@
 											<td>商品名称</td>
 											<td width="90">总金额</td>
 											<td width="90">本金</td>
-											<td width="65">滞纳金</td>
-											<td width="205">操作</td>
-										</tr>
-									</thead>
-									<tr>
-										<td>2016032300001</td>
-										<td>2016-03-24</td>
-										<td>苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果</td>
-										<td>￥6,700.50</td>
-										<td>￥20.50</td>
-										<td>￥20.50</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#updateBillPriceModal">修改金额</span>&nbsp;<span class="label label-danger">转为异常账单</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billDueDetailModal">详情</span></td>
-									</tr>
-									<tr>
-										<td>2016032300001</td>
-										<td>2016-03-23</td>
-										<td>白条订单</td>
-										<td>￥4,000.00</td>
-										<td>￥10.50</td>
-										<td>￥20.50</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#updateBillPriceModal">修改金额</span>&nbsp;<span class="label label-danger">转为异常账单</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billDueDetailModal">详情</span></td>
-									</tr>
-									<tr>
-										<td>2016032300001</td>
-										<td>2016-03-22</td>
-										<td>白条订单</td>
-										<td>￥5,000.00</td>
-										<td>￥170.50</td>
-										<td>￥20.50</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#updateBillPriceModal">修改金额</span>&nbsp;<span class="label label-danger">转为异常账单</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billDueDetailModal">详情</span></td>
-									</tr>
-								</table>
-
-								<table class="table table-hover table-condensed">
-									<thead>
-										<tr>
-											<td width="120">账单编号</td>
-											<td width="90">应还日期</td>
-											<td>商品名称</td>
-											<td width="90">总金额</td>
-											<td width="90">本金</td>
-											<td width="65">滞纳金</td>
 											<td width="50">操作</td>
 										</tr>
 									</thead>
@@ -1519,7 +1447,6 @@
 										<td>123</td>
 										<td>￥6,700.50</td>
 										<td>￥4.50</td>
-										<td>￥0.00</td>
 										<td><span class="label label-primary" data-toggle="modal" data-target="#billDueDetailModal">详情</span></td>
 									</tr>
 									<tr>
@@ -1528,7 +1455,6 @@
 										<td>白条订单</td>
 										<td>￥4,000.00</td>
 										<td>￥100.50</td>
-										<td>￥20.50</td>
 										<td><span class="label label-primary" data-toggle="modal" data-target="#billDueDetailModal">详情</span></td>
 									</tr>
 									<tr>
@@ -1537,38 +1463,11 @@
 										<td>白条订单</td>
 										<td>￥5,000.00</td>
 										<td>￥700.50</td>
-										<td>￥0.00</td>
 										<td><span class="label label-primary" data-toggle="modal" data-target="#billDueDetailModal">详情</span></td>
 									</tr>
 								</table>
 							</div>
 							<!-- 账单列表 end -->
-
-							<!-- 修改金额弹出层 begin -->
-							<div class="modal fade" id="updateBillPriceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-							   	<div class="modal-dialog">
-							      	<div class="modal-content">
-							         	<div class="modal-header">
-							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-							            	<h4 class="modal-title">修改账单金额</h4>
-							         	</div>
-
-										<form class="form form-inline">
-								         	<div class="modal-body">
-							            		<ul>
-							            			<li><span>账单本金：</span><input type="text" class="form-control" placeholder="输入账单本金"></li>
-							            			<li><span>滞纳金：</span><input type="text" class="form-control" placeholder="输入滞纳金"></li>
-							            		</ul>
-								         	</div>
-								         	<div class="modal-footer">
-								            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-								            	<button type="button" class="btn btn-warning">保存</button>
-								         	</div>
-							         	</form>
-							      	</div>
-						      	</div>
-							</div>
-							<!-- 修改金额弹出层 end -->
 
 							<!-- 账单详情弹出层 begin -->
 							<div class="modal fade" id="billDueDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -1602,10 +1501,22 @@
 							            			<li><span>学校：</span>广东工业大学</li>
 							            			<li class="block"><span>详细地址：</span>广东省广州市大学城广东工业大学东五714</li>
 							            		</ul>
+
+							            		<h4>修改账单金额</h4>
+							            		<ul>
+							            			<li class="block">
+							            				<form class="form form-inline">
+								            				<span>账单本金：</span>¥&nbsp;<input type="number" class="form-control" required>&nbsp;&nbsp;
+								            				<span>滞纳金：</span>¥&nbsp;<input type="number" class="form-control" required>
+								            				<button type="submit" class="btn btn-warning">提交修改</button>
+							            				</form>
+							            			</li>
+							            		</ul>
 						            		</div>
 							         	</div>
 							         	<div class="modal-footer">
 							            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							            	<button type="button" class="btn btn-warning">处理为异常账单</button>
 							         	</div>
 							      	</div>
 						      	</div>
@@ -1665,48 +1576,6 @@
 											<td>商品名称</td>
 											<td width="90">总金额</td>
 											<td width="90">本金</td>
-											<td width="65">滞纳金</td>
-											<td width="115">操作</td>
-										</tr>
-									</thead>
-									<tr>
-										<td>2016032300001</td>
-										<td>2016-03-24</td>
-										<td>苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果</td>
-										<td>￥5,000.00</td>
-										<td>￥700.50</td>
-										<td>￥20.50</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#billDealModal">转为坏账</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billExceptionDetailModal">详情</span></td>
-									</tr>
-									<tr>
-										<td>2016032300001</td>
-										<td>2016-03-23</td>
-										<td>白条订单</td>
-										<td>￥5,000.00</td>
-										<td>￥700.50</td>
-										<td>￥20.50</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#billDealModal">转为坏账</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billExceptionDetailModal">详情</span></td>
-									</tr>
-									<tr>
-										<td>2016032300001</td>
-										<td>2016-03-22</td>
-										<td>白条订单</td>
-										<td>￥5,000.00</td>
-										<td>￥700.50</td>
-										<td>￥20.50</td>
-										<td><span class="label label-warning" data-toggle="modal" data-target="#billDealModal">转为坏账</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#billExceptionDetailModal">详情</span></td>
-									</tr>
-								</table>
-
-								<table class="table table-hover table-condensed">
-									<thead>
-										<tr>
-											<td width="120">账单编号</td>
-											<td width="90">应还日期</td>
-											<td>商品名称</td>
-											<td width="90">总金额</td>
-											<td width="90">本金</td>
-											<td width="65">滞纳金</td>
 											<td width="50">操作</td>
 										</tr>
 									</thead>
@@ -1716,7 +1585,6 @@
 										<td>苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果手机6s苹果</td>
 										<td>￥5,000.00</td>
 										<td>￥700.50</td>
-										<td>￥20.50</td>
 										<td><span class="label label-primary" data-toggle="modal" data-target="#billExceptionDetailModal">详情</span></td>
 									</tr>
 									<tr>
@@ -1725,7 +1593,6 @@
 										<td>白条订单</td>
 										<td>￥5,000.00</td>
 										<td>￥700.50</td>
-										<td>￥20.50</td>
 										<td><span class="label label-primary" data-toggle="modal" data-target="#billExceptionDetailModal">详情</span></td>
 									</tr>
 									<tr>
@@ -1734,40 +1601,11 @@
 										<td>白条订单</td>
 										<td>￥5,000.00</td>
 										<td>￥700.50</td>
-										<td>￥20.50</td>
 										<td><span class="label label-primary" data-toggle="modal" data-target="#billExceptionDetailModal">详情</span></td>
 									</tr>
 								</table>
 							</div>
 							<!-- 账单列表 end -->
-
-							<!-- 去处理弹出层 begin -->
-							<div class="modal fade" id="billDealModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-							   	<div class="modal-dialog">
-							      	<div class="modal-content">
-							         	<div class="modal-header">
-							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-							            	<h4 class="modal-title">账单处理</h4>
-							         	</div>
-
-										<form class="form form-horizontal info-form">
-								         	<div class="modal-body">
-								         		<div class="bill-deal">
-								         			<h4>处理结果：<em>转为坏账</em></h4>
-
-						            				<h4>填写详细处理结果报告：（必填）</h4>
-						            				<textarea name="" class="form-control" id="" cols="30" rows="10"></textarea>
-								         		</div>
-								         	</div>
-								         	<div class="modal-footer">
-								            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-								            	<button type="submit" class="btn btn-warning" data-dismiss="modal">保存</button>
-								         	</div>
-							         	</form>
-							      	</div>
-						      	</div>
-							</div>
-							<!-- 去处理弹出层 end -->
 
 							<!-- 账单详情弹出层 begin -->
 							<div class="modal fade" id="billExceptionDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -1802,6 +1640,17 @@
 							            			<li class="block"><span>详细地址：</span>广东省广州市大学城广东工业大学东五714</li>
 							            		</ul>
 
+							            		<h4>转为坏账</h4>
+							            		<ul>
+							            			<li class="block">
+							            				<p>备注/处理报告：（必填）</p>
+							            				<textarea name="" class="form-control" id="" cols="30" rows="5" required></textarea>
+							            			</li>
+							            			<li class="block">
+							            				<button type="submit" class="btn btn-warning fn-right">提交处理结果</button>
+							            			</li>
+							            		</ul>
+							            		
 							            		<h4>处理结果：坏账</h4>
 						            			<p><span>详细处理报告：</span>该账单经过与用户沟通后，确认处理为坏账。</p>
 						            		</div>
@@ -1868,13 +1717,13 @@
 									<thead>
 										<tr>
 											<td>日期</td>
-											<td>签单数量</td>
-											<td>总订单量</td>
-											<td>审核通过订单量</td>
+											<td width="70">签单数量</td>
+											<td width="70">总订单量</td>
+											<td width="110">审核通过订单量</td>
 											<td>订单总成本</td>
 											<td>订单总服务费</td>
 											<td>总提成</td>
-											<td width="80">明细</td>
+											<td width="73">操作</td>
 										</tr>
 									</thead>
 									<tr>
@@ -1889,12 +1738,12 @@
 									</tr>
 									<tr>
 										<td>2016-03-16</td>
-										<td>10</td>
-										<td>100</td>
-										<td>90</td>
-										<td>￥3,000.00</td>
-										<td>￥900.00</td>
-										<td>￥100.00</td>
+										<td>10,000</td>
+										<td>10,000</td>
+										<td>9,999</td>
+										<td>￥300,000.00</td>
+										<td>￥900,000.00</td>
+										<td>￥100,000.00</td>
 										<td><span class="label label-warning" data-toggle="modal" data-target="#achievementDetailModal">查看明细</span></td>
 									</tr>
 								</table>
@@ -1915,22 +1764,22 @@
 							            			<thead>
 							            				<tr>
 							            					<td>省市</td>
-							            					<td>签单数量</td>
-							            					<td>总订单量</td>
-							            					<td>审核通过订单量</td>
-							            					<td>订单总成本</td>
-							            					<td>订单总服务费</td>
-							            					<td>区域提成</td>
+							            					<td width="70">签单数量</td>
+															<td width="70">总订单量</td>
+															<td width="110">审核通过订单量</td>
+															<td width="105">订单总成本</td>
+															<td width="105">订单总服务费</td>
+															<td width="100">区域提成</td>
 							            				</tr>
 							            			</thead>
 							            			<tr>
-							            				<td>广东省广州市</td>
+							            				<td>内蒙古乌鲁木齐</td>
 							            				<td>6</td>
-							            				<td>60</td>
+							            				<td>1000000</td>
 							            				<td>50</td>
-							            				<td>￥1,800.00</td>
-							            				<td>￥700.00</td>
-							            				<td>￥50.00</td>
+							            				<td>￥100,000.00</td>
+							            				<td>￥70,000.00</td>
+							            				<td>￥50,000.00</td>
 							            			</tr>
 							            			<tr>
 							            				<td>广东省深圳市</td>
@@ -1999,10 +1848,11 @@
 							<ul class="tab-nav">
 								<li class="active"><a href="javascript:;" data-state="0" onclick="mainTab(this);">等待签单员接单</a></li>
 								<li><a href="javascript:;" data-state="1" onclick="mainTab(this);">等待面签</a></li>
-								<li><a href="javascript:;" data-state="2" onclick="mainTab(this);">等待审核</a></li>
-								<li><a href="javascript:;" data-state="3" onclick="mainTab(this);">认证通过</a></li>
-								<li><a href="javascript:;" data-state="4" onclick="mainTab(this);">认证驳回</a></li>
-								<li><a href="javascript:;" data-state="5" onclick="mainTab(this);">认证失败</a></li>
+								<li><a href="javascript:;" data-state="2" onclick="mainTab(this);">等待初审</a></li>
+								<li><a href="javascript:;" data-state="3" onclick="mainTab(this);">等待终审</a></li>
+								<li><a href="javascript:;" data-state="4" onclick="mainTab(this);">认证通过</a></li>
+								<li><a href="javascript:;" data-state="5" onclick="mainTab(this);">认证驳回</a></li>
+								<li><a href="javascript:;" data-state="6" onclick="mainTab(this);">认证失败</a></li>
 							</ul>
 						</div>
 						<!-- 导航菜单 end -->
@@ -2017,7 +1867,7 @@
 											<td>用户姓名</td>
 											<td>手机号码</td>
 											<td>宿舍楼-房号</td>
-											<td>预约时间</td>
+											<td width="155">预约时间</td>
 											<td width="50">操作</td>
 										</tr>
 									</thead>
@@ -2088,6 +1938,7 @@
 							            			<li><span>QQ：</span>568480291</li>
 							            			<li><span>地址：</span>广东工业大学大学城校区东五714</li>
 							            			<li><span>信用额度：</span>￥3,000</li>
+							            			<li><span>可用额度：</span>￥2,500</li>
 							            		</ul>
 
 							            		<h4>教育信息</h4>
@@ -2125,7 +1976,10 @@
 							            		<ul>
 							            			<li><span>签单员姓名：</span>李四</li>
 							            			<li><span>签单员手机号码：</span>15820216712</li>
-							            			<li><span>审核人：</span>张三</li>
+							            			<li><span>初审人：</span>张三</li>
+							            			<li><span>初审时间：</span>2016-04-05 10:22:13</li>
+							            			<li><span>终审人：</span>里斯</li>
+							            			<li><span>终审时间：</span>2016-04-05 11:20:03</li>
 							            		</ul>
 
 							            		<h4>审核状态</h4>

@@ -300,12 +300,13 @@ label {
 .bill-info ul {
 	display: inline-block;
 	clear: both;
+	width: 100%;
 }
 .bill-info ul li {
+	margin-bottom: 5px;
 	display: inline-block;
 	width: 50%;
 	float: left;
-	line-height: 2;
 	color: #333;
 }
 .bill-info ul li.block {
@@ -656,7 +657,6 @@ button:disabled {
 }
 .modal-body label input {
 	display: inline-block;
-	margin-right: 3px;
-	vertical-align: top;
+	margin-right: 5px;
 }
 /* common end */
