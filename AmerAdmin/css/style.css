@@ -143,8 +143,8 @@ label {
 .col-side {
 	position: relative;
 	float: left;
-	width: 190px !important;
-	width: 13%;
+	width: 190px;
+	width: 13% !important;
 	border-right: 1px solid #e7e7eb;
 }
 .menu-box {
