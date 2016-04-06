@@ -143,7 +143,6 @@ label {
 .col-side {
 	position: relative;
 	float: left;
-	width: 190px;
 	width: 13% !important;
 	border-right: 1px solid #e7e7eb;
 }
@@ -193,7 +192,7 @@ label {
 .menu-item.active a {
 	text-decoration: none;
 	color: #fff;
-	font-weight: 700;
+	font-weight: 500;
 }
 .menu-item a {
 	display: block;
@@ -213,8 +212,7 @@ label {
 .col-main {
 	float: left;
 	margin-left: -1px;
-	width: 949px;
-	width: 86.3% !important;
+	width: 86.99% !important;
 	display: table-cell;
     vertical-align: top;
     word-wrap: break-word;
@@ -645,6 +643,9 @@ button:disabled {
 
 .form ul li {
 	margin-bottom: 15px;
+}
+.label {
+	font-weight: 400;
 }
 
 /* bootstrap 弹出层内的样式 */
