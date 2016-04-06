@@ -78,6 +78,7 @@ label {
 }
 .header-box .inner {
 	position: relative;
+	width: 96%;
 	margin: 0 auto;
 	height: 60px;
 	line-height: 60px;
@@ -122,10 +123,12 @@ label {
 /* container begin */
 .body {
 	min-height: 670px;
-	padding: 36px 15px 88px;
+	padding: 36px 0 88px;
 }
 .container-box {
 	position: relative;
+	margin: 0 auto;
+	width: 96%;
 	background-color: #fff;
 	border: 1px solid #d9dadc;
 	min-height: 650px;
@@ -140,8 +143,8 @@ label {
 .col-side {
 	position: relative;
 	float: left;
-	width: 190px;
-	width: 16.5789%;
+	width: 190px !important;
+	width: 13%;
 	border-right: 1px solid #e7e7eb;
 }
 .menu-box {
@@ -211,7 +214,7 @@ label {
 	float: left;
 	margin-left: -1px;
 	width: 949px;
-	width: 83.51% !important;
+	width: 86.3% !important;
 	display: table-cell;
     vertical-align: top;
     word-wrap: break-word;

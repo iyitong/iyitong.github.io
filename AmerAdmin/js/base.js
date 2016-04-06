@@ -1,21 +1,20 @@
 /**	
  * author:cyt
- * update:2016.03.24
+ * update:2016.04.06
  * desc: 通用部分
  **/
 
 // 判断是否已经登录
 function isLogin() {
-	$.post('/area/isLogin', {}, function(res) {
+	$.post(base_url + 'isLogin', {}, function(res) {
 		if (res.errcode == 0) {
-			var state = res.data.state,
-			name = res.data.name;
-			
-			$('#aberName').html(name);
+			var managerName = res.data.managerName;
+
+			$('.js-managerName').html(managerName);
 		} else if (res.errcode == 2) {
 			showMsg(res.info + '3秒后跳转到登录页面', 'w');
-			setTimeout("window.location.href = '/area/loginFTL';",3000);
-		}else {
+			setTimeout("window.location.href ='" + base_url + "loginFTL';", 3000);
+		} else {
 			showMsg(res.info, 'w');
 		}
 	}, 'json');
@@ -34,12 +33,9 @@ function tab(data_id) {
 			$('#main_' + data_id).removeClass('fn-hide').siblings('.main').addClass('fn-hide');
 		}
 	}
-		
+
 	// 根据不同的页面调用不同的方法
-	if (data_id == 'home') {
-	} else if (data_id == 'signer') {
-	} else if (data_id == 'achievement') {
-	}
+	if (data_id == 'home') {} else if (data_id == 'signer') {} else if (data_id == 'achievement') {}
 }
 
 // 主题内容部分菜单栏切换
@@ -47,12 +43,12 @@ function mainTab(ele) {
 	$(ele).parent().addClass('active').siblings('li').removeClass('active');
 }
 
-$(function(){
+$(function() {
 	// 退出
 	$('.js-logout').click(function() {
-		$.post('/area/logout', {}, function(res) {
+		$.post(base_url + 'logout', {}, function(res) {
 			if (res.errcode == 0) {
-				window.location.href = '/area/loginFTL';
+				window.location.href = base_url + 'loginFTL';
 			} else {
 				showMsg(res.info, 'w');
 			}
@@ -91,9 +87,9 @@ $(function(){
 	});
 
 	// 发货管理，选择订单类型
-	$('#order_send_type').change(function(){
+	$('#order_send_type').change(function() {
 		var type = $(this).find('option:selected').val(),
-		$span = $('.order-send-span');
+			$span = $('.order-send-span');
 
 		$span.eq(type).removeClass('fn-hide').siblings('span').addClass('fn-hide');
 	});
