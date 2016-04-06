@@ -793,26 +793,26 @@
 											<td width="120">订单编号</td>
 											<td>商品名称</td>
 											<td width="150">下单时间</td>
-											<td width="116">操作</td>
+											<td width="50">操作</td>
 										</tr>
 									</thead>
 									<tr>
 										<td>20160324123</td>
 										<td>苹果手机苹果手机苹果手机苹果手机</td>
 										<td>2016-01-24 10:23:43</td>
-										<td><span class="label label-warning" onclick="alert('该订单已经转移到你的“未审核订单”列表中，请自行前往“订单审核”模块进行审核');">我要审核</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#orderDetailModal">详情</span></td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#orderDetailModal">详情</span></td>
 									</tr>
 									<tr>
 										<td>20160324123</td>
 										<td>苹果手机苹果手机苹果手机苹果手机</td>
 										<td>2016-01-24 10:23:43</td>
-										<td><span class="label label-warning" onclick="alert('该订单已经转移到你的“未审核订单”列表中，请自行前往“订单审核”模块进行审核');">我要审核</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#orderDetailModal">详情</span></td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#orderDetailModal">详情</span></td>
 									</tr>
 									<tr>
 										<td>20160324123</td>
 										<td>苹果手机苹果手机苹果手机苹果手机</td>
 										<td>2016-01-24 10:23:43</td>
-										<td><span class="label label-warning" onclick="alert('该订单已经转移到你的“未审核订单”列表中，请自行前往“订单审核”模块进行审核');">我要审核</span>&nbsp;<span class="label label-primary" data-toggle="modal" data-target="#orderDetailModal">详情</span></td>
+										<td><span class="label label-primary" data-toggle="modal" data-target="#orderDetailModal">详情</span></td>
 									</tr>
 								</table>
 							</div>
@@ -851,6 +851,7 @@
 							         	</div>
 							         	<div class="modal-footer">
 							            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							            	<button type="button" class="btn btn-warning">我要审核</button>
 							         	</div>
 							      	</div>
 						      	</div>
@@ -1874,33 +1875,6 @@
 										<td><span class="label label-primary" data-toggle="modal" data-target="#userInfoDetailModal">详情</span></td>
 									</tr>
 								</table>
-
-<h4>等待审核的效果</h4>
-								<table class="table table-hover table-condensed">
-									<thead>
-										<tr>
-											<td>学校名称</td>
-											<td>用户姓名</td>
-											<td>手机号码</td>
-											<td>宿舍楼-房号</td>
-											<td width="93">操作</td>
-										</tr>
-									</thead>
-									<tr>
-										<td>广东工业大学</td>
-										<td>静风</td>
-										<td>13800138000</td>
-										<td>东五-714</td>
-										<td><span class="label label-primary" data-toggle="modal" data-target="#userInfoDetailModal">详情</span>&nbsp;<span class="label label-warning" data-toggle="modal" data-target="#userIdentifyModal">审核</span></td>
-									</tr>
-									<tr>
-										<td>广东工业大学</td>
-										<td>静风</td>
-										<td>13800138000</td>
-										<td>东五-714</td>
-										<td><span class="label label-primary" data-toggle="modal" data-target="#userInfoDetailModal">详情</span>&nbsp;<span class="label label-warning" data-toggle="modal" data-target="#userIdentifyModal">审核</span></td>
-									</tr>
-								</table>
 							</div>
 							<!-- 认证申请列表 end -->
 
@@ -1968,6 +1942,23 @@
 							            			<li><span>终审时间：</span>2016-04-05 11:20:03</li>
 							            		</ul>
 
+							            		<h4>初审/终审</h4>
+							            		<ul>
+							            			<li class="block">
+							            				<p>选择审核结果</p>
+								         				<label><input type="radio" name="bill_state">通过</label>
+							            				<label><input type="radio" name="bill_state">驳回</label>
+							            				<label><input type="radio" name="bill_state">不通过</label>
+								         			</li>
+
+								         			<li class="block">用户可用信用额度：<input type="text"></li>
+
+													<li class="block">
+														<p>填写详细处理结果报告：</p>
+							            				<textarea name="" class="form-control" id="" cols="30" rows="10"></textarea>
+													</li>
+							            		</ul>
+
 							            		<h4>审核状态</h4>
 							            		<p><span>驳回</span>，原因：身份证信息与其他资料不一致</p>
 							            	</div>
@@ -1992,17 +1983,7 @@
 										<form class="form form-horizontal info-form">
 								         	<div class="modal-body">
 								         		<div class="bill-deal">
-								         			<h4 class="text-center font-bold">选择审核结果</h4>
-								         			<div class="text-center">
-								         				<label><input type="radio" name="bill_state">通过</label>
-							            				<label><input type="radio" name="bill_state">驳回</label>
-							            				<label><input type="radio" name="bill_state">不通过</label>
-								         			</div>
-
-								         			<p>用户可用信用额度：<input type="text"></p>
-
-						            				<h4>填写详细处理结果报告：</h4>
-						            				<textarea name="" class="form-control" id="" cols="30" rows="10"></textarea>
+								         			
 								         		</div>
 								         	</div>
 								         	<div class="modal-footer">
