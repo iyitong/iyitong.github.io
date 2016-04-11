@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+	<meta name="renderer" content="webkit">
+	<title>商户管理系统</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link rel="stylesheet" href="http://7xl6qe.com2.z0.glb.qiniucdn.com/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://7xl6qe.com2.z0.glb.qiniucdn.com/css/base.min.css">
+	<!-- 如果是IE6打开，在顶部出现小黄条进行提醒 -->
+	<!--[if lt IE 7]>
+	<div style="position:absoulute;left:0;top:0;width:100%;height:50px;background:rgb(255,255,233);color:rgb(30,84,148);border-bottom:1px solid rgb(230,230,198);text-align:center;line-height:50px;font-size:12px;">您使用的浏览器版本过低，可能会影响到您浏览本网页，建议您升级您的浏览器。</div>
+	<![endif]-->
+	<!--[if lt IE 9]>
+      <script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/respond.min.js"></script>
+      <script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/html5shiv.js"></script>
+    <![endif]-->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<!-- header begin -->
+	<div class="head" id="header">
+		<div class="header-box">
+			<div class="inner">
+				<h1><a href="javascript:;" title="商户管理系统"><i class="logo"></i></a>商户管理系统</h1>
+				<div class="account">
+					<a href="javascript:;" class="nickname">昵称</a><a href="#" class="logout js-logout">退出</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- header end -->
+
+	<!-- container begin -->
+	<div class="body">
+		<div class="container-box">
+			<!-- side begin -->
+			<div class="col-side">
+				<div class="menu-box">
+					<dl class="menu no-extra">
+						<dt class="menu-title"><i class="icon-menu" style="background:url(
+	        http://7xl6qe.com2.z0.glb.qiniucdn.com/img/icon_menu_function.png
+	        ) no-repeat;"></i>成员管理</dt>
+						<dd class="menu-item"><a data-id="manager_list" href="#manager_list">成员列表</a></dd>
+						<dd class="menu-item"><a data-id="manager_add" href="#manager_add">添加成员</a></dd>
+					</dl>
+
+					<dl class="menu">
+						<dt class="menu-title"><i class="icon-menu" style="background:url(
+        http://7xl6qe.com2.z0.glb.qiniucdn.com/img/icon_menu_management.png
+        ) no-repeat;"></i>订单管理</dt>
+				        <dd class="menu-item"><a data-id="order_list" href="#order_list">订单列表</a></dd>
+					</dl>
+
+					<dl class="menu">
+						<dt class="menu-title"><i class="icon-menu" style="background:url(
+        http://7xl6qe.com2.z0.glb.qiniucdn.com/img/icon_menu_statistics.png
+        ) no-repeat;"></i>奖励管理</dt>
+						<dd class="menu-item"><a data-id="reward_list" href="#reward_list">奖励记录</a></dd>
+					</dl>
+				</div>
+			</div>
+			<!-- side end -->
+
+			<!-- main begin -->
+			<div class="col-main">
+				<!-- 成员列表 begin -->
+				<div class="main main-manager fn-hide" id="main_manager_list">
+					<div class="main-hd">
+						<h2>成员列表
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt>获取成员列表</dt>
+										<dd></dd>
+									</dl>
+								</div>
+							</div>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<div class="content-wrap">
+							<!-- 成员列表 begin -->
+							<div class="list manager-list" id="manager_lists">
+								<table class="table table-hover table-condensed">
+									<thead>
+										<tr>
+											<td>角色</td>
+											<td>姓名</td>
+											<td>手机号码</td>
+											<td width="150">邮箱</td>
+											<td>支付宝账号</td>
+											<td>支付宝姓名</td>
+											<td>所在省市</td>
+											<td width="110">身份证正面图片</td>
+											<td width="110">身份证反面图片</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>超级管理员</td>
+										<td>静风</td>
+										<td>15789038292</td>
+										<td>465767686@qq.com</td>
+										<td>15789876756</td>
+										<td>静风</td>
+										<td>广东省广州市</td>
+										<td><img src="img/pic1.png" width="100" alt=""></td>
+										<td><img src="img/pic1.png" width="100" alt=""></td>
+									</tr>
+									<tr>
+										<td>超级管理员</td>
+										<td>静风</td>
+										<td>15789038292</td>
+										<td>465767686@qq.com</td>
+										<td>15789876756</td>
+										<td>静风</td>
+										<td>广东省广州市</td>
+										<td><img src="img/pic1.png" width="100" alt=""></td>
+										<td><img src="img/pic1.png" width="100" alt=""></td>
+									</tr>
+									<tr>
+										<td>超级管理员</td>
+										<td>静风</td>
+										<td>15789038292</td>
+										<td>465767686@qq.com</td>
+										<td>15789876756</td>
+										<td>静风</td>
+										<td>广东省广州市</td>
+										<td><img src="img/pic1.png" width="100" alt=""></td>
+										<td><img src="img/pic1.png" width="100" alt=""></td>
+									</tr>
+								</table>
+							</div>
+							<!-- 成员列表 end -->
+						</div>
+					</div>
+				</div>
+				<!-- 商品列表 end -->
+
+				<!-- 添加成员 begin -->
+				<div class="main main-manager-add fn-hide" id="main_manager_add">
+					<div class="main-hd">
+						<h2>添加成员
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt>添加成员</dt>
+										<dd></dd>
+									</dl>
+
+									<div class="help-footer">
+										<p></p>
+									</div>
+								</div>
+							</div>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<div class="content-wrap">
+							<form action="" class="form form-inline addmanager-form">
+								<ul>
+									<li>
+										<span>角色：</span>
+										<select name="type" class="form-control" id="type">
+											<option value="0">超级管理员</option>
+											<option value="1">一级成员</option>
+											<option value="2">二级成员</option>
+											<option value="3">三级成员</option>
+										</select>
+									</li>
+
+									<li>
+										<span>姓名：</span>
+										<input type="text" class="form-control" id="name" name="name" placeholder="请输入成员姓名" required>
+									</li>
+
+									<li>
+										<span>手机：</span>
+										<input type="tel" class="form-control" id="cellphone" name="cellphone" placeholder="请输入成员手机号码" required>
+									</li>
+
+									<li>
+										<span>邮箱：</span>
+										<input type="email" class="form-control" id="email" name="email" placeholder="请输入成员邮箱" required>
+									</li>
+
+									<li>
+										<span>支付宝账号：</span>
+										<input type="text" class="form-control" id="alipay" name="alipay" placeholder="请输入支付宝账号" required>
+									</li>
+
+									<li>
+										<span>支付宝户主姓名：</span>
+										<input type="text" class="form-control" id="alipayName" name="aliplayName" placeholder="请输入支付宝户主姓名" required>
+									</li>
+
+									<li>
+										<span>所在省市：</span>
+										<select name="" class="form-control" id="privinceId" name="privinceId" style="width: 197px;">
+											<option value="0">请选择省份</option>
+										</select>
+										<select name="" class="form-control" id="cityId" name="cityId" style="width: 198px;">
+											<option value="0">请选择城市</option>
+										</select>
+									</li>
+
+									<li>
+										<span>身份证正面图片：</span>
+										<input type="file" class="form-control" id="IDUpPicUrl" name="IDUpPicUrl">
+									</li>
+
+									<li>
+										<span>身份证反面图片：</span>
+										<input type="file" class="form-control" id="IDDownPicUrl" name="IDDownPicUrl">
+									</li>
+								</ul>
+
+								<button class="btn btn-warning" type="submit">添加成员</button>
+							</form>
+						</div>
+					</div>
+				</div>
+				<!-- 添加商品 end -->
+
+				<!-- 订单列表 begin -->
+				<div class="main main-order-list fn-hide" id="main_order_list">
+					<div class="main-hd">
+						<h2>订单列表
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt>获取商家订单列表</dt>
+										<dd>商家订单通过H5页面提交</dd>
+									</dl>
+								</div>
+							</div>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<!-- 导航菜单 begin -->
+						<div class="title-tab">
+							<ul class="tab-nav">
+								<li class="active"><a href="javascript:;" data-state="0" onclick="mainTab(this);">未审核</a></li>
+								<li><a href="javascript:;" data-state="1" onclick="mainTab(this);">已通过</a></li>
+								<li><a href="javascript:;" data-state="2" onclick="mainTab(this);">不通过</a></li>
+							</ul>
+						</div>
+						<!-- 导航菜单 end -->
+
+						<div class="content-wrap">
+							<!-- 订单列表 begin -->
+							<div class="list order-list" id="order_total_list">
+								<table class="table table-hover table-condensed">
+									<thead>
+										<tr>
+											<td width="120">商家姓名</td>
+											<td>手机号码</td>
+											<td width="160">身份证号码</td>
+											<td>身份证正面照片</td>
+											<td>身份证反面照片</td>
+											<td>营业执照副本</td>
+											<td>银行卡正面照片</td>
+											<td width="150">提交时间</td>
+											<td width="50">操作</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>静风</td>
+										<td>15830209393</td>
+										<td>476789067898765454</td>
+										<td><img src="img/pic1.png" width="100" alt=""></td>
+										<td><img src="img/pic1.png" width="100" alt=""></td>
+										<td><img src="img/pic1.png" width="100" alt=""></td>
+										<td><img src="img/pic1.png" width="100" alt=""></td>
+										<td>2016-01-24 10:23:43</td>
+										<td><span class="label label-primary">审核</span></td>
+									</tr>
+									<tr>
+										<td>静风</td>
+										<td>15830209393</td>
+										<td>476789067898765454</td>
+										<td><img src="img/pic1.png" width="100" alt=""></td>
+										<td><img src="img/pic1.png" width="100" alt=""></td>
+										<td><img src="img/pic1.png" width="100" alt=""></td>
+										<td><img src="img/pic1.png" width="100" alt=""></td>
+										<td>2016-01-24 10:23:43</td>
+										<td><span class="label label-primary">审核</span></td>
+									</tr>
+									<tr>
+										<td>静风</td>
+										<td>15830209393</td>
+										<td>476789067898765454</td>
+										<td><img src="img/pic1.png" width="100" alt=""></td>
+										<td><img src="img/pic1.png" width="100" alt=""></td>
+										<td><img src="img/pic1.png" width="100" alt=""></td>
+										<td><img src="img/pic1.png" width="100" alt=""></td>
+										<td>2016-01-24 10:23:43</td>
+										<td><span class="label label-primary">审核</span></td>
+									</tr>
+								</table>
+							</div>
+							<!-- 订单列表 end -->
+
+							<!-- 订单详情弹出层 begin -->
+							<div class="modal fade" id="orderDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							   	<div class="modal-dialog">
+							      	<div class="modal-content">
+							         	<div class="modal-header">
+							            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							            	<h4 class="modal-title">订单详情</h4>
+							         	</div>
+
+							         	<div class="modal-body">
+						            		<div class="bill-info">
+						            			<p>订单编号：<strong>2016012411</strong></p>
+						            			<h4>订单信息</h4>
+							            		<ul>
+							            			<li class="block"><span>商品名称：</span>苹果手机se苹果手机se苹果手机se苹果手机se苹果手机se</li>
+							            			<li><span>商品价格：</span>￥4288.00</li>
+							            			<li><span>首付：</span>￥1000.00</li>
+							            			<li><span>分期详情：</span>￥1096.00 x 3期</li>
+							            			<li><span>月供：</span>￥1096.00（含服务费￥0.00）</li>
+							            			<li><span>邀请码：</span>12345</li>
+							            			<li><span>下单时间：</span>2016-01-24 10:25:30</li>
+							            		</ul>
+
+							            	    <h4>下单用户信息</h4>
+							            		<ul>
+							            			<li><span>姓名：</span>成一通</li>
+							            			<li><span>电话：</span>15820216212</li>
+							            			<li class="block"><span>收货地址：</span>广东省广州市大学城广东工业大学大学城校区东五714</li>
+							            		</ul>
+						            		</div>
+							         	</div>
+							         	<div class="modal-footer">
+							            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							            	<button type="button" class="btn btn-warning">我要审核</button>
+							         	</div>
+							      	</div>
+						      	</div>
+							</div>
+							<!-- 订单详情弹出层 end -->
+
+							<!-- 分页 -->
+							<div class="kkpager" id="order_kkpager">这里是分页列表</div>
+						</div>
+					</div>
+				</div>
+				<!-- 订单列表 end -->
+
+				<!-- 奖励列表 begin -->
+				<div class="main main-reward-list fn-hide" id="main_reward_list">
+					<div class="main-hd">
+						<h2>奖励记录
+							<div class="help">
+								<i class="help-icon"></i>
+								<div class="help_content">
+									<i class="dropdown_arrow out"></i>
+									<i class="dropdown_arrow in"></i>
+									<dl class="help-change-list">
+										<dt>获取奖励列表</dt>
+										<dd></dd>
+									</dl>
+								</div>
+							</div>
+						</h2>
+					</div>
+
+					<div class="main-bd">
+						<!-- 导航菜单 begin -->
+						<div class="title-tab">
+							<ul class="tab-nav">
+								<li class="active"><a href="javascript:;" data-state="0" onclick="mainTab(this);">未到期</a></li>
+								<li><a href="javascript:;" data-state="1" onclick="mainTab(this);">已达标</a></li>
+								<li><a href="javascript:;" data-state="2" onclick="mainTab(this);">未达标</a></li>
+							</ul>
+						</div>
+						<!-- 导航菜单 end -->
+
+						<div class="content-wrap">
+							<!-- 订单列表 begin -->
+							<div class="list order-list" id="order_total_list">
+								<table class="table table-hover table-condensed">
+									<thead>
+										<tr>
+											<td>姓名</td>
+											<td>录入系统时间</td>
+											<td>订单量</td>
+											<td>应获得奖励</td>
+										</tr>
+									</thead>
+									<tr>
+										<td>静风</td>
+										<td>2016-01-24 10:23:43</td>
+										<td>3897</td>
+										<td>￥1200</td>
+									</tr>
+									<tr>
+										<td>静风</td>
+										<td>2016-01-24 10:23:43</td>
+										<td>3897</td>
+										<td>￥1200</td>
+									</tr>
+									<tr>
+										<td>静风</td>
+										<td>2016-01-24 10:23:43</td>
+										<td>3897</td>
+										<td>￥1200</td>
+									</tr>
+								</table>
+							</div>
+							<!-- 订单列表 end -->
+						</div>
+					</div>
+				</div>
+				<!-- 奖励列表 end -->
+			</div>
+			<!-- main end -->
+		</div>
+	</div>
+	<!-- container end -->
+
+	<!-- footer begin -->
+	<div class="foot" id="footer">
+		<small class="copyright">Copyright © 2016 A梦分期 All Rights Reserved.</small>
+	</div>
+	<!-- footer end -->
+
+	<!-- 分页 -->
+	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/kkpager.min.js"></script>
+	<link rel="stylesheet" href="http://7xl6qe.com2.z0.glb.qiniucdn.com/css/kkpager_orange.min.css">
+
+	<!-- <script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/jquery-1.11.1.min.js"></script>
+	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/jquery.form.min.js"></script>
+	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/bootstrap.min.js"></script>
+	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/cookie.min.js"></script> -->
+
+	<script src="libs/jquery-1.11.1.min.js"></script>
+	<script src="libs/jquery.form.min.js"></script>
+	<script src="libs/bootstrap.min.js"></script>
+	<script src="libs/cookie.min.js"></script>
+	<script src="js/base.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/index.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
