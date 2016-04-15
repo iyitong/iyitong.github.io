@@ -185,6 +185,70 @@ body {
 }
 /* 提交资料页面 end */
 
+/* 认证结果 begin */
+.result-header {
+	padding: .3rem;
+	font-size: .24rem;
+	color: #78909c;
+	background-color: #f2ffff;
+}
+.result-state {
+	margin-bottom: .2rem;
+}
+.result-state span.state {
+	font-weight: bold;
+	font-size: .3rem;
+}
+.result-state span.state-fail {
+	color: #ff4640;
+}
+.result-state span.state-success {
+	color: #44b549;
+}
+.identify-info {
+	padding-bottom: .98rem;
+}
+.identify-info h4 {
+	padding: 0 .3rem;
+	height: .6rem;
+	line-height: .6rem;
+	background-color: #f1f2f3;
+	font-size: .24rem;
+	font-weight: normal;
+}
+.identify-info ul:not(:last-child) {
+	border-bottom: .1rem solid #f1f2f3;
+}
+.identify-info ul li:first-child {
+	border-bottom: 1px solid #dbe4e8;
+}
+.identify-info ul li {
+	padding:  0 .3rem;
+	line-height: .6rem;
+}
+.identify-info ul li span {
+	color: #78909c;
+}
+.identify-info ul li img {
+	position: relative;
+	margin-left: 10%;
+	width: 80%;
+}
+.identify-info .submit-again-btn {
+	position: fixed;
+	bottom: 0;
+	width: 7.5rem;
+	text-align: center;
+	height: .98rem;
+	line-height: .98rem;
+	font-weight: 700;
+	font-size: .36rem;
+	color: #fff;
+	background-color: #ff681d;
+	border: none;
+}
+
+/* 认证结果 end */
 
 /* common begin */
 .null-tips {
