@@ -187,7 +187,7 @@ body {
 }
 .nav-dialog-wrap {
 	position: absolute;
-	width: 100%;
+	width: 7.5rem;
 	height: 100%;
 	background-color: rgba(30,30,30,.5);
 }
