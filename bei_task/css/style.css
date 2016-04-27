@@ -157,11 +157,26 @@ body {
 }
 .nav ul li .icon {
 	display: inline-block;
+	float: left;
+	margin-top: .06rem;
+	margin-right: .2rem;
 	width: .38rem;
 	height: .38rem;
 }
 .nav ul li .icon-classify {
 	background: url('../img/icon_classify_link.png') center center no-repeat;
+	background-size: 100% 100%;
+}
+.nav ul li .icon-sort {
+	background: url('../img/icon_sort_link.png') center center no-repeat;
+	background-size: 100% 100%;
+}
+.nav ul li.active .icon-classify {
+	background: url('../img/icon_classify_active.png') center center no-repeat;
+	background-size: 100% 100%;
+}
+.nav ul li.active .icon-sort {
+	background: url('../img/icon_sort_active.png') center center no-repeat;
 	background-size: 100% 100%;
 }
 /* header end */
