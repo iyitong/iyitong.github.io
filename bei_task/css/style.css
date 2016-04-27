@@ -201,6 +201,10 @@ body {
 	width: 6.3rem;
 	border-bottom: 1px solid #dbe4e8;
 }
+.nav-dialog ul li label {
+	display: inline-block;
+	width: 100%;
+}
 .nav-dialog ul li span {
 	float: right;
 }
