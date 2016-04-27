@@ -292,7 +292,7 @@ body {
 	display: inline-block;
 	float: left;
 	padding: .35rem 0;
-	width: 4.1rem;
+	width: 4.3rem;
 }
 .task-list ul li .task-detail .task-name {
 	margin-bottom: .32rem;
@@ -301,7 +301,7 @@ body {
 }
 .task-list ul li .task-detail .task-name span {
 	display: inline-block;
-	width: 3.2rem;
+	width: 3.4rem;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
@@ -324,7 +324,7 @@ body {
 }
 .task-list ul li .charge {
 	display: inline-block;
-	width: 1.6rem;
+	width: 1.4rem;
 	text-align: right;
 	height: 1.6rem;
 	line-height: 1.6rem;
@@ -333,6 +333,7 @@ body {
 	font-weight: bold;
 	color: #fe781e;
 }
+
 i.loading {
 	display: inline-block;
 	position: relative;
