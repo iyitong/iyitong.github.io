@@ -208,8 +208,13 @@ body {
 	margin-top: .3rem;
 	width: .3rem;
 	height: .3rem;
+	outline-style: none;
 	background: url('../img/checkbox_link.png') center center no-repeat;
-	background-size: 100% 100%;
+	border: 1px solid #78909c;
+}
+.nav-dialog ul li span input[type="checkbox"]:checked {
+	background: url('../img/checkbox_active.png') center center no-repeat;
+	border: 1px solid #2fb98a;
 }
 .nav-dialog ul li:last-child {
 	padding: .4rem 0;
