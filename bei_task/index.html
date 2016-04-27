@@ -30,20 +30,28 @@
 
 		<nav class="nav">
 			<ul>
-				<li class="active"><i class="icon icon-classify"></i><span>分类</span></li>
-				<li><i class="icon icon-sort"></i><span>排序</span></li>
+				<li onclick="selectNav(this);" data-id="classify"><i class="icon icon-classify"></i><span>分类</span></li>
+				<li onclick="selectNav(this);" data-id="sort"><i class="icon icon-sort"></i><span>排序</span></li>
 			</ul>
 		</nav>
-		<div class="nav-dialog-wrap">
-			<div class="nav-dialog nav-classify-dialog">
+		<div class="nav-dialog-wrap fn-hide">
+			<div class="nav-dialog nav-classify-dialog fn-hide">
 				<ul>
-					<li><label>不限<span><input type="checkbox" checked="checked"></span></label></li>
-					<li><label>体验<span><input type="checkbox"></span></label></li>
-					<li><label>分享<span><input type="checkbox"></span></label></li>
-					<li><label>互动<span><input type="checkbox"></span></label></li>
-					<li><label>注册<span><input type="checkbox"></span></label></li>
-					<li><label>其他<span><input type="checkbox"></span></label></li>
+					<li><label>不限<span><input type="checkbox" name="sort_id" value="0" checked="checked"></span></label></li>
+					<li><label>体验<span><input type="checkbox" name="sort_id"></span></label></li>
+					<li><label>分享<span><input type="checkbox" name="sort_id"></span></label></li>
+					<li><label>互动<span><input type="checkbox" name="sort_id"></span></label></li>
+					<li><label>注册<span><input type="checkbox" name="sort_id"></span></label></li>
+					<li><label>其他<span><input type="checkbox" name="sort_id"></span></label></li>
 					<li><a class="nav-btn" href="javascript:;">提交</a></li>
+				</ul>
+			</div>
+
+			<div class="nav-dialog nav-sort-dialog fn-hide">
+				<ul>
+					<li><label>最新发布<span><input type="radio" name="order" value="last" checked="checked"></span></label></li>
+					<li><label>单价最高<span><input type="radio" name="order" value="high"></span></label></li>
+					<li><label>最快审核<span><input type="radio" name="order" value="fast"></span></label></li>
 				</ul>
 			</div>
 		</div>
@@ -146,9 +154,18 @@
 
 	</div>
 
-	<!-- <script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/jquery-1.11.1.min.js"></script>
-	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/jquery.form.min.js"></script>
+	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/jquery-1.11.1.min.js"></script>
+	<!-- <script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/jquery.form.min.js"></script>
 	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/bootstrap.min.js"></script>
 	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/cookie.min.js"></script> -->
+	<script>
+		function selectNav(ele) {
+			$(ele).addClass('active').siblings('li').removeClass('active');
+			$('.nav-dialog-wrap').removeClass('fn-hide');
+			var data_id = $(ele).attr('data-id');
+			$('.nav-' + data_id + '-dialog').removeClass('fn-hide').siblings('.nav-dialog').addClass('fn-hide');
+		}
+
+	</script>
 </body>
 </html>

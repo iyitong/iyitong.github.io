@@ -194,7 +194,7 @@ body {
 .nav-dialog {
 	background-color: #fff;
 }
-.nav-dialog ul li:not(:last-child) {
+.nav-dialog ul li {
 	padding: 0 .6rem;
 	height: .9rem;
 	line-height: .9rem;
@@ -208,7 +208,7 @@ body {
 .nav-dialog ul li span {
 	float: right;
 }
-.nav-dialog ul li span input[type="checkbox"] {
+.nav-classify-dialog ul li span input[type="checkbox"] {
 	margin-top: .3rem;
 	width: .3rem;
 	height: .3rem;
@@ -216,20 +216,18 @@ body {
 	background: none;
 	border: 1px solid #78909c;
 	border-radius: 0;
-	overflow: hidden;
 }
-.nav-dialog ul li span input[type="checkbox"]:checked {
+.nav-classify-dialog ul li span input[type="checkbox"]:checked {
 	border: 1px solid #2fb98a;
 	background: url('../img/checkbox_active.png') center center no-repeat;
 	background-size: 100% 100%;
 	border-radius: 0;
-	overflow: hidden;
 }
-.nav-dialog ul li:last-child {
+.nav-classify-dialog ul li:last-child {
 	padding: .4rem 0;
 	text-align: center;
 }
-.nav-dialog ul li:last-child .nav-btn {
+.nav-classify-dialog ul li:last-child .nav-btn {
 	display: inline-block;
 	width: 3rem;
 	text-align: center;
@@ -239,6 +237,16 @@ body {
 	background-color: #fe781e;
 	color: #fff;
 	font-size: .3rem;
+}
+.nav-sort-dialog ul li span input[type="radio"] {
+	background: none;
+}
+.nav-sort-dialog ul li span input[type="radio"]:checked {
+	margin-top: .275rem;
+	width: .35rem;
+	height: .25rem;
+	background: url('../img/icon_nav_sort_active.png') center center no-repeat;
+	background-size: 100% 100%;
 }
 /* task-list begin */
 .task-list ul li {
