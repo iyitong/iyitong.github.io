@@ -201,11 +201,29 @@ body {
 	text-align: center;
 	height: .9rem;
 	line-height: .9rem;
-	color: #21a5dc;
 	font-size: .3rem;
-	border: 1px solid #21a5dc;
 	border-radius: .9rem;
 	overflow: hidden;
+}
+.task-list ul li .classify-color-1 {
+	color: #21a5dc;
+	border: 1px solid #21a5dc;
+}
+.task-list ul li .classify-color-2 {
+	color: #ff4285;
+	border: 1px solid #ff4285;
+}
+.task-list ul li .classify-color-3 {
+	color: #2fb98a;
+	border: 1px solid #2fb98a;
+}
+.task-list ul li .classify-color-4 {
+	color: #f45719;
+	border: 1px solid #f45719;
+}
+.task-list ul li .classify-color-5 {
+	color: #1995f4;
+	border: 1px solid #1995f4;
 }
 .task-list ul li .task-detail {
 	display: inline-block;
