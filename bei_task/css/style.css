@@ -224,7 +224,7 @@ body {
 	border-radius: 0;
 }
 .nav-classify-dialog ul li:last-child {
-	padding: .4rem 0;
+	padding: .4rem .6rem;
 	text-align: center;
 }
 .nav-classify-dialog ul li:last-child .nav-btn {
