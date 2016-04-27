@@ -1,0 +1,229 @@
+/*
+ * @description:呗悬赏
+ * @author: cyt
+ * @update: 2016.04.27
+*/
+@charset "utf-8";
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	font-size: 312.5%;/*10px*/
+}
+
+a,
+a:hover,
+a:active {
+	text-decoration: none;
+	color: #263238;
+}
+.hidden {
+	visibility: hidden;
+}
+
+input,
+select,
+textarea {
+	-webkit-appearance: none;
+	outline: none;
+	border: 0;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
+    color: #ccc;
+}
+input:-moz-placeholder, textarea:-moz-placeholder { 
+    color: #ccc;
+}
+input::-moz-placeholder, textarea::-moz-placeholder { 
+    color: #ccc;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { 
+    color: #ccc;
+}
+input[type="checkbox"] {
+	display: inline-block;
+	float: left;
+	margin: 0 2px 0;
+	width: .36rem;
+	height: .36rem;
+	background: url('http://7xo79i.com2.z0.glb.qiniucdn.com/amer/img/icon_select_link.png') center center no-repeat;
+	background-size: 100% 100%;
+}
+input[type="checkbox"]:checked {
+	background: url('http://7xo79i.com2.z0.glb.qiniucdn.com/amer/img/icon_select_active.png') center center no-repeat;
+	background-size: 100% 100%;
+}
+input[type="checkbox"]:disabled {
+	background: none;
+	visibility:hidden;
+}
+input[type="radio"] {
+	display: inline-block;
+	float: left;
+	margin: 2px 3px 0;
+	width: .36rem;
+	height: .36rem;
+	background: url('../img/icon_radio_link.png') center center no-repeat;
+	background-size: 100% 100%;
+}
+input[type="radio"]:checked {
+	background: url('../img/icon_radio_active.png') center center no-repeat;
+	background-size: 100% 100%;
+}
+input[type="radio"]:disabled {
+	background: none;
+	visibility:hidden;
+}
+
+* {
+	outline: none;
+	webkit-focus-ring-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+}
+
+body, html {
+	width: 100%;
+	font-family: "Microsoft YaHei","Helvetica Neue",Arial, HelveticaNeue, Helvetica, "BBAlpha Sans", sans-serif;
+	font-weight: normal;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-align: center;
+	background: #fff;
+	color: #263238;
+}
+
+body {
+	margin: 0 auto;
+	font-size: .28rem;
+	line-height: 1;
+}
+.wrap {
+	margin: 0 auto;
+	width: 7.5rem;
+	background-color: #fff;
+	font-size: .28rem;
+}
+/* header begin */
+.header {
+	position: relative;
+	display: inline-block;
+	padding: .3rem 0;
+	width: 100%;
+	background-color: #2fb98a;
+	clear: both;
+}
+.menu-box {
+	position: relative;
+	float: left;
+	width: 50%;
+	text-align: center;
+}
+.menu-box .icon {
+	margin: 0 auto;
+	width: .54rem;
+	height: .54rem;
+}
+.menu-box .icon-balance {
+	background: url('../img/icon_balance.png') center center no-repeat;
+	background-size: 100% 100%;
+}
+.menu-box .icon-task {
+	background: url('../img/icon_mytask.png') center center no-repeat;
+	background-size: 100% 100%;
+}
+.menu-box .menu-title {
+	margin: .2rem auto;
+	color: #fff;
+}
+.menu-box .menu-info {
+	font-size: .24rem;
+	color: #0a5038;
+}
+/* header end */
+i.loading {
+	display: inline-block;
+	position: relative;
+	margin-right: 10px;
+	top: 5px;
+	width: 20px;
+	height: 20px;
+	background: url('http://7xl6qe.com2.z0.glb.qiniucdn.com/img/loading.gif') center center no-repeat;
+	background-size: 20px 20px;
+}
+i.icon-finish {
+	display: inline-block;
+	width: 1.8rem;
+	height: 1.8rem;
+	background: url('http://7xo79i.com2.z0.glb.qiniucdn.com/amer/img/icon_finish.png') center center no-repeat;
+	background-size: 100% 100%;
+}
+i.icon-warning {
+	display: inline-block;
+	width: 1.8rem;
+	height: 1.8rem;
+	background: url('http://7xo79i.com2.z0.glb.qiniucdn.com/amer/img/icon_warning.png') center center no-repeat;
+	background-size: 100% 100%;
+}
+button:disabled {
+	background-color: #ccc;
+	border: 1px solid #ccc;
+	color: #fff;
+}
+/* common end */
+
+/* 字体 */
+@font-face {
+    /* font-properties */
+    font-family: 'Snell Roundhand',cursive;
+    src:url('http://7xl6qe.com2.z0.glb.qiniucdn.com/fonts/Material-Design-Icons.woff2'),  
+    url('http://7xl6qe.com2.z0.glb.qiniucdn.com/fonts/SnellRoundhandLTStd-Scr.otf');
+}
+
+/* 自适应 */
+@media screen and (max-width:359px) and (orientation:portrait) {
+	html {
+		font-size: 266.67%;
+	}
+}
+
+@media screen and (min-width:360px) and (max-width:374px) and (orientation:portrait) {
+	html {
+		font-size: 300%;
+	}
+}
+
+@media screen and (min-width:384px) and (max-width:399px) and (orientation:portrait) {
+	html {
+		font-size: 320%;
+	}
+}
+
+@media screen and (min-width:400px) and (max-width:413px) and (orientation:portrait) {
+	html {
+		font-size: 333.33%;
+	}
+}
+
+@media screen and (min-width:414px) and (max-width:431px) and (orientation:portrait) {
+	html {
+		font-size: 345%;
+	}
+}
+
+@media screen and (min-width:432px) and (max-width:479px) and (orientation:portrait) {
+	html {
+		font-size: 360%;
+	}
+}
+
+@media screen and (min-width:480px)and (max-width:639px) and (orientation:portrait) {
+	html {
+		font-size: 400%;
+	}
+}
+
+@media screen and (min-width:640px) and (orientation:portrait) {
+	html {
+		font-size: 533.33%;
+	}
+}
