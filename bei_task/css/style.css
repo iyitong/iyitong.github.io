@@ -209,9 +209,8 @@ body {
 	width: .3rem;
 	height: .3rem;
 	outline-style: none;
+	background: none;
 	border: 1px solid #78909c;
-	background: url('../img/checkbox_link.png') center center no-repeat;
-	background-size: 100% 100%;
 	border-radius: 0;
 	overflow: hidden;
 }
