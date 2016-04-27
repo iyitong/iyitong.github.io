@@ -99,7 +99,8 @@ body {
 }
 .wrap {
 	margin: 0 auto;
-	width: 7.5rem;
+	width: 100%;
+	max-width: 7.5rem;
 	background-color: #fff;
 	font-size: .28rem;
 }
