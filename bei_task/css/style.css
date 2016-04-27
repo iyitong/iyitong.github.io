@@ -139,6 +139,31 @@ body {
 	font-size: .24rem;
 	color: #0a5038;
 }
+.nav {
+	display: inline-block;
+	padding: .25rem 0;
+	border-bottom: 1px solid #dbe4e8;
+}
+.nav ul li {
+	padding-left: .6rem;
+	float: left;
+	height: .5rem;
+	line-height: .5rem;
+	width: 3.15rem;
+}
+.nav ul li:first-child {
+	margin-left: -1px;
+	border-right: 1px solid #dbe4e8;
+}
+.nav ul li .icon {
+	display: inline-block;
+	width: .38rem;
+	height: .38rem;
+}
+.nav ul li .icon-classify {
+	background: url('../img/icon_classify_link.png') center center no-repeat;
+	background-size: 100% 100%;
+}
 /* header end */
 i.loading {
 	display: inline-block;
