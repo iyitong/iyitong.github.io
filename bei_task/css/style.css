@@ -377,6 +377,84 @@ body {
 	color: #fff;
 	font-size: .36rem;
 }
+/* my-balance begin */
+.my-balance-header {
+	padding: .6rem 0 .9rem 0;
+	text-align: center;
+	height: 1.1rem;
+	color: #fff;
+	background-color: #2fb98a;
+}
+.my-balance-header p {
+	margin-bottom: .4rem;
+	font-size: .26rem;
+}
+.my-balance-header h1 {
+	font-size: .6rem;
+}
+.my-balance-nav {
+	background-color: #fff;
+	height: 1.2rem;
+	border-bottom: 1px solid #dbe4e8;
+}
+.my-balance-nav a {
+	display: inline-block;
+	width: 50%;
+	float: left;
+	text-align: center;
+	height: 1.2rem;
+	line-height: 1.2rem;
+	font-size: .3rem;
+	color: #263238;
+}
+.my-balance-nav a:first-child {
+	margin-left: -1px;
+}
+.my-balance-nav i {
+	display: inline-block;
+	margin-top: .3rem;
+	float: left;
+	border-right: 1px solid #dbe4e8;
+	height: .6rem;
+}
+.my-balance-list {
+	position: relative;
+	background-color: #fff;
+}
+.my-balance-list ul li {
+	display: inline-block;
+	padding: 0 .3rem;
+	width: 6.9rem;
+	height: 1.2rem;
+}
+.my-balance-list ul li span.left {
+	display: inline-block;
+	float: left;
+	width: 5.1rem;
+}
+.my-balance-list ul li span.left .title {
+	display: inline-block;
+	margin: .2rem 0;
+	font-size: .3rem;
+	width: 5.1rem;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.my-balance-list ul li span.left .time {
+	font-size: .24rem;
+	color: #78909c;
+}
+.my-balance-list ul li span.money {
+	float: right;
+	width: 1.8rem;
+	text-align: right;
+	height: 1.2rem;
+	line-height: 1.2rem;
+	font-size: .36rem;
+	color: #fe781e;
+	font-weight: bold;
+}
 
 i.loading {
 	display: inline-block;
