@@ -88,7 +88,7 @@ body, html {
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	-webkit-box-align: center;
-	background: #fff;
+	background: #f1f3f2;
 	color: #263238;
 }
 
@@ -253,6 +253,7 @@ body {
 	padding: 0 .3rem;
 	width: 6.9rem;
 	height: 1.6rem;
+	background-color: #fff;
 	border-bottom: 1px solid #dbe4e8;
 	clear: both;
 }
