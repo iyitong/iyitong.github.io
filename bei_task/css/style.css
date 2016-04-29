@@ -101,7 +101,7 @@ body {
 	margin: 0 auto;
 	width: 100%;
 	max-width: 7.5rem;
-	background-color: #fff;
+	background-color: #f1f3f2;
 	font-size: .28rem;
 }
 /* header begin */
@@ -335,9 +335,6 @@ body {
 	color: #fe781e;
 }
 /* task-desc begin */
-.task-desc {
-	background-color: #f1f3f2;
-}
 .task-desc-header {
 	padding: .3rem .3rem .1rem;
 	border-bottom: .2rem solid #ccc;
@@ -364,7 +361,6 @@ body {
 .task-desc-detail {
 	padding: .3rem .3rem 1.08rem;
 	color: #263238;
-	background-color: #f1f3f2;
 }
 .task-desc-footer {
 	position: fixed;
