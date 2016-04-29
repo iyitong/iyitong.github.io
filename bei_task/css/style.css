@@ -366,6 +366,9 @@ body {
 	background-color: #f1f3f2;
 }
 .task-desc-footer {
+	position: fixed;
+	bottom: 0;
+	width: 7.5rem;
 	height: .98rem;
 	line-height: .98rem;
 	background-color: #ff7a31;
