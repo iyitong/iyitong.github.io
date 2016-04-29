@@ -353,6 +353,13 @@ body {
 .task-list ul li .state-2 {
 	color: #263238;
 }
+.my-task .task-list ul li .task-detail .task-name span {
+	display: inline-block;
+	width: 4.3rem;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
 /* task-desc begin */
 .task-desc-header {
 	padding: .3rem .3rem .1rem;
