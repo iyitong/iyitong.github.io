@@ -426,6 +426,7 @@ body {
 	padding: 0 .3rem;
 	width: 6.9rem;
 	height: 1.2rem;
+	border-bottom: 1px solid #dbe4e8;
 }
 .my-balance-list ul li span.left {
 	display: inline-block;
