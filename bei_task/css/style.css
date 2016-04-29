@@ -456,6 +456,29 @@ body {
 	color: #fe781e;
 	font-weight: bold;
 }
+/* my-task begin */
+.my-task-nav {
+	background-color: #fff;
+	height: .6rem;
+	line-height: .6rem;
+	border-bottom: 1px solid #dbe4e8;
+}
+.my-task-nav ul li {
+	float: left;
+	width: 25%;
+	text-align: center;
+}
+.my-task-nav ul li a {
+	display: inline-block;
+	width: 1.2rem;
+	height: .55rem;
+	font-size: .28rem;
+	border-bottom: .05rem solid #fff;
+}
+.my-task-nav ul li.active a {
+	color: #2fb98a;
+	border-bottom: .05rem solid #2fb98a;
+}
 
 i.loading {
 	display: inline-block;
