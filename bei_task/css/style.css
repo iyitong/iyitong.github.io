@@ -333,6 +333,49 @@ body {
 	font-weight: bold;
 	color: #fe781e;
 }
+/* task-desc begin */
+.task-desc {
+	background-color: #f1f3f2;
+}
+.task-desc-header {
+	padding: .3rem .3rem .1rem;
+	border-bottom: .2rem solid #ccc;
+	display: inline-block;
+}
+.task-desc-header h1 {
+	font-size: .3rem;
+	color: #263238;
+	font-weight: normal;
+}
+.task-desc-header h2 {
+	margin: .3rem 0;
+	font-size: .36rem;
+	color: #fe781e;
+}
+.task-desc-header ul li {
+	position: relative;
+	margin-bottom: .2rem;
+	width: 50%;
+	float: left;
+	color: #78909c;
+	font-size: .24rem;
+}
+.task-desc-detail {
+	padding: .3rem;
+	color: #263238;
+	background-color: #f1f3f2;
+}
+.task-desc-footer {
+	height: .98rem;
+	line-height: .98rem;
+	background-color: #ff7a31;
+	text-align: center;
+}
+.task-desc-footer a {
+	display: block;
+	color: #fff;
+	font-size: .36rem;
+}
 
 i.loading {
 	display: inline-block;
