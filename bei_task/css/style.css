@@ -361,7 +361,7 @@ body {
 	font-size: .24rem;
 }
 .task-desc-detail {
-	padding: .3rem;
+	padding: .3rem .3rem 1.08rem;
 	color: #263238;
 	background-color: #f1f3f2;
 }
