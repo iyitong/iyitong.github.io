@@ -335,6 +335,24 @@ body {
 	font-weight: bold;
 	color: #fe781e;
 }
+.task-list ul li .state {
+	display: inline-block;
+	width: 1.4rem;
+	text-align: right;
+	height: 1.6rem;
+	line-height: 1.6rem;
+	float: right;
+	font-size: .3rem;
+}
+.task-list ul li .state-0 {
+	color: #2fb98a;
+}
+.task-list ul li .state-1 {
+	color: #fe781e;
+}
+.task-list ul li .state-2 {
+	color: #263238;
+}
 /* task-desc begin */
 .task-desc-header {
 	padding: .3rem .3rem .1rem;
@@ -459,8 +477,8 @@ body {
 /* my-task begin */
 .my-task-nav {
 	background-color: #fff;
-	height: .6rem;
-	line-height: .6rem;
+	height: .8rem;
+	line-height: .8rem;
 	border-bottom: 1px solid #dbe4e8;
 }
 .my-task-nav ul li {
@@ -471,7 +489,7 @@ body {
 .my-task-nav ul li a {
 	display: inline-block;
 	width: 1.2rem;
-	height: .55rem;
+	height: .75rem;
 	font-size: .28rem;
 	border-bottom: .05rem solid #fff;
 }
