@@ -9,7 +9,7 @@ var base_url = 'http://www.bei_task.tao2.me:88/task/';
 
 // 获取分类列表
 function get_sort_list() {
-	$.getJSON(base_url + 'get_sort_list',{},function(res) {
+	$.getJSON(base_url + 'get_sort_list?callback=?',{},function(res) {
 
 	});
 }
