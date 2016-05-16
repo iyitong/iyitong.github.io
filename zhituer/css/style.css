@@ -232,6 +232,7 @@ body {
 	float: left;
 	width: 3.24rem;
 	border: 1px solid #dbe4e8;
+	overflow: hidden;
 }
 .item-list ul li img {
 	width: 100%;
