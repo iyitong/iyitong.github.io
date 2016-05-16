@@ -237,8 +237,7 @@ body {
 	float: left;
 	width: 6.6rem;
 	height: .74rem;
-	max-height: 1.48rem;
-	overflow: auto;
+	overflow: hidden;
 }
 .item-label-list span {
 	display: inline-block;
