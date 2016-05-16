@@ -250,6 +250,9 @@ body {
 	border-radius: .28rem;
 	border: 1px solid #78909c;
 	color: #78909c;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 .item-label-list span.active {
 	border: 1px solid #37ad7f;
