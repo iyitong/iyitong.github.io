@@ -286,7 +286,7 @@ body {
 }
 .item-list ul {
 	display: inline-table;
-	padding: .3rem 0 .3rem .3rem;
+	padding: .3rem 0 0 .3rem;
 }
 .item-list ul li {
 	margin: 0 .3rem .3rem 0;
