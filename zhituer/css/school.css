@@ -114,10 +114,14 @@ body {
 }
 /* search begin */
 .search {
+	position: fixed;
+	top: 0;
+	width: 6.9rem;
 	padding: .1rem .3rem;
 	height: .7rem;
 	background-color: #f1f3f2;
 	border-bottom: 1px solid #dbe4e8;
+	z-index: 1;
 }
 .search-input-wrap {
 	float: left;
@@ -149,6 +153,9 @@ body {
 	line-height: .7rem;
 	text-align: center;
 	font-size: .3rem;
+}
+.school-list {
+	margin-top: .9rem;
 }
 .school-list ul li {
 	padding: .3rem;

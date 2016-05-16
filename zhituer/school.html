@@ -15,34 +15,33 @@
 		<div class="search">
 			<div class="search-input-wrap">
 				<span class="icon-search"></span>
-				<input type="search">
+				<input id="school_name" type="search" onkeyup="searchSchool();">
 			</div>
-			<span class="search-cancel">取消</span>
+			<span class="search-cancel" onclick="cancelSearch();">取消</span>
 		</div>
 
 		<div class="school-list">
-			<ul>
+			<ul id="schoolId">
 				<li data-id="1">广东工业大学</li>
-				<li data-id="1">广东工业大学</li>
-				<li data-id="1">广东工业大学</li>
-				<li data-id="1">广东工业大学</li>
-				<li data-id="1">广东工业大学</li>
-				<li data-id="1">广东工业大学</li>
-				<li data-id="1">广东工业大学</li>
-				<li data-id="1">广东工业大学</li>
-				<li data-id="1">广东工业大学</li>
-				<li data-id="1">广东工业大学</li>
-				<li data-id="1">广东工业大学</li>
-				<li data-id="1">广东工业大学</li>
-				<li data-id="1">广东工业大学</li>
-				<li data-id="1">广东工业大学</li>
-				<li data-id="1">广东工业大学</li>
-				<li data-id="1">广东工业大学</li>
-				<li data-id="1">广东工业大学</li>
-				<li data-id="1">广东工业大学</li>
+				<li data-id="1">广东工业大学123</li>
+				<li data-id="1">广东工业大学1</li>
+				<li data-id="1">广东工业大学23</li>
+				<li data-id="1">广东工业大学34</li>
+				<li data-id="1">广东工业大学55</li>
+				<li data-id="1">广东工业大学56</li>
+				<li data-id="1">广东工业大学7</li>
+				<li data-id="1">广东工业大学8</li>
+				<li data-id="1">广东工业大学9</li>
+				<li data-id="1">广东工业大学10</li>
+				<li data-id="1">广东工业大学123</li>
+				<li data-id="1">广东工业大学222</li>
+				<li data-id="1">广东工业大学766</li>
+				<li data-id="1">广东工业大学awd</li>
+				<li data-id="1">广东工业大学we</li>
+				<li data-id="1">广东工业大学qwqe</li>
+				<li data-id="1">广东工业大学dff</li>
 			</ul>
 		</div>
-
 	</div>
 
 	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/jquery-1.11.1.min.js"></script>
@@ -50,11 +49,25 @@
 	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/bootstrap.min.js"></script>
 	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/cookie.min.js"></script> -->
 	<script>
-		$(document).ready(function() {
-			$('.js-nav ul li').click(function() {
-				$(this).addClass('active').siblings('li').removeClass('active');
+		function searchSchool() {
+			var school_name = $('#school_name').val(),
+			schoolIds = $('#schoolId li');
+			$(schoolIds).each(function(i) {
+				if (schoolIds[i].innerHTML.indexOf(school_name) > -1) {
+					$(this).show();
+				} else {
+					$(this).hide();
+				}
 			});
-		});
+		}
+
+		function cancelSearch() {
+			schoolIds = $('#schoolId li');
+			$(schoolIds).each(function(i) {
+				$('#school_name').val('');
+				$(this).show();
+			});
+		}
 	</script>
 </body>
 </html>

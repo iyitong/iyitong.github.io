@@ -247,6 +247,7 @@ body {
 	border-right: 1px solid #dbe4e8;
 }
 .nav ul li a {
+	display: inline-block;
 	width: 100%;
 	height: .98rem;
 	font-size: .24rem;
@@ -254,6 +255,7 @@ body {
 .nav ul li.active a {
 	display: inline-block;
 	color: #37ad7f;
+	font-size: .24rem;
 }
 .nav ul li a span {
 	display: inline-block;
