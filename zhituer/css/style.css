@@ -144,7 +144,6 @@ body {
 .search .search-cancel {
 	display: inline-block;
 	float: right;
-	width: .78rem;
 	height: .7rem;
 	line-height: .7rem;
 	text-align: center;
