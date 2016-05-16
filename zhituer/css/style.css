@@ -431,7 +431,8 @@ body {
 	top: -.8rem;
 }
 #scroller-pullUp{
-	bottom: -.8rem;
+	/*bottom: -.8rem;*/
+	bottom: 0;
 }
 
 #scroller-pullDown .pull-up-msg,#scroller-pullUp .pull-down-msg {
