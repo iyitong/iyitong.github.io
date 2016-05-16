@@ -175,15 +175,15 @@ body {
 	padding-right: .3rem;
 	width: 4.9rem;
 }
-.shop-info-detail ul li {
+.shop-info-detail p {
 	width: 4.9rem;
 	clear: both;
 }
-.shop-info-detail ul li:first-child {
+.shop-info-detail p:first-child {
 	display: inline-block;
 	padding: .46rem 0 .3rem 0;
 }
-.shop-info-detail ul li:last-child {
+.shop-info-detail p:last-child {
 	font-size: .26rem;
 	color: #78909c;
 	line-height: 1.2;
@@ -222,7 +222,7 @@ body {
 
 /* item-list begin */
 .item-list {
-	margin: 2.98rem 0 .98rem 0;
+	margin: 0 0 .98rem 0;
 }
 .item-list ul {
 	padding: .3rem 0 .3rem .3rem;
