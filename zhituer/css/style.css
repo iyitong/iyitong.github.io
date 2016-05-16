@@ -262,7 +262,7 @@ body {
 }
 .nav ul li a .nav-icon {
 	display: inline-block;
-	/*margin: .1rem auto;*/
+	margin: .1rem auto;
 	width: .4rem;
 	height: .4rem;
 }
