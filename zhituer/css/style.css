@@ -229,16 +229,52 @@ body {
 /* item-label begin */
 .item-label {
 	position: relative;
+	display: inline-table;
 	padding: .1rem .2rem;
+	background-color: #f1f3f2;
 }
-.item-label span {
+.item-label-list {
+	float: left;
+	width: 6.6rem;
+	height: .74rem;
+	max-height: 1.48rem;
+	overflow: auto;
+}
+.item-label-list span {
 	display: inline-block;
+	float: left;
 	margin: .1rem;
 	padding: .1rem .2rem;
+	font-size: .28rem;
 	border-radius: .28rem;
+	border: 1px solid #78909c;
+	color: #78909c;
+}
+.item-label-list span.active {
 	border: 1px solid #37ad7f;
 	color: #37ad7f;
 }
+.icon-label-wrap {
+	width: .5rem;
+	height: .74rem;
+	float: left;
+}
+.item-label .icon-label {
+	display: inline-block;
+	float: right;
+	margin-top: .25rem;
+	width: .3rem;
+	height: .19rem;
+}
+.item-label .icon-label-down {
+	background: url('../img/icon_down.png') center center no-repeat;
+	background-size: 100% 100%;
+}
+.item-label .icon-label-up {
+	background: url('../img/icon_up.png') center center no-repeat;
+	background-size: 100% 100%;
+}
+
 
 /* item-list begin */
 .item-list {
@@ -247,6 +283,7 @@ body {
 	background-color: #f1f3f2;
 }
 .item-list ul {
+	display: inline-table;
 	padding: .3rem 0 .3rem .3rem;
 }
 .item-list ul li {

@@ -6,7 +6,7 @@ function loaded() {
 
 	myScroll = new IScroll('#wrapper', {
 		probeType: 3,
-		mouseWheel: true
+		click: true
 	});
 
 	myScroll.on("scroll", function() {
@@ -52,5 +52,20 @@ function loaded() {
 }
 
 $(document).ready(function() {
+	$('.icon-label-wrap').click(function(){
+		var span_len  = $('.item-label-list span').length,
+		n = Math.ceil(span_len / 4.5);
+		if ($(this).children('i').hasClass('icon-label-up')) {
+			$(this).children('i').attr('class','icon-label icon-label-down');
+			$('.item-label-list').animate({height:".74rem"});
+		} else {
+			$(this).children('i').attr('class','icon-label icon-label-up');
+			$('.item-label-list').animate({height: 0.74*n + "rem"});
+		}
+	});
+	$('.js-nav ul li').click(function() {
+		$(this).addClass('active').siblings('li').removeClass('active');
+	});
+
 	setTimeout('loaded();', 300);
 });
