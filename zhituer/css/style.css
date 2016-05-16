@@ -291,6 +291,11 @@ body {
 	display: inline-table;
 	padding: .3rem 0 0 .3rem;
 }
+.item-list ul span.item-date {
+	display: inline-block;
+	margin-bottom: .2rem;
+	width: 100%;
+}
 .item-list ul li {
 	margin: 0 .3rem .3rem 0;
 	float: left;
