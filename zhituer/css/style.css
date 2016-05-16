@@ -114,9 +114,14 @@ body {
 }
 /* search begin */
 .search {
+	position: fixed;
+	top: 0;
 	padding: .1rem .3rem;
 	height: .7rem;
+	width: 6.9rem;
 	background-color: #f1f3f2;
+	border-bottom: 1px solid #dbe4e8;
+	z-index: 999;
 }
 .search-input-wrap {
 	float: left;
@@ -154,7 +159,6 @@ body {
 .shop-info {
 	height: 2rem;
 	background-color: #fff;
-	border-top: 1px solid #dbe4e8;
 	border-bottom: 1px solid #dbe4e8;
 }
 .shop-info .shop-logo {
@@ -222,7 +226,7 @@ body {
 
 /* item-list begin */
 .item-list {
-	margin: 0 0 .98rem 0;
+	margin: .9rem 0 .98rem 0;
 }
 .item-list ul {
 	padding: .3rem 0 .3rem .3rem;
