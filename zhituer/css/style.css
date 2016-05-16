@@ -300,7 +300,8 @@ body {
 	overflow: hidden;
 }
 .item-list ul li img {
-	width: 100%;
+	width: 3.24rem;
+	height: 3.24rem;
 }
 .item-list ul li p {
 	margin: .2rem;
