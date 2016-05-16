@@ -144,7 +144,7 @@ body {
 .search .search-cancel {
 	display: inline-block;
 	float: right;
-	width: .8rem;
+	width: .78rem;
 	height: .7rem;
 	line-height: .7rem;
 	text-align: center;
@@ -248,18 +248,22 @@ body {
 	border-right: 1px solid #dbe4e8;
 }
 .nav ul li a {
-	display: inline-block;
+	width: 100%;
 	height: .98rem;
 }
 .nav ul li.active a {
 	display: inline-block;
 	color: #37ad7f;
 }
+.nav ul li a span {
+	display: inline-block;
+	width: 100%;
+}
 .nav ul li a .nav-icon {
 	display: inline-block;
 	margin: .1rem auto;
-	width: .48rem;
-	height: .48rem;
+	width: .4rem;
+	height: .4rem;
 }
 .nav ul li a .nav-icon-home {
 	background: url('../img/icon_home_link.png') center center no-repeat;
