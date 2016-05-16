@@ -258,10 +258,11 @@ body {
 	width: .5rem;
 	height: .74rem;
 	float: left;
+	text-align: center;
 }
 .item-label .icon-label {
 	display: inline-block;
-	float: right;
+	float: left;
 	margin-top: .25rem;
 	width: .3rem;
 	height: .19rem;
