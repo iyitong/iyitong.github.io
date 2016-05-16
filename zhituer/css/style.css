@@ -116,7 +116,7 @@ body {
 .search {
 	position: fixed;
 	top: 0;
-	padding: .1rem .3rem;
+	padding: .13rem .3rem;
 	height: .7rem;
 	width: 6.9rem;
 	background-color: #f1f3f2;
@@ -147,7 +147,7 @@ body {
 	height: .5rem;
 }
 .search .search-cancel {
-	display: inline-block;
+	/*display: inline-block;*/
 	float: right;
 	height: .7rem;
 	line-height: .7rem;
