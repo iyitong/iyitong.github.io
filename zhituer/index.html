@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>纸团儿</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<!-- <link rel="stylesheet" href="http://7xl6qe.com2.z0.glb.qiniucdn.com/css/base.min.css"> -->
+	<link rel="stylesheet" href="css/base.min.css">
+	<link rel="stylesheet" href="css/style.css?v=1.0">
+</head>
+<body>
+	<div class="wrap">
+		<!-- search begin -->
+		<div class="search">
+			<div class="search-input-wrap">
+				<span class="icon-search"></span>
+				<input type="search">
+			</div>
+			<span class="search-cancel">取消</span>
+		</div>
+
+		<!-- shop-info begin -->
+		<div class="shop-info">
+			<span class="shop-logo">
+				<img src="img/logo.png" alt="">
+			</span>
+			<div class="shop-info-detail">
+				<ul>
+					<li>
+						<span class="shop-name">玟羽优选品牌店铺玟羽优选品牌店铺</span>
+						<span class="shop-collect"><i class="icon-collect"></i>收藏</span>
+					</li>
+					<li>主营名牌鞋包服装单，保证正品，物美价廉，欢迎选购。主营名牌鞋包服装单，保证正品，物美价廉，欢迎选购。</li>
+				</ul>
+			</div>
+		</div>
+		
+		<!-- nav begin -->
+		<div class="nav js-nav">
+			<ul>
+				<li class="active">
+					<a href="javascript:;">
+						<span class="nav-icon nav-icon-home"></span>
+						<span>自营产品</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<span class="nav-icon nav-icon-agent"></span>
+						<span>代理产品</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<span class="nav-icon nav-icon-info"></span>
+						<span>交易须知</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/jquery-1.11.1.min.js"></script>
+	<!-- <script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/jquery.form.min.js"></script>
+	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/bootstrap.min.js"></script>
+	<script src="http://7xl6qe.com2.z0.glb.qiniucdn.com/js/cookie.min.js"></script> -->
+	<script>
+		$(document).ready(function() {
+			$('.js-nav ul li').click(function() {
+				$(this).addClass('active').siblings('li').removeClass('active');
+			});
+		});
+	</script>
+</body>
+</html>
