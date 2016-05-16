@@ -171,7 +171,6 @@ body {
 	height: 100%;
 }
 .shop-info-detail {
-	/*display: inline-block;*/
 	float: left;
 	padding-right: .3rem;
 	width: 4.9rem;
@@ -232,7 +231,7 @@ body {
 	margin: 0 .3rem .3rem 0;
 	float: left;
 	width: 3.24rem;
-	border: 1px solid #0d1d42;
+	border: 1px solid #dbe4e8;
 }
 .item-list ul li img {
 	width: 100%;
