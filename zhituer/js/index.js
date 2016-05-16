@@ -54,7 +54,7 @@ function loaded() {
 $(document).ready(function() {
 	$('.icon-label-wrap').click(function(){
 		var span_len  = $('.item-label-list span').length,
-		n = Math.ceil(span_len / 4.2);
+		n = Math.ceil(span_len / 4);
 		if ($(this).children('i').hasClass('icon-label-up')) {
 			$(this).children('i').attr('class','icon-label icon-label-down');
 			$('.item-label-list').animate({height:".74rem"});
