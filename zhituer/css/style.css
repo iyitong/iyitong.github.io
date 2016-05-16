@@ -154,9 +154,12 @@ body {
 	text-align: center;
 	font-size: .3rem;
 }
-
+.index-wrap {
+	margin-top: .98rem;
+}
 /* shop-info begin */
 .shop-info {
+	position: relative;
 	height: 2rem;
 	background-color: #fff;
 	border-bottom: 1px solid #dbe4e8;
@@ -223,10 +226,25 @@ body {
 	background: url('../img/icon_collect_link.png') center center no-repeat;
 	background-size: 100% 100%;
 }
+/* item-label begin */
+.item-label {
+	position: relative;
+	padding: .1rem .2rem;
+}
+.item-label span {
+	display: inline-block;
+	margin: .1rem;
+	padding: .1rem .2rem;
+	border-radius: .28rem;
+	border: 1px solid #37ad7f;
+	color: #37ad7f;
+}
 
 /* item-list begin */
 .item-list {
-	margin: .9rem 0 .98rem 0;
+	display: inline-block;
+	margin-bottom: .98rem;
+	background-color: #f1f3f2;
 }
 .item-list ul {
 	padding: .3rem 0 .3rem .3rem;
@@ -236,6 +254,7 @@ body {
 	float: left;
 	width: 3.24rem;
 	border: 1px solid #dbe4e8;
+	background-color: #fff;
 	overflow: hidden;
 }
 .item-list ul li img {
