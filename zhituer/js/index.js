@@ -61,6 +61,10 @@ $(document).ready(function() {
 		} else {
 			$(this).children('i').attr('class','icon-label icon-label-up');
 			$('.item-label-list').animate({height: 0.74*n + "rem"});
+			setTimeout("var myScroll = new IScroll('#wrapper', {\
+				probeType: 3,\
+				click: true\
+			});myScroll.refresh();",300);
 		}
 	});
 	$('.js-nav ul li').click(function() {
